@@ -1134,12 +1134,12 @@ def create_consts_str(g: gh.Graph, s: str) -> gm.Angle | gm.Ratio:
     p0, _ = g.get_or_create_const_rat(n, d)
   return p0
 
-
 def do_algebra(
     g: gh.Graph, added: list[pr.Dependency], verbose: bool = False
 ) -> None:
   for add in added:
     g.add_algebra(add, None)
+
   derives, eq4s = g.derive_algebra(level=None, verbose=verbose)
   apply_derivations(g, derives)
   apply_derivations(g, eq4s)
@@ -1150,7 +1150,9 @@ def apply_derivations(
 ) -> list[pr.Dependency]:
   applied = []
   all_derives = list(derives.items())
+  # print(f'All derives: {all_derives}')
   for name, args in all_derives:
     for arg in args:
       applied += g.do_algebra(name, arg)
+  # print(f'Len of applied: {len(applied)}')
   return applied

@@ -1,0 +1,1614 @@
+===== 开始处理问题: translated_imo_2000_p1 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:17:33.978057: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:17:35.175819: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:17:35.178251 131779066517312 graph.py:498] translated_imo_2000_p1
+I0623 01:17:35.178367 131779066517312 graph.py:499] a b = segment a b; g1 = on_tline g1 a a b; g2 = on_tline g2 b b a; m = on_circle m g1 a, on_circle m g2 b; n = on_circle n g1 a, on_circle n g2 b; c = on_pline c m a b, on_circle c g1 a; d = on_pline d m a b, on_circle d g2 b; e = on_line e a c, on_line e b d; p = on_line p a n, on_line p c d; q = on_line q b n, on_line q c d ? cong e p e q
+I0623 01:17:35.793544 131779066517312 ddar.py:60] Depth 1/1000 time = 0.5957300662994385
+I0623 01:17:37.476895 131779066517312 ddar.py:60] Depth 2/1000 time = 1.6832008361816406
+I0623 01:17:39.529194 131779066517312 ddar.py:60] Depth 3/1000 time = 2.0521321296691895
+I0623 01:17:42.402427 131779066517312 ddar.py:60] Depth 4/1000 time = 2.8730673789978027
+I0623 01:17:46.588149 131779066517312 ddar.py:60] Depth 5/1000 time = 4.185515403747559
+I0623 01:17:46.605775 131779066517312 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+A B G1 G2 M N C D E P Q : Points
+AG_1 ⟂ AB [00]
+BA ⟂ G_2B [01]
+G_1M = G_1A [02]
+G_2M = G_2B [03]
+G_2N = G_2B [04]
+G_1N = G_1A [05]
+∠NBM = ∠NBM [06]
+G_1C = G_1A [07]
+CM ∥ AB [08]
+∠NAC = ∠NAC [09]
+G_2D = G_2B [10]
+DM ∥ AB [11]
+∠NBD = ∠NBD [12]
+E,B,D are collinear [13]
+A,E,C are collinear [14]
+N,A,P are collinear [15]
+P,D,C are collinear [16]
+N,B,Q are collinear [17]
+D,Q,C are collinear [18]
+QD:MQ = QD:MQ [19]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. G_1C = G_1A [07] & G_1M = G_1A [02] ⇒  G_1 is the circumcenter of \Delta ACM [20]
+002. G_1 is the circumcenter of \Delta ACM [20] & AG_1 ⟂ AB [00] ⇒  ∠BAC = ∠AMC [21]
+003. G_2M = G_2B [03] & G_2D = G_2B [10] & G_2N = G_2B [04] ⇒  N,M,B,D are concyclic [22]
+004. N,M,B,D are concyclic [22] ⇒  ∠NMD = ∠NBD [23]
+005. G_1N = G_1A [05] & G_1C = G_1A [07] & G_1M = G_1A [02] ⇒  N,A,M,C are concyclic [24]
+006. N,A,M,C are concyclic [24] ⇒  ∠NAC = ∠NMC [25]
+007. N,A,M,C are concyclic [24] ⇒  ∠ANM = ∠ACM [26]
+008. A,E,C are collinear [14] & E,B,D are collinear [13] & ∠NMD = ∠NBD [23] & DM ∥ AB [11] & ∠NAC = ∠NMC [25] & CM ∥ AB [08] ⇒  ∠NAE = ∠NBE [27]
+009. ∠NAE = ∠NBE [27] ⇒  N,E,A,B are concyclic [28]
+010. N,E,A,B are concyclic [28] ⇒  ∠NEA = ∠NBA [29]
+011. N,E,A,B are concyclic [28] ⇒  ∠NEB = ∠NAB [30]
+012. DM ∥ AB [11] & CM ∥ AB [08] ⇒  MC ∥ MD [31]
+013. MC ∥ MD [31] ⇒  D,M,C are collinear [32]
+014. G_2N = G_2B [04] & G_2M = G_2B [03] ⇒  G_2 is the circumcenter of \Delta BNM [33]
+015. G_2 is the circumcenter of \Delta BNM [33] & G_2B ⟂ BA [01] ⇒  ∠NBA = ∠NMB [34]
+016. DM ∥ AB [11] & D,M,C are collinear [32] ⇒  AB ∥ CD [35]
+017. N,B,Q are collinear [17] & D,M,C are collinear [32] & D,Q,C are collinear [18] & ∠NMB = ∠NBA [34] & AB ∥ CD [35] ⇒  ∠NMB = ∠BQM [36]
+018. N,B,Q are collinear [17] & ∠NBM = ∠NBM [06] ⇒  ∠NBM = ∠QBM [37]
+019. ∠NMB = ∠BQM [36] & ∠NBM = ∠QBM [37] (Similar Triangles)⇒  BN:BM = BM:BQ [38]
+020. A,E,C are collinear [14] & ∠BAC = ∠AMC [21] & CM ∥ AB [08] ⇒  ∠BAM = ∠EAB [39]
+021. G_2D = G_2B [10] & G_2M = G_2B [03] ⇒  G_2 is the circumcenter of \Delta BDM [40]
+022. G_2 is the circumcenter of \Delta BDM [40] & G_2B ⟂ BA [01] ⇒  ∠ABD = ∠BMD [41]
+023. B,E,D are collinear [13] & ∠ABD = ∠BMD [41] & DM ∥ AB [11] ⇒  ∠EBA = ∠ABM [42]
+024. ∠BAM = ∠EAB [39] & ∠EBA = ∠ABM [42] (Similar Triangles)⇒  BE = BM [43]
+025. ∠BAM = ∠EAB [39] & ∠EBA = ∠ABM [42] (Similar Triangles)⇒  AE = AM [44]
+026. BQ:MB = MB:NB [38] & EB = MB [43] ⇒  BQ:BE = BE:BN [45]
+027. N,B,Q are collinear [17] & E,B,D are collinear [13] & ∠NBD = ∠NBD [12] ⇒  ∠QBE = ∠NBE [46]
+028. BQ:BE = BE:BN [45] & ∠QBE = ∠NBE [46] (Similar Triangles)⇒  ∠BQE = ∠NEB [47]
+029. B,E,D are collinear [13] & ∠BAC = ∠AMC [21] & CM ∥ AB [08] & ∠NEA = ∠NBA [29] & A,E,C are collinear [14] & ∠BQE = ∠NEB [47] & N,B,Q are collinear [17] ⇒  ∠QED = ∠MAB [48]
+030. C,Q,D are collinear [18] & B,E,D are collinear [13] & ∠ABD = ∠BMD [41] & DM ∥ AB [11] & AB ∥ CD [35] ⇒  ∠QDE = ∠MBA [49]
+031. ∠QED = ∠MAB [48] & ∠QDE = ∠MBA [49] (Similar Triangles)⇒  QE:QD = MA:MB [50]
+032. N,B,Q are collinear [17] & P,A,N are collinear [15] & A,E,C are collinear [14] & ∠NMD = ∠NBD [23] & DM ∥ AB [11] & ∠NAC = ∠NMC [25] & CM ∥ AB [08] ⇒  ∠QBD = ∠PAE [51]
+033. G_1N = G_1A [05] & G_1M = G_1A [02] ⇒  G_1 is the circumcenter of \Delta ANM [52]
+034. G_1 is the circumcenter of \Delta ANM [52] & AG_1 ⟂ AB [00] ⇒  ∠NAB = ∠NMA [53]
+035. G_1 is the circumcenter of \Delta ANM [52] & AG_1 ⟂ AB [00] ⇒  ∠MAB = ∠MNA [54]
+036. P,A,N are collinear [15] & D,M,C are collinear [32] & P,D,C are collinear [16] & ∠NAB = ∠NMA [53] & AB ∥ CD [35] ⇒  ∠APM = ∠NMA [55]
+037. D,M,C are collinear [32] & P,D,C are collinear [16] & ∠MAB = ∠MNA [54] & AB ∥ CD [35] ⇒  ∠AMP = ∠MNA [56]
+038. ∠APM = ∠NMA [55] & ∠AMP = ∠MNA [56] (Similar Triangles)⇒  AM:PA = NA:AM [57]
+039. NA:AM = AM:PA [57] & AE = AM [44] ⇒  AN:AE = AE:AP [58]
+040. A,E,C are collinear [14] & P,A,N are collinear [15] & ∠NAC = ∠NAC [09] ⇒  ∠NAE = ∠PAE [59]
+041. AN:AE = AE:AP [58] & ∠NAE = ∠PAE [59] (Similar Triangles)⇒  ∠ANE = ∠PEA [60]
+042. C,Q,D are collinear [18] & A,E,C are collinear [14] & ∠ANE = ∠PEA [60] & ∠NEB = ∠NAB [30] & E,B,D are collinear [13] & AB ∥ CD [35] ⇒  ∠QDB = ∠PEA [61]
+043. ∠QBD = ∠PAE [51] & ∠QDB = ∠PEA [61] (Similar Triangles)⇒  DQ:EP = DB:EA [62]
+044. AB ∥ CD [35] & A,E,C are collinear [14] & E,B,D are collinear [13] ⇒  AE:AC = BE:BD [63]
+045. G_1C = G_1A [07] & G_1N = G_1A [05] ⇒  G_1 is the circumcenter of \Delta ACN [64]
+046. G_1 is the circumcenter of \Delta ACN [64] & AG_1 ⟂ AB [00] ⇒  ∠CAB = ∠CNA [65]
+047. ∠CAB = ∠CNA [65] & ∠ANM = ∠ACM [26] & CM ∥ AB [08] ⇒  ∠ANM = ∠CNA [66]
+048. N,A,M,C are concyclic [24] & ∠ANM = ∠CNA [66] ⇒  AM = CA [67]
+049. QE:QD = MA:MB [50] & AE = AM [44] & BE = BM [43] & DQ:EP = DB:EA [62] & AE:AC = BE:BD [63] & AM = CA [67] ⇒  PE:QD = EQ:QD [68]
+050. PE:QD = EQ:QD [68] & QD:MQ = QD:MQ [19] ⇒  EQ = PE
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2000_p1 =====
+===== 开始处理问题: translated_imo_2000_p6 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:17:48.228646: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:17:49.377418: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:17:49.379867 139369141430080 graph.py:498] translated_imo_2000_p6
+I0623 01:17:49.379979 139369141430080 graph.py:499] a b c = triangle a b c; h = orthocenter h a b c; t1 t2 t3 i = incenter2 t1 t2 t3 i a b c; h1 = foot h1 a b c; h2 = foot h2 b c a; h3 = foot h3 c a b; x1 = reflect x1 h1 t1 t2; x2 = reflect x2 h2 t1 t2; y2 = reflect y2 h2 t2 t3; y3 = reflect y3 h3 t2 t3; z = on_line z x1 x2, on_line z y2 y3 ? cong i z i t1
+I0623 01:17:51.453978 139369141430080 ddar.py:60] Depth 1/1000 time = 2.019813060760498
+I0623 01:17:55.352736 139369141430080 ddar.py:60] Depth 2/1000 time = 3.8985848426818848
+I0623 01:18:05.805397 139369141430080 ddar.py:60] Depth 3/1000 time = 10.45247220993042
+I0623 01:18:16.259889 139369141430080 ddar.py:60] Depth 4/1000 time = 10.454237222671509
+I0623 01:18:29.073853 139369141430080 ddar.py:60] Depth 5/1000 time = 12.813758611679077
+I0623 01:18:43.251921 139369141430080 ddar.py:60] Depth 6/1000 time = 14.177846670150757
+I0623 01:18:58.664359 139369141430080 ddar.py:60] Depth 7/1000 time = 15.412233352661133
+I0623 01:19:13.871625 139369141430080 ddar.py:60] Depth 8/1000 time = 15.207056045532227
+I0623 01:19:29.084529 139369141430080 ddar.py:60] Depth 9/1000 time = 15.181357860565186
+I0623 01:19:44.247482 139369141430080 ddar.py:60] Depth 10/1000 time = 15.103293418884277
+I0623 01:19:59.361064 139369141430080 ddar.py:60] Depth 11/1000 time = 15.048417568206787
+I0623 01:20:14.830999 139369141430080 ddar.py:60] Depth 12/1000 time = 15.458086729049683
+I0623 01:20:14.831358 139369141430080 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2000_p6 =====
+===== 开始处理问题: translated_imo_2002_p2a =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:20:16.369203: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:20:17.522065: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:20:17.524484 124703858087744 graph.py:498] translated_imo_2002_p2a
+I0623 01:20:17.524595 124703858087744 graph.py:499] b c = segment b c; o = midpoint o b c; a = on_circle a o b; d = on_circle d o b, on_bline d a b; e = on_bline e o a, on_circle e o b; f = on_bline f o a, on_circle f o b; j = on_pline j o a d, on_line j a c ? eqangle e c e j e j e f
+I0623 01:20:19.199346 124703858087744 ddar.py:60] Depth 1/1000 time = 1.6457359790802002
+I0623 01:20:22.673013 124703858087744 ddar.py:60] Depth 2/1000 time = 3.4734950065612793
+I0623 01:20:27.299783 124703858087744 ddar.py:60] Depth 3/1000 time = 4.626537799835205
+I0623 01:20:27.307735 124703858087744 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+B C O A D E F J : Points
+OB = OC [00]
+C,O,B are collinear [01]
+OA = OB [02]
+OD = OB [03]
+DA = DB [04]
+∠EOA = ∠OAE [05]
+∠AEO = ∠AEO [06]
+OE = OB [07]
+EO = EA [08]
+∠FOA = ∠OAF [09]
+∠OFA = ∠OFA [10]
+OF = OB [11]
+FO = FA [12]
+A,C,J are collinear [13]
+JO ∥ AD [14]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. ∠EOA = ∠OAE [05] & ∠AEO = ∠AEO [06] (Similar Triangles)⇒  OA:OE = AO:AE [15]
+002. OA:OE = AO:AE [15] & OA = OB [02] & OE = OB [07] ⇒  AO = AE [16]
+003. ∠FOA = ∠OAF [09] & ∠OFA = ∠OFA [10] (Similar Triangles)⇒  OA:OF = AO:AF [17]
+004. OF = OB [11] & OA = OB [02] ⇒  OA = OF [18]
+005. OD = OB [03] & OA = OB [02] ⇒  OA = OD [19]
+006. OA = OD [19] (SSS)⇒  ∠OAD = ∠ADO [20]
+007. OA = OB [02] & DA = DB [04] ⇒  BA ⟂ OD [21]
+008. OA = OB [02] & OB = OC [00] ⇒  O is the circumcenter of \Delta CAB [22]
+009. O is the circumcenter of \Delta CAB [22] & C,O,B are collinear [01] ⇒  AC ⟂ AB [23]
+010. A,C,J are collinear [13] & ∠OAD = ∠ADO [20] & BA ⟂ OD [21] & AC ⟂ AB [23] & AD ∥ JO [14] ⇒  ∠AOJ = ∠OJA [24]
+011. ∠AOJ = ∠OJA [24] ⇒  AO = AJ [25]
+012. AO = AE [16] & OA:OF = AO:AF [17] & OA = OF [18] & AO = AJ [25] ⇒  F,O,J,E are concyclic [26]
+013. F,O,J,E are concyclic [26] ⇒  ∠FOJ = ∠FEJ [27]
+014. FO = FA [12] & OF = OB [11] & OE = OB [07] ⇒  EO = AF [28]
+015. AE = AO [16] & EO = AF [28] & OA = OF [18] (SSS)⇒  AE ∥ FO [29]
+016. OA = OB [02] & OE = OB [07] & OB = OC [00] & OF = OB [11] ⇒  C,F,E,A are concyclic [30]
+017. F,E,A,C are concyclic [30] ⇒  ∠AFE = ∠ACE [31]
+018. FO = FA [12] & OF = OB [11] & OE = OB [07] & EO = EA [08] ⇒  AE = AF [32]
+019. AE = AF [32] ⇒  ∠FEA = ∠AFE [33]
+020. OE = OB [07] & OF = OB [11] & OB = OC [00] & C,F,E,A are concyclic [30] & OA = OB [02] & OD = OB [03] ⇒  D,F,E,A are concyclic [34]
+021. D,F,E,A are concyclic [34] ⇒  ∠FDA = ∠FEA [35]
+022. ∠AFE = ∠ACE [31] & ∠FEA = ∠AFE [33] & ∠FDA = ∠FEA [35] & BA ⟂ OD [21] & AC ⟂ AB [23] ⇒  ∠FDA = ∠(OD-CE) [36]
+023. OD = OB [03] & OF = OB [11] ⇒  OF = OD [37]
+024. OF = OD [37] ⇒  ∠OFD = ∠FDO [38]
+025. ∠FDO = ∠OFD [38] & FO ∥ AE [29] ⇒  ∠FDO = ∠(AE-FD) [39]
+026. ∠FDA = ∠(OD-CE) [36] & ∠FDO = ∠(AE-FD) [39] ⇒  ∠DAE = ∠(CE-DF) [40]
+027. OF = OB [11] & OE = OB [07] & EO = EA [08] ⇒  AE = FO [41]
+028. A,C,J are collinear [13] & AD ∥ JO [14] & BA ⟂ OD [21] & AC ⟂ AB [23] ⇒  ∠JOD = ∠DAJ [42]
+029. A,C,J are collinear [13] & BA ⟂ OD [21] & AC ⟂ AB [23] ⇒  ∠JDO = ∠DJA [43]
+030. ∠JOD = ∠DAJ [42] & ∠JDO = ∠DJA [43] (Similar Triangles)⇒  DO = JA [44]
+031. A,C,J are collinear [13] & AE ∥ FO [29] & BA ⟂ OD [21] & AC ⟂ AB [23] ⇒  ∠EAJ = ∠FOD [45]
+032. AE = FO [41] & DO = JA [44] & ∠EAJ = ∠FOD [45] (SAS)⇒  ∠(AE-FO) = ∠(EJ-DF) [46]
+033. ∠FOJ = ∠FEJ [27] & AE ∥ FO [29] & JO ∥ AD [14] & ∠DAE = ∠(CE-DF) [40] & ∠(AE-FO) = ∠(EJ-DF) [46] ⇒  ∠CEJ = ∠JEF
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2002_p2a =====
+===== 开始处理问题: translated_imo_2002_p2b =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:20:28.884645: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:20:30.038592: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:20:30.041089 139365738764096 graph.py:498] translated_imo_2002_p2b
+I0623 01:20:30.041214 139365738764096 graph.py:499] b c = segment b c; o = midpoint o b c; a = on_circle a o b; d = on_circle d o b, on_bline d a b; e = on_bline e o a, on_circle e o b; f = on_bline f o a, on_circle f o b; j = on_pline j o a d, on_line j a c ? eqangle c e c j c j c f
+I0623 01:20:31.615315 139365738764096 ddar.py:60] Depth 1/1000 time = 1.546584129333496
+I0623 01:20:31.616548 139365738764096 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+B C O A E F J : Points
+OB = OC [00]
+OA = OB [01]
+OE = OB [02]
+EO = EA [03]
+OF = OB [04]
+FO = FA [05]
+A,C,J are collinear [06]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. OA = OB [01] & OF = OB [04] & OE = OB [02] & OB = OC [00] ⇒  E,F,A,C are concyclic [07]
+002. E,F,A,C are concyclic [07] ⇒  ∠AEF = ∠ACF [08]
+003. E,F,A,C are concyclic [07] ⇒  ∠EFA = ∠ECA [09]
+004. EO = EA [03] & OE = OB [02] & OF = OB [04] & FO = FA [05] ⇒  AF = AE [10]
+005. AF = AE [10] ⇒  ∠EFA = ∠AEF [11]
+006. A,C,J are collinear [06] & ∠AEF = ∠ACF [08] & ∠EFA = ∠AEF [11] & ∠EFA = ∠ECA [09] ⇒  ∠ECJ = ∠JCF
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2002_p2b =====
+===== 开始处理问题: translated_imo_2003_p4 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:20:33.167718: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:20:34.306799: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:20:34.309288 134881599944512 graph.py:498] translated_imo_2003_p4
+I0623 01:20:34.309413 134881599944512 graph.py:499] a b c = triangle a b c; o = circle o a b c; b1 = on_circle b1 o a, on_bline b1 c a; d1 = on_circle d1 o a, on_bline d1 c a; x = on_line x b b1, on_line x a c; d = on_line d d1 x, on_circle d o a; p = foot p d b c; q = foot q d c a; r = foot r d a b ? cong p q q r
+I0623 01:20:35.769086 134881599944512 ddar.py:60] Depth 1/1000 time = 1.4321167469024658
+I0623 01:20:43.670416 134881599944512 ddar.py:60] Depth 2/1000 time = 7.901165723800659
+I0623 01:20:50.150057 134881599944512 ddar.py:60] Depth 3/1000 time = 6.4793994426727295
+I0623 01:20:55.810057 134881599944512 ddar.py:60] Depth 4/1000 time = 5.659794330596924
+I0623 01:20:55.821883 134881599944512 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+A B C O B1 D1 X D P Q R : Points
+OB = OC [00]
+OA = OB [01]
+B_1C = B_1A [02]
+OB_1 = OA [03]
+D_1C = D_1A [04]
+OD_1 = OA [05]
+B_1,B,X are collinear [06]
+C,A,X are collinear [07]
+OD = OA [08]
+D,D_1,X are collinear [09]
+C,P,B are collinear [10]
+DP ⟂ BC [11]
+DA:DQ = DA:DQ [12]
+C,A,Q are collinear [13]
+DQ ⟂ AC [14]
+A,B,R are collinear [15]
+DR ⟂ AB [16]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. OB = OC [00] & OA = OB [01] & OD = OA [08] ⇒  D,A,C,B are concyclic [17]
+002. C,D,A,B are concyclic [17] ⇒  ∠DCA = ∠DBA [18]
+003. C,D,A,B are concyclic [17] ⇒  ∠DCB = ∠DAB [19]
+004. C,D,A,B are concyclic [17] ⇒  ∠CAD = ∠CBD [20]
+005. C,D,A,B are concyclic [17] ⇒  ∠CDB = ∠CAB [21]
+006. C,P,B are collinear [10] & C,A,Q are collinear [13] & DQ ⟂ AC [14] & DP ⟂ BC [11] ⇒  ∠CPD = ∠CQD [22]
+007. ∠CPD = ∠CQD [22] ⇒  C,Q,D,P are concyclic [23]
+008. C,Q,D,P are concyclic [23] ⇒  ∠CQP = ∠CDP [24]
+009. C,Q,D,P are concyclic [23] ⇒  ∠CDQ = ∠CPQ [25]
+010. ∠DCA = ∠DBA [18] & ∠CQP = ∠CDP [24] & C,A,Q are collinear [13] ⇒  ∠DPQ = ∠DBA [26]
+011. OB = OC [00] & OA = OB [01] ⇒  OA = OC [27]
+012. OA = OC [27] & D_1C = D_1A [04] ⇒  AC ⟂ OD_1 [28]
+013. OA = OC [27] & D_1C = D_1A [04] (SSS)⇒  ∠OD_1A = ∠CD_1O [29]
+014. OA = OC [27] & B_1C = B_1A [02] ⇒  AC ⟂ OB_1 [30]
+015. OA = OC [27] & B_1C = B_1A [02] (SSS)⇒  ∠OB_1A = ∠CB_1O [31]
+016. ∠CDQ = ∠CPQ [25] & C,P,B are collinear [10] & AC ⟂ OD_1 [28] & AC ⟂ B_1O [30] & DQ ⟂ AC [14] & ∠DCB = ∠DAB [19] ⇒  ∠DAB = ∠DQP [32]
+017. ∠DPQ = ∠DBA [26] & ∠DAB = ∠DQP [32] (Similar Triangles)⇒  DQ:QP = DA:AB [33]
+018. OB = OC [00] & OA = OB [01] & OD_1 = OA [05] & OB_1 = OA [03] ⇒  D_1,B_1,A,B are concyclic [34]
+019. OB = OC [00] & OA = OB [01] & OD_1 = OA [05] & OB_1 = OA [03] ⇒  C,D_1,B_1,B are concyclic [35]
+020. D_1,B_1,A,B are concyclic [34] ⇒  ∠D_1B_1B = ∠D_1AB [36]
+021. C,D_1,B_1,B are concyclic [35] ⇒  ∠CD_1B_1 = ∠CBB_1 [37]
+022. B_1,B,X are collinear [06] & ∠D_1B_1B = ∠D_1AB [36] & ∠OD_1A = ∠CD_1O [29] & AC ⟂ OD_1 [28] & AC ⟂ B_1O [30] & ∠CD_1B_1 = ∠CBB_1 [37] ⇒  ∠CBX = ∠XBA [38]
+023. ∠CBX = ∠XBA [38] & C,A,X are collinear [07] ⇒  CX:CB = AX:AB [39]
+024. D,A,C,B are concyclic [17] & OB = OC [00] & OA = OB [01] & OB_1 = OA [03] & OD_1 = OA [05] ⇒  D,D_1,B_1,A are concyclic [40]
+025. D,A,C,B are concyclic [17] & OB = OC [00] & OA = OB [01] & OB_1 = OA [03] & OD_1 = OA [05] ⇒  C,D,D_1,B_1 are concyclic [41]
+026. D,D_1,B_1,A are concyclic [40] ⇒  ∠DD_1B_1 = ∠DAB_1 [42]
+027. C,D,D_1,B_1 are concyclic [41] ⇒  ∠CDD_1 = ∠CB_1D_1 [43]
+028. D,D_1,X are collinear [09] & ∠DD_1B_1 = ∠DAB_1 [42] & ∠OB_1A = ∠CB_1O [31] & AC ⟂ OD_1 [28] & AC ⟂ B_1O [30] & ∠CDD_1 = ∠CB_1D_1 [43] ⇒  ∠CDX = ∠XDA [44]
+029. ∠CDX = ∠XDA [44] & C,A,X are collinear [07] ⇒  CX:CD = AX:DA [45]
+030. CX:CB = AX:AB [39] & CX:CD = AX:DA [45] ⇒  DA:AB = CD:CB [46]
+031. DQ ⟂ AC [14] & DR ⟂ AB [16] ⇒  ∠QDR = ∠CAB [47]
+032. A,B,R are collinear [15] & C,A,Q are collinear [13] & DQ ⟂ AC [14] & DR ⟂ AB [16] ⇒  ∠ARD = ∠AQD [48]
+033. ∠ARD = ∠AQD [48] ⇒  D,A,Q,R are concyclic [49]
+034. D,A,Q,R are concyclic [49] ⇒  ∠DAQ = ∠DRQ [50]
+035. ∠CAD = ∠CBD [20] & ∠DAQ = ∠DRQ [50] & C,A,Q are collinear [13] ⇒  ∠QRD = ∠CBD [51]
+036. ∠CDB = ∠CAB [21] & ∠QDR = ∠CAB [47] ⇒  ∠QDR = ∠CDB [52]
+037. ∠QRD = ∠CBD [51] & ∠QDR = ∠CDB [52] (Similar Triangles)⇒  DQ:QR = CD:CB [53]
+038. DQ:QP = DA:AB [33] & DA:AB = CD:CB [46] & DQ:QR = CD:CB [53] ⇒  DQ:QR = DQ:QP [54]
+039. DA:DQ = DA:DQ [12] & DQ:QR = DQ:QP [54] ⇒  QR = QP
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2003_p4 =====
+===== 开始处理问题: translated_imo_2004_p1 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:20:57.402650: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:20:58.562682: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:20:58.565176 135782929119040 graph.py:498] translated_imo_2004_p1
+I0623 01:20:58.565303 135782929119040 graph.py:499] a b c = triangle a b c; o = midpoint o b c; m = on_circle m o b, on_line m a b; n = on_circle n o b, on_line n a c; r = angle_bisector r b a c, angle_bisector r m o n; o1 = circle o1 b m r; o2 = circle o2 c n r; p = on_circle p o1 r, on_circle p o2 r ? coll p b c
+I0623 01:20:59.289705 135782929119040 ddar.py:60] Depth 1/1000 time = 0.6956226825714111
+I0623 01:21:00.650120 135782929119040 ddar.py:60] Depth 2/1000 time = 1.3602368831634521
+I0623 01:21:01.935377 135782929119040 ddar.py:60] Depth 3/1000 time = 1.2850677967071533
+I0623 01:21:03.384718 135782929119040 ddar.py:60] Depth 4/1000 time = 1.4491441249847412
+I0623 01:21:04.735280 135782929119040 ddar.py:60] Depth 5/1000 time = 1.3502459526062012
+I0623 01:21:06.236646 135782929119040 ddar.py:60] Depth 6/1000 time = 1.4844565391540527
+I0623 01:21:06.238016 135782929119040 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2004_p1 =====
+===== 开始处理问题: translated_imo_2004_p5 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:21:07.782176: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:21:08.933686: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:21:08.936328 131487686399808 graph.py:498] translated_imo_2004_p5
+I0623 01:21:08.936455 131487686399808 graph.py:499] a b c = triangle a b c; o = circle o a b c; d = on_circle d o a; p = on_aline p b c a b d, on_aline p d c a d b ? cong a p c p
+I0623 01:21:09.005161 131487686399808 ddar.py:60] Depth 1/1000 time = 0.06337094306945801
+I0623 01:21:09.094232 131487686399808 ddar.py:60] Depth 2/1000 time = 0.08890724182128906
+I0623 01:21:09.159759 131487686399808 ddar.py:60] Depth 3/1000 time = 0.06537437438964844
+I0623 01:21:09.230228 131487686399808 ddar.py:60] Depth 4/1000 time = 0.06937551498413086
+I0623 01:21:09.311323 131487686399808 ddar.py:60] Depth 5/1000 time = 0.08094143867492676
+I0623 01:21:09.406658 131487686399808 ddar.py:60] Depth 6/1000 time = 0.09519243240356445
+I0623 01:21:09.505036 131487686399808 ddar.py:60] Depth 7/1000 time = 0.0982205867767334
+I0623 01:21:09.607527 131487686399808 ddar.py:60] Depth 8/1000 time = 0.10214376449584961
+I0623 01:21:09.717191 131487686399808 ddar.py:60] Depth 9/1000 time = 0.10817074775695801
+I0623 01:21:09.718486 131487686399808 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+A B C O D P : Points
+OA = OB [00]
+OB = OC [01]
+OD = OA [02]
+∠PBC = ∠ABD [03]
+∠PDC = ∠ADB [04]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. OA = OB [00] & OB = OC [01] ⇒  OC = OA [05]
+002. OD = OA [02] & OA = OB [00] ⇒  OB = OD [06]
+003. OB = OD [06] ⇒  ∠OBD = ∠BDO [07]
+004. OB = OC [01] ⇒  ∠OBC = ∠BCO [08]
+005. OA = OB [00] ⇒  ∠OBA = ∠BAO [09]
+006. OB = OC [01] & OA = OB [00] & OD = OA [02] ⇒  D,B,C,A are concyclic [10]
+007. OB = OC [01] & OA = OB [00] & OD = OA [02] ⇒  OD = OC [11]
+008. D,B,C,A are concyclic [10] ⇒  ∠DCB = ∠DAB [12]
+009. OD = OC [11] ⇒  ∠ODC = ∠DCO [13]
+010. ∠PBC = ∠ABD [03] & ∠PDC = ∠ADB [04] & ∠DCB = ∠DAB [12] & ∠OBC = ∠BCO [08] & ∠ODC = ∠DCO [13] (Angle chase)⇒  ∠BPD = ∠BOD [14]
+011. ∠BPD = ∠BOD [14] ⇒  D,B,P,O are concyclic [15]
+012. D,B,P,O are concyclic [15] ⇒  ∠DBP = ∠DOP [16]
+013. ∠PBC = ∠ABD [03] & ∠OBD = ∠BDO [07] & ∠OBC = ∠BCO [08] & ∠OBA = ∠BAO [09] & ∠DBP = ∠DOP [16] (Angle chase)⇒  ∠COP = ∠POA [17]
+014. OC = OA [05] & ∠COP = ∠POA [17] (SAS)⇒  PC = PA
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2004_p5 =====
+===== 开始处理问题: translated_imo_2005_p5 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:21:11.258223: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:21:12.407324: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:21:12.409748 125347460491072 graph.py:498] translated_imo_2005_p5
+I0623 01:21:12.409868 125347460491072 graph.py:499] a b c = triangle a b c; d = eqdistance d a b c; e = on_line e b c; f = on_line f a d, eqdistance f d e b; p = on_line p a c, on_line p b d; q = on_line q e f, on_line q b d; r = on_line r e f, on_line r a c; o1 = circle o1 a p d; o2 = circle o2 b p c; m = on_circle m o1 p, on_circle m o2 p ? cyclic p q r m
+I0623 01:21:13.366575 125347460491072 ddar.py:60] Depth 1/1000 time = 0.9250867366790771
+I0623 01:21:14.600075 125347460491072 ddar.py:60] Depth 2/1000 time = 1.2333343029022217
+I0623 01:21:15.939030 125347460491072 ddar.py:60] Depth 3/1000 time = 1.338775873184204
+I0623 01:21:17.393148 125347460491072 ddar.py:60] Depth 4/1000 time = 1.453923225402832
+I0623 01:21:19.096138 125347460491072 ddar.py:60] Depth 5/1000 time = 1.7028272151947021
+I0623 01:21:20.759655 125347460491072 ddar.py:60] Depth 6/1000 time = 1.663327932357788
+I0623 01:21:22.723826 125347460491072 ddar.py:60] Depth 7/1000 time = 1.9639861583709717
+I0623 01:21:22.729089 125347460491072 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+A B C D E F P Q R O1 O2 M : Points
+DA = BC [00]
+E,B,C are collinear [01]
+FD = EB [02]
+D,F,A are collinear [03]
+P,C,A are collinear [04]
+P,B,D are collinear [05]
+E,F,Q are collinear [06]
+B,D,Q are collinear [07]
+E,R,F are collinear [08]
+R,C,A are collinear [09]
+O_1P = O_1D [10]
+O_1A = O_1P [11]
+O_2B = O_2P [12]
+O_2P = O_2C [13]
+O_1M = O_1P [14]
+O_2M = O_2P [15]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. O_1P = O_1D [10] & O_1M = O_1P [14] & O_1A = O_1P [11] ⇒  M,D,P,A are concyclic [16]
+002. M,D,P,A are concyclic [16] ⇒  ∠MDA = ∠MPA [17]
+003. M,D,P,A are concyclic [16] ⇒  ∠MPD = ∠MAD [18]
+004. O_2B = O_2P [12] & O_2M = O_2P [15] & O_2P = O_2C [13] ⇒  P,B,M,C are concyclic [19]
+005. P,B,M,C are concyclic [19] ⇒  ∠PBC = ∠PMC [20]
+006. P,B,M,C are concyclic [19] ⇒  ∠PMB = ∠PCB [21]
+007. ∠MPD = ∠MAD [18] & P,B,D are collinear [05] & ∠PBC = ∠PMC [20] ⇒  ∠MCB = ∠MAD [22]
+008. ∠MDA = ∠MPA [17] & P,C,A are collinear [04] & ∠PMB = ∠PCB [21] ⇒  ∠MBC = ∠MDA [23]
+009. ∠MCB = ∠MAD [22] & ∠MBC = ∠MDA [23] (Similar Triangles)⇒  BC:DA = BM:DM [24]
+010. BC:DA = BM:DM [24] & DA = BC [00] ⇒  MD = MB [25]
+011. D,F,A are collinear [03] & E,B,C are collinear [01] & ∠ADM = ∠CBM [23] ⇒  ∠FDM = ∠EBM [26]
+012. FD = EB [02] & BM = DM [25] & ∠FDM = ∠EBM [26] (SAS)⇒  MF = ME [27]
+013. FD = EB [02] & BM = DM [25] & ∠FDM = ∠EBM [26] (SAS)⇒  ∠EMF = ∠BMD [28]
+014. MD = MB [25] & MF = ME [27] ⇒  MD:MB = MF:ME [29]
+015. MD:MB = MF:ME [29] & ∠EMF = ∠BMD [28] (Similar Triangles)⇒  ∠MDB = ∠MFE [30]
+016. E,F,Q are collinear [06] & B,D,Q are collinear [07] & ∠MFE = ∠MDB [30] ⇒  ∠MFQ = ∠MDQ [31]
+017. ∠MFQ = ∠MDQ [31] ⇒  M,D,F,Q are concyclic [32]
+018. M,D,F,Q are concyclic [32] ⇒  ∠MDF = ∠MQF [33]
+019. E,R,F are collinear [08] & E,F,Q are collinear [06] & R,C,A are collinear [09] & P,C,A are collinear [04] & ∠MDA = ∠MPA [17] & ∠MDF = ∠MQF [33] & D,F,A are collinear [03] ⇒  ∠MQR = ∠MPR [34]
+020. ∠MQR = ∠MPR [34] ⇒  P,M,R,Q are concyclic
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2005_p5 =====
+===== 开始处理问题: translated_imo_2007_p4 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:21:24.303166: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:21:25.426952: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:21:25.429402 130311566878528 graph.py:498] translated_imo_2007_p4
+I0623 01:21:25.429522 130311566878528 graph.py:499] a b c = triangle a b c; o = circle o a b c; r = on_circle r o a, on_bline r a b; l = midpoint l c a; k = midpoint k c b; p = on_line p o k, on_line p c r; q = on_line q o l, on_line q c r; l1 = foot l1 l c r; k1 = foot k1 k c r ? eqratio k k1 l l1 r q r p
+I0623 01:21:26.898390 130311566878528 ddar.py:60] Depth 1/1000 time = 1.4457745552062988
+I0623 01:21:29.621201 130311566878528 ddar.py:60] Depth 2/1000 time = 2.722641706466675
+I0623 01:21:29.629894 130311566878528 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+A B C O R L K P Q L1 K1 : Points
+OB = OC [00]
+OA = OB [01]
+OR = OA [02]
+RA = RB [03]
+∠BAR = ∠RBA [04]
+A,L,C are collinear [05]
+LC = LA [06]
+K,B,C are collinear [07]
+KC = KB [08]
+K,P,O are collinear [09]
+P,C,R are collinear [10]
+L,Q,O are collinear [11]
+Q,C,R are collinear [12]
+L_1,C,R are collinear [13]
+L_1L ⟂ CR [14]
+K_1,C,R are collinear [15]
+CR ⟂ K_1K [16]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. OB = OC [00] & KC = KB [08] ⇒  BC ⟂ KO [17]
+002. OA = OB [01] & OB = OC [00] ⇒  OC = OA [18]
+003. OC = OA [18] & LC = LA [06] ⇒  AC ⟂ LO [19]
+004. L,A,C are collinear [05] & L,Q,O are collinear [11] & K,P,O are collinear [09] & K,B,C are collinear [07] & BC ⟂ KO [17] & AC ⟂ LO [19] ⇒  ∠CLQ = ∠PKC [20]
+005. OB = OC [00] & OA = OB [01] & OR = OA [02] ⇒  O is the circumcenter of \Delta RCB [21]
+006. OB = OC [00] & OA = OB [01] & OR = OA [02] ⇒  O is the circumcenter of \Delta RCA [22]
+007. OB = OC [00] & OA = OB [01] & OR = OA [02] ⇒  A,B,C,R are concyclic [23]
+008. OB = OC [00] & OA = OB [01] & OR = OA [02] ⇒  OC = OR [24]
+009. K,B,C are collinear [07] & KC = KB [08] ⇒  K is midpoint of CB [25]
+010. O is the circumcenter of \Delta RCB [21] & K is midpoint of CB [25] ⇒  ∠BRC = ∠BOK [26]
+011. OA = OB [01] & RA = RB [03] (SSS)⇒  ∠RAO = ∠OBR [27]
+012. A,L,C are collinear [05] & LC = LA [06] ⇒  L is midpoint of CA [28]
+013. O is the circumcenter of \Delta RCA [22] & L is midpoint of CA [28] ⇒  ∠ARC = ∠AOL [29]
+014. K_1,C,R are collinear [15] & L_1,C,R are collinear [13] & P,C,R are collinear [10] & Q,C,R are collinear [12] & L,Q,O are collinear [11] & K,P,O are collinear [09] & ∠BRC = ∠BOK [26] & ∠RAO = ∠OBR [27] & ∠ARC = ∠AOL [29] ⇒  ∠CQL = ∠KPC [30]
+015. ∠CLQ = ∠PKC [20] & ∠CQL = ∠KPC [30] (Similar Triangles)⇒  CL:CK = CQ:CP [31]
+016. K_1,C,R are collinear [15] & L_1,C,R are collinear [13] & L_1L ⟂ CR [14] & P,C,R are collinear [10] & CR ⟂ K_1K [16] ⇒  ∠KK_1C = ∠CL_1L [32]
+017. A,B,C,R are concyclic [23] ⇒  ∠ABR = ∠ACR [33]
+018. A,B,C,R are concyclic [23] ⇒  ∠ABC = ∠ARC [34]
+019. K,B,C are collinear [07] & K_1,C,R are collinear [15] & L_1,C,R are collinear [13] & L,A,C are collinear [05] & ∠ABR = ∠ACR [33] & ∠BAR = ∠RBA [04] & ∠ABC = ∠ARC [34] ⇒  ∠KCK_1 = ∠L_1CL [35]
+020. ∠KK_1C = ∠CL_1L [32] & ∠KCK_1 = ∠L_1CL [35] (Similar Triangles)⇒  KK_1:LL_1 = KC:LC [36]
+021. OC = OR [24] ⇒  ∠OCR = ∠CRO [37]
+022. K_1,C,R are collinear [15] & L_1,C,R are collinear [13] & P,C,R are collinear [10] & Q,C,R are collinear [12] & ∠OCR = ∠CRO [37] ⇒  ∠OCP = ∠QRO [38]
+023. K,P,O are collinear [09] & K_1,C,R are collinear [15] & L_1,C,R are collinear [13] & P,C,R are collinear [10] & Q,C,R are collinear [12] & L,Q,O are collinear [11] & ∠BRC = ∠BOK [26] & ∠RAO = ∠OBR [27] & ∠ARC = ∠AOL [29] ⇒  ∠OPC = ∠RQO [39]
+024. ∠OCP = ∠QRO [38] & ∠OPC = ∠RQO [39] (Similar Triangles)⇒  CO:RO = CP:RQ [40]
+025. K_1,C,R are collinear [15] & L_1,C,R are collinear [13] & P,C,R are collinear [10] & Q,C,R are collinear [12] & ∠OCR = ∠CRO [37] ⇒  ∠OCQ = ∠PRO [41]
+026. L,Q,O are collinear [11] & K_1,C,R are collinear [15] & L_1,C,R are collinear [13] & P,C,R are collinear [10] & Q,C,R are collinear [12] & K,P,O are collinear [09] & ∠BRC = ∠BOK [26] & ∠RAO = ∠OBR [27] & ∠ARC = ∠AOL [29] ⇒  ∠OQC = ∠RPO [42]
+027. ∠OCQ = ∠PRO [41] & ∠OQC = ∠RPO [42] (Similar Triangles)⇒  CO:RO = CQ:RP [43]
+028. CL:CK = CQ:CP [31] & LC = LA [06] & KC = KB [08] & KK_1:LL_1 = KC:LC [36] & CO:RO = CP:RQ [40] & OC = OR [24] & CO:RO = CQ:RP [43] ⇒  KK_1:LL_1 = RQ:RP
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2007_p4 =====
+===== 开始处理问题: translated_imo_2008_p1a =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:21:31.176097: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:21:32.319744: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:21:32.322204 129275839272768 graph.py:498] translated_imo_2008_p1a
+I0623 01:21:32.322322 129275839272768 graph.py:499] a b c = triangle a b c; h = orthocenter h a b c; d = midpoint d b c; e = midpoint e a c; f = midpoint f a b; a1 = on_circle a1 d h, on_line a1 b c; a2 = on_circle a2 d h, on_line a2 b c; b1 = on_circle b1 e h, on_line b1 c a; b2 = on_circle b2 e h, on_line b2 c a; c1 = on_circle c1 f h, on_line c1 a b; c2 = on_circle c2 f h, on_line c2 a b ? cyclic c1 c2 b1 b2
+I0623 01:21:35.564369 129275839272768 ddar.py:60] Depth 1/1000 time = 3.193347930908203
+I0623 01:21:39.435087 129275839272768 ddar.py:60] Depth 2/1000 time = 3.870558261871338
+I0623 01:21:43.623999 129275839272768 ddar.py:60] Depth 3/1000 time = 4.188724994659424
+I0623 01:21:48.213361 129275839272768 ddar.py:60] Depth 4/1000 time = 4.5887451171875
+I0623 01:21:48.223621 129275839272768 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2008_p1a =====
+===== 开始处理问题: translated_imo_2008_p1b =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:21:49.768974: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:21:50.911405: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:21:50.913793 137864599000896 graph.py:498] translated_imo_2008_p1b
+I0623 01:21:50.913936 137864599000896 graph.py:499] a b c = triangle a b c; h = orthocenter h a b c; d = midpoint d b c; e = midpoint e a c; f = midpoint f a b; a1 = on_circle a1 d h, on_line a1 b c; a2 = on_circle a2 d h, on_line a2 b c; b1 = on_circle b1 e h, on_line b1 c a; b2 = on_circle b2 e h, on_line b2 c a; c1 = on_circle c1 f h, on_line c1 a b; c2 = on_circle c2 f h, on_line c2 a b ? cyclic c1 c2 b1 a1
+I0623 01:21:54.159085 137864599000896 ddar.py:60] Depth 1/1000 time = 3.1959469318389893
+I0623 01:21:57.954526 137864599000896 ddar.py:60] Depth 2/1000 time = 3.795259714126587
+I0623 01:22:02.042469 137864599000896 ddar.py:60] Depth 3/1000 time = 4.087778806686401
+I0623 01:22:06.730062 137864599000896 ddar.py:60] Depth 4/1000 time = 4.686980962753296
+I0623 01:22:06.740785 137864599000896 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2008_p1b =====
+===== 开始处理问题: translated_imo_2008_p6 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:22:08.378304: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:22:09.582962: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:22:09.585386 137902552651584 graph.py:498] translated_imo_2008_p6
+I0623 01:22:09.585504 137902552651584 graph.py:499] x y z = triangle x y z; o = circle o x y z; w = on_circle w o x; a = on_tline a z o z, on_tline a x o x; b = on_tline b z o z, on_tline b w o w; c = on_tline c y o y, on_tline c w o w; d = on_tline d x o x, on_tline d y o y; i1 = incenter i1 a b c; i2 = incenter i2 a c d; f1 = foot f1 i1 a c; f2 = foot f2 i2 a c; q t p s = cc_tangent q t p s i1 f1 i2 f2; k = on_line k q t, on_line k p s ? cong o k o x
+I0623 01:22:11.111258 137902552651584 ddar.py:60] Depth 1/1000 time = 1.438736915588379
+I0623 01:22:13.446178 137902552651584 ddar.py:60] Depth 2/1000 time = 2.334745407104492
+I0623 01:22:21.580203 137902552651584 ddar.py:60] Depth 3/1000 time = 8.133841276168823
+I0623 01:22:32.016599 137902552651584 ddar.py:60] Depth 4/1000 time = 10.436183452606201
+I0623 01:22:42.525049 137902552651584 ddar.py:60] Depth 5/1000 time = 10.508240222930908
+I0623 01:22:54.928704 137902552651584 ddar.py:60] Depth 6/1000 time = 12.400226354598999
+I0623 01:23:07.589992 137902552651584 ddar.py:60] Depth 7/1000 time = 12.66107177734375
+I0623 01:23:20.459743 137902552651584 ddar.py:60] Depth 8/1000 time = 12.758479595184326
+I0623 01:23:33.355668 137902552651584 ddar.py:60] Depth 9/1000 time = 12.895718336105347
+I0623 01:23:46.137086 137902552651584 ddar.py:60] Depth 10/1000 time = 12.614372491836548
+I0623 01:23:46.138108 137902552651584 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2008_p6 =====
+===== 开始处理问题: translated_imo_2009_p2 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:23:47.664205: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:23:48.805074: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:23:48.807553 129227576534848 graph.py:498] translated_imo_2009_p2
+I0623 01:23:48.807687 129227576534848 graph.py:499] m l k = triangle m l k; w = circle w m l k; q = on_tline q m w m; p = mirror p q m; b = mirror b p k; c = mirror c q l; a = on_line a b q, on_line a c p; o = circle o a b c ? cong o p o q
+I0623 01:23:49.100359 129227576534848 ddar.py:60] Depth 1/1000 time = 0.26665782928466797
+I0623 01:23:49.424913 129227576534848 ddar.py:60] Depth 2/1000 time = 0.32440614700317383
+I0623 01:23:49.832144 129227576534848 ddar.py:60] Depth 3/1000 time = 0.40706729888916016
+I0623 01:23:50.253284 129227576534848 ddar.py:60] Depth 4/1000 time = 0.42096853256225586
+I0623 01:23:50.683901 129227576534848 ddar.py:60] Depth 5/1000 time = 0.4302985668182373
+I0623 01:23:51.047458 129227576534848 ddar.py:60] Depth 6/1000 time = 0.3589189052581787
+I0623 01:23:51.483238 129227576534848 ddar.py:60] Depth 7/1000 time = 0.4356207847595215
+I0623 01:23:51.918047 129227576534848 ddar.py:60] Depth 8/1000 time = 0.4323911666870117
+I0623 01:23:51.918694 129227576534848 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2009_p2 =====
+===== 开始处理问题: translated_imo_2010_p2 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:23:53.440196: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:23:54.636012: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:23:54.638466 125339090302784 graph.py:498] translated_imo_2010_p2
+I0623 01:23:54.638582 125339090302784 graph.py:499] a b c = triangle a b c; o = circle o a b c; i = incenter i a b c; d = on_line d a i, on_circle d o a; f = on_line f b c; e = on_aline e a c b a f, on_circle e o a; g = midpoint g i f; k = on_line k d g, on_line k e i ? cong o a o k
+I0623 01:23:55.150142 125339090302784 ddar.py:60] Depth 1/1000 time = 0.4963808059692383
+I0623 01:23:55.820966 125339090302784 ddar.py:60] Depth 2/1000 time = 0.670677661895752
+I0623 01:23:56.470723 125339090302784 ddar.py:60] Depth 3/1000 time = 0.6496021747589111
+I0623 01:23:57.130860 125339090302784 ddar.py:60] Depth 4/1000 time = 0.6599857807159424
+I0623 01:23:57.791692 125339090302784 ddar.py:60] Depth 5/1000 time = 0.660545825958252
+I0623 01:23:58.395850 125339090302784 ddar.py:60] Depth 6/1000 time = 0.5966665744781494
+I0623 01:23:59.153568 125339090302784 ddar.py:60] Depth 7/1000 time = 0.7575457096099854
+I0623 01:23:59.938882 125339090302784 ddar.py:60] Depth 8/1000 time = 0.7851653099060059
+I0623 01:24:00.712479 125339090302784 ddar.py:60] Depth 9/1000 time = 0.7706458568572998
+I0623 01:24:00.712661 125339090302784 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2010_p2 =====
+===== 开始处理问题: translated_imo_2010_p4 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:24:02.225526: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:24:03.354195: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:24:03.356711 132708414400320 graph.py:498] translated_imo_2010_p4
+I0623 01:24:03.356827 132708414400320 graph.py:499] s c p = iso_triangle s c p; o = on_tline o c s c; a = on_circle a o c; b = on_circle b o c, on_line b s a; m = on_line m c p, on_circle m o c; l = on_line l b p, on_circle l o c; k = on_line k a p, on_circle k o c ? cong m k m l
+I0623 01:24:03.808868 132708414400320 ddar.py:60] Depth 1/1000 time = 0.43525242805480957
+I0623 01:24:05.387319 132708414400320 ddar.py:60] Depth 2/1000 time = 1.5783054828643799
+I0623 01:24:06.998510 132708414400320 ddar.py:60] Depth 3/1000 time = 1.6110303401947021
+I0623 01:24:08.641118 132708414400320 ddar.py:60] Depth 4/1000 time = 1.642456293106079
+I0623 01:24:10.339841 132708414400320 ddar.py:60] Depth 5/1000 time = 1.6985032558441162
+I0623 01:24:10.345654 132708414400320 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+S C P O A B M L K : Points
+SC = SP [00]
+∠PCS = ∠SPC [01]
+CO ⟂ CS [02]
+OA = OC [03]
+OB = OC [04]
+B,S,A are collinear [05]
+OM = OC [06]
+P,M,C are collinear [07]
+OL = OC [08]
+P,B,L are collinear [09]
+OK = OC [10]
+P,K,A are collinear [11]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. OL = OC [08] & OK = OC [10] & OA = OC [03] & OB = OC [04] & OM = OC [06] ⇒  L,A,K,M are concyclic [12]
+002. OL = OC [08] & OK = OC [10] & OA = OC [03] & OB = OC [04] & OM = OC [06] ⇒  M,L,K,C are concyclic [13]
+003. OA = OC [03] & OB = OC [04] ⇒  O is the circumcenter of \Delta CAB [14]
+004. O is the circumcenter of \Delta CAB [14] & CO ⟂ CS [02] ⇒  ∠SCA = ∠CBA [15]
+005. B,S,A are collinear [05] & ∠CBA = ∠SCA [15] ⇒  ∠CBS = ∠SCA [16]
+006. B,S,A are collinear [05] ⇒  ∠ASC = ∠BSC [17]
+007. B,S,A are collinear [05] ⇒  ∠ASP = ∠BSP [18]
+008. ∠CBS = ∠SCA [16] & ∠ASC = ∠BSC [17] (Similar Triangles)⇒  SA:SC = SC:SB [19]
+009. SA:SC = SC:SB [19] & SC = SP [00] ⇒  SA:PS = PS:BS [20]
+010. SA:PS = PS:BS [20] & ∠ASP = ∠BSP [18] (Similar Triangles)⇒  ∠SAP = ∠BPS [21]
+011. OL = OC [08] & OK = OC [10] & OA = OC [03] & OB = OC [04] & L,A,K,M are concyclic [12] ⇒  M,A,B,K are concyclic [22]
+012. M,A,B,K are concyclic [22] ⇒  ∠KMB = ∠KAB [23]
+013. P,L,B are collinear [09] & ∠SAP = ∠BPS [21] & B,S,A are collinear [05] & P,K,A are collinear [11] & ∠KMB = ∠KAB [23] ⇒  ∠KMB = ∠SPB [24]
+014. OL = OC [08] & OM = OC [06] ⇒  O is the circumcenter of \Delta CLM [25]
+015. O is the circumcenter of \Delta CLM [25] & CO ⟂ CS [02] ⇒  ∠SCM = ∠CLM [26]
+016. P,M,C are collinear [07] & ∠SCM = ∠CLM [26] & ∠PCS = ∠SPC [01] ⇒  ∠SPM = ∠MLC [27]
+017. M,L,K,C are concyclic [13] ⇒  ∠CMK = ∠CLK [28]
+018. P,M,C are collinear [07] & ∠CMK = ∠CLK [28] ⇒  ∠PMK = ∠CLK [29]
+019. ∠SPM = ∠MLC [27] & ∠PMK = ∠CLK [29] ⇒  ∠(PS-LM) = ∠MKL [30]
+020. ∠KMB = ∠SPB [24] & ∠(PS-LM) = ∠MKL [30] ⇒  ∠(BM-KL) = ∠(PB-ML) [31]
+021. OA = OC [03] & OL = OC [08] & OB = OC [04] & OM = OC [06] ⇒  M,L,A,B are concyclic [32]
+022. M,L,A,B are concyclic [32] ⇒  ∠MAL = ∠MBL [33]
+023. ∠(BM-KL) = ∠(PB-ML) [31] & P,B,L are collinear [09] & ∠MAL = ∠MBL [33] ⇒  ∠MAL = ∠KLM [34]
+024. M,L,A,K are concyclic [12] & ∠MAL = ∠KLM [34] ⇒  ML = KM
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2010_p4 =====
+===== 开始处理问题: translated_imo_2011_p6 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:24:11.875774: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:24:13.019488: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:24:13.021992 125600139601728 graph.py:498] translated_imo_2011_p6
+I0623 01:24:13.022137 125600139601728 graph.py:499] a b c = triangle a b c; o = circle o a b c; p = on_circle p o a; q = on_tline q p o p; pa = reflect pa p b c; pb = reflect pb p c a; pc = reflect pc p a b; qa = reflect qa q b c; qb = reflect qb q c a; qc = reflect qc q a b; a1 = on_line a1 pb qb, on_line a1 pc qc; b1 = on_line b1 pa qa, on_line b1 pc qc; c1 = on_line c1 pa qa, on_line c1 pb qb; o1 = circle o1 a1 b1 c1; x = on_circle x o a, on_circle x o1 a1 ? coll x o o1
+I0623 01:24:17.158343 125600139601728 ddar.py:60] Depth 1/1000 time = 3.9563090801239014
+I0623 01:24:23.661274 125600139601728 ddar.py:60] Depth 2/1000 time = 6.502755165100098
+I0623 01:24:30.259028 125600139601728 ddar.py:60] Depth 3/1000 time = 6.5975658893585205
+I0623 01:24:37.184989 125600139601728 ddar.py:60] Depth 4/1000 time = 6.925782680511475
+I0623 01:24:45.593205 125600139601728 ddar.py:60] Depth 5/1000 time = 8.408021688461304
+I0623 01:24:52.996498 125600139601728 ddar.py:60] Depth 6/1000 time = 7.4030797481536865
+I0623 01:25:00.612103 125600139601728 ddar.py:60] Depth 7/1000 time = 7.6153764724731445
+I0623 01:25:10.208800 125600139601728 ddar.py:60] Depth 8/1000 time = 9.447880268096924
+I0623 01:25:23.761068 125600139601728 ddar.py:60] Depth 9/1000 time = 13.55206036567688
+I0623 01:25:38.166664 125600139601728 ddar.py:60] Depth 10/1000 time = 14.405377864837646
+I0623 01:25:56.658896 125600139601728 ddar.py:60] Depth 11/1000 time = 18.492024660110474
+I0623 01:26:14.895402 125600139601728 ddar.py:60] Depth 12/1000 time = 18.23627233505249
+I0623 01:26:33.273957 125600139601728 ddar.py:60] Depth 13/1000 time = 18.3782901763916
+I0623 01:26:52.192831 125600139601728 ddar.py:60] Depth 14/1000 time = 18.795459747314453
+I0623 01:27:11.059454 125600139601728 ddar.py:60] Depth 15/1000 time = 18.866392612457275
+I0623 01:27:11.181059 125600139601728 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2011_p6 =====
+===== 开始处理问题: translated_imo_2012_p1 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:27:12.705789: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:27:13.835115: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:27:13.837668 133516420237120 graph.py:498] translated_imo_2012_p1
+I0623 01:27:13.837785 133516420237120 graph.py:499] a b c = triangle a b c; m l k j = excenter2 m l k j a b c; f = on_line f m l, on_line f b j; g = on_line g m k, on_line g c j; s = on_line s f a, on_line s b c; t = on_line t g a, on_line t c b ? cong m s m t
+I0623 01:27:14.264949 133516420237120 ddar.py:60] Depth 1/1000 time = 0.41980600357055664
+I0623 01:27:15.410213 133516420237120 ddar.py:60] Depth 2/1000 time = 1.1451153755187988
+I0623 01:27:17.478601 133516420237120 ddar.py:60] Depth 3/1000 time = 2.0682151317596436
+I0623 01:27:20.463572 133516420237120 ddar.py:60] Depth 4/1000 time = 2.9847819805145264
+I0623 01:27:27.717972 133516420237120 ddar.py:60] Depth 5/1000 time = 7.254199743270874
+I0623 01:27:27.757585 133516420237120 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+A B C J M L K F G S T : Points
+∠JAB = ∠CAJ [00]
+∠ACJ = ∠JCB [01]
+M,B,C are collinear [02]
+JM ⟂ BC [03]
+A,C,L are collinear [04]
+JL ⟂ AC [05]
+A,K,B are collinear [06]
+JK ⟂ AB [07]
+J,B,F are collinear [08]
+L,F,M are collinear [09]
+M,K,G are collinear [10]
+J,C,G are collinear [11]
+S,B,C are collinear [12]
+A,F,S are collinear [13]
+A,T,G are collinear [14]
+B,T,C are collinear [15]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. A,K,B are collinear [06] & M,B,C are collinear [02] & JM ⟂ BC [03] & JK ⟂ AB [07] ⇒  ∠JKB = ∠JMB [16]
+002. ∠JKB = ∠JMB [16] ⇒  M,J,K,B are concyclic [17]
+003. M,J,K,B are concyclic [17] ⇒  ∠MKJ = ∠MBJ [18]
+004. M,J,K,B are concyclic [17] ⇒  ∠MJB = ∠MKB [19]
+005. A,K,B are collinear [06] & A,C,L are collinear [04] & JL ⟂ AC [05] & JK ⟂ AB [07] ⇒  ∠JKA = ∠ALJ [20]
+006. A,K,B are collinear [06] & A,C,L are collinear [04] & ∠JAB = ∠CAJ [00] ⇒  ∠JAK = ∠LAJ [21]
+007. ∠JKA = ∠ALJ [20] & ∠JAK = ∠LAJ [21] (Similar Triangles)⇒  JK = JL [22]
+008. M,B,C are collinear [02] & A,C,L are collinear [04] & JL ⟂ AC [05] & JM ⟂ BC [03] ⇒  ∠JMC = ∠CLJ [23]
+009. J,C,G are collinear [11] & M,B,C are collinear [02] & A,C,L are collinear [04] & ∠JCB = ∠ACJ [01] ⇒  ∠JCM = ∠LCJ [24]
+010. ∠JMC = ∠CLJ [23] & ∠JCM = ∠LCJ [24] (Similar Triangles)⇒  JM = JL [25]
+011. ∠JMC = ∠CLJ [23] & ∠JCM = ∠LCJ [24] (Similar Triangles)⇒  CM = CL [26]
+012. ∠JMC = ∠CLJ [23] & ∠JCM = ∠LCJ [24] (Similar Triangles)⇒  ∠MJC = ∠CJL [27]
+013. JK = JL [22] & JM = JL [25] ⇒  J is the circumcenter of \Delta LKM [28]
+014. JK = JL [22] & JM = JL [25] ⇒  JK = JM [29]
+015. M,B,C are collinear [02] & S,B,C are collinear [12] ⇒  S,B,M are collinear [30]
+016. S,B,C are collinear [12] & S,B,M are collinear [30] & JM ⟂ BC [03] ⇒  MJ ⟂ SM [31]
+017. J is the circumcenter of \Delta LKM [28] & MJ ⟂ SM [31] ⇒  ∠SML = ∠MKL [32]
+018. J,B,F are collinear [08] & ∠MKJ = ∠MBJ [18] & M,K,G are collinear [10] & M,B,C are collinear [02] & ∠SML = ∠MKL [32] & S,B,C are collinear [12] & S,B,M are collinear [30] & L,F,M are collinear [09] ⇒  ∠KLF = ∠KJF [33]
+019. ∠KLF = ∠KJF [33] ⇒  L,J,K,F are concyclic [34]
+020. A,K,B are collinear [06] & A,C,L are collinear [04] & JL ⟂ AC [05] & JK ⟂ AB [07] ⇒  ∠JKA = ∠JLA [35]
+021. ∠JKA = ∠JLA [35] ⇒  A,J,K,L are concyclic [36]
+022. M,B,C are collinear [02] & A,C,L are collinear [04] & JL ⟂ AC [05] & JM ⟂ BC [03] ⇒  ∠JMC = ∠JLC [37]
+023. ∠JMC = ∠JLC [37] ⇒  M,J,C,L are concyclic [38]
+024. M,J,C,L are concyclic [38] ⇒  ∠MCJ = ∠MLJ [39]
+025. J,C,G are collinear [11] & ∠SML = ∠MKL [32] & S,B,C are collinear [12] & S,B,M are collinear [30] & L,F,M are collinear [09] & M,K,G are collinear [10] & ∠MCJ = ∠MLJ [39] & M,B,C are collinear [02] ⇒  ∠GJL = ∠GKL [40]
+026. ∠GJL = ∠GKL [40] ⇒  L,J,K,G are concyclic [41]
+027. L,J,K,F are concyclic [34] & A,J,K,L are concyclic [36] & L,J,K,G are concyclic [41] ⇒  K,A,F,G are concyclic [42]
+028. K,A,F,G are concyclic [42] ⇒  ∠KFA = ∠KGA [43]
+029. M,K,G are collinear [10] & A,T,G are collinear [14] & ∠KGA = ∠KFA [43] ⇒  ∠MGT = ∠KFA [44]
+030. JM = JL [25] & CM = CL [26] ⇒  LM ⟂ JC [45]
+031. J,C,G are collinear [11] & S,B,C are collinear [12] & S,B,M are collinear [30] & JM ⟂ BC [03] & LM ⟂ JC [45] & L,F,M are collinear [09] ⇒  ∠(JC-LF) = ∠JMS [46]
+032. J,C,G are collinear [11] & LM ⟂ JC [45] & L,F,M are collinear [09] ⇒  JC ⟂ LF [47]
+033. A,K,B are collinear [06] & JK ⟂ AB [07] ⇒  JK ⟂ AK [48]
+034. JC ⟂ LF [47] & JK ⟂ AK [48] ⇒  ∠(JC-AK) = ∠(LF-JK) [49]
+035. J is the circumcenter of \Delta LKM [28] & JK ⟂ AK [48] ⇒  ∠AKL = ∠KML [50]
+036. J,B,F are collinear [08] & ∠MJB = ∠MKB [19] & M,K,G are collinear [10] & A,K,B are collinear [06] & ∠AKL = ∠KML [50] & L,F,M are collinear [09] & ∠SML = ∠MKL [32] & S,B,C are collinear [12] & S,B,M are collinear [30] & ∠MKJ = ∠MBJ [18] & M,B,C are collinear [02] ⇒  ∠KJF = ∠FJM [51]
+037. JK = JM [29] & ∠KJF = ∠FJM [51] (SAS)⇒  ∠JKF = ∠FMJ [52]
+038. JK = JM [29] & ∠KJF = ∠FJM [51] (SAS)⇒  FK = FM [53]
+039. J,C,G are collinear [11] & A,K,B are collinear [06] & ∠(JC-AK) = ∠(LF-JK) [49] & ∠JKF = ∠FMJ [52] & L,F,M are collinear [09] ⇒  ∠(MJ-KF) = ∠(JC-AK) [54]
+040. ∠(JC-LF) = ∠JMS [46] & ∠(MJ-KF) = ∠(JC-AK) [54] ⇒  ∠(SM-KF) = ∠(LF-AK) [55]
+041. L,J,K,G are concyclic [41] & A,J,K,L are concyclic [36] ⇒  A,J,K,G are concyclic [56]
+042. L,J,K,G are concyclic [41] & A,J,K,L are concyclic [36] ⇒  L,A,J,G are concyclic [57]
+043. L,A,J,G are concyclic [57] ⇒  ∠LAG = ∠LJG [58]
+044. A,J,K,G are concyclic [56] ⇒  ∠KAG = ∠KJG [59]
+045. B,T,C are collinear [15] & M,B,C are collinear [02] & A,T,G are collinear [14] & A,K,B are collinear [06] & ∠(SM-KF) = ∠(LF-AK) [55] & S,B,C are collinear [12] & S,B,M are collinear [30] & JC ⟂ LM [45] & ∠LAG = ∠LJG [58] & A,C,L are collinear [04] & J,C,G are collinear [11] & JL ⟂ AC [05] & JK ⟂ AB [07] & ∠KAG = ∠KJG [59] & L,F,M are collinear [09] ⇒  ∠MTG = ∠FKA [60]
+046. ∠MGT = ∠KFA [44] & ∠MTG = ∠FKA [60] (Similar Triangles)⇒  MG:AF = MT:AK [61]
+047. J,C,G are collinear [11] & ∠MJC = ∠CJL [27] ⇒  ∠LJG = ∠GJM [62]
+048. JM = JL [25] & ∠LJG = ∠GJM [62] (SAS)⇒  GL = GM [63]
+049. L,J,K,F are concyclic [34] & A,J,K,L are concyclic [36] ⇒  A,J,K,F are concyclic [64]
+050. L,J,K,G are concyclic [41] & A,J,K,L are concyclic [36] & A,J,K,F are concyclic [64] ⇒  K,A,L,F,G,L are concyclic [65]
+051. A,C,L are collinear [04] & JL ⟂ AC [05] ⇒  JL ⟂ LA [66]
+052. J is the circumcenter of \Delta LKM [28] & JL ⟂ LA [66] ⇒  ∠ALK = ∠LMK [67]
+053. A,C,L are collinear [04] & ∠ALK = ∠LMK [67] & L,F,M are collinear [09] & M,K,G are collinear [10] ⇒  ∠LKG = ∠ALF [68]
+054. K,A,L,F,G,L are concyclic [65] & ∠LKG = ∠ALF [68] ⇒  LG = AF [69]
+055. JK = JM [29] & FK = FM [53] ⇒  JF ⟂ KM [70]
+056. L,J,K,F are concyclic [34] & A,J,K,L are concyclic [36] ⇒  L,A,J,F are concyclic [71]
+057. L,A,J,F are concyclic [71] ⇒  ∠LAF = ∠LJF [72]
+058. A,J,K,F are concyclic [64] ⇒  ∠KAF = ∠KJF [73]
+059. M,K,G are collinear [10] & S,A,F are collinear [13] & JF ⟂ KM [70] & ∠LAF = ∠LJF [72] & A,C,L are collinear [04] & J,B,F are collinear [08] & JL ⟂ AC [05] & JK ⟂ AB [07] & ∠KAF = ∠KJF [73] & A,K,B are collinear [06] ⇒  MK ∥ SA [74]
+060. MK ∥ SA [74] & B,M,S are collinear [30] & A,K,B are collinear [06] ⇒  MB:KB = MS:KA [75]
+061. J,B,F are collinear [08] & M,B,C are collinear [02] & M,K,G are collinear [10] & ∠SML = ∠MKL [32] & S,B,C are collinear [12] & S,B,M are collinear [30] & L,F,M are collinear [09] & ∠AKL = ∠KML [50] & A,K,B are collinear [06] & ∠MJB = ∠MKB [19] ⇒  ∠MJB = ∠BMK [76]
+062. M,J,K,B are concyclic [17] & ∠MJB = ∠BMK [76] ⇒  MB = BK [77]
+063. MG:AF = MT:AK [61] & GL = GM [63] & LG = AF [69] & MB:KB = MS:KA [75] & MB = BK [77] ⇒  MS = MT
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2012_p1 =====
+===== 开始处理问题: translated_imo_2012_p5 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:27:29.299974: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:27:30.438996: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:27:30.441426 124446534412096 graph.py:498] translated_imo_2012_p5
+I0623 01:27:30.441569 124446534412096 graph.py:499] c a b = r_triangle c a b; d = foot d c a b; x = on_line x c d; k = on_line k a x, on_circle k b c; l = on_line l b x, on_circle l a c; m = on_line m a l, on_line m b k ? cong m k m l
+I0623 01:27:30.505470 124446534412096 ddar.py:60] Depth 1/1000 time = 0.05807137489318848
+I0623 01:27:30.583086 124446534412096 ddar.py:60] Depth 2/1000 time = 0.07748174667358398
+I0623 01:27:30.684653 124446534412096 ddar.py:60] Depth 3/1000 time = 0.10143566131591797
+I0623 01:27:30.815265 124446534412096 ddar.py:60] Depth 4/1000 time = 0.1304631233215332
+I0623 01:27:30.948625 124446534412096 ddar.py:60] Depth 5/1000 time = 0.13322758674621582
+I0623 01:27:30.950124 124446534412096 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2012_p5 =====
+===== 开始处理问题: translated_imo_2013_p4 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:27:32.456561: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:27:33.573260: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:27:33.575630 134983405115200 graph.py:498] translated_imo_2013_p4
+I0623 01:27:33.575744 134983405115200 graph.py:499] a b c = triangle a b c; h = orthocenter h a b c; m = on_line m h b, on_line m a c; n = on_line n h c, on_line n a b; w = on_line w b c; o1 = circle o1 b n w; o2 = circle o2 c m w; x = on_line x o1 w, on_circle x o1 w; y = on_line y o2 w, on_circle y o2 w ? coll x h y
+I0623 01:27:34.072733 134983405115200 ddar.py:60] Depth 1/1000 time = 0.4816703796386719
+I0623 01:27:35.149034 134983405115200 ddar.py:60] Depth 2/1000 time = 1.076129674911499
+I0623 01:27:36.072764 134983405115200 ddar.py:60] Depth 3/1000 time = 0.9235436916351318
+I0623 01:27:37.493828 134983405115200 ddar.py:60] Depth 4/1000 time = 1.4208862781524658
+I0623 01:27:39.104919 134983405115200 ddar.py:60] Depth 5/1000 time = 1.6109273433685303
+I0623 01:27:41.160122 134983405115200 ddar.py:60] Depth 6/1000 time = 2.0549983978271484
+I0623 01:27:43.117613 134983405115200 ddar.py:60] Depth 7/1000 time = 1.9572556018829346
+I0623 01:27:43.131728 134983405115200 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+A B C H M N W O1 O2 X Y : Points
+BH ⟂ AC [00]
+AH ⟂ BC [01]
+A,M,C are collinear [02]
+H,M,B are collinear [03]
+A,N,B are collinear [04]
+H,N,C are collinear [05]
+W,B,C are collinear [06]
+O_1B = O_1N [07]
+O_1N = O_1W [08]
+O_2M = O_2W [09]
+O_2C = O_2M [10]
+O_1X = O_1W [11]
+X,W,O_1 are collinear [12]
+O_2Y = O_2W [13]
+W,O_2,Y are collinear [14]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. A,M,C are collinear [02] & H,M,B are collinear [03] & BH ⟂ AC [00] ⇒  ∠AMH = ∠BMC [15]
+002. A,M,C are collinear [02] & H,M,B are collinear [03] & BH ⟂ AC [00] ⇒  ∠AMB = ∠HMC [16]
+003. W,B,C are collinear [06] & AH ⟂ BC [01] ⇒  HA ⟂ WB [17]
+004. H,M,B are collinear [03] & A,M,C are collinear [02] & BH ⟂ AC [00] ⇒  HM ⟂ AM [18]
+005. HA ⟂ WB [17] & HM ⟂ AM [18] ⇒  ∠HAM = ∠(WB-HM) [19]
+006. A,M,C are collinear [02] & H,M,B are collinear [03] & ∠HAM = ∠(WB-HM) [19] & W,B,C are collinear [06] ⇒  ∠HAM = ∠CBM [20]
+007. ∠AMH = ∠BMC [15] & ∠HAM = ∠CBM [20] (Similar Triangles)⇒  HM:MC = AM:MB [21]
+008. HM:MC = AM:MB [21] & ∠AMB = ∠HMC [16] (Similar Triangles)⇒  ∠ABM = ∠HCM [22]
+009. HM:MC = AM:MB [21] & ∠AMB = ∠HMC [16] (Similar Triangles)⇒  ∠MAB = ∠MHC [23]
+010. A,N,B are collinear [04] & H,N,C are collinear [05] & ∠ABM = ∠HCM [22] & H,M,B are collinear [03] & A,M,C are collinear [02] & ∠MAB = ∠MHC [23] ⇒  AN ⟂ HN [24]
+011. O_2M = O_2W [09] & O_2Y = O_2W [13] ⇒  O_2 is the circumcenter of \Delta YMW [25]
+012. O_2 is the circumcenter of \Delta YMW [25] & W,O_2,Y are collinear [14] ⇒  MY ⟂ MW [26]
+013. H,M,B are collinear [03] & A,M,C are collinear [02] & MY ⟂ MW [26] & BH ⟂ AC [00] ⇒  ∠HMA = ∠YMW [27]
+014. O_2C = O_2M [10] & O_2M = O_2W [09] & O_2Y = O_2W [13] ⇒  Y,M,W,C are concyclic [28]
+015. O_2C = O_2M [10] & O_2M = O_2W [09] & O_2Y = O_2W [13] ⇒  O_2 is the circumcenter of \Delta YCW [29]
+016. Y,M,W,C are concyclic [28] ⇒  ∠YWM = ∠YCM [30]
+017. O_2 is the circumcenter of \Delta YCW [29] & W,O_2,Y are collinear [14] ⇒  CW ⟂ YC [31]
+018. O_1B = O_1N [07] & O_1N = O_1W [08] & O_1X = O_1W [11] ⇒  X,N,W,B are concyclic [32]
+019. O_1B = O_1N [07] & O_1N = O_1W [08] & O_1X = O_1W [11] ⇒  O_1 is the circumcenter of \Delta XBW [33]
+020. X,N,W,B are concyclic [32] ⇒  ∠XNW = ∠XBW [34]
+021. X,N,W,B are concyclic [32] ⇒  ∠XWN = ∠XBN [35]
+022. O_1N = O_1W [08] & O_1X = O_1W [11] ⇒  O_1 is the circumcenter of \Delta XNW [36]
+023. O_1 is the circumcenter of \Delta XNW [36] & X,W,O_1 are collinear [12] ⇒  NX ⟂ NW [37]
+024. O_1 is the circumcenter of \Delta XBW [33] & X,W,O_1 are collinear [12] ⇒  BW ⟂ XB [38]
+025. A,M,C are collinear [02] & W,O_2,Y are collinear [14] & ∠YWM = ∠YCM [30] & CW ⟂ YC [31] & ∠XNW = ∠XBW [34] & W,B,C are collinear [06] & NX ⟂ NW [37] & BW ⟂ XB [38] & AH ⟂ BC [01] ⇒  ∠HAM = ∠YWM [39]
+026. ∠HMA = ∠YMW [27] & ∠HAM = ∠YWM [39] (Similar Triangles)⇒  HM:MY = AM:MW [40]
+027. MY ⟂ MW [26] & HM ⟂ AM [18] ⇒  ∠WMA = ∠YMH [41]
+028. MY ⟂ MW [26] & HM ⟂ AM [18] ⇒  ∠WMH = ∠YMA [42]
+029. HM:MY = AM:MW [40] & ∠AMW = ∠HMY [41] (Similar Triangles)⇒  ∠(HY-AW) = ∠YMW [43]
+030. HM:MY = AM:MW [40] & ∠AMW = ∠HMY [41] (Similar Triangles)⇒  ∠MAW = ∠MHY [44]
+031. ∠(HY-AW) = ∠YMW [43] & ∠WMH = ∠YMA [42] & H,M,B are collinear [03] & A,M,C are collinear [02] & ∠MAW = ∠MHY [44] ⇒  AW ⟂ HY [45]
+032. AN ⟂ HN [24] & AW ⟂ HY [45] ⇒  ∠NAW = ∠NHY [46]
+033. HM ⟂ AM [18] & NX ⟂ NW [37] ⇒  ∠(HM-NX) = ∠(AM-NW) [47]
+034. H,N,C are collinear [05] & A,N,B are collinear [04] & ∠(HM-NX) = ∠(AM-NW) [47] & H,M,B are collinear [03] & A,M,C are collinear [02] & ∠MAB = ∠MHC [23] ⇒  ∠HNA = ∠XNW [48]
+035. A,N,B are collinear [04] & X,O_1,W are collinear [12] & ∠XWN = ∠XBN [35] & BW ⟂ XB [38] & AH ⟂ BC [01] & W,B,C are collinear [06] ⇒  ∠NAH = ∠NWX [49]
+036. ∠HNA = ∠XNW [48] & ∠NAH = ∠NWX [49] (Similar Triangles)⇒  HN:NX = AN:NW [50]
+037. AN ⟂ HN [24] & NX ⟂ NW [37] ⇒  ∠ANW = ∠HNX [51]
+038. HN:NX = AN:NW [50] & ∠HNX = ∠ANW [51] (Similar Triangles)⇒  ∠NAW = ∠NHX [52]
+039. ∠NAW = ∠NHY [46] & A,N,B are collinear [04] & H,N,C are collinear [05] & ∠NAW = ∠NHX [52] ⇒  ∠(HX-AW) = ∠(HY-AW) [53]
+040. ∠(HX-AW) = ∠(HY-AW) [53] ⇒  HX ∥ HY [54]
+041. HX ∥ HY [54] ⇒  H,X,Y are collinear
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2013_p4 =====
+===== 开始处理问题: translated_imo_2014_p4 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:27:44.668110: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:27:45.785747: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:27:45.788191 131564623152960 graph.py:498] translated_imo_2014_p4
+I0623 01:27:45.788307 131564623152960 graph.py:499] a b c = triangle a b c; p = on_line p b c, on_aline p a b b c a; q = on_line q b c, on_aline q a c c b a; m = mirror m a p; n = mirror n a q; x = on_line x b m, on_line x c n; o = circle o a b c ? cong o x o a
+I0623 01:27:46.173387 131564623152960 ddar.py:60] Depth 1/1000 time = 0.3736696243286133
+I0623 01:27:46.655829 131564623152960 ddar.py:60] Depth 2/1000 time = 0.4822969436645508
+I0623 01:27:47.430890 131564623152960 ddar.py:60] Depth 3/1000 time = 0.7748842239379883
+I0623 01:27:48.243758 131564623152960 ddar.py:60] Depth 4/1000 time = 0.8127248287200928
+I0623 01:27:49.310637 131564623152960 ddar.py:60] Depth 5/1000 time = 1.0666916370391846
+I0623 01:27:50.478624 131564623152960 ddar.py:60] Depth 6/1000 time = 1.1678450107574463
+I0623 01:27:51.569968 131564623152960 ddar.py:60] Depth 7/1000 time = 1.0911881923675537
+I0623 01:27:52.668675 131564623152960 ddar.py:60] Depth 8/1000 time = 1.0984063148498535
+I0623 01:27:53.781740 131564623152960 ddar.py:60] Depth 9/1000 time = 1.112184762954712
+I0623 01:27:55.021712 131564623152960 ddar.py:60] Depth 10/1000 time = 1.2398102283477783
+I0623 01:27:56.184813 131564623152960 ddar.py:60] Depth 11/1000 time = 1.1547887325286865
+I0623 01:27:57.357628 131564623152960 ddar.py:60] Depth 12/1000 time = 1.1704587936401367
+I0623 01:27:58.551021 131564623152960 ddar.py:60] Depth 13/1000 time = 1.193204402923584
+I0623 01:27:58.554486 131564623152960 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2014_p4 =====
+===== 开始处理问题: translated_imo_2015_p3 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:28:00.085426: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:28:01.232153: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:28:01.234707 139472857413440 graph.py:498] translated_imo_2015_p3
+I0623 01:28:01.234842 139472857413440 graph.py:499] a b c = triangle a b c; h = orthocenter h a b c; f = on_line f h a, on_line f b c; m = midpoint m b c; o = circle o a b c; q = on_dia q a h, on_circle q o a; k = on_dia k h q, on_circle k o a; o1 = circle o1 k q h; o2 = circle o2 f k m ? coll o1 o2 k
+I0623 01:28:02.064547 139472857413440 ddar.py:60] Depth 1/1000 time = 0.7911496162414551
+I0623 01:28:03.499076 139472857413440 ddar.py:60] Depth 2/1000 time = 1.4343657493591309
+I0623 01:28:05.175163 139472857413440 ddar.py:60] Depth 3/1000 time = 1.6758942604064941
+I0623 01:28:07.048020 139472857413440 ddar.py:60] Depth 4/1000 time = 1.8726789951324463
+I0623 01:28:09.045650 139472857413440 ddar.py:60] Depth 5/1000 time = 1.997119426727295
+I0623 01:28:10.937393 139472857413440 ddar.py:60] Depth 6/1000 time = 1.8914709091186523
+I0623 01:28:12.880199 139472857413440 ddar.py:60] Depth 7/1000 time = 1.9156885147094727
+I0623 01:28:12.886605 139472857413440 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2015_p3 =====
+===== 开始处理问题: translated_imo_2015_p4 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:28:14.379926: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:28:15.482215: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:28:15.484732 134230633772864 graph.py:498] translated_imo_2015_p4
+I0623 01:28:15.484857 134230633772864 graph.py:499] a b c = triangle a b c; o = circle o a b c; d = on_line d b c; e = on_line e b c, on_circle e a d; f = on_circle f o a, on_circle f a d; g = on_circle g o a, on_circle g a d; o1 = circle o1 f b d; o2 = circle o2 g c e; k = on_circle k o1 b, on_line k a b; l = on_circle l o2 c, on_line l a c; x = on_line x f k, on_line x l g ? coll x o a
+I0623 01:28:17.172933 134230633772864 ddar.py:60] Depth 1/1000 time = 1.6332175731658936
+I0623 01:28:20.996347 134230633772864 ddar.py:60] Depth 2/1000 time = 3.8232455253601074
+I0623 01:28:25.580939 134230633772864 ddar.py:60] Depth 3/1000 time = 4.584394454956055
+I0623 01:28:30.358749 134230633772864 ddar.py:60] Depth 4/1000 time = 4.777599334716797
+I0623 01:28:30.363894 134230633772864 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+A B C O D E F G O1 O2 K L X : Points
+OA = OB [00]
+OB = OC [01]
+B,C,D are collinear [02]
+B,C,E are collinear [03]
+AE = AD [04]
+AF = AD [05]
+OF = OA [06]
+AG = AD [07]
+OG = OA [08]
+O_1F = O_1B [09]
+O_1B = O_1D [10]
+O_2G = O_2C [11]
+O_2C = O_2E [12]
+O_1K = O_1B [13]
+A,B,K are collinear [14]
+O_2L = O_2C [15]
+A,C,L are collinear [16]
+F,X,K are collinear [17]
+G,X,L are collinear [18]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. AG = AD [07] & AF = AD [05] ⇒  AF = AG [19]
+002. O_2G = O_2C [11] & O_2L = O_2C [15] & O_2C = O_2E [12] ⇒  G,L,C,E are concyclic [20]
+003. G,L,C,E are concyclic [20] ⇒  ∠GLC = ∠GEC [21]
+004. B,C,E are collinear [03] & G,X,L are collinear [18] & ∠GLC = ∠GEC [21] & A,C,L are collinear [16] ⇒  ∠(AC-BE) = ∠XGE [22]
+005. AE = AD [04] & AG = AD [07] & AF = AD [05] ⇒  F,G,E,D are concyclic [23]
+006. F,G,E,D are concyclic [23] ⇒  ∠FGE = ∠FDE [24]
+007. B,C,E are collinear [03] & ∠FGE = ∠FDE [24] & B,C,D are collinear [02] ⇒  ∠(FD-BE) = ∠FGE [25]
+008. ∠(AC-BE) = ∠XGE [22] & ∠(FD-BE) = ∠FGE [25] ⇒  ∠(AC-FD) = ∠XGF [26]
+009. O_1F = O_1B [09] & O_1K = O_1B [13] & O_1B = O_1D [10] ⇒  F,B,K,D are concyclic [27]
+010. F,B,K,D are concyclic [27] ⇒  ∠FBD = ∠FKD [28]
+011. F,B,K,D are concyclic [27] ⇒  ∠FBK = ∠FDK [29]
+012. OA = OB [00] & OG = OA [08] & OB = OC [01] & OF = OA [06] ⇒  A,G,B,F are concyclic [30]
+013. OA = OB [00] & OG = OA [08] & OB = OC [01] & A,G,B,F are concyclic [30] ⇒  B,C,F,G are concyclic [31]
+014. OA = OB [00] & OG = OA [08] & OB = OC [01] & A,G,B,F are concyclic [30] ⇒  A,C,F,G are concyclic [32]
+015. B,C,F,G are concyclic [31] ⇒  ∠CBF = ∠CGF [33]
+016. F,X,K are collinear [17] & ∠FBD = ∠FKD [28] & B,C,D are collinear [02] & ∠CBF = ∠CGF [33] ⇒  ∠CGF = ∠(KD-FX) [34]
+017. A,C,F,G are concyclic [32] ⇒  ∠GCA = ∠GFA [35]
+018. AF = AG [19] ⇒  ∠GFA = ∠AGF [36]
+019. A,B,F,G are concyclic [30] ⇒  ∠ABF = ∠AGF [37]
+020. ∠GCA = ∠GFA [35] & ∠GFA = ∠AGF [36] & ∠ABF = ∠AGF [37] & ∠FBK = ∠FDK [29] & A,B,K are collinear [14] ⇒  ∠KDF = ∠GCA [38]
+021. ∠CGF = ∠(KD-FX) [34] & ∠KDF = ∠GCA [38] ⇒  ∠XFD = ∠(FG-AC) [39]
+022. F,X,K are collinear [17] & G,X,L are collinear [18] & ∠(AC-FD) = ∠XGF [26] & ∠XFD = ∠(FG-AC) [39] ⇒  ∠XFG = ∠FGX [40]
+023. ∠XFG = ∠FGX [40] ⇒  XF = XG [41]
+024. AF = AG [19] & XF = XG [41] ⇒  FG ⟂ AX [42]
+025. OF = OA [06] & OG = OA [08] ⇒  OG = OF [43]
+026. OG = OF [43] & AF = AG [19] ⇒  FG ⟂ AO [44]
+027. FG ⟂ AX [42] & FG ⟂ AO [44] ⇒  A,X,O are collinear
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2015_p4 =====
+===== 开始处理问题: translated_imo_2016_p1 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:28:31.932175: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:28:33.071439: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:28:33.073893 140102415279936 graph.py:498] translated_imo_2016_p1
+I0623 01:28:33.074008 140102415279936 graph.py:499] a b z = triangle a b z; f = angle_bisector f b a z, on_bline f a b; c = on_tline c b f b, on_line c a f; d = on_line d a z, on_bline d a c; e = angle_mirror e c a d, on_bline e a d; m = midpoint m c f; x = parallelogram e a m x; y = on_line y f x, on_line y e m ? coll y b d
+I0623 01:28:33.297132 140102415279936 ddar.py:60] Depth 1/1000 time = 0.1949937343597412
+I0623 01:28:33.929761 140102415279936 ddar.py:60] Depth 2/1000 time = 0.6324737071990967
+I0623 01:28:34.797136 140102415279936 ddar.py:60] Depth 3/1000 time = 0.8672103881835938
+I0623 01:28:35.712421 140102415279936 ddar.py:60] Depth 4/1000 time = 0.9151053428649902
+I0623 01:28:37.308205 140102415279936 ddar.py:60] Depth 5/1000 time = 1.595625638961792
+I0623 01:28:40.769493 140102415279936 ddar.py:60] Depth 6/1000 time = 3.4611198902130127
+I0623 01:28:48.749440 140102415279936 ddar.py:60] Depth 7/1000 time = 7.979707956314087
+I0623 01:28:59.562448 140102415279936 ddar.py:60] Depth 8/1000 time = 10.812752723693848
+I0623 01:28:59.615442 140102415279936 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+A B Z F C D E M X Y : Points
+∠BAF = ∠FBA [00]
+∠BAF = ∠FAZ [01]
+FA = FB [02]
+F,A,C are collinear [03]
+BC ⟂ BF [04]
+∠DAC = ∠ACD [05]
+D,A,Z are collinear [06]
+DA = DC [07]
+∠CAD = ∠DAE [08]
+∠DAE = ∠EDA [09]
+EA = ED [10]
+F,C,M are collinear [11]
+MC = MF [12]
+EX ∥ AM [13]
+EA ∥ MX [14]
+E,Y,M are collinear [15]
+X,F,Y are collinear [16]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. F,C,M are collinear [11] & F,A,C are collinear [03] & EX ∥ AM [13] ⇒  MF ∥ EX [17]
+002. MF ∥ EX [17] & E,Y,M are collinear [15] & X,F,Y are collinear [16] ⇒  YM:FM = EY:XE [18]
+003. F,C,M are collinear [11] & F,A,C are collinear [03] & ∠BAF = ∠FBA [00] ⇒  ∠(AB-MF) = ∠FBA [19]
+004. ∠BAF = ∠FBA [00] & ∠BAF = ∠FAZ [01] & ∠DAC = ∠ACD [05] & D,A,Z are collinear [06] & F,A,C are collinear [03] ⇒  ∠DCA = ∠FBA [20]
+005. F,A,C are collinear [03] & ∠ZAF = ∠FAB [01] & D,A,Z are collinear [06] ⇒  ∠DAC = ∠FAB [21]
+006. F,A,C are collinear [03] & ∠ZAF = ∠FAB [01] & D,A,Z are collinear [06] ⇒  ∠DAF = ∠CAB [22]
+007. ∠DCA = ∠FBA [20] & ∠DAC = ∠FAB [21] (Similar Triangles)⇒  DC:FB = AC:AB [23]
+008. DC:FB = AC:AB [23] & DA = DC [07] & FA = FB [02] ⇒  AD:AF = AC:AB [24]
+009. AD:AF = AC:AB [24] & ∠DAF = ∠CAB [22] (Similar Triangles)⇒  ∠DFA = ∠CBA [25]
+010. AD:AF = AC:AB [24] & ∠DAF = ∠CAB [22] (Similar Triangles)⇒  ∠DAC = ∠(DF-BC) [26]
+011. AD:AF = AC:AB [24] & ∠DAF = ∠CAB [22] (Similar Triangles)⇒  FD:FA = BC:BA [27]
+012. F,C,M are collinear [11] & F,A,C are collinear [03] & ∠DFA = ∠CBA [25] ⇒  ∠ABC = ∠MFD [28]
+013. ∠(AB-MF) = ∠FBA [19] & ∠ABC = ∠MFD [28] ⇒  ∠(AB-DF) = ∠FBC [29]
+014. F,C,M are collinear [11] & F,A,C are collinear [03] & ∠ZAF = ∠FAB [01] & D,A,Z are collinear [06] ⇒  ∠(AB-MF) = ∠(MF-DA) [30]
+015. ∠(AB-MF) = ∠FBA [19] & ∠(AB-MF) = ∠(MF-DA) [30] ⇒  ∠BAD = ∠BFM [31]
+016. ∠BAD = ∠BFM [31] & F,C,M are collinear [11] & F,A,C are collinear [03] & D,A,Z are collinear [06] & ∠DAC = ∠(DF-BC) [26] ⇒  ∠(BC-DF) = ∠FBA [32]
+017. BC ⟂ BF [04] & ∠(BC-DF) = ∠FBA [32] ⇒  ∠FBC = ∠(DF-AB) [33]
+018. BC ⟂ BF [04] & ∠(BC-DF) = ∠FBA [32] ⇒  ∠BFD = ∠CBA [34]
+019. F,C,M are collinear [11] & F,A,C are collinear [03] & ∠DAC = ∠ACD [05] & D,A,Z are collinear [06] & ∠BAF = ∠FAZ [01] ⇒  ∠(AB-MF) = ∠(DC-MF) [35]
+020. ∠(AB-MF) = ∠(DC-MF) [35] ⇒  AB ∥ DC [36]
+021. ∠(AB-DF) = ∠FBC [29] & ∠FBC = ∠(DF-AB) [33] & AB ∥ CD [36] ⇒  FD ⟂ DC [37]
+022. M,F,C are collinear [11] & MC = MF [12] ⇒  M is midpoint of FC [38]
+023. FD ⟂ DC [37] & M is midpoint of FC [38] ⇒  FM = DM [39]
+024. F,C,M are collinear [11] & F,A,C are collinear [03] & EX ∥ AM [13] ⇒  ∠XEM = ∠AME [40]
+025. MX ∥ AE [14] ⇒  ∠XME = ∠AEM [41]
+026. ∠XEM = ∠AME [40] & ∠XME = ∠AEM [41] (Similar Triangles)⇒  EX = MA [42]
+027. BC ⟂ BF [04] & M is midpoint of FC [38] ⇒  FM = BM [43]
+028. BC ⟂ BF [04] & M is midpoint of FC [38] ⇒  CM = BM [44]
+029. FM = BM [43] ⇒  ∠MBF = ∠BFM [45]
+030. FD:FA = BC:BA [27] & FA = FB [02] ⇒  DF:FB = BC:AB [46]
+031. DF:FB = BC:AB [46] & ∠BFD = ∠CBA [34] (Similar Triangles)⇒  ∠DBA = ∠(BF-AC) [47]
+032. ∠BAF = ∠FBA [00] & ∠BAF = ∠FAZ [01] & ∠CAD = ∠DAE [08] & F,A,C are collinear [03] & D,A,Z are collinear [06] & ∠DAE = ∠EDA [09] ⇒  ∠EDA = ∠FBA [48]
+033. ∠FAB = ∠ZAF [01] & ∠CAD = ∠DAE [08] & F,A,C are collinear [03] & D,A,Z are collinear [06] ⇒  ∠EAD = ∠FAB [49]
+034. ∠EDA = ∠FBA [48] & ∠EAD = ∠FAB [49] (Similar Triangles)⇒  DE:BF = DA:BA [50]
+035. DE:BF = DA:BA [50] & DA = DC [07] & AE = DE [10] & FA = FB [02] ⇒  AD:AB = AE:AF [51]
+036. F,C,M are collinear [11] & F,A,C are collinear [03] & ∠CAD = ∠DAE [08] ⇒  ∠(MF-DA) = ∠DAE [52]
+037. ∠(AB-MF) = ∠(MF-DA) [30] & ∠(MF-DA) = ∠DAE [52] ⇒  ∠BAD = ∠(MF-AE) [53]
+038. F,A,C are collinear [03] & ∠BAD = ∠(MF-AE) [53] & F,C,M are collinear [11] ⇒  ∠DAB = ∠EAF [54]
+039. AD:AB = AE:AF [51] & ∠DAB = ∠EAF [54] (Similar Triangles)⇒  ∠DBA = ∠EFA [55]
+040. F,A,C are collinear [03] & ∠MBF = ∠BFM [45] & F,C,M are collinear [11] & ∠DBA = ∠(BF-AC) [47] & ∠DBA = ∠EFA [55] ⇒  ∠EFA = ∠MBF [56]
+041. F,C,M are collinear [11] & F,A,C are collinear [03] & ∠BAD = ∠BFM [31] ⇒  ∠(MF-DA) = ∠FBA [57]
+042. F,C,M are collinear [11] & F,A,C are collinear [03] & ∠DAE = ∠BAF [49] ⇒  ∠DAE = ∠(AB-MF) [58]
+043. ∠(MF-DA) = ∠FBA [57] & ∠DAE = ∠(AB-MF) [58] ⇒  ∠(MF-AE) = ∠BFM [59]
+044. F,A,C are collinear [03] & F,C,M are collinear [11] & ∠(MF-AE) = ∠BFM [59] ⇒  ∠EAF = ∠MFB [60]
+045. ∠EFA = ∠MBF [56] & ∠EAF = ∠MFB [60] (Similar Triangles)⇒  AF:FB = AE:FM [61]
+046. FM = DM [39] & AF:FB = AE:FM [61] & FA = FB [02] & EA = ED [10] ⇒  DE = DM [62]
+047. F,A,C are collinear [03] & ∠DFB = ∠ABC [34] & ∠DFA = ∠CBA [25] ⇒  ∠AFD = ∠DFB [63]
+048. FA = FB [02] & ∠AFD = ∠DFB [63] (SAS)⇒  DA = DB [64]
+049. FA = FB [02] & ∠AFD = ∠DFB [63] (SAS)⇒  ∠FAD = ∠DBF [65]
+050. F,C,M are collinear [11] & F,A,C are collinear [03] & ∠DBA = ∠EFA [55] ⇒  ∠ABD = ∠MFE [66]
+051. ∠(AB-MF) = ∠(MF-DA) [30] & ∠ABD = ∠MFE [66] ⇒  ∠(MF-DB) = ∠(DA-FE) [67]
+052. F,C,M are collinear [11] & F,A,C are collinear [03] & ∠DAE = ∠EDA [09] & ∠CAD = ∠DAE [08] & D,A,Z are collinear [06] ⇒  ∠(MF-DA) = ∠EDA [68]
+053. ∠(MF-DA) = ∠EDA [68] ⇒  MF ∥ DE [69]
+054. DA = DC [07] & DA = DB [64] ⇒  DB = DC [70]
+055. DB = DC [70] & CM = BM [44] ⇒  BC ⟂ DM [71]
+056. ∠(AB-MF) = ∠FBA [19] & ∠ABD = ∠MFE [66] ⇒  ∠(EF-AB) = ∠DBF [72]
+057. ∠BAD = ∠BFM [31] & F,C,M are collinear [11] & F,A,C are collinear [03] & D,A,Z are collinear [06] & ∠FAD = ∠DBF [65] & ∠(EF-AB) = ∠DBF [72] ⇒  ∠(FE-AB) = ∠FBA [73]
+058. ∠(FE-AB) = ∠FBA [73] ⇒  FE ∥ FB [74]
+059. ∠(MF-DB) = ∠(DA-FE) [67] & F,C,M are collinear [11] & F,A,C are collinear [03] & MF ∥ DE [69] & BC ⟂ DM [71] & BC ⟂ BF [04] & BF ∥ EF [74] ⇒  ∠EDB = ∠ADM [75]
+060. DE = DM [62] & DA = DB [64] & ∠EDB = ∠ADM [75] (SAS)⇒  BE = AM [76]
+061. YM:FM = EY:XE [18] & DM = FM [39] & EX = MA [42] & BE = AM [76] ⇒  MY:MD = EY:EB [77]
+062. EF ∥ BF [74] ⇒  F,E,B are collinear [78]
+063. E,Y,M are collinear [15] & BC ⟂ DM [71] & BC ⟂ BF [04] & BF ∥ EF [74] & F,E,B are collinear [78] ⇒  ∠YMD = ∠YEB [79]
+064. MY:MD = EY:EB [77] & ∠YMD = ∠YEB [79] (Similar Triangles)⇒  ∠MYD = ∠EYB [80]
+065. ∠MYD = ∠EYB [80] & E,Y,M are collinear [15] ⇒  DY ∥ BY [81]
+066. DY ∥ BY [81] ⇒  Y,D,B are collinear
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2016_p1 =====
+===== 开始处理问题: translated_imo_2017_p4 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:29:01.161687: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:29:02.297328: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:29:02.299787 124837286172480 graph.py:498] translated_imo_2017_p4
+I0623 01:29:02.299899 124837286172480 graph.py:499] r s = segment r s; t = mirror t r s; o = on_bline o r s; j = on_circle j o s; o1 = circle o1 j s t; a = on_tline a r o r, on_circle a o1 s; b = on_tline b r o r, on_circle b o1 s; k = on_line k j a, on_circle k o s ? perp k t o1 t
+I0623 01:29:02.756143 124837286172480 ddar.py:60] Depth 1/1000 time = 0.4111614227294922
+I0623 01:29:03.720133 124837286172480 ddar.py:60] Depth 2/1000 time = 0.9638373851776123
+I0623 01:29:04.794796 124837286172480 ddar.py:60] Depth 3/1000 time = 1.0745067596435547
+I0623 01:29:06.046360 124837286172480 ddar.py:60] Depth 4/1000 time = 1.2513387203216553
+I0623 01:29:06.049847 124837286172480 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+R S T O J O1 A K : Points
+R,S,T are collinear [00]
+SR = ST [01]
+OR = OS [02]
+OJ = OS [03]
+O_1S = O_1T [04]
+O_1J = O_1S [05]
+O_1A = O_1S [06]
+AR ⟂ OR [07]
+OK = OS [08]
+J,A,K are collinear [09]
+
+ * Auxiliary Constructions:
+B : Points
+OR ⟂ BR [10]
+
+ * Proof steps:
+001. O_1S = O_1T [04] & O_1A = O_1S [06] ⇒  O_1 is the circumcenter of \Delta TSA [11]
+002. O_1J = O_1S [05] & O_1A = O_1S [06] & O_1S = O_1T [04] ⇒  J,S,A,T are concyclic [12]
+003. J,S,A,T are concyclic [12] ⇒  ∠SJA = ∠STA [13]
+004. OJ = OS [03] & OK = OS [08] & OR = OS [02] ⇒  J,R,S,K are concyclic [14]
+005. J,R,S,K are concyclic [14] ⇒  ∠JSR = ∠JKR [15]
+006. ∠SJA = ∠STA [13] & R,S,T are collinear [00] & ∠JSR = ∠JKR [15] & J,A,K are collinear [09] ⇒  ∠SRK = ∠(RS-AT) [16]
+007. R,S,T are collinear [00] & ∠SRK = ∠(RS-AT) [16] ⇒  ∠SRK = ∠RTA [17]
+008. OK = OS [08] & OR = OS [02] ⇒  O is the circumcenter of \Delta RKS [18]
+009. O is the circumcenter of \Delta RKS [18] & OR ⟂ RB [10] ⇒  ∠BRK = ∠RSK [19]
+010. R,S,T are collinear [00] & OR ⟂ BR [10] & AR ⟂ OR [07] & ∠BRK = ∠RSK [19] ⇒  ∠SKR = ∠TRA [20]
+011. ∠SRK = ∠RTA [17] & ∠SKR = ∠TRA [20] (Similar Triangles)⇒  RS:TA = RK:TR [21]
+012. RS:TA = RK:TR [21] & SR = ST [01] ⇒  ST:AT = RK:RT [22]
+013. R,S,T are collinear [00] & ∠(RS-AT) = ∠SRK [16] ⇒  ∠STA = ∠TRK [23]
+014. ST:AT = RK:RT [22] & ∠STA = ∠TRK [23] (Similar Triangles)⇒  ∠TSA = ∠TKR [24]
+015. ∠(AT-RS) = ∠KRS [16] ⇒  AT ∥ RK [25]
+016. R,S,T are collinear [00] & ∠TSA = ∠TKR [24] & AT ∥ KR [25] ⇒  ∠KTS = ∠TAS [26]
+017. O_1 is the circumcenter of \Delta TSA [11] & ∠KTS = ∠TAS [26] ⇒  O_1T ⟂ KT
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2017_p4 =====
+===== 开始处理问题: translated_imo_2018_p1 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:29:07.592585: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:29:08.726986: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:29:08.729447 133855960102720 graph.py:498] translated_imo_2018_p1
+I0623 01:29:08.729561 133855960102720 graph.py:499] a b c = triangle a b c; o = circle o a b c; d = on_line d a b; e = on_line e a c, on_circle e a d; f = on_bline f b d, on_circle f o a; g = on_bline g e c, on_circle g o a ? para d e f g
+I0623 01:29:09.118754 133855960102720 ddar.py:60] Depth 1/1000 time = 0.3663215637207031
+I0623 01:29:09.656845 133855960102720 ddar.py:60] Depth 2/1000 time = 0.5378942489624023
+I0623 01:29:10.102549 133855960102720 ddar.py:60] Depth 3/1000 time = 0.4455106258392334
+I0623 01:29:10.653304 133855960102720 ddar.py:60] Depth 4/1000 time = 0.546349048614502
+I0623 01:29:10.653530 133855960102720 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2018_p1 =====
+===== 开始处理问题: translated_imo_2019_p2 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:29:12.152192: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:29:13.268741: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:29:13.271091 134377044830016 graph.py:498] translated_imo_2019_p2
+I0623 01:29:13.271213 134377044830016 graph.py:499] a b c = triangle; a1 = on_line b c; b1 = on_line a c; p = on_line a a1; q = on_line b b1, on_pline p a b; p1 = on_line p b1, eqangle3 p c a b c; q1 = on_line q a1, eqangle3 c q b c a ? cyclic p q p1 q1
+I0623 01:29:13.324077 134377044830016 ddar.py:60] Depth 1/1000 time = 0.045792341232299805
+I0623 01:29:13.324653 134377044830016 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2019_p2 =====
+===== 开始处理问题: translated_imo_2019_p6 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:29:14.824364: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:29:15.954560: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:29:15.957084 140652290979648 graph.py:498] translated_imo_2019_p6
+I0623 01:29:15.957227 140652290979648 graph.py:499] a b c = triangle a b c; d e f i = incenter2 d e f i a b c; r = on_tline r d e f, on_circle r i d; p = on_line p r a, on_circle p i d; o1 = circle o1 p c e; o2 = circle o2 p b f; q = on_circle q o1 p, on_circle q o2 p; t = on_line t p q, on_line t i d ? perp a t a i
+I0623 01:29:16.751216 140652290979648 ddar.py:60] Depth 1/1000 time = 0.7633571624755859
+I0623 01:29:19.244583 140652290979648 ddar.py:60] Depth 2/1000 time = 2.493210554122925
+I0623 01:29:24.212699 140652290979648 ddar.py:60] Depth 3/1000 time = 4.967921257019043
+I0623 01:29:31.383741 140652290979648 ddar.py:60] Depth 4/1000 time = 7.170853614807129
+I0623 01:29:38.493344 140652290979648 ddar.py:60] Depth 5/1000 time = 7.109356641769409
+I0623 01:29:46.123990 140652290979648 ddar.py:60] Depth 6/1000 time = 7.630400896072388
+I0623 01:29:53.813755 140652290979648 ddar.py:60] Depth 7/1000 time = 7.6895527839660645
+I0623 01:30:01.623974 140652290979648 ddar.py:60] Depth 8/1000 time = 7.809972763061523
+I0623 01:30:09.987894 140652290979648 ddar.py:60] Depth 9/1000 time = 8.340070962905884
+I0623 01:30:18.484507 140652290979648 ddar.py:60] Depth 10/1000 time = 8.496416330337524
+I0623 01:30:26.515804 140652290979648 ddar.py:60] Depth 11/1000 time = 7.8994460105896
+I0623 01:30:26.516213 140652290979648 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2019_p6 =====
+===== 开始处理问题: translated_imo_2020_p1 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:30:28.021557: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:30:29.142948: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:30:29.145286 127492195592000 graph.py:498] translated_imo_2020_p1
+I0623 01:30:29.145399 127492195592000 graph.py:499] p a b = triangle p a b; x = angle_bisector p b a; y = angle_bisector p a b; z = on_aline z a p a b x; t = on_aline t p a p a z; d = on_aline d p t p b a, on_line a z; u = on_aline u b p b a y; v = on_aline v p b p b u; c = on_aline c p v p a b, on_line b u; o = angle_bisector a d p, angle_bisector p c b ? cong o a o b
+I0623 01:30:29.204247 127492195592000 ddar.py:60] Depth 1/1000 time = 0.04269766807556152
+I0623 01:30:29.238286 127492195592000 ddar.py:60] Depth 2/1000 time = 0.0339200496673584
+I0623 01:30:29.272711 127492195592000 ddar.py:60] Depth 3/1000 time = 0.03433370590209961
+I0623 01:30:29.318176 127492195592000 ddar.py:60] Depth 4/1000 time = 0.04500889778137207
+I0623 01:30:29.367503 127492195592000 ddar.py:60] Depth 5/1000 time = 0.049187660217285156
+I0623 01:30:29.417396 127492195592000 ddar.py:60] Depth 6/1000 time = 0.04977107048034668
+I0623 01:30:29.481141 127492195592000 ddar.py:60] Depth 7/1000 time = 0.06045961380004883
+I0623 01:30:29.543668 127492195592000 ddar.py:60] Depth 8/1000 time = 0.06239724159240723
+I0623 01:30:29.546268 127492195592000 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2020_p1 =====
+===== 开始处理问题: translated_imo_2021_p3 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:30:31.037004: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:30:32.148740: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:30:32.151167 134966778021696 graph.py:498] translated_imo_2021_p3
+I0623 01:30:32.151297 134966778021696 graph.py:499] a b c = triangle; d = angle_bisector b a c; e = on_aline d a d c b, on_line a c; f = on_aline d a d b c, on_line a b; x = on_bline b c, on_line a c; o1 = circle a d c; o2 = circle e x d; y = on_line e f, on_line b c ? coll o1 o2 y
+I0623 01:30:32.450011 134966778021696 ddar.py:60] Depth 1/1000 time = 0.2838325500488281
+I0623 01:30:32.767162 134966778021696 ddar.py:60] Depth 2/1000 time = 0.31699705123901367
+I0623 01:30:33.102861 134966778021696 ddar.py:60] Depth 3/1000 time = 0.3339827060699463
+I0623 01:30:33.103024 134966778021696 alphageometry.py:221] DD+AR failed to solve the problem.
+===== 完成问题: translated_imo_2021_p3 =====
+===== 开始处理问题: translated_imo_2022_p4 =====
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:30:34.588245: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+/home/xmy/miniconda3/envs/AG/lib/python3.10/site-packages/flax/struct.py:132: FutureWarning: jax.tree_util.register_keypaths is deprecated, and will be removed in a future release. Please use `register_pytree_with_keys()` instead.
+  jax.tree_util.register_keypaths(data_clz, keypaths)
+2025-06-23 01:30:35.694446: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+I0623 01:30:35.696834 129752856721216 graph.py:498] translated_imo_2022_p4
+I0623 01:30:35.696958 129752856721216 graph.py:499] b c = segment; d = free; e = eqdistance d b c; t = on_bline b d, on_bline c e; a = eqangle2 b t e; p = on_line a b, on_line c d; q = on_line a b, on_line c t; r = on_line a e, on_line c d; s = on_line a e, on_line d t ? cyclic p q r s
+I0623 01:30:35.953013 129752856721216 ddar.py:60] Depth 1/1000 time = 0.24581289291381836
+I0623 01:30:36.229063 129752856721216 ddar.py:60] Depth 2/1000 time = 0.2758975028991699
+I0623 01:30:36.542561 129752856721216 ddar.py:60] Depth 3/1000 time = 0.31334447860717773
+I0623 01:30:36.902032 129752856721216 ddar.py:60] Depth 4/1000 time = 0.35931873321533203
+I0623 01:30:37.296794 129752856721216 ddar.py:60] Depth 5/1000 time = 0.3946084976196289
+I0623 01:30:37.697952 129752856721216 ddar.py:60] Depth 6/1000 time = 0.4010148048400879
+I0623 01:30:38.147253 129752856721216 ddar.py:60] Depth 7/1000 time = 0.442110538482666
+I0623 01:30:38.150098 129752856721216 alphageometry.py:191] 
+==========================
+ * From theorem premises:
+B C D E T A P Q R S : Points
+ED = BC [00]
+TC = TE [01]
+TB = TD [02]
+∠TBA = ∠AET [03]
+C,D,P are collinear [04]
+B,A,P are collinear [05]
+Q,B,A are collinear [06]
+Q,C,T are collinear [07]
+R,A,E are collinear [08]
+R,C,D are collinear [09]
+A,E,S are collinear [10]
+T,D,S are collinear [11]
+
+ * Auxiliary Constructions:
+: Points
+
+
+ * Proof steps:
+001. ED = BC [00] & TC = TE [01] & TB = TD [02] (SSS)⇒  ∠CBT = ∠EDT [12]
+002. ED = BC [00] & TC = TE [01] & TB = TD [02] (SSS)⇒  ∠BCT = ∠DET [13]
+003. ED = BC [00] & TC = TE [01] & TB = TD [02] (SSS)⇒  ∠BTC = ∠DTE [14]
+004. ∠CBT = ∠EDT [12] & T,D,S are collinear [11] ⇒  ∠CBT = ∠EDS [15]
+005. ∠BCT = ∠DET [13] & Q,C,T are collinear [07] ⇒  ∠BCQ = ∠DET [16]
+006. A,E,S are collinear [10] & Q,B,A are collinear [06] & ∠AET = ∠TBA [03] ⇒  ∠SET = ∠TBQ [17]
+007. T,D,S are collinear [11] & Q,T,C are collinear [07] & ∠BTC = ∠DTE [14] ⇒  ∠STE = ∠BTQ [18]
+008. ∠SET = ∠TBQ [17] & ∠STE = ∠BTQ [18] (Similar Triangles)⇒  TS:TQ = TE:TB [19]
+009. TS:TQ = TE:TB [19] & TB = TD [02] & CT = TE [01] ⇒  TS:TQ = TC:TD [20]
+010. T,D,S are collinear [11] & Q,T,C are collinear [07] ⇒  ∠STQ = ∠DTC [21]
+011. TS:TQ = TC:TD [20] & ∠STQ = ∠DTC [21] (Similar Triangles)⇒  ∠TSQ = ∠DCT [22]
+012. ∠TSQ = ∠DCT [22] & T,D,S are collinear [11] & Q,C,T are collinear [07] ⇒  ∠DSQ = ∠DCQ [23]
+013. ∠TBA = ∠AET [03] & ∠CBT = ∠EDS [15] & ∠BCQ = ∠DET [16] & ∠DSQ = ∠DCQ [23] (Angle chase)⇒  ∠(AE-CD) = ∠(QS-AB) [24]
+014. A,E,S are collinear [10] & R,A,E are collinear [08] & R,C,D are collinear [09] & C,D,P are collinear [04] & Q,B,A are collinear [06] & B,A,P are collinear [05] & ∠(AE-CD) = ∠(QS-AB) [24] ⇒  ∠SRP = ∠SQP [25]
+015. ∠SRP = ∠SQP [25] ⇒  Q,R,P,S are concyclic
+==========================
+
+/home/xmy/alphageometry/numericals.py:1243: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show(block=block)
+===== 完成问题: translated_imo_2022_p4 =====

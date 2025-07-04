@@ -17,17 +17,18 @@
 set -e
 set -x
 
-virtualenv -p python3 .
-source ./bin/activate
+# 自己创建了环境
+# virtualenv -p python3 .
+# source ./bin/activate
 
-pip install --require-hashes -r requirements.txt
+# pip install --require-hashes -r requirements.txt
 
-gdown --folder https://bit.ly/alphageometry
+# gdown --folder https://bit.ly/alphageometry
 DATA=ag_ckpt_vocab
 
 MELIAD_PATH=meliad_lib/meliad
-mkdir -p $MELIAD_PATH
-git clone https://github.com/google-research/meliad $MELIAD_PATH
+# mkdir -p $MELIAD_PATH
+# git clone https://github.com/google-research/meliad $MELIAD_PATH
 export PYTHONPATH=$PYTHONPATH:$MELIAD_PATH
 
 DDAR_ARGS=(
@@ -62,11 +63,55 @@ LM_ARGS=(
 
 echo $PYTHONPATH
 
+
+# log_file="$(pwd)/alphageometry.log"
+# > "$log_file"
+# problems_file="$(pwd)/imo_ag_30.txt"
+# problem_names=$(sed -n '1~2p' "$problems_file")
+# while IFS= read -r problem_name; do
+#     echo "===== 开始处理问题: $problem_name =====" | tee -a "$log_file"
+#     # python -m alphageometry \
+#     #     --alsologtostderr \
+#     #     --problems_file="$problems_file" \
+#     #     --problem_name="$problem_name" \
+#     #     --mode=ddar \
+#     #     "${DDAR_ARGS[@]}" >> "$log_file" 2>&1
+#     python -m alphageometry \
+#         --alsologtostderr \
+#         --problems_file="$problems_file" \
+#         --problem_name="$problem_name" \
+#         --mode=alphageometry \
+#         "${DDAR_ARGS[@]}" \
+#         "${SEARCH_ARGS[@]}" \
+#         "${LM_ARGS[@]}" >> "$log_file" 2>&1
+
+    
+#     echo "===== 完成问题: $problem_name =====" | tee -a "$log_file"
+# done <<< "$problem_names"
+
+# echo "所有问题处理完成，日志已保存至: $log_file"
+
+# Run DDAR
 python -m alphageometry \
 --alsologtostderr \
 --problems_file=$(pwd)/examples.txt \
---problem_name=orthocenter \
---mode=alphageometry \
-"${DDAR_ARGS[@]}" \
-"${SEARCH_ARGS[@]}" \
-"${LM_ARGS[@]}"
+--problem_name=orthocenter_aux \
+--mode=ddar \
+"${DDAR_ARGS[@]}"
+# --problems_file=$(pwd)/imo_ag_30.txt \
+# --problem_name=translated_imo_2005_p5 \
+
+
+# Run AlphaGeometry
+# log_file="$(pwd)/alphageometry.log"
+# > "$log_file"
+# python -m alphageometry \
+# --alsologtostderr \
+# --problems_file=$(pwd)/examples.txt \
+# --problem_name=orthocenter \
+# --mode=alphageometry \
+# "${DDAR_ARGS[@]}" \
+# "${SEARCH_ARGS[@]}" \
+# "${LM_ARGS[@]}" >> "$log_file" 2>&1
+# 2>&1 | grep "TensorRT\|GPU"
+# 将 stderr 重定向到 stdout

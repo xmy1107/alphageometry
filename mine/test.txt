@@ -1,0 +1,12 @@
+p1
+a b = segment a b; g1 = on_tline g1 a a b; g2 = on_tline g2 b b a; m = on_circle m g1 a, on_circle m g2 b; n = on_circle n g1 a, on_circle n g2 b; c = on_pline c m a b, on_circle c g1 a; d = on_pline d m a b, on_circle d g2 b; e = on_line e a c, on_line e b d; p = on_line p a n, on_line p c d; q = on_line q b n, on_line q c d ? cong e p e q
+p2
+a b c = triangle; h = on_tline b a c, on_tline c a b ? perp a h b c
+p3
+a b = segment a b; g1 = on_tline g1 a a b; g2 = on_tline g2 b b a; m = on_circle m g1 a, on_circle m g2 b; n = on_circle n g1 a, on_circle n g2 b; c = on_pline c m a b, on_circle c g1 a; d = on_pline d m a b, on_circle d g2 b; e = on_line e a c, on_line e b d; p = on_line p a n, on_line p c d; q = on_line q b n, on_line q c d ? cong a b c d
+p4
+a b c = triangle; h = on_tline b a c, on_tline c a b; e = on_line e a c, on_line e b h ? perp a h b c
+p5
+a b c = triangle; h = on_tline b a c, on_tline c a b; e = on_line e a c, on_line e b h; e f g = triangle ? perp a h b a
+p6
+a b c = triangle; h = on_tline b a c, on_tline c a b; e = on_line e a c, on_line e b h; f = free f; g = free g ? perp a h b a

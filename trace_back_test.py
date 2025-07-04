@@ -43,6 +43,8 @@ class TracebackTest(unittest.TestCase):
     query = pr.Dependency(p.goal.name, goal_args, None, None)
 
     setup, aux, _, _ = tb.get_logs(query, g, merge_trivials=False)
+    print('Setup:', setup)
+    print('Aux:', aux)
 
     # Convert each predicates to its hash string:
     setup = [p.hashed() for p in setup]

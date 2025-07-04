@@ -28,6 +28,7 @@ from numpy.random import uniform as unif  # pylint: disable=g-importing-member
 
 
 matplotlib.use('TkAgg')
+# matplotlib.use('Agg')  # 远程临时改为非图形化界面
 
 
 ATOM = 1e-12
@@ -702,7 +703,11 @@ def check_perp(points: list[Point]) -> bool:
 
 def check_cyclic(points: list[Point]) -> bool:
   points = list(set(points))
-  (a, b, c), *ps = points
+  # (a, b, c), *ps = points
+  try:
+    a, b, c, *ps = points  # fixed
+  except Exception as e:
+      raise RuntimeError(f"points 解包失败，原因：{type(e).__name__}: {e}，points={points}") from e
   circle = Circle(p1=a, p2=b, p3=c)
   for d in ps:
     if not close_enough(d.distance(circle.center), circle.radius):

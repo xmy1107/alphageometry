@@ -36,16 +36,16 @@ from problem import Dependency, EmptyDependency
 np = nm.np
 
 
-FREE = [
+FREE = [      # 自由构造
     'free',
     'segment',
-    'r_triangle',
-    'risos',
+    'r_triangle', # 直角三角形
+    'risos',    # 等腰直角三角形
     'triangle',
     'triangle12',
-    'ieq_triangle',
-    'eq_quadrangle',
-    'eq_trapezoid',
+    'ieq_triangle', # 等边三角形
+    'eq_quadrangle',  # 等边四边形
+    'eq_trapezoid',   # 等腰梯形
     'eqdia_quadrangle',
     'quadrangle',
     'r_trapezoid',
@@ -56,14 +56,14 @@ FREE = [
     'iso_triangle',
 ]
 
-INTERSECT = [
-    'angle_bisector',
-    'angle_mirror',
-    'eqdistance',
-    'lc_tangent',
-    'on_aline',
-    'on_bline',
-    'on_circle',
+INTERSECT = [   # 通过交点构造
+    'angle_bisector', # 角平分线
+    'angle_mirror',   # 角对称线
+    'eqdistance',     # 等距线
+    'lc_tangent',     # 圆的切线
+    'on_aline',       #
+    'on_bline',       #
+    'on_circle',      # 在圆上
     'on_line',
     'on_pline',
     'on_tline',
@@ -152,6 +152,17 @@ class Graph:
     rat.set_lengths(None, None)
     self.connect_val(rat, deps=None)
 
+  def print_all_algebraic_equations(self) -> None:
+    print("=== Angle Table (atable) ===")
+    for eq in self.atable.get_all_eqs_and_why():
+        print(eq)
+    print("\n=== Distance Table (dtable) ===")
+    for eq in self.dtable.get_all_eqs_and_why():
+        print(eq)
+    print("\n=== Ratio Table (rtable) ===")
+    for eq in self.rtable.get_all_eqs_and_why():
+        print(eq)
+
   def get_or_create_const_ang(self, n: int, d: int) -> None:
     n, d = ar.simplify(n, d)
     if (n, d) not in self.aconst:
@@ -175,7 +186,7 @@ class Graph:
     rat2 = self.rconst[(d, n)]
     return rat1, rat2
 
-  def add_algebra(self, dep: Dependency, level: int) -> None:
+  def add_algebra(self, dep: Dependency, level: int, all_conclusions: list[str]) -> None:
     """Add new algebraic predicates."""
     _ = level
     if dep.name not in [
@@ -190,6 +201,7 @@ class Graph:
       return
 
     name, args = dep.name, dep.args
+    all_conclusions.append(f"{name} {' '.join(a.name for a in args)}")
 
     if name == 'para':
       ab, cd = dep.algebra
@@ -494,6 +506,7 @@ class Graph:
     check = False
     g = None
     added = None
+    logging.info('Starting to Build problem.')
     if verbose:
       logging.info(pr.url)
       logging.info(pr.txt())
@@ -502,6 +515,7 @@ class Graph:
         g = Graph()
         added = []
         plevel = 0
+        print("plevel: ", plevel)
         for clause in pr.clauses:
           adds, plevel = g.add_clause(
               clause, plevel, definitions, verbose=verbose
@@ -509,18 +523,17 @@ class Graph:
           added += adds
         g.plevel = plevel
 
-      except (nm.InvalidLineIntersectError, nm.InvalidQuadSolveError):
-        continue
-      except DepCheckFailError:
-        continue
-      except (PointTooCloseError, PointTooFarError):
+      except (nm.InvalidLineIntersectError, nm.InvalidQuadSolveError, DepCheckFailError, PointTooCloseError, PointTooFarError) as e:
+        raise RuntimeError(f"Caught exception: {type(e).__name__}") from e
         continue
 
       if not pr.goal:
         break
 
       args = list(map(lambda x: g.get(x, lambda: int(x)), pr.goal.args))
-      check = nm.check(pr.goal.name, args)
+      # check = nm.check(pr.goal.name, args) # goal最终也是图的一部分，需要成立
+      check = True # 忽略goal
+      logging.info(f"{check}")
 
     g.url = pr.url
     g.build_def = (pr, definitions)

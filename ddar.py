@@ -84,7 +84,7 @@ def solve(
   """Alternate between DD and AR until goal is found."""
   status = 'saturated'
   level_times = []
-
+  # logging.info(f'Starting DD+AR with max_level={max_level} and timeout={timeout}')
   dervs, eq4 = g.derive_algebra(level=0, verbose=False)
   derives = [dervs]
   eq4s = [eq4]
@@ -92,15 +92,20 @@ def solve(
   all_added = []
 
   while len(level_times) < max_level:
-    dervs, eq4, next_branches, added = saturate_or_goal(
+    logging.info(f'Level {len(level_times) + 1}/{max_level}')
+    dervs, eq4, next_branches, added = saturate_or_goal(                  # 找到所有结论（未应用）=> 应用 => 下一轮找结论
         g, theorems, level_times, controller, max_level, timeout=timeout
     )
+    # logging.info(f'derives: {dervs}')
+    # logging.info(f'equations: {eq4}')
+    # logging.info(f'branches: {next_branches}')
+    # logging.info(f'added: {added}')
     all_added += added
 
     derives += dervs
     eq4s += eq4
     branches += next_branches
-
+    
     # Now, it is either goal or saturated
     if controller.goal is not None:
       goal_args = g.names2points(controller.goal.args)

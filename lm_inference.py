@@ -21,7 +21,6 @@ import models  # pylint: disable=unused-import
 import t5.data
 from transformer import inference_utils
 
-
 np = jax.numpy
 
 
