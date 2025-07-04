@@ -94,6 +94,8 @@ class Graph:
   """Graph data structure representing proof state."""
 
   def __init__(self):
+    self.all_conclusions = []  # all algebraic conclusions
+
     self.type2nodes = {
         Point: [],
         Line: [],
@@ -186,7 +188,7 @@ class Graph:
     rat2 = self.rconst[(d, n)]
     return rat1, rat2
 
-  def add_algebra(self, dep: Dependency, level: int, all_conclusions: list[str]) -> None:
+  def add_algebra(self, dep: Dependency, level: int) -> None:
     """Add new algebraic predicates."""
     _ = level
     if dep.name not in [
@@ -201,7 +203,7 @@ class Graph:
       return
 
     name, args = dep.name, dep.args
-    all_conclusions.append(f"{name} {' '.join(a.name for a in args)}")
+    self.all_conclusions.append(f"{name} {' '.join(a.name for a in args)}")
 
     if name == 'para':
       ab, cd = dep.algebra
