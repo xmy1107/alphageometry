@@ -128,7 +128,7 @@ def proof_step_string(
   return f'{premises_nl} \u21d2 {conclusion_nl}'
 
 
-def write_solution(g: gh.Graph, p: pr.Problem, out_file: str, printlog : bool = False) -> None:
+def write_solution(g: gh.Graph, p: pr.Problem, out_file: str, printlog : bool = False) -> list[str]:
   """Output the solution to out_file.
 
   Args:
@@ -176,7 +176,8 @@ def write_solution(g: gh.Graph, p: pr.Problem, out_file: str, printlog : bool = 
   setup, aux, proof_steps, refs = ddar.get_proof_steps(
       g, p.goal, merge_trivials=False
   )
-
+  
+  count_points = []
 
   solution = '\n=========================='
   solution += '\n * From theorem premises:\n'
@@ -195,11 +196,15 @@ def write_solution(g: gh.Graph, p: pr.Problem, out_file: str, printlog : bool = 
   aux_premises_nl = []
   for premises, [points] in aux:
     solution += ' '.join([p.name.upper() for p in points]) + ' '
+    count_points.extend([p.name for p in points])
     aux_premises_nl += [
         natural_language_statement(p) + ' [{:02}]'.format(refs[p.hashed()])
         for p in premises
     ]
   solution += ': Points\n' + '\n'.join(aux_premises_nl)
+
+  if not printlog: return count_points
+
 
   # some special case where the deduction rule has a well known name.
   r2name = {

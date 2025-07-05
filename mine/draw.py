@@ -12,6 +12,8 @@ import alphageometry
 DEFS_FILE = '../defs.txt'
 PROBLEMS_FILE = 'gen.txt'
 PROBLEM_NAME =  'p1'
+# PROBLEMS_FILE = '../examples.txt'
+# PROBLEM_NAME =  'orthocenter_aux'
 OUT_FILE = ''
 RULES_FILE = '../rules.txt'
 
@@ -28,10 +30,10 @@ def draw(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
   """
   ddar.solve(g, RULES, p, max_level=10)
 
-  # goal_args = g.names2nodes(p.goal.args)
-  # if not g.check(p.goal.name, goal_args):
-    # logging.info('DD+AR failed to solve the problem.')
-    # return False
+  goal_args = g.names2nodes(p.goal.args)
+  if not g.check(p.goal.name, goal_args):
+    logging.info('DD+AR failed to solve the problem.')
+    return False
   
 
   # logging.info('DD+AR successed to solve the problem.')
@@ -41,6 +43,8 @@ def draw(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
   #    for a in 
   # p.goal = pr.Construction.from_txt("cong a d b e")
   alphageometry.write_solution(g, p, out_file, True)
+  # count_points = alphageometry.write_solution(g, p, out_file, False)
+  # print("Count points: ", count_points)
   g.sort_conclusions()
   print('\n'.join([' '.join(con) for con in g.all_conclusions]))
   print("Size of all_conclutions: ", len(g.all_conclusions))

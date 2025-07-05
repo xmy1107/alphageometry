@@ -101,7 +101,7 @@ def draw(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
   # for condition in ['perp', 'cong', 'coll']:
   #    for a in 
   # p.goal = pr.Construction.from_txt("cong a d b e")
-#   alphageometry.write_solution(g, p, out_file, True)
+#   count_points = alphageometry.write_solution(g, p, out_file, False)
   g.sort_conclusions()
 #   print('\n'.join([' '.join(con) for con in g.all_conclusions]))
   print("Size of all_conclutions: ", len(g.all_conclusions))
@@ -113,50 +113,63 @@ def draw(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
 #       g.type2nodes[gh.Segment])
   return True
 
-if __name__ == "__main__":
+def main(_):
     global DEFINITIONS
     global RULES
 
     DEFINITIONS = pr.Definition.from_txt_file(DEFS_FILE, to_dict=True)
     RULES = pr.Theorem.from_txt_file(RULES_FILE, to_dict=True)
 
-    script = random_geometry()
-    prev_conclusions = set()
+    for _ in range(100):
+        print(f"\nTrying to generate a new geometry script in {_}th iteration.")
+        script = random_geometry()
+        prev_conclusions = set()
 
-    aux_problems = []
-    num = 0
-    
-    print("Generated script: ",'\n'.join(script))
+        aux_problems = []
+        num = 0
+        
+        print("Generated script: ",'\n'.join(script))
 
-    for i in range(2, len(script) + 1):
-        try:
-            problem_str = '; '.join(script[:i])
-            last_line = script[i-1]
-            t = last_line.split('=')[0].strip().split()[0]
+        for i in range(2, len(script) + 1):
+            try:
+                problem_str = '; '.join(script[:i])
+                last_line = script[i-1]
+                t = last_line.split('=')[0].strip().split()[0]
 
-            # 构造 pr.Problem 对象
-            this_problem = pr.Problem.from_txt(problem_str, translate=True)
-            g, _ = gh.Graph.build_problem(this_problem, DEFINITIONS)
-            draw(g, this_problem, OUT_FILE)
+                # 构造 pr.Problem 对象
+                this_problem = pr.Problem.from_txt(problem_str, translate=True)
+                g, _ = gh.Graph.build_problem(this_problem, DEFINITIONS)
+                draw(g, this_problem, OUT_FILE)
 
-            curr_conclusions = set(tuple(con) for con in getattr(g, 'all_conclusions', []))
-            new_conclusions = curr_conclusions - prev_conclusions
+                curr_conclusions = set(tuple(con) for con in getattr(g, 'all_conclusions', []))
+                new_conclusions = curr_conclusions - prev_conclusions
 
-            for concl in new_conclusions:
-                if t not in concl:
-                    num += 1
-                    aux_problems.append(f"p{num}\n{problem_str} ? {' '.join(concl)}")
-                    print("prev: ",prev_conclusions)
-                    print("new: ",new_conclusions)
-                    print("curr: ",curr_conclusions)
-                    with open(OUT_FILE, 'w') as f:
-                        f.write('\n'.join(aux_problems))
-                    exit(0)
+                for concl in new_conclusions:
+                    if t not in concl:
+                        num += 1
+                        aux_problems.append(f"p{num}\n{problem_str} ? {' '.join(concl)}")    # 找到一组同构判定下以为有辅助点的问题
+                        # print("prev: ",prev_conclusions)
+                        # print("new: ",new_conclusions)
+                        # print("curr: ",curr_conclusions)
+                        with open(OUT_FILE, 'w') as f:
+                            f.write('\n'.join(aux_problems))
 
-            prev_conclusions = curr_conclusions
-        except Exception as e:
-            print(f"Error at problem {i}: {e}")
-            exit(0)
-        # finally:
-        #     with open(OUT_FILE, 'w') as f:
-        #         f.write('\n'.join(aux_problems))
+                        this_problem = pr.Problem.from_txt(f"{problem_str} ? {' '.join(concl)}", translate=True)
+                        # this_problem.goal = pr.Construction.from_txt(f"{' '.join(concl)}")
+                        ddar.solve(g, RULES, this_problem, max_level=10)
+                        count_points = alphageometry.write_solution(g, this_problem, '', False)
+                        if len(count_points) > 0:
+                            print(f"Found auxiliary problem: p{num} with goal {concl}")      # 找到真的有辅助点的问题
+                            alphageometry.write_solution(g, this_problem, '', True)
+                            exit(0)
+
+                prev_conclusions = curr_conclusions
+            except Exception as e:
+                print(f"Error at problem {i}: {e}")
+                break
+            # finally:
+            #     with open(OUT_FILE, 'w') as f:
+            #         f.write('\n'.join(aux_problems))
+
+if __name__ == '__main__':
+    app.run(main)
