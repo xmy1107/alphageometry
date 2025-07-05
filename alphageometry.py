@@ -242,7 +242,7 @@ def write_solution(g: gh.Graph, p: pr.Problem, out_file: str, printlog : bool = 
 
   if printlog:
     logging.info(solution)
-    logging.info(my_solution)
+    # logging.info(my_solution)
   if out_file:
     with open(out_file, 'w') as f:
       f.write(solution)

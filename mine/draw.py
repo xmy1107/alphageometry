@@ -11,7 +11,7 @@ import alphageometry
 
 DEFS_FILE = '../defs.txt'
 PROBLEMS_FILE = 'gen.txt'
-PROBLEM_NAME =  'p2'
+PROBLEM_NAME =  'p1'
 OUT_FILE = ''
 RULES_FILE = '../rules.txt'
 
@@ -40,7 +40,7 @@ def draw(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
   # for condition in ['perp', 'cong', 'coll']:
   #    for a in 
   # p.goal = pr.Construction.from_txt("cong a d b e")
-  # alphageometry.write_solution(g, p, out_file, True)
+  alphageometry.write_solution(g, p, out_file, True)
   print('\n'.join(g.all_conclusions))
   print("Size of all_conclutions: ", len(g.all_conclusions))
 
@@ -68,6 +68,9 @@ def main(_):
   g, _ = gh.Graph.build_problem(this_problem, DEFINITIONS)
 
   draw(g, this_problem, OUT_FILE)
+
+  # Set = set(getattr(g, 'all_conclusions', []))
+  # print(Set)
 
 if __name__ == '__main__':
   app.run(main)

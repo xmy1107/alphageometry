@@ -1,7 +1,7 @@
 import random
 import string
 
-TURNS = 3
+TURNS = 7
 
 def random_geometry():
     """
@@ -62,8 +62,9 @@ def random_geometry():
 
 if __name__ == "__main__":
     script = random_geometry()
-    problemstr = "p1\n" + '; '.join(script) + ' ? coll a b c d'
-    # print(pro_str)
     file_path = './gen.txt'
     with open(file_path, 'w') as f:
-        f.write(problemstr)
+        for i in range(1, len(script)):
+            if i!=1: f.write('\n')
+            problemstr = f"p{i}\n" + '; '.join(script[:i])
+            f.write(problemstr)

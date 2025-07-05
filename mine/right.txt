@@ -1,0 +1,20 @@
+cong a b a d
+cong e d e c
+cong f d f a
+cong f a f c
+para a e b c
+eqangle d f e f e f c f
+eqangle e f d f c f e f
+eqangle a f a b a b d f
+eqangle a b a f d f a b
+eqangle a f a c a c c f
+eqangle a c a f c f a c
+eqangle d f c d c d c f
+eqangle c d d f c f c d
+eqangle a b a c d f e f
+eqangle a c a b e f d f
+eqangle a b d f a c e f
+eqangle d f a b e f a c
+eqangle a c c f a b e f
+eqangle c f a c e f a b
+perp c d e f
