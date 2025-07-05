@@ -142,6 +142,50 @@ class Graph:
     g.build_clauses = list(getattr(self, 'build_clauses', []))
     return g
 
+  def sort_conclusions(self) -> None:  # 明确结论描述的同构并内部排好序便于判同构时比较
+    for con in self.all_conclusions:
+      for i in range(1, len(con), 2): # 各点对ab遵循a<b
+        if con[i] > con[i + 1]: con[i], con[i + 1] = con[i + 1], con[i]
+
+      if len(con) == 5: # eg. cong c d a b = cong a b c d
+        if con[1] + con[2] > con[3] + con[4]:
+            con[1:5] = con[3:5] + con[1:3]
+      '''
+      for example:
+      eqangle a b e f c d g h = eqangle a b c d e f g h
+      eqangle e f g h a b c d = eqangle a b c d e f g h
+      令1 2 3 4代表四组点对，则以下均等价，要以字典序最小的为准：
+      1 2 3 4
+      1 3 2 4
+      3 4 1 2
+      3 1 4 2
+      还有四种，1 4也可以交换
+      '''
+      if len(con) == 9:
+        idx_orders = [
+          [1, 2, 3, 4],
+          [1, 3, 2, 4],
+          [3, 4, 1, 2],
+          [3, 1, 4, 2],
+          [4, 2, 3, 1],
+          [4, 3, 2, 1],
+          [2, 4, 1, 3],
+          [2, 1, 4, 3]
+        ]
+        # 找到字典序最小的组合
+        min_idx = min(
+            range(8),
+            key=lambda i: ''.join(con[j * 2 - 1] + con[j * 2] for j in idx_orders[i])
+        )
+        idx = idx_orders[min_idx]
+        # 重组con[1:9]
+        new_con = []
+        for j in idx:
+            new_con.extend([con[j * 2 - 1], con[j * 2]])
+        con[1:9] = new_con
+
+
+
   def _create_const_ang(self, n: int, d: int) -> None:
     n, d = ar.simplify(n, d)
     ang = self.aconst[(n, d)] = self.new_node(Angle, f'{n}pi/{d}')
@@ -203,7 +247,7 @@ class Graph:
       return
 
     name, args = dep.name, dep.args
-    self.all_conclusions.append(f"{name} {' '.join(a.name for a in args)}")
+    self.all_conclusions.append([name] + [a.name for a in args])
 
     if name == 'para':
       ab, cd = dep.algebra

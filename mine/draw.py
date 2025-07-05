@@ -41,7 +41,8 @@ def draw(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
   #    for a in 
   # p.goal = pr.Construction.from_txt("cong a d b e")
   alphageometry.write_solution(g, p, out_file, True)
-  print('\n'.join(g.all_conclusions))
+  g.sort_conclusions()
+  print('\n'.join([' '.join(con) for con in g.all_conclusions]))
   print("Size of all_conclutions: ", len(g.all_conclusions))
 
   gh.nm.draw(

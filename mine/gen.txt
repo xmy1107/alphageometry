@@ -1,2 +1,2 @@
 p1
-a b c = triangle a b c; d = mirror d c b; e = circle e c a b; f = on_bline f a e ? eqangle b e b c b c c e
+a b c = triangle a b c; d = circle d c b a; e = mirror e c b; f = circle f b d a; g = midpoint g f e ? eqangle a d a f b d d f

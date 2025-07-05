@@ -177,6 +177,7 @@ def write_solution(g: gh.Graph, p: pr.Problem, out_file: str, printlog : bool = 
       g, p.goal, merge_trivials=False
   )
 
+
   solution = '\n=========================='
   solution += '\n * From theorem premises:\n'
   premises_nl = []

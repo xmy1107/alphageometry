@@ -102,7 +102,8 @@ def draw(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
   #    for a in 
   # p.goal = pr.Construction.from_txt("cong a d b e")
 #   alphageometry.write_solution(g, p, out_file, True)
-  print('\n'.join(g.all_conclusions))
+  g.sort_conclusions()
+#   print('\n'.join([' '.join(con) for con in g.all_conclusions]))
   print("Size of all_conclutions: ", len(g.all_conclusions))
 
 #   gh.nm.draw(
@@ -124,6 +125,8 @@ if __name__ == "__main__":
 
     aux_problems = []
     num = 0
+    
+    print("Generated script: ",'\n'.join(script))
 
     for i in range(2, len(script) + 1):
         try:
@@ -136,14 +139,13 @@ if __name__ == "__main__":
             g, _ = gh.Graph.build_problem(this_problem, DEFINITIONS)
             draw(g, this_problem, OUT_FILE)
 
-            curr_conclusions = set(getattr(g, 'all_conclusions', []))
+            curr_conclusions = set(tuple(con) for con in getattr(g, 'all_conclusions', []))
             new_conclusions = curr_conclusions - prev_conclusions
 
             for concl in new_conclusions:
-                tokens = concl.split()
-                if t not in tokens:
+                if t not in concl:
                     num += 1
-                    aux_problems.append(f"p{num}\n{problem_str} ? {concl}")
+                    aux_problems.append(f"p{num}\n{problem_str} ? {' '.join(concl)}")
                     print("prev: ",prev_conclusions)
                     print("new: ",new_conclusions)
                     print("curr: ",curr_conclusions)
@@ -154,6 +156,7 @@ if __name__ == "__main__":
             prev_conclusions = curr_conclusions
         except Exception as e:
             print(f"Error at problem {i}: {e}")
-        finally:
-            with open(OUT_FILE, 'w') as f:
-                f.write('\n'.join(aux_problems))
+            exit(0)
+        # finally:
+        #     with open(OUT_FILE, 'w') as f:
+        #         f.write('\n'.join(aux_problems))

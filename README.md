@@ -14,8 +14,6 @@ fixed：numericals.py	check_cyclic	(a, b, c), *ps = points => a, b, c, *ps = poi
 
 graph.py	build_problem
 
-
-
 # Method
 
 [论文概要](https://zhuanlan.zhihu.com/p/679166024)
