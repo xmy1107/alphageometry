@@ -14,7 +14,7 @@ import string
 DEFS_FILE = '../defs.txt'
 # PROBLEMS_FILE = 'gen.txt'
 # PROBLEM_NAME =  'p2'
-OUT_FILE = './gen.txt'
+OUT_FILE = './gen3.txt'
 RULES_FILE = '../rules.txt'
 
 TURNS = 6

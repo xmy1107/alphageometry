@@ -48,17 +48,17 @@ SEARCH_ARGS=(
 LM_ARGS=(
   --ckpt_path=$DATA \
   --vocab_path=$DATA/geometry.757.model \
-  --gin_search_paths=$MELIAD_PATH/transformer/configs \
-  --gin_file=base_htrans.gin \
-  --gin_file=size/medium_150M.gin \
-  --gin_file=options/positions_t5.gin \
-  --gin_file=options/lr_cosine_decay.gin \
-  --gin_file=options/seq_1024_nocache.gin \
-  --gin_file=geometry_150M_generate.gin \
-  --gin_param=DecoderOnlyLanguageModelGenerate.output_token_losses=True \
-  --gin_param=TransformerTaskConfig.batch_size=$BATCH_SIZE \
-  --gin_param=TransformerTaskConfig.sequence_length=128 \
-  --gin_param=Trainer.restore_state_variables=False
+  # --gin_search_paths=$MELIAD_PATH/transformer/configs \
+  # --gin_file=base_htrans.gin \
+  # --gin_file=size/medium_150M.gin \
+  # --gin_file=options/positions_t5.gin \
+  # --gin_file=options/lr_cosine_decay.gin \
+  # --gin_file=options/seq_1024_nocache.gin \
+  # --gin_file=geometry_150M_generate.gin \
+  # --gin_param=DecoderOnlyLanguageModelGenerate.output_token_losses=True \
+  # --gin_param=TransformerTaskConfig.batch_size=$BATCH_SIZE \
+  # --gin_param=TransformerTaskConfig.sequence_length=128 \
+  # --gin_param=Trainer.restore_state_variables=False
 );
 
 echo $PYTHONPATH

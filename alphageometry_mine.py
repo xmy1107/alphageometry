@@ -137,42 +137,6 @@ def write_solution(g: gh.Graph, p: pr.Problem, out_file: str, printlog : bool = 
     out_file: file to write to, empty string to skip writing to file.
   """
 
-  # ===================my test begin========================
-  from problem import Dependency
-  from trace_back import get_logs
-
-  # # 假设 p 是 pr.Problem，g 是 gh.Graph
-  # goal_args = g.names2nodes(p.goal.args)
-  # query = Dependency(p.goal.name, goal_args, None, None)
-
-  # setup, aux_setup, log, setup_points = get_logs(query, g)
-
-  # # 为每个条件和结论分配唯一序号
-  # dep2idx = {}
-  # idx = 0
-  # for prems, cons in log:
-  #     for d in prems + cons:
-  #         h = d.hashed()
-  #         if h not in dep2idx:
-  #             dep2idx[h] = idx
-  #             idx += 1
-
-  # # 输出每一步推理
-  # for prems, cons in log:
-  #     for c in cons:
-  #         c_idx = dep2idx[c.hashed()]
-  #         prems_idx = [dep2idx[p.hashed()] for p in prems]
-  #         print(f"结论[{c_idx}]: {c}  由条件{prems_idx}推出")
-
-  # setup, aux, proof_steps, refs = ddar.get_proof_steps(g, p.goal, merge_trivials=False)
-
-  # for step in proof_steps:
-  #     premises, [conclusion] = step
-  #     c_idx = refs[conclusion.hashed()]
-  #     prems_idx = [refs[p.hashed()] for p in premises]
-  #     print(f"结论[{c_idx}]: {conclusion}  由条件{prems_idx}推出")
-  # ===================my test end========================
-
   setup, aux, proof_steps, refs = ddar.get_proof_steps(
       g, p.goal, merge_trivials=False
   )
@@ -514,36 +478,6 @@ def insert_aux_to_premise(pstring: str, auxstring: str) -> str:
   """
   setup, goal = pstring.split(' ? ')
   return setup + '; ' + auxstring + ' ? ' + goal
-
-
-class BeamQueue:
-  """Keep only the top k objects according to their values."""
-
-  def __init__(self, max_size: int = 512):
-    self.queue = []
-    self.max_size = max_size
-
-  def add(self, node: object, val: float) -> None:
-    """Add a new node to this queue."""
-
-    if len(self.queue) < self.max_size:
-      self.queue.append((val, node))
-      return
-
-    # Find the minimum node:
-    min_idx, (min_val, _) = min(enumerate(self.queue), key=lambda x: x[1])
-
-    # replace it if the new node has higher value.
-    if val > min_val:
-      self.queue[min_idx] = (val, node)
-
-  def __iter__(self):
-    for val, node in self.queue:
-      yield val, node
-
-  def __len__(self) -> int:
-    return len(self.queue)
-
 
 def run_alphageometry(
     model: "lm.LanguageModelInference", # 前向引用

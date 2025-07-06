@@ -1,0 +1,1314 @@
+a b = segment a b; c = on_bline c a b, on_circle c a b; d = mirror d b c; e = circle e c d a; f = midpoint f e b ? cong b c c e
+a b c = triangle a b c; d = circle d b c a; e = circle e c a d; f = midpoint f b a ? eqangle a b b c c d c e
+a b c = triangle a b c; d = circle d b c a; e = mirror e a b; f = circle f b e d; g = on_circle g c b; h = on_bline h d e, on_circle h f d ? eqangle a d b f e f b d
+a b c = triangle a b c; d = circle d a b c; e = on_bline e c b; f = on_circle f a c; g = circle g c d b; h = mirror h c g; i = midpoint i b c ? eqangle b d b g c d b h
+a b = segment a b; c = on_circle c a b, on_bline c a b; d = circle d c a b; e = circle e c d a; f = circle f a e d ? eqangle a b a d c d b c
+a b c = triangle a b c; d = circle d b c a; e = circle e b c d; f = midpoint f b e; g = midpoint g c b ? eqangle a b a c b e b d
+a b c = triangle a b c; d = circle d b a c; e = on_line e a b; f = mirror f c a; g = circle g c f b; h = mirror h c d ? eqangle a b b f c g c d
+a b c = triangle a b c; d = circle d b c a; e = midpoint e d a; f = circle f c a e; g = on_line g c d; h = circle h d g f ? eqangle c d c f d f c e
+a b c = triangle a b c; d = on_circle d a b; e = mirror e d b; f = mirror f a e; g = midpoint g a e ? eqratio a f d e e f b e
+a b c = triangle a b c; d = circle d c a b; e = on_bline e d a; f = mirror f e a; g = mirror g a e; h = circle h g f b ? cong a g e f
+a b c = triangle a b c; d = midpoint d b c; e = circle e a d c; f = circle f b a d; g = midpoint g d c ? eqangle a c c e e f b c
+a b c = triangle a b c; d = on_line d c b, on_bline d b c; e = circle e a d b; f = mirror f c b; g = circle g e b c; h = midpoint h c e ? eqangle c e d e e g d g
+a b c = triangle a b c; d = on_bline d a b; e = circle e d a c; f = mirror f a d; g = circle g a f e; h = circle h g e d ? eqangle d e d g e f e g
+a b c = triangle a b c; d = midpoint d a b; e = circle e b d c; f = mirror f c d; g = circle g e c f; h = midpoint h d c ? eqangle c e d e e g f g
+a b c = triangle a b c; d = mirror d b a; e = mirror e a b; f = circle f a b c ? cong a e b d
+a b c = triangle a b c; d = circle d c a b; e = on_circle e c d, on_bline e b a; f = circle f a c e; g = on_line g a b; h = mirror h a d; i = circle i e g f ? eqangle a b b c c h c d
+a b c = triangle a b c; d = circle d a c b; e = mirror e c d; f = on_line f b e; g = midpoint g b f ? eqangle a b a d b e a c
+a b = segment a b; c = mirror c a b; d = mirror d b c; e = mirror e a d; f = on_circle f b e; g = mirror g e b; h = circle h a f c ? cong a e c g
+a b c = triangle a b c; d = on_line d c a; e = mirror e b a; f = circle f a c b; g = on_circle g f c, on_circle g c a; h = on_circle h a c; i = circle i f h a ? eqangle a b a c b c a g
+a b = segment a b; c = mirror c b a; d = on_bline d b a; e = midpoint e d a; f = on_bline f e b, on_bline f a d; g = midpoint g a b ? eqratio a d a e c d b e
+a b = segment a b; c = on_line c b a, on_bline c a b; d = mirror d c b; e = on_bline e b d; f = mirror f b d; g = circle g e f d; h = mirror h e d ? eqangle b e d e f g e g
+a b c = triangle a b c; d = circle d a c b; e = mirror e c a; f = circle f e d c; g = circle g f d c ? eqangle a d a f d e d f
+a b c = triangle a b c; d = circle d a c b; e = circle e d c b; f = midpoint f c b ? eqangle a b a c b e b d
+a b c = triangle a b c; d = mirror d c b; e = mirror e a d; f = circle f d b a; g = circle g e b f; h = mirror h c f ? eqratio a e c d d e b d
+a b c = triangle a b c; d = circle d c b a; e = mirror e a d; f = mirror f c e ? eqangle a b b c c e c d
+a b c = triangle a b c; d = mirror d b c; e = mirror e c d; f = midpoint f c a; g = midpoint g a f ? cong b d c e
+a b c = triangle a b c; d = midpoint d a c; e = mirror e d b; f = midpoint f e c ? eqratio a c c d d e b e
+a b c = triangle a b c; d = mirror d c b; e = mirror e b d; f = circle f b c a; g = midpoint g d e; h = circle h d f b ? cong b e c d
+a b c = triangle a b c; d = circle d a b c; e = circle e d b a; f = midpoint f e c; g = midpoint g c a ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d c b a; e = circle e d b a; f = circle f d e c; g = circle g d a e ? eqangle a b d f e f a b
+a b c = triangle a b c; d = midpoint d a c; e = on_bline e d c, on_circle e d a; f = circle f c d e; g = circle g e b c; h = circle h f g e; i = on_line i d e, on_bline i h b ? eqangle d f e f e h g h
+a b c = triangle a b c; d = circle d a b c; e = circle e a d b; f = circle f e b c; g = circle g d c b; h = on_line h b g ? eqangle b d c d d g c g
+a b c = triangle a b c; d = circle d c b a; e = midpoint e a b; f = circle f d b e; g = circle g c e a; h = midpoint h c a ? eqangle b c b d c g c e
+a b c = triangle a b c; d = mirror d a c; e = circle e b a d; f = midpoint f e c; g = midpoint g b d ? eqratio a d c d c e c f
+a b c = triangle a b c; d = midpoint d a b; e = midpoint e c d; f = mirror f e b; g = circle g b f a; h = midpoint h c b ? eqratio a b b d c d d e
+a b c = triangle a b c; d = midpoint d b a; e = on_bline e d a; f = mirror f c b; g = midpoint g b d; h = mirror h g a ? eqratio a d c f d g b f
+a b c = triangle a b c; d = circle d a c b; e = circle e a d b; f = on_circle f d a; g = mirror g f d ? eqangle a f b f d e b d
+a b = segment a b; c = on_circle c a b; d = mirror d b a; e = midpoint e c b; f = circle f d c e; g = circle g e a f ? eqangle a f c f d f b c
+a b c = triangle a b c; d = circle d a b c; e = midpoint e c b; f = on_circle f d c; g = on_bline g a c; h = circle h g e c; i = circle i a g d ? eqangle a d a f d g c f
+a b c = triangle a b c; d = midpoint d b c; e = circle e d a c; f = on_line f a b, on_line f c e; g = on_circle g b d, on_circle g a d; h = mirror h e b; i = midpoint i e a ? eqratio b c b g e h b h
+a b c = triangle a b c; d = mirror d b a; e = mirror e c b; f = midpoint f d a ? eqratio a d b d b e c e
+a b c = triangle a b c; d = circle d c a b; e = circle e c d a; f = midpoint f a c ? eqangle a b b c c d c e
+a b c = triangle a b c; d = circle d a b c; e = midpoint e b d; f = on_circle f c e; g = midpoint g e c; h = circle h e f d; i = midpoint i c h ? eqratio b d c e d e c g
+a b c = triangle a b c; d = circle d c b a; e = mirror e c d; f = on_circle f b e, on_line f b c ? eqangle a b a d b c a e
+a b c = triangle a b c; d = midpoint d a c; e = mirror e b a; f = circle f e a c; g = circle g c f e; h = circle h d c b; i = midpoint i g h ? eqratio a c b e c d a e
+a b c = triangle a b c; d = circle d b c a; e = circle e b a d; f = mirror f b d ? eqangle a c a e b c a d
+a b c = triangle a b c; d = on_bline d a c; e = midpoint e a c; f = mirror f c a; g = on_bline g d c, on_circle g a c; h = midpoint h f e; i = midpoint i e g ? eqratio a g c f e h e f
+a b c = triangle a b c; d = midpoint d a b; e = on_bline e a d, on_circle e b a; f = circle f e d b; g = on_bline g e f; h = midpoint h c g; i = circle i a h e ? eqangle a e b f d e e f
+a b c = triangle a b c; d = circle d c b a; e = circle e d a c; f = midpoint f b c ? eqangle a b b c c d c e
+a b c = triangle a b c; d = mirror d c b; e = circle e a d c; f = mirror f e d; g = circle g a c e; h = midpoint h d f ? eqratio b d c d d e e f
+a b c = triangle a b c; d = mirror d c b; e = on_bline e c b; f = circle f a c d; g = midpoint g f c ? eqangle b e b f b f c e
+a b c = triangle a b c; d = on_circle d a b; e = midpoint e c d; f = midpoint f e b; g = mirror g d a ? eqratio b e b f c d d e
+a b c = triangle a b c; d = circle d c b a; e = mirror e b a; f = midpoint f c d; g = on_bline g a c; h = midpoint h b c ? eqangle a b a d b c d g
+a b c = triangle a b c; d = circle d a b c; e = mirror e d a; f = on_bline f e d; g = on_circle g d c; h = circle h e c d ? eqangle a b a f b c a c
+a b c = triangle a b c; d = circle d c b a; e = mirror e b a; f = circle f b e c; g = mirror g c d ? eqangle a d b f e f b d
+a b = segment a b; c = on_circle c b a, on_bline c a b; d = on_line d c b, on_bline d b c; e = circle e b c a; f = circle f b a e; g = midpoint g f d ? eqratio a c a d c e c d
+a b c = triangle a b c; d = circle d c b a; e = midpoint e c a; f = circle f e a b; g = on_line g c e, on_bline g e f; h = circle h e d f; i = midpoint i e a ? eqangle a c d h e f d f
+a b = segment a b; c = mirror c b a; d = on_circle d a c; e = mirror e c d; f = mirror f b e; g = mirror g a c; h = circle h e a c ? eqratio a c a e e f c f
+a b c = triangle a b c; d = circle d a c b; e = on_circle e d c, on_bline e d c; f = circle f b e d; g = on_bline g a e; h = circle h a e g; i = on_line i c d ? eqangle a b b d d g b e
+a b c = triangle a b c; d = on_circle d a b; e = circle e a c b; f = midpoint f d e; g = mirror g f d; h = mirror h e b ? eqratio d e f g f g d e
+a b = segment a b; c = on_bline c a b; d = midpoint d c a; e = on_line e a b; f = mirror f e a; g = mirror g b d ? eqratio a d a f b c e f
+a b = segment a b; c = midpoint c b a; d = on_bline d b a; e = midpoint e c d; f = circle f a d e; g = midpoint g d f ? eqratio a b a c c d d e
+a b = segment a b; c = mirror c a b; d = on_circle d c b; e = mirror e b d; f = midpoint f b c ? eqratio a c b c b e d e
+a b = segment a b; c = on_line c b a, on_circle c a b; d = on_circle d a b; e = circle e d b a; f = midpoint f c e; g = mirror g d a; h = mirror h a e ? eqangle a b a d c d d e
+a b c = triangle a b c; d = circle d b c a; e = on_bline e b a, on_circle e a b; f = circle f d a b; g = midpoint g e b; h = mirror h b c ? eqangle a d d f d f b d
+a b c = triangle a b c; d = circle d b c a; e = on_circle e a c, on_bline e c b; f = circle f e a c; g = circle g b d a; h = circle h c d a ? eqangle a b a g b e c f
+a b c = triangle a b c; d = circle d c a b; e = circle e b a d; f = mirror f d a; g = circle g a b e; h = circle h f b a ? eqangle a d b d b e b g
+a b c = triangle a b c; d = circle d a c b; e = circle e d c b; f = mirror f c d ? eqangle a b a c b e b d
+a b c = triangle a b c; d = circle d c a b; e = midpoint e c a; f = on_bline f b e; g = mirror g b c; h = midpoint h a d ? eqratio a c a e b g c g
+a b c = triangle a b c; d = circle d a c b; e = midpoint e a c; f = circle f c b d; g = circle g f c e; h = circle h a b d; i = circle i h e b ? eqangle a b a c b d d f
+a b = segment a b; c = midpoint c a b; d = on_bline d a b; e = circle e a c d; f = on_bline f c a ? eqangle a e c d c d c e
+a b = segment a b; c = mirror c a b; d = on_circle d c b; e = mirror e a c; f = circle f a d b; g = mirror g b f; h = on_circle h c f, on_bline h f d ? eqangle a d a f c d c f
+a b c = triangle a b c; d = mirror d a c; e = circle e a b d; f = circle f e c a; g = circle g e a d ? para a f e f
+a b = segment a b; c = on_bline c a b; d = on_line d a b; e = on_bline e c d; f = circle f d c b; g = mirror g c f ? eqangle a c b f d f b c
+a b c = triangle a b c; d = midpoint d c b; e = midpoint e a b; f = mirror f e c; g = midpoint g c f ? eqratio a c d e e f c f
+a b = segment a b; c = on_line c a b; d = on_bline d b a; e = mirror e d a; f = on_bline f a b; g = midpoint g c a; h = midpoint h c g ? eqratio a c a g d e a d
+a b c = triangle a b c; d = on_circle d a b, on_circle d c a; e = mirror e c a; f = on_bline f c e; g = mirror g d e; h = mirror h f b ? eqratio a c c e e g d g
+a b c = triangle a b c; d = mirror d b a; e = circle e d c b; f = circle f e b a; g = mirror g f d; h = midpoint h d g ? eqratio a d b d d g f g
+a b c = triangle a b c; d = midpoint d b a; e = circle e a b c; f = circle f c e b; g = mirror g e b; h = midpoint h b g ? eqratio a b a d e g b e
+a b c = triangle a b c; d = circle d c a b; e = circle e b c d; f = mirror f b a; g = mirror g d e ? eqangle a b a c d e c d
+a b = segment a b; c = on_bline c b a; d = midpoint d c a; e = circle e a b c; f = circle f e d c; g = on_circle g f b, on_circle g c d; h = midpoint h g e ? eqangle a e a f b g b c
+a b = segment a b; c = mirror c a b; d = on_circle d c a, on_bline d a b; e = midpoint e d c; f = mirror f a c; g = on_bline g f b, on_circle g a f; h = circle h e a c ? eqratio a c a f b c a c
+a b = segment a b; c = on_circle c a b; d = circle d c a b; e = circle e c d a; f = mirror f a b ? eqangle a b b d d e b c
+a b c = triangle a b c; d = midpoint d a c; e = circle e c d b; f = circle f b e d; g = mirror g e f ? eqangle a c b c d e e f
+a b c = triangle a b c; d = mirror d c a; e = on_bline e a c; f = midpoint f a b; g = midpoint g b d ? eqratio a b b f c d a d
+a b c = triangle a b c; d = mirror d b a; e = circle e c d a; f = circle f b a e; g = circle g f c e; h = mirror h e a ? eqangle a e a f b f d e
+a b c = triangle a b c; d = circle d b c a; e = mirror e a d; f = midpoint f a b ? eqangle a c b c b e b d
+a b c = triangle a b c; d = on_line d c a; e = circle e d a b; f = on_circle f e a; g = circle g d c e; h = midpoint h f d; i = midpoint i e c ? eqangle a b b d c g c e
+a b c = triangle a b c; d = mirror d b c; e = circle e a d c; f = circle f b e d; g = on_circle g e b; h = midpoint h b e ? eqangle b e c e e f c f
+a b c = triangle a b c; d = circle d b a c; e = midpoint e b d; f = circle f b c d; g = midpoint g c d; h = circle h b f d; i = on_circle i e d ? eqangle b f b h c f f g
+a b = segment a b; c = on_circle c a b; d = on_circle d a c, on_circle d b c; e = mirror e d c; f = circle f a e d; g = circle g a c d ? eqangle a c c f e f a e
+a b c = triangle a b c; d = midpoint d b a; e = circle e c a d; f = circle f b d c; g = circle g c b a; h = circle h g d e ? eqangle b f c g d g c e
+a b c = triangle a b c; d = circle d a c b; e = circle e b a d; f = midpoint f a c ? eqangle a c a e b c a d
+a b c = triangle a b c; d = on_bline d b a, on_circle d a b; e = midpoint e d b; f = circle f b a d; g = circle g d b f; h = circle h c d f ? eqangle a b a e d g a b
+a b c = triangle a b c; d = circle d c a b; e = midpoint e d b; f = on_bline f d c, on_bline f e a; g = circle g d c e; h = mirror h b d ? eqangle a b a c b c f g
+a b c = triangle a b c; d = midpoint d c b; e = circle e d c a; f = midpoint f d a; g = mirror g e b; h = mirror h b e ? eqratio a d a f b c b d
+a b c = triangle a b c; d = circle d b a c; e = mirror e c a; f = mirror f a d; g = midpoint g d e ? eqratio a d a e a f c e
+a b c = triangle a b c; d = mirror d c a; e = circle e d c b; f = midpoint f d e; g = circle g b a e; h = mirror h e a; i = circle i f b g ? cong a f e f
+a b c = triangle a b c; d = circle d b c a; e = circle e b d a; f = mirror f a c; g = midpoint g b a ? eqangle a c b c b d b e
+a b c = triangle a b c; d = mirror d c b; e = mirror e b d; f = on_line f e c, on_circle f c a; g = midpoint g e a ? cong b e c d
+a b c = triangle a b c; d = circle d a b c; e = circle e a c d; f = mirror f a d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = circle d b c a; e = on_bline e d c, on_bline e c a; f = circle f e b d; g = mirror g a d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = circle d a b c; e = mirror e a d; f = on_circle f b a, on_bline f d e; g = mirror g d a; h = midpoint h g b ? cong a e d g
+a b c = triangle a b c; d = circle d b a c; e = on_line e c b; f = on_circle f a c, on_bline f b a; g = midpoint g d a; h = on_bline h b g; i = midpoint i c a ? eqangle a c b c d f b d
+a b c = triangle a b c; d = mirror d a c; e = circle e a b d; f = circle f b e c; g = on_circle g f e, on_circle g e b ? eqangle a c b e c f b c
+a b = segment a b; c = mirror c b a; d = midpoint d b a; e = on_circle e b c; f = circle f e b c; g = midpoint g d a; h = midpoint h f b ? eqratio a c a d c d b g
+a b c = triangle a b c; d = mirror d a b; e = mirror e c a; f = on_bline f d b; g = midpoint g f e ? eqratio a d b d c e a e
+a b c = triangle a b c; d = mirror d a c; e = circle e a c b; f = mirror f c b; g = on_bline g a e; h = midpoint h d e ? eqratio a d c d c f b f
+a b c = triangle a b c; d = midpoint d c b; e = mirror e d c; f = midpoint f e a ? cong b c d e
+a b c = triangle a b c; d = circle d b c a; e = circle e d c a; f = midpoint f c a ? eqangle a b b c c d c e
+a b c = triangle a b c; d = circle d b a c; e = on_circle e d b, on_circle e b d; f = midpoint f a b; g = mirror g d f; h = circle h f e a; i = on_line i d f ? eqangle a c c d d h c e
+a b c = triangle a b c; d = circle d c a b; e = circle e c b d; f = circle f e b a; g = midpoint g c b ? eqangle a c c d d f b c
+a b = segment a b; c = mirror c a b; d = mirror d b c; e = midpoint e b c; f = mirror f e c; g = mirror g d a ? cong b c e f
+a b c = triangle a b c; d = circle d a b c; e = circle e b a d; f = circle f d c b; g = mirror g b e; h = circle h f d e ? eqangle b c d f e f b d
+a b c = triangle a b c; d = midpoint d b a; e = midpoint e d b; f = on_bline f a b; g = midpoint g d a; h = mirror h e c; i = midpoint i c f ? cong b d e g
+a b = segment a b; c = on_bline c b a, on_circle c a b; d = circle d b c a; e = circle e a c d; f = mirror f d e; g = midpoint g c a ? eqangle a b a d b c d e
+a b c = triangle a b c; d = on_circle d a c, on_line d a c; e = mirror e b d; f = on_bline f a c; g = midpoint g d a; h = circle h f c b; i = midpoint i d b ? eqratio a c c d d e b e
+a b c = triangle a b c; d = circle d c b a; e = circle e d a b; f = circle f e d b; g = midpoint g d f; h = circle h g c d ? eqangle a e d f e f b e
+a b c = triangle a b c; d = mirror d a b; e = mirror e c a; f = mirror f d e; g = midpoint g b d ? eqratio a d b d c e a e
+a b c = triangle a b c; d = mirror d b c; e = midpoint e c a; f = circle f c a b; g = mirror g a d; h = midpoint h g f ? eqratio a g b d d g c d
+a b = segment a b; c = midpoint c a b; d = on_bline d b a; e = circle e d b a; f = circle f d e b; g = mirror g c a ? eqangle b e b f d f d e
+a b c = triangle a b c; d = on_circle d a b, on_circle d c a; e = midpoint e d b; f = midpoint f a e; g = circle g f a b; h = mirror h f e; i = midpoint i h g ? eqangle a g b f b h f g
+a b c = triangle a b c; d = mirror d b c; e = circle e a c d; f = midpoint f a c; g = circle g b a d; h = circle h e d b ? eqangle a e e f e g c g
+a b c = triangle a b c; d = mirror d a c; e = circle e a c b; f = on_circle f b e; g = circle g d e a; h = midpoint h a g ? eqangle c e c g d e e g
+a b c = triangle a b c; d = midpoint d b c; e = mirror e d a; f = midpoint f d c ? eqratio a e c d d e b c
+a b c = triangle a b c; d = circle d a b c; e = circle e d a c; f = circle f a e b; g = circle g b f e; h = mirror h a f ? eqangle a b a e b g b f
+a b c = triangle a b c; d = circle d c b a; e = on_bline e a d, on_circle e a c; f = circle f c a d; g = midpoint g b c ? eqangle a b b d d f b c
+a b = segment a b; c = mirror c b a; d = midpoint d c a; e = midpoint e c d; f = on_circle f a e; g = mirror g e c; h = midpoint h f a ? cong a d e g
+a b c = triangle a b c; d = midpoint d a b; e = mirror e b c; f = mirror f e b; g = circle g d c a; h = midpoint h b f; i = on_line i g c, on_bline i c f ? eqratio b f c e e f c h
+a b c = triangle a b c; d = circle d b c a; e = circle e b a d; f = midpoint f e a; g = midpoint g e c; h = circle h a c e; i = midpoint i b a ? eqangle a b b c d h c d
+a b = segment a b; c = midpoint c b a; d = on_circle d b c, on_circle d a b; e = on_bline e b c; f = mirror f c d; g = mirror g d a; h = circle h a g b ? eqratio b d b f b f d g
+a b c = triangle a b c; d = on_circle d b a; e = circle e a d b; f = circle f b e a; g = mirror g b f; h = circle h g f e; i = circle i g d b ? eqangle a b b f e f b d
+a b c = triangle a b c; d = circle d c b a; e = on_bline e b c; f = circle f d b c; g = midpoint g e a ? eqangle b d d f d f c d
+a b c = triangle a b c; d = midpoint d c a; e = mirror e b d; f = circle f a c b; g = circle g e a b; h = mirror h e c; i = circle i e b h ? eqratio a c b e c f a g
+a b c = triangle a b c; d = circle d a b c; e = mirror e c b; f = mirror f a c; g = midpoint g f e ? eqratio a f c e c f b e
+a b c = triangle a b c; d = on_line d c a; e = midpoint e c b; f = mirror f e c; g = mirror g b d ? cong b c e f
+a b c = triangle a b c; d = circle d b c a; e = on_bline e b c; f = mirror f b d; g = circle g a d e; h = on_line h g c; i = midpoint i b h ? eqangle a b a d d e a c
+a b c = triangle a b c; d = circle d b a c; e = mirror e c d; f = mirror f b c ? eqangle a b a d b c a e
+a b = segment a b; c = midpoint c a b; d = on_line d a c; e = mirror e a d; f = midpoint f d e ? eqratio a b a e b c d e
+a b c = triangle a b c; d = mirror d a b; e = circle e c a b; f = mirror f e a; g = circle g b a e; h = on_bline h b d; i = midpoint i h e ? eqratio a d b d e f a e
+a b c = triangle a b c; d = circle d a c b; e = mirror e b a; f = circle f c d b; g = on_bline g a c, on_circle g c a; h = midpoint h d a; i = midpoint i b f ? eqratio a e a h b e c d
+a b c = triangle a b c; d = circle d b a c; e = circle e a d b; f = midpoint f a b ? eqangle a c a e b c a d
+a b c = triangle a b c; d = midpoint d b c; e = circle e d c a; f = circle f d b a; g = on_bline g c b; h = circle h d c f ? eqangle c e d g d g d e
+a b = segment a b; c = mirror c a b; d = on_bline d c a; e = circle e c d b; f = midpoint f d e; g = on_line g a d; h = circle h d b f ? eqangle a b b e d e a b
+a b c = triangle a b c; d = midpoint d c a; e = circle e d b c; f = circle f c a e; g = midpoint g f c ? eqangle a f c e d e c f
+a b c = triangle a b c; d = on_circle d b a; e = mirror e d b; f = mirror f b e; g = circle g e b c ? cong b f d e
+a b c = triangle a b c; d = on_bline d c a; e = circle e c d a; f = circle f c e a; g = mirror g c f ? eqangle a d c d c e c f
+a b c = triangle a b c; d = circle d c a b; e = on_line e a c; f = on_circle f c a, on_circle f d b; g = mirror g d f ? eqangle a f b c c f b f
+a b c = triangle a b c; d = mirror d a b; e = mirror e b c; f = midpoint f a c; g = mirror g c d; h = mirror h c e; i = midpoint i d g ? cong b e c h
+a b = segment a b; c = midpoint c a b; d = on_circle d c a; e = on_line e d c; f = circle f b e d; g = midpoint g e c ? eqangle a b a d b f b e
+a b = segment a b; c = on_circle c b a; d = circle d b a c; e = circle e b d a; f = on_line f d b ? eqangle a c c d d e b c
+a b c = triangle a b c; d = circle d b c a; e = mirror e b a; f = mirror f a b; g = mirror g c d; h = circle h d e c ? eqangle a b a d b g a c
+a b c = triangle a b c; d = mirror d c a; e = midpoint e a b; f = midpoint f b c ? eqratio a b b e c d a d
+a b c = triangle a b c; d = circle d b c a; e = mirror e d b; f = circle f c d a; g = mirror g b a; h = on_bline h d c, on_line h c d ? eqratio a g b e b g d e
+a b c = triangle a b c; d = circle d b c a; e = circle e a c d; f = mirror f c e; g = midpoint g c b ? eqangle a b b c c d c e
+a b c = triangle a b c; d = mirror d c a; e = midpoint e a b; f = circle f a e c; g = midpoint g c a ? eqratio a b b e c d a d
+a b c = triangle a b c; d = circle d a c b; e = mirror e b d; f = midpoint f a b ? eqangle a c a d b c a e
+a b c = triangle a b c; d = mirror d c a; e = circle e b c d; f = midpoint f a b; g = circle g e c a ? eqratio a b b f c d a d
+a b c = triangle a b c; d = midpoint d c b; e = midpoint e d c; f = on_line f d b; g = on_bline g d f; h = mirror h e c; i = midpoint i h g ? eqratio b c b d e h c e
+a b = segment a b; c = mirror c b a; d = on_circle d b a; e = mirror e d b; f = circle f e b a ? cong b c d e
+a b c = triangle a b c; d = circle d c a b; e = circle e d b c; f = midpoint f c b ? eqangle a b a c b e b d
+a b c = triangle a b c; d = circle d b c a; e = circle e a d b; f = mirror f e c; g = on_line g a b, on_line g e d ? eqangle a c a e b c a d
+a b = segment a b; c = on_bline c b a; d = circle d b a c; e = mirror e c d; f = mirror f c e ? eqangle a b a d b c a e
+a b = segment a b; c = on_circle c a b; d = on_bline d c b; e = on_line e a b, on_circle e b d; f = midpoint f a b; g = mirror g f d; h = midpoint h d g ? eqratio a b b f f g d g
+a b = segment a b; c = on_circle c a b, on_circle c b a; d = midpoint d a b; e = circle e c b d; f = mirror f d e ? cong b d b e
+a b = segment a b; c = mirror c b a; d = on_circle d b a; e = on_bline e b d, on_bline e b a; f = midpoint f d a; g = circle g b a f ? eqratio a d a f b c b d
+a b c = triangle a b c; d = mirror d c b; e = mirror e a d; f = on_circle f d c; g = circle g b a e; h = circle h g b c; i = circle i d g e ? eqratio a e c d d e b d
+a b c = triangle a b c; d = circle d b c a; e = circle e b d a; f = mirror f c d ? eqangle a c b c d e b d
+a b c = triangle a b c; d = circle d c a b; e = midpoint e a b; f = on_line f c e, on_bline f c a; g = circle g d f c; h = midpoint h d c ? eqangle a c a f c d d g
+a b c = triangle a b c; d = midpoint d c b; e = on_bline e d c; f = mirror f a c; g = circle g f d a; h = mirror h b a; i = midpoint i b a ? eqratio a f b c c f b d
+a b = segment a b; c = mirror c b a; d = mirror d a c; e = on_bline e b a; f = circle f e d a; g = on_line g c e; h = midpoint h a f ? cong a d b c
+a b c = triangle a b c; d = circle d a c b; e = circle e d a b; f = midpoint f a b ? eqangle a c a e b c a d
+a b c = triangle a b c; d = mirror d a c; e = mirror e c d; f = on_bline f a d; g = midpoint g d f ? cong a d c e
+a b c = triangle a b c; d = circle d c b a; e = circle e b a d; f = on_bline f a d; g = circle g a f e; h = mirror h a d ? eqangle a c b c b d b e
+a b c = triangle a b c; d = circle d a b c; e = mirror e a b; f = circle f b d a; g = midpoint g d a; h = circle h b g d; i = midpoint i d f ? eqangle a b d e d h d f
+a b = segment a b; c = mirror c b a; d = on_bline d b c; e = circle e c d a; f = circle f d b a ? para c e d e
+a b c = triangle a b c; d = midpoint d a c; e = mirror e d c; f = midpoint f a b ? cong a c d e
+a b = segment a b; c = on_circle c b a, on_bline c a b; d = on_bline d c b; e = circle e a d b; f = circle f d c b ? eqangle a b a e b c c d
+a b = segment a b; c = on_bline c b a, on_line c a b; d = on_bline d a c; e = circle e c b d; f = circle f b d a ? eqangle a d b e c e c d
+a b c = triangle a b c; d = circle d a c b; e = on_line e b c; f = circle f c d b; g = on_line g a c; h = mirror h d f ? eqangle a b a c c d c f
+a b c = triangle a b c; d = mirror d a b; e = on_circle e d c, on_line e d a; f = midpoint f e d; g = midpoint g e f ? eqratio a d b d c d d f
+a b c = triangle a b c; d = on_bline d b a; e = circle e d a c; f = mirror f a c; g = circle g c e a; h = mirror h e a; i = midpoint i e c ? eqratio a e c f e h a f
+a b c = triangle a b c; d = circle d c b a; e = mirror e b d; f = midpoint f a b ? eqangle a c a d b c a e
+a b c = triangle a b c; d = midpoint d b c; e = on_bline e c d, on_line e d c; f = mirror f e c; g = midpoint g e c; h = circle h f d a ? cong d g f g
+a b c = triangle a b c; d = circle d c a b; e = mirror e d c; f = circle f e c a; g = midpoint g b a ? eqangle a b b d d f b c
+a b c = triangle a b c; d = circle d b a c; e = circle e d a c; f = midpoint f a c ? eqangle a b b c c d c e
+a b = segment a b; c = midpoint c a b; d = on_circle d c a; e = mirror e c a; f = circle f b d e ? cong a b c e
+a b c = triangle a b c; d = circle d a b c; e = mirror e a d; f = midpoint f c a ? eqangle a b b c c e c d
+a b c = triangle a b c; d = circle d c b a; e = mirror e c b; f = mirror f b a; g = mirror g c f ? eqratio a f b e b f c e
+a b c = triangle a b c; d = mirror d c b; e = mirror e b a; f = on_bline f a c; g = circle g a b c; h = midpoint h d g ? eqratio a e b d b e c d
+a b = segment a b; c = on_bline c b a, on_circle c a b; d = midpoint d a c; e = mirror e d b; f = circle f c d b; g = midpoint g e b ? eqratio a c d e d f a f
+a b c = triangle a b c; d = midpoint d c b; e = circle e c d a; f = mirror f d b; g = circle g a e d; h = midpoint h g a ? cong b c d f
+a b c = triangle a b c; d = midpoint d c b; e = mirror e a b; f = circle f b a c; g = circle g f b d; h = on_bline h d c; i = circle i a f d ? eqangle b c d g f g b c
+a b = segment a b; c = mirror c b a; d = on_bline d b c; e = circle e d a c; f = mirror f a e ? para c e d e
+a b c = triangle a b c; d = mirror d a c; e = midpoint e c b; f = midpoint f e b ? eqratio a d b c c d b e
+a b c = triangle a b c; d = circle d b a c; e = circle e b d c; f = mirror f d a; g = circle g a e b; h = circle h f g e; i = midpoint i a e ? eqangle a e b e d g b g
+a b c = triangle a b c; d = circle d a c b; e = on_bline e c a, on_line e a b; f = on_bline f b c; g = mirror g a b; h = on_bline h e b ? eqangle a b a c b d d f
+a b c = triangle a b c; d = circle d c a b; e = midpoint e d b; f = circle f e a d; g = circle g f e d; h = on_circle h g f; i = midpoint i a b ? eqangle a b a c f g b c
+a b c = triangle a b c; d = mirror d a b; e = mirror e b d; f = midpoint f a c ? cong a d b e
+a b = segment a b; c = on_bline c a b; d = mirror d b a; e = midpoint e c a; f = circle f e b a; g = on_circle g c a; h = midpoint h b e ? eqangle b c b f c f b e
+a b c = triangle a b c; d = circle d a b c; e = midpoint e b d; f = mirror f a e; g = circle g f b d; h = midpoint h d f ? eqangle a d b g d f e g
+a b c = triangle a b c; d = circle d b c a; e = midpoint e b d; f = circle f b a e; g = midpoint g b f ? eqangle a e d f e f b d
+a b = segment a b; c = on_bline c a b; d = mirror d c a; e = mirror e a c; f = on_line f b d, on_bline f c a ? cong a e c d
+a b c = triangle a b c; d = midpoint d c a; e = on_bline e c a; f = mirror f b a; g = on_circle g a c; h = circle h b d g; i = midpoint i g h ? eqratio a c a d b f a f
+a b c = triangle a b c; d = mirror d c a; e = midpoint e a d; f = on_line f c e, on_circle f d e; g = midpoint g f b ? cong a c e f
+a b c = triangle a b c; d = on_bline d c b; e = circle e c b a; f = midpoint f a c ? eqangle a b a e d e a c
+a b = segment a b; c = mirror c b a; d = on_bline d a c; e = circle e d a c; f = mirror f d c; g = mirror g d b ? eqratio a c b c c d d f
+a b c = triangle a b c; d = on_circle d a b; e = mirror e a b; f = midpoint f c b; g = circle g a c d; h = midpoint h d a ? eqratio a b a e b f b c
+a b c = triangle a b c; d = circle d b a c; e = circle e b d a; f = on_bline f d c; g = mirror g d e ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d a c b; e = circle e d c a; f = circle f e d b; g = circle g e a d ? eqangle a c d f e f a c
+a b c = triangle a b c; d = circle d b a c; e = midpoint e d b; f = on_circle f d c, on_bline f b e; g = mirror g f d; h = midpoint h f c ? eqangle b c b f c d c g
+a b c = triangle a b c; d = circle d c b a; e = on_line e a c; f = circle f e b c; g = circle g b f c; h = circle h d g b; i = circle i c g b ? eqratio b c b d f g g h
+a b c = triangle a b c; d = mirror d c a; e = mirror e b c; f = midpoint f c e ? eqratio a d c d c e b e
+a b = segment a b; c = on_bline c a b, on_circle c b a; d = mirror d c a; e = circle e a b c; f = circle f a e c; g = circle g c d e ? eqangle a b b e c f a b
+a b c = triangle a b c; d = mirror d b c; e = midpoint e a c; f = circle f c a d; g = circle g e f b; h = midpoint h f g ? eqratio a c b d c e c d
+a b c = triangle a b c; d = midpoint d c b; e = circle e c b a; f = circle f b a e; g = circle g b c e; h = circle h f g d ? eqangle a c c e e f b c
+a b = segment a b; c = midpoint c b a; d = midpoint d c b; e = midpoint e a c; f = on_line f e c; g = mirror g e b; h = mirror h g f ? cong b c d e
+a b c = triangle a b c; d = on_bline d b c; e = circle e a c b; f = midpoint f a c ? eqangle a b a e d e a c
+a b c = triangle a b c; d = on_bline d a c; e = mirror e c a; f = circle f b e d; g = midpoint g c b; h = mirror h d f; i = midpoint i d b ? eqangle b e b f d e b h
+a b c = triangle a b c; d = circle d c b a; e = midpoint e b c; f = mirror f a d; g = midpoint g f c ? eqangle a c b f c d b c
+a b c = triangle a b c; d = mirror d a b; e = mirror e b a; f = mirror f c a; g = circle g e b f; h = circle h e d g ? cong a d b e
+a b = segment a b; c = on_circle c b a, on_line c b a; d = on_bline d a c; e = on_line e a b; f = circle f d b e; g = midpoint g a d ? para d f e f
+a b = segment a b; c = on_circle c b a; d = midpoint d b a; e = circle e a c d; f = midpoint f e c; g = midpoint g d f ? eqangle a b b e d e c d
+a b c = triangle a b c; d = circle d a b c; e = mirror e a c; f = mirror f b d; g = circle g c b d; h = midpoint h e g ? eqangle a b a d d g a c
+a b c = triangle a b c; d = circle d a b c; e = on_circle e d b, on_line e d b; f = midpoint f e c ? eqangle a c a e c d b c
+a b c = triangle a b c; d = circle d b a c; e = circle e b d a; f = circle f b a e; g = midpoint g f e; h = mirror h b e; i = mirror i g h ? eqangle a d a f b d a e
+a b = segment a b; c = on_circle c a b, on_bline c a b; d = midpoint d a c; e = mirror e b a; f = midpoint f c e ? eqangle a b b c b c a c
+a b c = triangle a b c; d = circle d a c b; e = mirror e b d; f = circle f d b c; g = circle g c e d; h = circle h b g c ? eqangle a b a c b f b d
+a b c = triangle a b c; d = circle d b a c; e = midpoint e b d; f = midpoint f c e; g = on_line g f e; h = mirror h a f ? eqratio a d c e d e e f
+a b c = triangle a b c; d = circle d a b c; e = circle e c d a; f = on_circle f b d, on_bline f e d; g = on_circle g e f, on_bline g e f ? eqangle a c d f e f a c
+a b c = triangle a b c; d = midpoint d a b; e = midpoint e c a; f = midpoint f b c; g = circle g f c e; h = mirror h a b ? eqratio a e d f d f a e
+a b c = triangle a b c; d = midpoint d b c; e = circle e a b d; f = on_bline f d e, on_line f c e; g = mirror g f b; h = midpoint h a g ? eqratio b c c d f g b g
+a b c = triangle a b c; d = circle d a b c; e = mirror e a d; f = on_bline f a c; g = mirror g b a ? eqangle a b b c c e c d
+a b c = triangle a b c; d = circle d b c a; e = midpoint e b c; f = circle f b e d; g = midpoint g c d ? eqangle b d d f e f c d
+a b c = triangle a b c; d = midpoint d a c; e = mirror e d b; f = circle f d b a; g = circle g c a e; h = midpoint h e b ? eqratio a c c d d e b e
+a b c = triangle a b c; d = circle d b c a; e = on_bline e c a; f = circle f c d e; g = mirror g c d ? eqangle a b a d b c d e
+a b c = triangle a b c; d = circle d c b a; e = mirror e c a; f = midpoint f b a; g = midpoint g b e ? eqratio a b a f c e a e
+a b = segment a b; c = midpoint c b a; d = mirror d a b; e = on_line e c b, on_bline e b d; f = on_line f c e, on_circle f d a; g = mirror g c f; h = mirror h g e ? eqratio a d a f d e c e
+a b = segment a b; c = mirror c b a; d = on_circle d b a, on_bline d a b; e = circle e b d a; f = circle f e a b ? eqangle a b a d c d d e
+a b c = triangle a b c; d = circle d b a c; e = circle e d c b; f = mirror f a d ? eqangle a b a c d e c d
+a b c = triangle a b c; d = circle d c b a; e = on_bline e d c; f = midpoint f b e; g = mirror g f e; h = circle h c f g; i = midpoint i d c ? cong b e f g
+a b c = triangle a b c; d = midpoint d b a; e = mirror e d b; f = on_bline f d a; g = circle g b d f ? cong a b d e
+a b c = triangle a b c; d = midpoint d b a; e = circle e c b a; f = mirror f e b; g = midpoint g c f ? eqratio a b a d e f b e
+a b c = triangle a b c; d = midpoint d a b; e = midpoint e b c; f = circle f c a b; g = circle g f a c; h = midpoint h f d ? eqangle a b b c f g c f
+a b c = triangle a b c; d = circle d b a c; e = circle e c a d; f = mirror f b d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = midpoint d c a; e = circle e d b a; f = mirror f d e; g = circle g e b d; h = on_circle h e b ? eqangle a b a c b e e g
+a b c = triangle a b c; d = mirror d a c; e = circle e c b d; f = midpoint f c d; g = circle g e c a; h = mirror h a f; i = circle i b a c ? eqangle a g e f e f c g
+a b c = triangle a b c; d = mirror d c b; e = circle e b a d; f = mirror f b e; g = on_bline g f d, on_circle g c b; h = mirror h d f ? eqratio b f c d e f c g
+a b = segment a b; c = mirror c a b; d = on_bline d b c; e = circle e c d a; f = circle f b d a ? eqangle a d b d d e b e
+a b = segment a b; c = on_circle c a b; d = mirror d c b; e = circle e b d a; f = on_bline f e a; g = mirror g a b ? eqangle a b b e d e a c
+a b c = triangle a b c; d = midpoint d b c; e = on_bline e a b, on_circle e a b; f = circle f e a c; g = circle g a e b; h = circle h e a g ? eqangle a b b g b g b e
+a b = segment a b; c = on_bline c a b; d = mirror d b c; e = circle e a d c; f = circle f e d c; g = mirror g e d; h = mirror h a d ? eqangle a e c f e f d e
+a b c = triangle a b c; d = circle d c b a; e = on_line e a d; f = circle f a d b; g = mirror g f c; h = mirror h d f ? eqangle a c a d b c d f
+a b c = triangle a b c; d = mirror d c b; e = circle e c d a; f = circle f b a d; g = circle g c d e; h = circle h d g b ? eqangle b e b f d f b e
+a b c = triangle a b c; d = mirror d c a; e = mirror e a c; f = circle f a d b; g = midpoint g f e ? cong a e c d
+a b c = triangle a b c; d = circle d a c b; e = midpoint e a d; f = circle f b c d; g = circle g d c f; h = mirror h d c ? eqangle b c c d c f c g
+a b = segment a b; c = mirror c b a; d = on_bline d a c; e = midpoint e b a; f = on_line f b d; g = midpoint g e a; h = midpoint h d f ? eqratio a c a g b c a e
+a b c = triangle a b c; d = mirror d b a; e = on_bline e c b; f = mirror f a d; g = on_bline g f b ? cong a f b d
+a b c = triangle a b c; d = circle d b a c; e = circle e c b d; f = circle f d e c; g = midpoint g c d ? eqangle b e d e e f c f
+a b c = triangle a b c; d = circle d b a c; e = on_circle e b c; f = mirror f c e; g = circle g a b d; h = mirror h e f; i = mirror i h b ? eqratio c f e h e h c f
+a b c = triangle a b c; d = circle d c a b; e = circle e c d a; f = circle f e a c; g = mirror g b d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = circle d b a c; e = circle e d b a; f = mirror f b c; g = midpoint g a c ? eqangle a c a e b c a d
+a b = segment a b; c = on_circle c a b, on_circle c b a; d = circle d a b c; e = midpoint e c b; f = on_line f c a; g = circle g c e f; h = mirror h e g ? eqangle a c b c e g f g
+a b c = triangle a b c; d = circle d b a c; e = midpoint e a d; f = circle f a c d; g = midpoint g a b ? eqangle a b b c c d c f
+a b c = triangle a b c; d = circle d b a c; e = mirror e d b; f = circle f b e c; g = midpoint g d b; h = circle h c a g; i = circle i h f c ? eqangle c d c f d f c e
+a b c = triangle a b c; d = mirror d a c; e = circle e a d b; f = midpoint f a b; g = circle g e a c; h = midpoint h g c ? eqratio a g c f d e b d
+a b = segment a b; c = on_bline c a b; d = mirror d c b; e = mirror e b d; f = on_line f a c, on_bline f c a ? cong b e c d
+a b c = triangle a b c; d = circle d b c a; e = circle e a b d; f = midpoint f b a ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d c a b; e = mirror e c d; f = mirror f d c ? eqangle a b a d b c a e
+a b c = triangle a b c; d = circle d b a c; e = midpoint e d c; f = mirror f c d; g = mirror g c a ? eqangle a b a c b d b f
+a b c = triangle a b c; d = midpoint d a c; e = on_bline e d c; f = circle f b c e; g = circle g a c e; h = circle h c g a; i = circle i c h d ? eqangle c e d g d g d e
+a b = segment a b; c = mirror c b a; d = on_circle d c a; e = circle e a d b; f = mirror f c e ? eqangle a b b e c e b d
+a b c = triangle a b c; d = circle d c b a; e = mirror e c d; f = on_bline f a e; g = mirror g a f; h = midpoint h b d ? eqangle a b b d e g b e
+a b c = triangle a b c; d = midpoint d c b; e = midpoint e a d; f = circle f b a c; g = circle g d f a; h = circle h c d a ? eqangle b f d g f g c f
+a b = segment a b; c = midpoint c a b; d = on_bline d c a, on_line d a c; e = on_bline e a c; f = circle f c e b; g = on_line g b e; h = mirror h e f ? eqangle a e b f d e b e
+a b c = triangle a b c; d = circle d a c b; e = midpoint e b a; f = midpoint f c d; g = midpoint g d f; h = circle h e b c; i = midpoint i b e ? eqangle a d b h e h b d
+a b c = triangle a b c; d = circle d b a c; e = mirror e b d; f = circle f d a e; g = mirror g a e; h = circle h d g e ? eqangle a c a e c d b c
+a b c = triangle a b c; d = circle d b a c; e = midpoint e a b; f = on_line f a e; g = circle g e c a; h = mirror h f e; i = mirror i b c ? eqratio a b b e f h e h
+a b c = triangle a b c; d = circle d c b a; e = mirror e d c; f = mirror f c d; g = midpoint g f b ? eqangle a b a f b d b c
+a b c = triangle a b c; d = circle d b c a; e = circle e c a d; f = on_line f a d; g = mirror g c d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = mirror d a c; e = circle e d c b; f = circle f a e c; g = midpoint g e a ? eqangle a f c e d e c f
+a b c = triangle a b c; d = mirror d a c; e = mirror e b a; f = midpoint f e d ? eqratio a d b e c d a e
+a b = segment a b; c = midpoint c b a; d = on_circle d c b; e = mirror e c d; f = midpoint f e b ? cong a b c e
+a b = segment a b; c = on_bline c b a; d = midpoint d c a; e = on_circle e a b; f = mirror f b a; g = midpoint g d c ? eqratio a b b d b f c f
+a b = segment a b; c = mirror c a b; d = on_circle d a b; e = mirror e c a; f = midpoint f b e; g = on_line g e a; h = midpoint h d c ? eqratio a e c e e f b e
+a b c = triangle a b c; d = circle d c b a; e = on_bline e c b; f = mirror f c e; g = midpoint g b a ? eqangle a b a d b f a c
+a b c = triangle a b c; d = circle d b c a; e = midpoint e c a; f = mirror f b a; g = midpoint g c e ? eqratio a c a e b f a f
+a b c = triangle a b c; d = circle d a c b; e = on_line e a d, on_bline e a d; f = circle f e a b; g = mirror g c b; h = mirror h e b; i = mirror i e d ? eqangle a d d f e f b e
+a b c = triangle a b c; d = circle d a b c; e = circle e c d a; f = circle f c e b; g = mirror g f a; h = midpoint h a c ? eqangle a b b c c d c e
+a b c = triangle a b c; d = circle d a c b; e = mirror e b d; f = midpoint f c e ? eqangle a c a e c d b c
+a b c = triangle a b c; d = midpoint d b a; e = circle e a d c; f = circle f e a b; g = circle g f a e ? eqangle a e a f b f d e
+a b c = triangle a b c; d = circle d a b c; e = circle e b a d; f = circle f d b c; g = circle g d a e; h = mirror h b e ? eqangle a e d g e g b e
+a b c = triangle a b c; d = midpoint d c b; e = on_line e a c, on_circle e c a; f = mirror f c a; g = circle g e f b ? cong a e c f
+a b c = triangle a b c; d = circle d c a b; e = circle e d a b; f = mirror f c d ? eqangle a c b c d e b d
+a b c = triangle a b c; d = midpoint d b a; e = midpoint e b d; f = midpoint f c b; g = mirror g e b; h = mirror h f c ? cong b d e g
+a b c = triangle a b c; d = on_bline d b a, on_bline d a c; e = on_circle e d a; f = circle f a c d; g = on_circle g a b; h = mirror h a d ? eqangle a b b c c d c f
+a b c = triangle a b c; d = circle d b c a; e = circle e c a d; f = midpoint f a c ? eqangle a b b c c d c e
+a b = segment a b; c = on_bline c b a, on_circle c b a; d = circle d c a b; e = circle e c d a; f = circle f b a d ? eqangle a e b c b c b d
+a b c = triangle a b c; d = circle d b c a; e = midpoint e a d; f = mirror f c a; g = on_circle g f a; h = mirror h b e ? eqangle a c c e d f a c
+a b c = triangle a b c; d = circle d b c a; e = mirror e d a; f = midpoint f e a; g = circle g a b f; h = mirror h b d ? eqangle a c b c b f b g
+a b c = triangle a b c; d = circle d c a b; e = circle e c b d; f = mirror f e c; g = mirror g c b; h = midpoint h f b ? eqratio b g c f c g e f
+a b c = triangle a b c; d = circle d c b a; e = midpoint e d c; f = midpoint f b e; g = midpoint g b c ? eqratio b d b e c e e f
+a b = segment a b; c = mirror c b a; d = on_bline d c b, on_circle d a b; e = midpoint e a b; f = midpoint f a d; g = circle g f d c; h = mirror h d e ? eqangle a g c d f g c g
+a b c = triangle a b c; d = mirror d a b; e = circle e b c a; f = mirror f c a; g = midpoint g d e ? eqratio a d b d c f a f
+a b c = triangle a b c; d = mirror d b a; e = mirror e c a; f = circle f c d a; g = midpoint g b c ? eqangle b e c f d f b e
+a b c = triangle a b c; d = circle d c a b; e = on_bline e a c; f = mirror f c d; g = mirror g c f ? eqangle a b a d b c a f
+a b c = triangle a b c; d = midpoint d a c; e = circle e a d b; f = on_circle f b c, on_line f c a; g = midpoint g a e; h = on_circle h a e, on_circle h f e; i = mirror i e f ? eqangle a e a h d h a h
+a b c = triangle a b c; d = circle d a c b; e = circle e c d a; f = midpoint f c a ? eqangle a b b c c d c e
+a b c = triangle a b c; d = mirror d c b; e = midpoint e b c; f = circle f b a c; g = mirror g d e; h = on_circle h f b; i = midpoint i g a ? eqratio b d c d e g d g
+a b c = triangle a b c; d = circle d c a b; e = midpoint e c a; f = mirror f c d; g = midpoint g a f ? eqangle a b a d b f a c
+a b c = triangle a b c; d = midpoint d c a; e = mirror e b c; f = circle f e d b; g = circle g e f c ? eqratio a c a d b e c e
+a b c = triangle a b c; d = midpoint d b a; e = mirror e c d; f = midpoint f c b; g = circle g c a d; h = circle h a d e; i = on_bline i c e, on_bline i a d ? eqratio a e c e d h g h
+a b c = triangle a b c; d = circle d b c a; e = mirror e c d; f = mirror f c e ? eqangle a b a d b c a e
+a b c = triangle a b c; d = circle d c a b; e = circle e c a d; f = midpoint f b c ? eqangle a b b c c d c e
+a b = segment a b; c = midpoint c a b; d = midpoint d c a; e = on_circle e a c, on_bline e d c; f = midpoint f c b; g = circle g e b d; h = midpoint h a e ? eqangle b e c e c e d e
+a b c = triangle a b c; d = circle d c a b; e = circle e d b a; f = circle f d b e; g = midpoint g b f ? eqangle a e d f e f b e
+a b c = triangle a b c; d = circle d a b c; e = mirror e b d; f = mirror f e a; g = on_line g c e, on_circle g f d ? eqangle a c a e c d b c
+a b c = triangle a b c; d = on_line d b c; e = circle e a b d; f = on_bline f a e; g = circle g b a f; h = midpoint h a d ? eqangle a d b c e g b e
+a b = segment a b; c = on_circle c b a; d = mirror d b c; e = circle e d c a; f = circle f e a b; g = circle g b f e; h = mirror h e a ? eqangle b c d e e f e g
+a b c = triangle a b c; d = circle d b c a; e = circle e b d a; f = on_bline f a b, on_line f a c ? eqangle a c a e b c a d
+a b c = triangle a b c; d = mirror d b a; e = circle e c a b; f = circle f b c d; g = mirror g f a; h = mirror h b c; i = midpoint i g b ? eqangle a f b e d h b c
+a b = segment a b; c = on_circle c b a; d = circle d c b a; e = midpoint e a d; f = circle f c e a; g = mirror g f e ? eqangle b d c d c e c f
+a b c = triangle a b c; d = circle d c b a; e = midpoint e a c; f = midpoint f e b; g = circle g e f c; h = midpoint h a g ? eqratio a c b e c e b f
+a b c = triangle a b c; d = circle d a b c; e = mirror e b a; f = circle f a d e; g = mirror g c e; h = mirror h b f ? eqratio a e b e e g c g
+a b c = triangle a b c; d = circle d b a c; e = mirror e a b; f = on_bline f d c, on_bline f d e; g = midpoint g b d; h = circle h g c a; i = mirror i g b ? eqangle a d a g d e b d
+a b c = triangle a b c; d = mirror d b c; e = mirror e c b; f = midpoint f c a; g = circle g a c b ? cong b d c e
+a b c = triangle a b c; d = circle d c a b; e = mirror e a c; f = circle f a b d; g = mirror g d b; h = circle h g c d ? eqangle a c b c d f b d
+a b c = triangle a b c; d = circle d c a b; e = midpoint e a c; f = on_line f d a, on_bline f c e; g = circle g f e d ? eqratio a c a d c e d f
+a b c = triangle a b c; d = mirror d b a; e = circle e a d c; f = circle f d e a; g = midpoint g a d ? eqangle a c c d d e d f
+a b c = triangle a b c; d = circle d a b c; e = on_circle e d b; f = midpoint f c d; g = on_circle g e b; h = circle h c f b; i = midpoint i c e ? eqangle a b a c b d d h
+a b = segment a b; c = on_circle c b a; d = midpoint d a b; e = circle e d c a; f = circle f e d c; g = midpoint g d a ? eqangle a c a e c f b c
+a b c = triangle a b c; d = midpoint d c b; e = midpoint e a c; f = on_line f a c, on_circle f c d; g = circle g d f e; h = circle h b f a; i = midpoint i b f ? eqangle b f d g f h d f
+a b c = triangle a b c; d = midpoint d a b; e = on_bline e d c; f = midpoint f d e; g = midpoint g a c ? eqratio a b b d c e e f
+a b c = triangle a b c; d = on_bline d c b, on_circle d b c; e = circle e d b a; f = circle f d c b; g = midpoint g f e ? eqangle b c b d c f b f
+a b c = triangle a b c; d = mirror d b a; e = mirror e a c; f = circle f e d b; g = midpoint g c e ? eqratio a d b d c e a e
+a b c = triangle a b c; d = circle d c b a; e = midpoint e a d; f = mirror f e a; g = mirror g b c ? cong a d e f
+a b c = triangle a b c; d = mirror d a c; e = circle e b c a; f = midpoint f b c; g = circle g a d b; h = circle h d b f ? eqangle b c b d c e d g
+a b c = triangle a b c; d = mirror d b a; e = circle e c d a; f = on_line f d c; g = mirror g c e; h = midpoint h d a ? eqangle a b a g d e c d
+a b = segment a b; c = on_line c b a; d = on_circle d a c; e = circle e c d a; f = circle f d e a; g = circle g d c f ? eqangle a b c e e f c d
+a b = segment a b; c = midpoint c a b; d = mirror d a b; e = on_bline e a d, on_circle e c d; f = circle f e b a; g = circle g b d f; h = midpoint h e d ? eqangle b e b f d g d f
+a b c = triangle a b c; d = mirror d c a; e = midpoint e a b; f = midpoint f c a ? eqratio a b b e c d a d
+a b c = triangle a b c; d = mirror d a c; e = circle e b a c; f = mirror f b a; g = circle g c d b; h = circle h c b g; i = midpoint i a b ? eqratio a d b f c d a f
+a b = segment a b; c = on_line c a b; d = on_line d c b; e = midpoint e a d; f = midpoint f b a; g = midpoint g b f ? eqratio a b a d a f d e
+a b c = triangle a b c; d = mirror d c b; e = midpoint e d a; f = mirror f e c; g = midpoint g e b ? eqratio a c b e e f c f
+a b c = triangle a b c; d = circle d a c b; e = on_circle e a d; f = mirror f a d; g = midpoint g b f ? eqangle a b b d c f b c
+a b c = triangle a b c; d = midpoint d c a; e = mirror e b c; f = circle f b a d; g = midpoint g f b ? eqratio a c a d b e c e
+a b c = triangle a b c; d = circle d a b c; e = circle e c b d; f = midpoint f b a ? eqangle a b a c d e c d
+a b c = triangle a b c; d = midpoint d b c; e = circle e a b c; f = on_bline f b c; g = mirror g f b; h = mirror h e d ? eqratio b c c d f g b g
+a b c = triangle a b c; d = circle d a c b; e = circle e c b d; f = circle f d e b; g = midpoint g e a; h = mirror h f e ? eqangle b c b d b e b f
+a b c = triangle a b c; d = on_bline d a b; e = mirror e b d; f = circle f b d c; g = circle g f e b; h = mirror h c b; i = midpoint i e f ? eqangle d f d g e f f g
+a b = segment a b; c = mirror c b a; d = mirror d c b; e = mirror e d a; f = on_circle f b d, on_bline f e d ? cong b e c d
+a b c = triangle a b c; d = mirror d a c; e = circle e a d b; f = midpoint f e c; g = circle g d c e ? eqratio a d c d c e c f
+a b c = triangle a b c; d = mirror d c b; e = circle e b d a; f = mirror f a e; g = circle g d e b; h = mirror h b d; i = midpoint i a h ? eqangle a b b c d f d e
+a b = segment a b; c = midpoint c b a; d = on_bline d c a; e = circle e b d c; f = circle f d b a ? eqangle a d b e c e c d
+a b = segment a b; c = on_circle c b a; d = on_line d b c, on_circle d b c; e = circle e d b a; f = midpoint f e a; g = circle g b f e ? eqangle a d b f c e a d
+a b c = triangle a b c; d = circle d c b a; e = circle e d b c; f = mirror f b d ? eqangle a b a d d e a c
+a b c = triangle a b c; d = circle d c a b; e = mirror e a d; f = mirror f d e; g = circle g f b a ? cong a e d f
+a b c = triangle a b c; d = on_line d b a, on_bline d b a; e = on_bline e a d, on_circle e d b; f = circle f e d c; g = circle g f d a ? eqangle a f c d c e c f
+a b = segment a b; c = midpoint c a b; d = mirror d c b; e = on_bline e a b; f = mirror f d c; g = circle g c d e ? eqratio a b c f c f a b
+a b c = triangle a b c; d = circle d a b c; e = circle e c d b; f = mirror f b d ? eqangle a b a d d e a c
+a b c = triangle a b c; d = circle d a c b; e = circle e a c d; f = midpoint f e a; g = mirror g c e; h = midpoint h a b ? eqangle a b b c c d c e
+a b = segment a b; c = on_circle c b a; d = circle d b c a; e = midpoint e d b; f = on_bline f c b; g = circle g d e a; h = circle h a b d ? eqangle a b a c d f c d
+a b c = triangle a b c; d = midpoint d b a; e = circle e b c d; f = on_bline f c d; g = circle g e a b; h = mirror h b g ? eqangle a g b e d e b g
+a b c = triangle a b c; d = circle d a b c; e = on_circle e d a; f = on_bline f a b; g = circle g b e d; h = midpoint h c e ? eqangle b c b d c e d g
+a b c = triangle a b c; d = mirror d c b; e = circle e a b d; f = circle f c d a; g = on_circle g e a, on_bline g e d ? eqangle a b a c a e a f
+a b c = triangle a b c; d = midpoint d a b; e = on_line e c d; f = mirror f e a; g = mirror g c b; h = mirror h c d ? eqratio a b b d e f a f
+a b = segment a b; c = midpoint c b a; d = on_circle d b c; e = mirror e d b; f = midpoint f a d ? cong a b d e
+a b c = triangle a b c; d = circle d a c b; e = circle e c b d; f = midpoint f c a ? eqangle a b a d d e a c
+a b c = triangle a b c; d = circle d a c b; e = circle e a c d; f = midpoint f c a ? eqangle a b b c c d c e
+a b c = triangle a b c; d = on_circle d b a; e = circle e d a c; f = mirror f c e ? eqangle a c b e c d d e
+a b = segment a b; c = midpoint c a b; d = on_bline d b a; e = circle e d b c; f = circle f d c a ? para b e d e
+a b c = triangle a b c; d = circle d c b a; e = circle e a d b; f = midpoint f e b; g = circle g e c d; h = midpoint h a b ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d c a b; e = mirror e b d; f = on_circle f a b; g = circle g e a f ? eqangle a b a d c e a c
+a b c = triangle a b c; d = midpoint d b c; e = circle e c d a; f = circle f d a e; g = circle g a f e; h = mirror h a g ? eqangle a d a f d e f g
+a b c = triangle a b c; d = circle d b c a; e = circle e a d b; f = circle f e d b; g = on_circle g a b, on_bline g e b; h = on_line h b e ? eqangle a d d e e f f g
+a b c = triangle a b c; d = on_line d b a, on_bline d a c; e = midpoint e d a; f = circle f c b a; g = circle g e b f ? eqangle a b b f d f b c
+a b c = triangle a b c; d = circle d b a c; e = circle e b c d; f = circle f c e d; g = mirror g f e ? eqangle b c c d c e c f
+a b c = triangle a b c; d = circle d c a b; e = on_bline e c b, on_circle e d c; f = mirror f a c; g = mirror g a b ? eqangle a b a d d e a c
+a b c = triangle a b c; d = circle d c b a; e = on_line e a b, on_line e c d; f = circle f e b c; g = circle g e c a ? eqangle a b a c b d d f
+a b c = triangle a b c; d = midpoint d a b; e = circle e b c a; f = midpoint f d e; g = on_bline g b a, on_circle g a e; h = circle h b c d ? eqratio a b b d d e e f
+a b = segment a b; c = on_circle c b a, on_bline c a b; d = circle d c b a; e = circle e d b c; f = midpoint f b a; g = on_line g e a; h = midpoint h f e ? eqangle b g c d c e c g
+a b = segment a b; c = mirror c b a; d = on_circle d b c, on_bline d b c; e = mirror e a b; f = circle f b d a ? cong a e c d
+a b = segment a b; c = mirror c b a; d = on_circle d b c, on_bline d b c; e = mirror e a c; f = mirror f d c ? eqratio a e c d c d a e
+a b c = triangle a b c; d = mirror d b c; e = circle e b c a; f = mirror f c e; g = mirror g e f ? eqangle a b a f b e b c
+a b c = triangle a b c; d = midpoint d c a; e = midpoint e b a; f = mirror f d b; g = circle g d f a; h = midpoint h f e ? eqratio a b a e d f b f
+a b c = triangle a b c; d = circle d b c a; e = circle e c d a; f = circle f b c d; g = midpoint g f e; h = midpoint h a c ? eqangle a b b c c d c e
+a b = segment a b; c = midpoint c b a; d = on_circle d b a, on_bline d b c; e = mirror e a b; f = circle f c d e; g = circle g e c f; h = circle h a d b ? eqangle a b d e d f f g
+a b = segment a b; c = midpoint c b a; d = on_bline d b a; e = circle e c b d; f = circle f a d e; g = circle g a f c; h = mirror h g c ? eqangle b e c d c d c e
+a b c = triangle a b c; d = on_circle d b c; e = circle e d a c; f = mirror f b d; g = midpoint g a c ? eqangle a c a d b e d e
+a b c = triangle a b c; d = circle d c b a; e = mirror e b c; f = on_line f d c, on_circle f e b; g = mirror g b d; h = circle h e g b ? eqangle a c a d b c a g
+a b c = triangle a b c; d = mirror d a b; e = circle e c b d; f = circle f d e b; g = midpoint g b c ? eqangle b c c d e f d e
+a b c = triangle a b c; d = circle d b c a; e = mirror e a d; f = circle f a c d; g = on_line g b f; h = midpoint h e b ? eqangle a b b d c e b c
+a b c = triangle a b c; d = circle d b a c; e = circle e b a d; f = circle f d e a; g = midpoint g a e ? eqangle a b a e b d e f
+a b c = triangle a b c; d = circle d c b a; e = circle e a c d; f = circle f d e c; g = mirror g f c ? eqangle a e d f e f c e
+a b = segment a b; c = mirror c a b; d = on_bline d b a; e = circle e b a d; f = mirror f a e; g = mirror g a d; h = midpoint h a b ? eqangle a d b d b f c f
+a b c = triangle a b c; d = circle d c b a; e = midpoint e a b; f = midpoint f e c; g = on_line g c f; h = midpoint h c f ? eqratio a b b e c e c f
+a b c = triangle a b c; d = on_bline d b a; e = on_circle e b a, on_circle e a c; f = on_circle f d c, on_circle f a e; g = midpoint g e c ? eqangle a d c e e f a e
+a b c = triangle a b c; d = circle d b c a; e = mirror e c a; f = midpoint f a d; g = midpoint g d f ? eqangle a d c f d e c d
+a b c = triangle a b c; d = on_bline d b c; e = mirror e c d; f = circle f c b a; g = circle g c d a; h = mirror h a f ? eqangle a b a c b f b e
+a b c = triangle a b c; d = circle d b c a; e = circle e b d a; f = midpoint f a c ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d a c b; e = midpoint e b a; f = circle f d a c; g = circle g b c e; h = circle h b f e ? eqangle a b b c d f c d
+a b c = triangle a b c; d = mirror d a b; e = circle e c d b; f = circle f c a d; g = mirror g a f; h = midpoint h b c ? eqangle b c c e d g c d
+a b c = triangle a b c; d = mirror d b c; e = circle e d b a; f = circle f e c d; g = mirror g c a; h = circle h e c f ? para d f e f
+a b c = triangle a b c; d = circle d a b c; e = midpoint e d b; f = mirror f a d; g = circle g c d e ? eqangle a c b c b f b d
+a b = segment a b; c = on_circle c a b, on_circle c b a; d = circle d c b a; e = mirror e c b; f = mirror f b d; g = midpoint g a d ? eqratio a e b e b e b d
+a b = segment a b; c = on_circle c a b; d = circle d a b c; e = mirror e b a; f = circle f b d e; g = mirror g d a ? eqangle a b b c d f d e
+a b = segment a b; c = on_bline c a b; d = circle d c a b; e = mirror e a d; f = midpoint f b d; g = circle g d c b; h = mirror h c g ? para c e c g
+a b c = triangle a b c; d = mirror d a c; e = mirror e d a; f = mirror f c e; g = on_circle g f a, on_bline g d f; h = mirror h b a ? eqratio a e d e e f c f
+a b c = triangle a b c; d = on_bline d b a, on_bline d b c; e = circle e a b d; f = midpoint f a e; g = on_circle g a d; h = mirror h b d ? eqangle a c b c b d b e
+a b c = triangle a b c; d = circle d c a b; e = midpoint e d c; f = on_line f e b; g = mirror g e d; h = mirror h f c; i = midpoint i h c ? eqratio a d d g f h c h
+a b c = triangle a b c; d = circle d a b c; e = circle e c d b; f = on_line f b e; g = mirror g d e ? eqangle a b a c d e c d
+a b c = triangle a b c; d = circle d c b a; e = midpoint e d a; f = circle f d b a; g = mirror g e a; h = midpoint h d c ? cong b d e g
+a b c = triangle a b c; d = on_bline d a c; e = mirror e b d; f = mirror f d a; g = midpoint g b d ? eqratio a f d e d f b e
+a b c = triangle a b c; d = mirror d b a; e = midpoint e b c; f = circle f e b a; g = mirror g a e; h = circle h b c a; i = circle i g e b ? eqratio b g c e c h f h
+a b c = triangle a b c; d = on_line d c b; e = midpoint e a c; f = mirror f e d; g = on_circle g d e, on_circle g a c; h = mirror h a b ? eqratio a c c e e f d g
+a b = segment a b; c = on_bline c a b; d = mirror d c a; e = mirror e b d; f = midpoint f a d; g = circle g a b e; h = circle h d a e ? eqratio a d b e d f d e
+a b = segment a b; c = midpoint c b a; d = on_bline d a b; e = circle e d c a; f = circle f a b e; g = midpoint g c d ? eqangle b d b e c d e f
+a b c = triangle a b c; d = mirror d b a; e = midpoint e d a; f = on_circle f a d, on_line f a c; g = midpoint g a f; h = mirror h c b ? eqratio a e a e d g e f
+a b c = triangle a b c; d = circle d a c b; e = circle e c a d; f = circle f a b d; g = circle g f d c; h = circle h e a d; i = circle i g c f ? eqangle a e e h e h d e
+a b c = triangle a b c; d = circle d c a b; e = circle e b a d; f = circle f c a e; g = midpoint g b a ? eqangle a b b d d f b c
+a b c = triangle a b c; d = circle d a b c; e = circle e b c d; f = mirror f a e; g = on_line g f b, on_line g a c; h = mirror h b d ? eqangle a b a d d e a c
+a b c = triangle a b c; d = circle d b c a; e = circle e d c b; f = midpoint f c a ? eqangle a b a d d e a c
+a b c = triangle a b c; d = mirror d c b; e = on_bline e a c, on_line e c d; f = midpoint f a d; g = on_circle g c b, on_line g c e; h = mirror h c g ? eqratio b g c d c d b g
+a b c = triangle a b c; d = midpoint d c b; e = mirror e a c; f = circle f e d c; g = midpoint g a b ? eqratio a e b c c e b d
+a b c = triangle a b c; d = on_circle d b a, on_bline d c b; e = mirror e c a; f = circle f d c b; g = midpoint g a d; h = midpoint h a e ? eqratio a d c e d g a e
+a b c = triangle a b c; d = mirror d b c; e = midpoint e c d; f = mirror f a b; g = midpoint g d e; h = mirror h d f ? eqratio b e c d c g d e
+a b = segment a b; c = midpoint c b a; d = mirror d c a; e = on_bline e d b ? cong a b c d
+a b c = triangle a b c; d = circle d a b c; e = on_line e d a; f = on_circle f c e, on_line f e d; g = mirror g b d; h = circle h f c e ? eqangle a c a d b c a g
+a b c = triangle a b c; d = mirror d b a; e = midpoint e b a; f = circle f a c d; g = circle g c f d; h = circle h f b d; i = mirror i f h ? eqangle a b a c c f c g
+a b c = triangle a b c; d = circle d a b c; e = circle e c a d; f = mirror f a d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = on_line d c a; e = circle e b c a; f = midpoint f a d; g = mirror g b e; h = midpoint h e d ? eqangle a b a e c g a c
+a b = segment a b; c = mirror c a b; d = on_bline d a b, on_circle d c a; e = circle e d b c; f = mirror f d e ? eqangle a d b d c e d e
+a b = segment a b; c = midpoint c a b; d = mirror d c a; e = on_circle e a c, on_circle e b a; f = mirror f c b; g = midpoint g e d ? cong c d c f
+a b c = triangle a b c; d = midpoint d c a; e = mirror e b d; f = midpoint f b d; g = mirror g a f; h = midpoint h d a; i = on_line i c a ? eqratio a b a c f h a d
+a b c = triangle a b c; d = midpoint d c a; e = circle e b a c; f = mirror f d c; g = mirror g f b ? cong a c d f
+a b = segment a b; c = mirror c a b; d = mirror d b a; e = on_bline e d a; f = circle f b e a ? cong a c b d
+a b c = triangle a b c; d = on_bline d b c; e = midpoint e c d; f = midpoint f a d; g = mirror g e d; h = on_line h c a, on_bline h e b; i = midpoint i c a ? cong c d e g
+a b c = triangle a b c; d = circle d a c b; e = mirror e b d; f = midpoint f d c ? eqangle a b a c c e c d
+a b c = triangle a b c; d = circle d a c b; e = on_circle e b a; f = mirror f b d; g = mirror g c b; h = on_bline h g e; i = circle i h d b ? eqangle a c a f c d b c
+a b = segment a b; c = on_bline c a b, on_circle c b a; d = circle d c a b; e = circle e d c a; f = circle f d e a; g = circle g a f d ? eqangle a c b c c d d e
+a b c = triangle a b c; d = circle d a b c; e = circle e b a d; f = mirror f d a; g = circle g d e a; h = midpoint h b g ? eqangle a b a d a e a g
+a b c = triangle a b c; d = circle d b c a; e = mirror e a b; f = circle f d b e; g = mirror g e f ? eqangle a d b d e f d f
+a b c = triangle a b c; d = mirror d c b; e = circle e b a c; f = midpoint f a e; g = circle g a f c; h = midpoint h c b ? eqangle a b b c c f c g
+a b c = triangle a b c; d = on_bline d c a; e = circle e c d a; f = midpoint f a d; g = circle g c f d; h = midpoint h f g; i = midpoint i c a ? eqangle a g d g f g d h
+a b = segment a b; c = midpoint c b a; d = mirror d c a; e = on_bline e a c ? cong a b c d
+a b c = triangle a b c; d = midpoint d c a; e = mirror e d c; f = circle f e b d; g = midpoint g b f ? cong a c d e
+a b c = triangle a b c; d = circle d b c a; e = circle e b a d; f = circle f b e c; g = mirror g d e ? eqangle a b a d d f a c
+a b = segment a b; c = mirror c a b; d = mirror d b a; e = on_bline e a b ? cong a c b d
+a b c = triangle a b c; d = circle d a c b; e = midpoint e a b; f = circle f c e a; g = on_circle g f c; h = circle h e d f; i = midpoint i d e ? eqangle a g c g d f c f
+a b c = triangle a b c; d = circle d b c a; e = on_bline e d c, on_bline e a b; f = midpoint f a c ? eqangle a c b c d e b d
+a b c = triangle a b c; d = mirror d a c; e = circle e a b c; f = mirror f e b; g = circle g d c e; h = mirror h a d; i = circle i a e d ? eqangle a e c g d g c e
+a b c = triangle a b c; d = mirror d c a; e = midpoint e a b; f = circle f e c b; g = midpoint g f e; h = on_circle h c a, on_bline h e c; i = mirror i b f ? eqratio a f b g c d c h
+a b c = triangle a b c; d = circle d c a b; e = midpoint e c a; f = circle f d c a; g = on_bline g a e, on_circle g f a; h = mirror h g d ? eqangle a c d g e g c d
+a b c = triangle a b c; d = circle d a b c; e = circle e b d a; f = midpoint f d b; g = circle g d e b; h = midpoint h a f ? eqangle a b a d b g b e
+a b = segment a b; c = on_bline c b a; d = circle d b a c; e = mirror e c a; f = circle f b e a; g = midpoint g c d ? eqangle b c b f c d b e
+a b = segment a b; c = on_circle c a b; d = midpoint d b c; e = circle e b c a; f = circle f e d c; g = circle g b f e; h = circle h b e d ? eqangle b c d f e f b c
+a b c = triangle a b c; d = circle d b c a; e = circle e d b a; f = midpoint f b a ? eqangle a c a e b c a d
+a b c = triangle a b c; d = midpoint d a b; e = circle e d a c; f = circle f c e d; g = mirror g d e ? eqangle a b a c c e c f
+a b c = triangle a b c; d = circle d a c b; e = mirror e c b; f = mirror f b a; g = on_line g e d; h = circle h f a c; i = midpoint i d e ? eqratio a f b e b f c e
+a b = segment a b; c = on_circle c b a, on_bline c b a; d = midpoint d a b; e = mirror e d a; f = mirror f b e; g = circle g d b c ? eqratio a f b f d e e f
+a b c = triangle a b c; d = circle d c b a; e = midpoint e d b; f = circle f b d a; g = circle g f b e; h = circle h e f c ? eqangle b d e g f g b d
+a b c = triangle a b c; d = mirror d c a; e = circle e b d a; f = mirror f a e; g = mirror g c e; h = mirror h d b ? eqangle a b b d d f d e
+a b = segment a b; c = mirror c b a; d = mirror d a c; e = on_bline e d a; f = on_bline f c a ? cong a d b c
+a b c = triangle a b c; d = circle d a c b; e = circle e d a c; f = mirror f d e ? eqangle a b b c c d c e
+a b c = triangle a b c; d = mirror d c a; e = mirror e b d; f = mirror f e c ? eqratio a d c d d e b e
+a b = segment a b; c = mirror c a b; d = on_line d c a, on_circle d c b; e = on_bline e d a ? cong a c b d
+a b c = triangle a b c; d = circle d c b a; e = circle e d a b; f = circle f d a e; g = midpoint g c d; h = mirror h e f ? eqangle a b a e b d e f
+a b c = triangle a b c; d = mirror d c b; e = mirror e b c; f = circle f a d c; g = circle g d e a ? cong b e c d
+a b c = triangle a b c; d = circle d c b a; e = circle e d c a; f = midpoint f c a ? eqangle a b b c c d c e
+a b c = triangle a b c; d = mirror d c b; e = circle e c d a; f = midpoint f e b; g = circle g b c f; h = mirror h c e ? eqratio b d b f c d b e
+a b c = triangle a b c; d = midpoint d a b; e = midpoint e c d; f = circle f d e b; g = circle g a b f; h = midpoint h c f ? eqratio a b b d c d d e
+a b c = triangle a b c; d = circle d c a b; e = circle e a d c; f = mirror f b d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = mirror d a b; e = circle e d b c; f = circle f b c a; g = on_bline g c a; h = circle h e g c; i = mirror i f b ? eqangle a f c f d e c e
+a b c = triangle a b c; d = circle d a c b; e = midpoint e a b; f = mirror f c d; g = on_circle g c d ? eqangle a b a d b c a f
+a b c = triangle a b c; d = circle d a b c; e = circle e b a d; f = circle f b c e; g = mirror g c d ? eqangle a c b c d e b d
+a b = segment a b; c = mirror c a b; d = mirror d b a; e = on_circle e c d; f = midpoint f e c ? eqratio a c b d b d a c
+a b c = triangle a b c; d = circle d a c b; e = circle e d c b; f = mirror f d e ? eqangle a b a c d e c d
+a b = segment a b; c = on_bline c a b; d = circle d a b c; e = midpoint e a b; f = mirror f a d ? eqangle a c b c c e b d
+a b c = triangle a b c; d = mirror d c b; e = midpoint e a b; f = midpoint f a d ? eqratio a b b e c d b d
+a b = segment a b; c = on_bline c b a; d = circle d b a c; e = circle e d c a; f = circle f d a b ? eqangle a e c d d e b d
+a b c = triangle a b c; d = circle d a b c; e = circle e c d a; f = mirror f c d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = mirror d a c; e = mirror e c a; f = midpoint f a e; g = circle g d b c; h = circle h c b e; i = midpoint i c h ? eqratio a e d e e f c f
+a b = segment a b; c = on_bline c b a; d = on_line d a c; e = midpoint e a b; f = midpoint f e d; g = midpoint g c b ? eqratio a b b e d e d f
+a b c = triangle a b c; d = circle d a c b; e = mirror e c b; f = midpoint f d b; g = midpoint g e a ? eqangle b d c f d e c d
+a b = segment a b; c = on_line c b a; d = midpoint d c a; e = mirror e c a; f = midpoint f c b; g = mirror g b e; h = midpoint h f d ? eqratio a b b g d f e g
+a b c = triangle a b c; d = circle d b c a; e = on_line e a d; f = circle f b e a; g = mirror g e d ? eqangle a d a f b e d f
+a b c = triangle a b c; d = circle d a b c; e = circle e c d b; f = mirror f a e; g = circle g a b f; h = midpoint h b c ? eqangle a c a d b c d g
+a b c = triangle a b c; d = on_bline d b c; e = circle e d b c; f = circle f b e d; g = on_bline g d e ? eqangle b c d f e f b c
+a b c = triangle a b c; d = circle d a c b; e = on_bline e b c; f = on_circle f b e, on_line f d e; g = mirror g b c; h = midpoint h f d ? eqangle c e e g f g c f
+a b c = triangle a b c; d = mirror d b a; e = mirror e b d; f = mirror f e b; g = midpoint g c f ? eqratio a d b f d e e f
+a b c = triangle a b c; d = circle d a b c; e = midpoint e c a; f = midpoint f c b; g = circle g d a e; h = midpoint h e a ? para a d a g
+a b c = triangle a b c; d = circle d c a b; e = circle e a d b; f = midpoint f e a; g = mirror g d a; h = midpoint h b a ? eqangle a c b c b d b e
+a b c = triangle a b c; d = midpoint d a c; e = circle e b a c; f = on_line f b c, on_bline f b e; g = circle g f e d; h = circle h b d e ? eqangle a c d g e g a c
+a b c = triangle a b c; d = circle d b a c; e = on_bline e b c; f = mirror f d b; g = mirror g c d; h = circle h f b c ? eqangle a b a c b d b g
+a b c = triangle a b c; d = on_bline d b a, on_bline d c b; e = circle e b d a; f = circle f d e b; g = midpoint g b c ? eqangle a c b c b d b e
+a b c = triangle a b c; d = midpoint d c b; e = circle e a c b; f = midpoint f c a; g = circle g e b a; h = circle h d f e ? eqangle a c a e b c e g
+a b = segment a b; c = mirror c a b; d = on_bline d a c; e = circle e d a b; f = circle f b e a ? para a e d e
+a b c = triangle a b c; d = on_bline d b a; e = mirror e b a; f = circle f e b c; g = on_bline g a b ? eqangle a d a f a f b d
+a b c = triangle a b c; d = circle d a c b; e = mirror e b d; f = mirror f c e; g = midpoint g e f ? eqratio b e c f d e e f
+a b = segment a b; c = midpoint c b a; d = on_bline d b c; e = circle e a c d; f = circle f d a b ? eqangle a e b d c d c e
+a b c = triangle a b c; d = midpoint d c b; e = circle e b c a; f = mirror f d a; g = circle g f a b; h = mirror h e g ? eqratio a f b d d f b c
+a b = segment a b; c = mirror c a b; d = on_bline d a b, on_circle d c a; e = circle e a b d; f = midpoint f d a; g = midpoint g d f ? eqratio a f b c b f b d
+a b = segment a b; c = on_circle c b a, on_bline c a b; d = midpoint d a b; e = circle e b c d; f = circle f e c a; g = midpoint g f c ? para c f d e
+a b c = triangle a b c; d = circle d c a b; e = midpoint e a b; f = circle f b a d; g = midpoint g f e; h = mirror h d f ? eqangle a d d f d f b d
+a b = segment a b; c = on_circle c b a, on_circle c a b; d = circle d a c b; e = midpoint e b d; f = circle f a b e; g = mirror g e f ? eqangle a d b d e f a e
+a b c = triangle a b c; d = circle d c a b; e = circle e d b a; f = mirror f c b; g = circle g d a e; h = midpoint h b e; i = circle i g b f ? eqangle a e d g e g b e
+a b c = triangle a b c; d = circle d a b c; e = circle e a b d; f = mirror f c d ? eqangle a c b c b d b e
+a b c = triangle a b c; d = circle d c a b; e = midpoint e a b; f = mirror f d a; g = midpoint g d b ? eqratio a b b e d f a d
+a b c = triangle a b c; d = mirror d c a; e = circle e b d a; f = circle f d b c; g = midpoint g f a; h = circle h g d a ? eqangle a e a f a f d e
+a b c = triangle a b c; d = circle d a c b; e = circle e c d a; f = midpoint f c b ? eqangle a b b c c d c e
+a b = segment a b; c = on_bline c a b; d = circle d b c a; e = mirror e c b; f = mirror f a c; g = midpoint g e a ? eqratio a f c e c e a f
+a b = segment a b; c = mirror c a b; d = on_bline d b a; e = midpoint e b d; f = midpoint f a e; g = midpoint g d c ? eqangle a d a e c d b d
+a b c = triangle a b c; d = circle d b c a; e = circle e d a b; f = on_circle f e b; g = circle g f d c; h = midpoint h d e ? eqangle b d b f e g e f
+a b c = triangle a b c; d = midpoint d a c; e = mirror e d c; f = circle f c e b; g = midpoint g e b ? eqratio a c d e d e a c
+a b c = triangle a b c; d = circle d c a b; e = midpoint e a d; f = mirror f e b; g = mirror g a d ? eqratio a d d e e f b f
+a b c = triangle a b c; d = on_bline d a b, on_bline d c b; e = circle e b d a; f = midpoint f c a ? eqangle a c a e b c a d
+a b c = triangle a b c; d = mirror d c b; e = mirror e a d; f = mirror f d e; g = mirror g a e; h = midpoint h c b ? cong d f e g
+a b c = triangle a b c; d = midpoint d a b; e = mirror e d a; f = circle f d c a ? cong a b d e
+a b c = triangle a b c; d = circle d b c a; e = circle e a d b; f = mirror f d a; g = on_line g c f; h = circle h f g d ? eqangle a c b c b d b e
+a b c = triangle a b c; d = on_line d a b; e = midpoint e d b; f = mirror f e d; g = circle g c d e ? cong b d e f
+a b c = triangle a b c; d = circle d a b c; e = midpoint e b c; f = circle f b d e; g = circle g e c d ? para b f d f
+a b c = triangle a b c; d = circle d a b c; e = circle e b d c; f = midpoint f c d; g = midpoint g d b; h = mirror h e a ? eqratio b f c g d f d f
+a b c = triangle a b c; d = mirror d a b; e = on_bline e b c; f = midpoint f b c; g = midpoint g b d ? eqratio a d b c b d c f
+a b c = triangle a b c; d = circle d b a c; e = circle e d b c; f = circle f e d b; g = mirror g e f ? eqangle b c c e e f c d
+a b c = triangle a b c; d = circle d c a b; e = mirror e b d; f = circle f d a c; g = mirror g f e; h = circle h a g b ? eqangle a b b c d f c d
+a b c = triangle a b c; d = mirror d b a; e = circle e c a b; f = circle f d b e; g = mirror g b f ? eqangle a e b e d f e f
+a b = segment a b; c = mirror c a b; d = on_bline d a c; e = circle e a d c; f = mirror f e a; g = midpoint g a e ? eqratio a c b c e f a f
+a b c = triangle a b c; d = on_line d a b; e = mirror e d a; f = midpoint f c a; g = midpoint g a e ? eqratio a c a f d e a e
+a b c = triangle a b c; d = circle d b a c; e = circle e d c b; f = midpoint f c b ? eqangle a b a c b e b d
+a b c = triangle a b c; d = on_line d b a, on_circle d b a; e = on_circle e c b, on_line e b c; f = circle f a b c; g = circle g a e b; h = circle h c f d; i = midpoint i g b ? eqangle a c a e a f a g
+a b c = triangle a b c; d = mirror d a c; e = circle e a b d; f = circle f a b c; g = circle g e a c ? eqangle a b b c c e c f
+a b c = triangle a b c; d = mirror d a c; e = on_circle e c d; f = mirror f c e; g = circle g d e f; h = mirror h b e ? cong a d c f
+a b c = triangle a b c; d = on_bline d a b, on_line d c a; e = circle e c b a; f = circle f b a d ? eqangle a c c e d e b c
+a b c = triangle a b c; d = midpoint d a c; e = circle e d b a; f = midpoint f e d; g = on_circle g d e; h = mirror h d e; i = mirror i a e ? eqangle a e a f c e d e
+a b = segment a b; c = midpoint c b a; d = on_bline d c a; e = circle e a d b; f = circle f a c d ? eqangle a d a e b e c d
+a b c = triangle a b c; d = on_circle d b a, on_line d c b; e = circle e a c d; f = on_bline f e b; g = circle g e a c ? eqangle a d b f e f a d
+a b = segment a b; c = on_bline c b a; d = circle d b c a; e = circle e d c a; f = circle f a b e; g = circle g f a d ? eqangle a b a c a d a e
+a b c = triangle a b c; d = circle d c b a; e = circle e a d b; f = mirror f a b; g = on_bline g c d; h = midpoint h b g; i = midpoint i a b ? eqangle a c b c b d b e
+a b c = triangle a b c; d = circle d c a b; e = circle e c a d; f = circle f d c e; g = midpoint g b c ? eqangle a b b c d f a c
+a b c = triangle a b c; d = mirror d a b; e = circle e c d b; f = mirror f e d; g = circle g e a b; h = circle h d f a ? eqangle a e b f e g b g
+a b = segment a b; c = midpoint c a b; d = on_bline d a c, on_circle d b a; e = circle e d a b; f = on_circle f a c, on_line f d a ? eqangle a d c d d e b e
+a b c = triangle a b c; d = circle d b a c; e = circle e d a c; f = circle f e c d; g = on_line g b d; h = midpoint h f c ? eqangle a e d e e f c f
+a b c = triangle a b c; d = circle d b c a; e = circle e a d b; f = on_circle f c d; g = midpoint g c b ? eqangle a c c d d e b c
+a b c = triangle a b c; d = mirror d a b; e = circle e d c b; f = circle f a b c; g = mirror g d e ? eqangle a b c d e f c e
+a b c = triangle a b c; d = mirror d b a; e = mirror e c d; f = midpoint f a b ? eqratio a d b d d e c e
+a b = segment a b; c = midpoint c b a; d = on_bline d a b; e = circle e c b d; f = circle f e a b; g = on_circle g a e, on_circle g e b ? eqangle a d a f b d e f
+a b c = triangle a b c; d = midpoint d a b; e = circle e a c b; f = circle f c d e; g = midpoint g f a; h = mirror h e f ? eqangle a b c d c e c f
+a b c = triangle a b c; d = circle d a b c; e = midpoint e c a; f = midpoint f b c; g = circle g c d b; h = circle h a b f; i = mirror i d g ? eqangle b d d g d g c d
+a b c = triangle a b c; d = mirror d c b; e = circle e d a c; f = circle f b c e; g = midpoint g f d; h = circle h b e d ? para b g e f
+a b c = triangle a b c; d = mirror d a b; e = mirror e c a; f = circle f b d c; g = on_bline g b e; h = on_bline h e f; i = midpoint i b d ? eqratio a d b d c e a e
+a b c = triangle a b c; d = circle d c a b; e = circle e d b c; f = circle f c e d; g = mirror g a f; h = mirror h c f ? eqangle b c b d c e e f
+a b = segment a b; c = on_circle c a b, on_bline c a b; d = midpoint d b c; e = midpoint e a d; f = on_line f e d, on_bline f a c; g = mirror g e a ? eqangle a c b c b f a d
+a b = segment a b; c = mirror c b a; d = on_circle d c a; e = on_line e b d; f = mirror f a c; g = circle g f e b ? cong a f b c
+a b c = triangle a b c; d = circle d b c a; e = mirror e b d; f = midpoint f e c ? eqangle a c a e c d b c
+a b c = triangle a b c; d = circle d c b a; e = mirror e a d; f = mirror f d c ? eqangle a c b e c d b c
+a b c = triangle a b c; d = circle d c a b; e = mirror e a d; f = midpoint f b e ? eqangle a b b d c e b c
+a b c = triangle a b c; d = on_circle d b a; e = midpoint e c d; f = circle f a e c; g = circle g d c f; h = circle h f c e ? eqangle c f e f f g d g
+a b = segment a b; c = on_line c a b; d = mirror d a b; e = on_bline e a d; f = midpoint f a c; g = midpoint g b c; h = midpoint h d e ? eqratio a d b c b d c g
+a b = segment a b; c = on_bline c a b; d = circle d c a b; e = circle e a c d; f = mirror f a b ? eqangle a b a c a d a e
+a b = segment a b; c = mirror c b a; d = on_circle d a b, on_bline d b a; e = midpoint e a d; f = mirror f d a; g = circle g c f a ? eqratio a d b c b e c d
+a b c = triangle a b c; d = circle d b c a; e = circle e b d a; f = circle f c d e; g = midpoint g f e; h = midpoint h a c ? eqangle a c c d d e b c
+a b c = triangle a b c; d = midpoint d c a; e = midpoint e a d; f = midpoint f b e; g = circle g a d b; h = circle h e b d; i = circle i g e c ? eqangle a c b e d h g h
+a b c = triangle a b c; d = midpoint d b a; e = circle e c b d; f = on_line f c d; g = mirror g c b; h = circle h b a f; i = circle i g b d ? eqangle b e d h d h d e
+a b c = triangle a b c; d = circle d b c a; e = mirror e c b; f = midpoint f a e; g = midpoint g f b; h = midpoint h f e; i = on_bline i e b, on_line i h e ? eqratio a e c e e h g h
+a b c = triangle a b c; d = mirror d b c; e = midpoint e a d; f = circle f c a d; g = circle g a d b; h = midpoint h e b; i = midpoint i e c ? eqangle a c a d c g d f
+a b = segment a b; c = on_bline c a b, on_circle c b a; d = circle d a c b; e = circle e d b c; f = midpoint f c e; g = mirror g d a; h = circle h b f d ? eqangle a b c g d f b f
+a b c = triangle a b c; d = midpoint d c b; e = midpoint e a c; f = circle f d b a; g = circle g a f d; h = midpoint h d b ? eqangle a b b f f g b c
+a b c = triangle a b c; d = mirror d a c; e = circle e b a c; f = mirror f d e; g = midpoint g a b; h = circle h a f d; i = midpoint i h c ? eqangle a b b c c h a f
+a b c = triangle a b c; d = mirror d c b; e = circle e a c d; f = mirror f c a; g = circle g b f c; h = mirror h e c; i = mirror i h b ? eqangle a d a e b f f g
+a b c = triangle a b c; d = on_circle d b a; e = mirror e d b; f = circle f c e a; g = midpoint g c a ? eqangle a c a d c f c e
+a b c = triangle a b c; d = mirror d c b; e = circle e c d a; f = circle f d b a; g = circle g b d e ? eqangle a b a d b f b e
+a b c = triangle a b c; d = mirror d a b; e = mirror e b d; f = circle f d c b ? cong a d b e
+a b c = triangle a b c; d = circle d a b c; e = midpoint e a c; f = midpoint f a d; g = circle g d f b; h = midpoint h f e; i = circle i e c d ? eqratio b d d f e f e h
+a b c = triangle a b c; d = midpoint d b a; e = on_line e b c, on_circle e b c; f = midpoint f e b ? eqratio a b a d c e b c
+a b c = triangle a b c; d = circle d a b c; e = circle e a d c; f = on_circle f d c, on_line f e a ? eqangle a b b c c d c e
+a b c = triangle a b c; d = on_line d b a; e = mirror e c a; f = circle f b c e; g = mirror g b c; h = mirror h f a ? eqratio a e c e c g b g
+a b c = triangle a b c; d = on_circle d a c; e = mirror e d a; f = midpoint f b a; g = midpoint g b f ? eqratio a b a f d e a e
+a b c = triangle a b c; d = circle d b a c; e = on_line e b c; f = circle f d b c; g = mirror g d f ? eqangle a b a c d f c d
+a b c = triangle a b c; d = midpoint d a c; e = on_bline e c a, on_bline e a b; f = circle f b d e; g = midpoint g e c ? eqangle a c d f e f a c
+a b c = triangle a b c; d = midpoint d b a; e = circle e b a c; f = mirror f c a; g = circle g a e f; h = mirror h e g ? eqangle a e c e e g f g
+a b c = triangle a b c; d = circle d a b c; e = circle e c d a; f = midpoint f c b ? eqangle a b a d b c d e
+a b c = triangle a b c; d = midpoint d b a; e = circle e c b a; f = mirror f e b; g = midpoint g d a ? eqratio a b a d e f b e
+a b c = triangle a b c; d = circle d b c a; e = midpoint e b a; f = circle f c d a; g = mirror g d f ? eqangle a b a d b c d f
+a b c = triangle a b c; d = circle d c b a; e = on_circle e c a, on_line e d b; f = mirror f a b; g = mirror g b c; h = circle h c e b; i = midpoint i c g ? eqratio a f b f b g c g
+a b c = triangle a b c; d = circle d c a b; e = mirror e c a; f = circle f b e a; g = midpoint g a e ? eqangle a c d f e f b e
+a b c = triangle a b c; d = midpoint d a b; e = midpoint e d b; f = circle f a e c; g = circle g b f a; h = circle h e a g ? eqangle a f d g d g e f
+a b c = triangle a b c; d = mirror d a b; e = mirror e b a; f = midpoint f a e; g = mirror g d a; h = on_bline h c d, on_line h d c ? eqratio a e d g e f b e
+a b c = triangle a b c; d = midpoint d b a; e = midpoint e d c; f = circle f b d e; g = midpoint g f c ? eqratio a b a d c d c e
+a b c = triangle a b c; d = circle d b a c; e = midpoint e a b; f = on_line f a c, on_circle f e a; g = midpoint g d b; h = circle h e g a; i = midpoint i c a ? eqangle a c d e e f b f
+a b c = triangle a b c; d = circle d b a c; e = midpoint e b d; f = midpoint f d a; g = midpoint g e f; h = circle h c a e ? eqangle a c c d d g b c
+a b c = triangle a b c; d = midpoint d c a; e = midpoint e d a; f = midpoint f b d; g = midpoint g c d; h = circle h a g f ? cong a d e g
+a b c = triangle a b c; d = midpoint d c a; e = on_bline e c a; f = midpoint f d a; g = midpoint g a e; h = midpoint h c d; i = midpoint i b a ? cong c d f h
+a b c = triangle a b c; d = circle d a c b; e = mirror e b d; f = mirror f d a; g = on_bline g d a; h = mirror h b e; i = mirror i h b ? eqangle a c a d b c a e
+a b = segment a b; c = mirror c a b; d = on_bline d a c; e = circle e d c b; f = circle f e c b ? para c e d e
+a b c = triangle a b c; d = circle d c b a; e = on_bline e b c; f = midpoint f a c ? eqangle a b a c b d d e
+a b c = triangle a b c; d = circle d a b c; e = mirror e b a; f = mirror f b d; g = midpoint g a b ? eqangle a c b c e f a f
+a b = segment a b; c = mirror c b a; d = on_circle d a c; e = on_bline e b a, on_bline e b d; f = circle f d a c; g = circle g d f a ? eqangle a b a d b d d f
+a b c = triangle a b c; d = midpoint d b a; e = circle e d b c; f = mirror f e a; g = mirror g e d; h = circle h c d a; i = midpoint i d a ? eqangle b c c d g h d e
+a b c = triangle a b c; d = midpoint d a c; e = mirror e b c; f = mirror f b a ? eqratio a c b e c d c e
+a b c = triangle a b c; d = circle d c a b; e = mirror e c b; f = on_bline f b a; g = midpoint g c a ? eqangle a c c d d f b c
+a b c = triangle a b c; d = circle d c b a; e = mirror e a d; f = mirror f b a; g = midpoint g c f ? eqratio a e b f d e a f
+a b c = triangle a b c; d = circle d c b a; e = circle e b a d; f = midpoint f b d; g = mirror g b d ? eqangle a c c d d e b c
+a b c = triangle a b c; d = mirror d b a; e = mirror e c b; f = on_circle f a b, on_circle f e a; g = midpoint g e a; h = mirror h a c; i = midpoint i g f ? eqratio a f b d b e c e
+a b c = triangle a b c; d = midpoint d b c; e = circle e a c b; f = circle f d a c; g = circle g e a c; h = circle h g b d ? eqangle a e e g e g c e
+a b c = triangle a b c; d = midpoint d a c; e = circle e a b c; f = midpoint f c d; g = on_circle g f b; h = circle h b e d; i = midpoint i e c ? eqangle a e d h e h c e
+a b = segment a b; c = midpoint c a b; d = on_circle d c b; e = midpoint e d a; f = midpoint f b e; g = on_circle g a d; h = midpoint h a c ? eqratio a d a e b e d f
+a b = segment a b; c = midpoint c b a; d = on_circle d c b, on_circle d b c; e = mirror e d b; f = on_circle f a b; g = circle g d c a; h = circle h g e b ? eqangle a d b d b g c d
+a b c = triangle a b c; d = mirror d a b; e = mirror e b c; f = circle f a c d; g = mirror g b f; h = midpoint h d f ? eqratio a d b d b g f g
+a b c = triangle a b c; d = circle d a c b; e = circle e b a d; f = on_line f b a, on_bline f b e; g = midpoint g a b ? eqangle a c b c b d b e
+a b = segment a b; c = mirror c b a; d = on_circle d a b; e = on_circle e d c, on_line e c d; f = circle f e a d; g = midpoint g a e ? eqangle a b b d e f a e
+a b c = triangle a b c; d = midpoint d a c; e = midpoint e b d; f = circle f b d a; g = midpoint g b c ? eqratio a c b d c d d e
+a b c = triangle a b c; d = on_bline d c b; e = mirror e d c; f = circle f e c a; g = on_bline g d f, on_bline g e b; h = mirror h a d; i = midpoint i e f ? eqratio a h d e d h c e
+a b c = triangle a b c; d = circle d a b c; e = circle e a c d; f = midpoint f e d; g = midpoint g d a; h = circle h d c e; i = circle i g f e ? eqangle a f e g e h c f
+a b c = triangle a b c; d = circle d c b a; e = mirror e a d; f = midpoint f b a ? eqangle a c b c b e b d
+a b c = triangle a b c; d = midpoint d a b; e = on_line e a b; f = on_bline f e c; g = mirror g b e; h = mirror h g a; i = midpoint i c e ? eqratio a b a h b d d e
+a b = segment a b; c = mirror c b a; d = midpoint d a b; e = mirror e d a; f = on_circle f a b; g = on_bline g a f; h = mirror h e g ? cong a b d e
+a b = segment a b; c = mirror c a b; d = on_circle d c a; e = mirror e c a; f = mirror f a d ? eqratio a c b c c e a c
+a b c = triangle a b c; d = mirror d a c; e = on_line e d a, on_circle e d c; f = midpoint f d b; g = mirror g b a ? cong a d c e
+a b c = triangle a b c; d = mirror d b a; e = on_bline e a d, on_circle e c b; f = mirror f a c; g = mirror g d f ? eqratio a d b d c f a f
+a b c = triangle a b c; d = circle d a c b; e = mirror e b d; f = on_line f e a, on_bline f d a ? eqangle a c a d b c a e
+a b = segment a b; c = midpoint c a b; d = on_bline d c a; e = mirror e c b; f = mirror f d a ? cong a b c e
+a b c = triangle a b c; d = circle d b a c; e = circle e c d b; f = midpoint f c b ? eqangle a b a c b e b d
+a b c = triangle a b c; d = on_bline d c a; e = mirror e a d; f = circle f d c e; g = circle g a c d; h = on_line h a b ? eqangle a d a g c d c e
+a b c = triangle a b c; d = circle d c b a; e = circle e a d c; f = midpoint f c b ? eqangle a b a d b c d e
+a b c = triangle a b c; d = circle d c b a; e = midpoint e a d; f = circle f c d b; g = midpoint g c a ? eqangle a b a c b d d f
+a b c = triangle a b c; d = mirror d c a; e = circle e c d b; f = circle f b c a; g = on_bline g b f; h = midpoint h e d; i = circle i e c a ? eqangle a b b f d e b d
+a b c = triangle a b c; d = circle d b c a; e = midpoint e a b; f = mirror f c e; g = circle g a c f; h = midpoint h a e ? eqangle a b b c d g c d
+a b c = triangle a b c; d = circle d b a c; e = mirror e d c; f = mirror f d a; g = mirror g b c ? eqratio a c c e e f d f
+a b c = triangle a b c; d = circle d c b a; e = on_line e c d; f = mirror f c d; g = circle g c a e; h = on_line h b g ? eqangle a b a d b c a f
+a b c = triangle a b c; d = circle d a b c; e = mirror e d a; f = circle f a c d; g = circle g b d e ? eqangle a b a d b c d f
+a b c = triangle a b c; d = circle d b a c; e = circle e d c b; f = midpoint f b a ? eqangle a b a c d e c d
+a b c = triangle a b c; d = mirror d c a; e = circle e b c d; f = midpoint f b e; g = mirror g b e; h = mirror h a g; i = circle i d a g ? eqangle a c c e d g b c
+a b c = triangle a b c; d = midpoint d c a; e = circle e c b a; f = circle f e b d; g = mirror g b c; h = circle h c b d; i = midpoint i e b ? eqratio a c a d b g c g
+a b c = triangle a b c; d = circle d c a b; e = mirror e d c; f = circle f c b d; g = midpoint g c b ? eqangle a b a c b f b d
+a b c = triangle a b c; d = circle d b a c; e = circle e d c a; f = circle f d e b; g = mirror g d e ? eqangle a b b c c d c e
+a b c = triangle a b c; d = circle d b c a; e = circle e c b d; f = midpoint f c a ? eqangle a b a c b d d e
+a b c = triangle a b c; d = circle d c a b; e = circle e d c a; f = mirror f c d ? eqangle a b a e b c a d
+a b = segment a b; c = on_bline c b a; d = midpoint d c a; e = mirror e d a; f = circle f a d b ? cong a c d e
+a b c = triangle a b c; d = circle d b a c; e = circle e d c b; f = mirror f b d ? eqangle a b a c b e b d
+a b c = triangle a b c; d = mirror d b a; e = mirror e a c; f = circle f d e b; g = midpoint g b f ? eqratio a d b d c e a e
+a b c = triangle a b c; d = mirror d a c; e = circle e c d b; f = mirror f d e; g = mirror g e b; h = midpoint h f a ? eqangle a c b c b f b e
+a b c = triangle a b c; d = circle d c b a; e = circle e c d a; f = on_bline f e c; g = mirror g b d ? eqangle a b a e b c a d
+a b c = triangle a b c; d = midpoint d b a; e = on_bline e b a; f = circle f d b e; g = midpoint g c d; h = circle h d a c; i = on_bline i h g, on_circle i b g ? eqangle a c c d d e d h
+a b = segment a b; c = on_circle c a b; d = on_bline d a c, on_circle d a c; e = circle e a c d; f = midpoint f a b; g = midpoint g b c ? eqangle a d a e b d b c
+a b c = triangle a b c; d = mirror d c b; e = midpoint e a b; f = circle f c b a; g = on_bline g d a; h = midpoint h c g ? eqratio a b b e c d b d
+a b = segment a b; c = mirror c b a; d = on_circle d c a, on_circle d b c; e = mirror e d c; f = mirror f a b ? eqangle a b a d c d b e
+a b c = triangle a b c; d = circle d b c a; e = circle e d a c; f = mirror f c d ? eqangle a b a e b c a d
+a b c = triangle a b c; d = circle d c a b; e = mirror e a d; f = circle f d b c; g = midpoint g f e ? eqangle a b a c b d d f
+a b = segment a b; c = mirror c b a; d = on_bline d b a, on_circle d a c; e = on_line e a b; f = mirror f d c; g = midpoint g e f ? eqratio a d b c c f d f
+a b = segment a b; c = mirror c a b; d = on_circle d b a; e = mirror e b c; f = mirror f a e; g = on_circle g b d; h = circle h e a d ? eqangle a d c g d g b g
+a b c = triangle a b c; d = mirror d b a; e = circle e d c b; f = circle f d b e; g = circle g e a b; h = midpoint h f e ? para b e e g
+a b = segment a b; c = on_circle c b a, on_bline c a b; d = circle d c b a; e = circle e a d b; f = on_line f b c; g = circle g f c d; h = circle h b e d ? eqangle a e c d e g a f
+a b c = triangle a b c; d = midpoint d b a; e = midpoint e c d; f = circle f b d c; g = circle g a f b; h = on_line h e g, on_circle h g e ? eqangle b c c d d g d f
+a b = segment a b; c = on_bline c b a; d = circle d b a c; e = circle e d c a; f = mirror f c a; g = circle g f b a ? eqangle a b a c a d a e
+a b c = triangle a b c; d = mirror d a c; e = circle e b d c; f = circle f a b c; g = mirror g b d; h = midpoint h d c ? eqangle a c b d e f b e
+a b = segment a b; c = midpoint c a b; d = on_circle d c b; e = midpoint e a d; f = circle f e b c; g = midpoint g a e; h = midpoint h c b ? eqangle a d b f c d b e
+a b c = triangle a b c; d = mirror d a c; e = circle e c a b; f = on_circle f a c, on_line f c a; g = mirror g f b ? eqratio a d c f c f a d
+a b = segment a b; c = midpoint c a b; d = mirror d b a; e = on_circle e b d; f = circle f e b a; g = on_bline g d c, on_line g a c; h = midpoint h a f ? eqratio a d b d c g c d
+a b c = triangle a b c; d = circle d c a b; e = mirror e a d; f = midpoint f d a; g = midpoint g e b ? eqangle a b b d c e b c
+a b c = triangle a b c; d = midpoint d b c; e = midpoint e c a; f = on_bline f e d; g = circle g d e a; h = midpoint h a e ? eqangle a c a d f g d g
+a b c = triangle a b c; d = on_line d b c; e = midpoint e a d; f = mirror f b a; g = circle g e a c; h = midpoint h f c ? eqratio a d b f d e a f
+a b c = triangle a b c; d = circle d b c a; e = circle e a d c; f = on_circle f c e, on_bline f d a; g = circle g c a f; h = mirror h a g ? eqangle a e c f d f c g
+a b = segment a b; c = mirror c b a; d = mirror d a c; e = on_bline e b d ? cong a d b c
+a b c = triangle a b c; d = circle d c b a; e = circle e c d a; f = mirror f d b; g = midpoint g c b ? eqangle a b a d b c d e
+a b c = triangle a b c; d = circle d b c a; e = on_line e d c; f = circle f b a d; g = mirror g d a; h = midpoint h b c ? eqangle a c a d b c d f
+a b = segment a b; c = on_circle c b a, on_circle c a b; d = midpoint d c b; e = midpoint e c a; f = mirror f b c; g = circle g a d e ? eqangle a b a f b e a c
+a b c = triangle a b c; d = midpoint d c b; e = mirror e b c; f = on_circle f c d, on_line f b d; g = circle g c b a; h = circle h d a c ? cong b c d f
+a b c = triangle a b c; d = midpoint d a c; e = midpoint e b d; f = midpoint f c e; g = midpoint g f b ? eqratio a c b d c d d e
+a b c = triangle a b c; d = circle d c a b; e = midpoint e d b; f = midpoint f b c; g = mirror g c b; h = circle h b e g; i = mirror i c e ? eqangle b h d f d f g h
+a b c = triangle a b c; d = circle d b a c; e = mirror e d c; f = mirror f b d; g = mirror g d a ? eqangle a c a f c d b c
+a b c = triangle a b c; d = circle d c b a; e = on_bline e a d; f = midpoint f a b; g = midpoint g f d; h = circle h c g f; i = midpoint i e c ? eqratio a b b f d f d g
+a b c = triangle a b c; d = mirror d b a; e = midpoint e d c; f = mirror f a d; g = circle g f c a; h = mirror h g c ? cong a f b d
+a b = segment a b; c = on_bline c b a; d = circle d a b c; e = on_circle e a d; f = circle f e a d; g = circle g a b f; h = mirror h a g ? eqangle a f b f c d b g
+a b c = triangle a b c; d = on_circle d b c; e = circle e b d c; f = circle f a c b; g = circle g a d b; h = midpoint h a c ? eqangle a c b c f g b f
+a b c = triangle a b c; d = circle d b c a; e = circle e a d c; f = circle f a e c; g = circle g e a b; h = circle h d e c; i = midpoint i h f ? eqangle a c a e e h a d
+a b = segment a b; c = on_circle c b a, on_circle c a b; d = circle d c a b; e = mirror e b d; f = midpoint f b c ? eqangle a b a c c e c d
+a b c = triangle a b c; d = mirror d a b; e = mirror e b d; f = circle f c e a ? cong a d b e
+a b c = triangle a b c; d = circle d b a c; e = midpoint e b c; f = circle f b c d; g = circle g c f a; h = mirror h d f ? eqangle b d d f d f c d
+a b = segment a b; c = on_line c b a; d = on_circle d b c, on_circle d a b; e = circle e a d b; f = circle f c d e; g = mirror g e f ? eqangle b f c e d f d e
+a b c = triangle a b c; d = circle d b a c; e = midpoint e d b; f = midpoint f c b; g = circle g d b a; h = mirror h a f; i = on_bline i h e ? eqangle a c c d d g b c
+a b c = triangle a b c; d = circle d a c b; e = circle e c a d; f = circle f a e d; g = midpoint g a c ? eqangle a b a e b c a d
+a b c = triangle a b c; d = on_circle d a b, on_line d a b; e = on_bline e a d, on_circle e c a; f = mirror f c a; g = midpoint g b c; h = circle h f c b ? eqratio a g b f c g b c
+a b c = triangle a b c; d = circle d b a c; e = mirror e c d; f = midpoint f a e ? eqangle a b a d b e a c
+a b c = triangle a b c; d = circle d a b c; e = circle e d a c; f = circle f a b e; g = midpoint g c a ? eqangle a b a e b c a d
+a b c = triangle a b c; d = mirror d a c; e = circle e c d b; f = mirror f d e; g = on_circle g a f, on_line g f c; h = mirror h d f ? eqangle a f b c c f b d
+a b c = triangle a b c; d = midpoint d b a; e = circle e a b c; f = circle f a e b; g = circle g e b f; h = circle h d f b ? eqangle a b a f f g a e
+a b c = triangle a b c; d = circle d b a c; e = mirror e b c; f = on_bline f e a, on_bline f d e; g = mirror g b d; h = mirror h d g ? eqangle a c a g e g b c
+a b c = triangle a b c; d = midpoint d c a; e = circle e a b d; f = midpoint f d b; g = circle g f e a; h = mirror h b e ? eqratio a c a d b d b f
+a b c = triangle a b c; d = circle d b a c; e = on_bline e d a; f = circle f e d a; g = mirror g b e; h = circle h a f d; i = midpoint i a b ? eqangle a b b c e f a c
+a b c = triangle a b c; d = on_bline d b a; e = on_line e d b; f = mirror f a d; g = circle g e b a; h = circle h g a b; i = circle i h d a ? eqangle a d a e b f e g
+a b c = triangle a b c; d = circle d b c a; e = circle e d a b; f = circle f d c a; g = circle g f d a; h = circle h g b e ? eqangle a c a d a f a g
+a b c = triangle a b c; d = mirror d c a; e = midpoint e b c; f = circle f b a c; g = circle g b d a; h = mirror h d f ? eqratio a f b c f g c d
+a b c = triangle a b c; d = circle d c a b; e = midpoint e a d; f = circle f e d c; g = circle g a c e; h = mirror h c d ? eqangle a b b c c e c g
+a b c = triangle a b c; d = on_bline d b a, on_line d b c; e = on_circle e b d, on_line e b a; f = circle f b e c; g = mirror g b f ? eqangle a d b f e f b c
+a b = segment a b; c = on_circle c b a, on_bline c a b; d = circle d b a c; e = mirror e a b; f = mirror f c e; g = mirror g a f; h = mirror h g a ? eqratio b f e f e g c f
+a b c = triangle a b c; d = circle d c b a; e = midpoint e a b; f = circle f e c b; g = mirror g e d; h = mirror h b f ? eqratio a b b e e g d g
+a b c = triangle a b c; d = circle d b a c; e = mirror e d b; f = circle f e a c; g = circle g f a b; h = circle h d e a ? eqangle a b b d d f b c
+a b = segment a b; c = mirror c b a; d = on_bline d b c; e = circle e a b d; f = midpoint f a b ? para b d d e
+a b = segment a b; c = midpoint c b a; d = on_bline d c a; e = mirror e d a; f = midpoint f e c ? eqratio a b a c d e a d
+a b = segment a b; c = mirror c b a; d = mirror d a c; e = on_circle e a b; f = circle f d e b ? cong a d b c
+a b c = triangle a b c; d = circle d a c b; e = mirror e d b; f = mirror f b d; g = circle g d c b ? cong b f d e
+a b c = triangle a b c; d = circle d a b c; e = mirror e b a; f = midpoint f a b; g = mirror g d b; h = circle h d a f ? eqratio a e b f d g b d
+a b c = triangle a b c; d = on_circle d c b, on_circle d a b; e = circle e a c d; f = on_circle f c b, on_circle f d e; g = midpoint g c b; h = mirror h f c; i = circle i b e d ? eqangle a c b c d h b h
+a b c = triangle a b c; d = circle d b c a; e = midpoint e a c; f = midpoint f c d; g = circle g e a d; h = circle h g d e ? eqratio a c c d c e a g
+a b c = triangle a b c; d = midpoint d a b; e = mirror e d c; f = midpoint f c b; g = mirror g b c; h = circle h a c f ? eqratio a c d e d f c e
+a b c = triangle a b c; d = midpoint d b c; e = circle e a d b; f = midpoint f d a; g = midpoint g b a ? eqratio a d a f b c c d
+a b c = triangle a b c; d = circle d a b c; e = circle e c d a; f = circle f a d b; g = midpoint g e d; h = circle h d f g; i = midpoint i b a ? eqangle a b b c e f a c
+a b c = triangle a b c; d = circle d b c a; e = circle e d a c; f = midpoint f a c ? eqangle a b a e b c a d
+a b c = triangle a b c; d = midpoint d c b; e = on_line e d c, on_bline e a d; f = midpoint f d a; g = mirror g a e ? eqratio a d a f b c b d
+a b c = triangle a b c; d = circle d c b a; e = circle e a b d; f = circle f d c e; g = midpoint g c a ? eqangle a c c d d e b c
+a b = segment a b; c = on_bline c a b, on_circle c a b; d = circle d c a b; e = mirror e a c; f = circle f e c b ? eqangle a b a d b e b c
+a b c = triangle a b c; d = mirror d b a; e = on_bline e d c, on_bline e a b; f = midpoint f c e; g = circle g b a c; h = mirror h b g; i = midpoint i c a ? eqangle a b c h d h a c
+a b c = triangle a b c; d = circle d a b c; e = circle e d b a; f = mirror f b d ? eqangle a c a d b c d e
+a b c = triangle a b c; d = circle d a c b; e = circle e a c d; f = mirror f b d ? eqangle a b a d b c d e
+a b c = triangle a b c; d = mirror d c a; e = circle e c a b; f = circle f d c e; g = mirror g d f ? eqangle a e c f d f c e
+a b c = triangle a b c; d = circle d b c a; e = midpoint e a c; f = circle f e d c; g = mirror g f e; h = mirror h b g ? eqangle a d c d e f c d
+a b c = triangle a b c; d = midpoint d c b; e = mirror e d b; f = on_bline f d b, on_circle f c b; g = circle g e b f; h = mirror h e d ? eqangle b c c f d f b f
+a b c = triangle a b c; d = midpoint d c a; e = on_bline e a c; f = circle f c d e; g = mirror g f d ? eqangle a e c e d f c e
+a b c = triangle a b c; d = circle d c b a; e = midpoint e d b; f = mirror f e c; g = midpoint g c f ? eqratio b d b e e f c f
+a b = segment a b; c = on_circle c b a, on_bline c a b; d = circle d c a b; e = mirror e c d; f = circle f c d a; g = circle g a d e ? eqangle a c a d b d e f
+a b c = triangle a b c; d = circle d a c b; e = circle e d c a; f = circle f b c e; g = midpoint g c a ? eqangle a b a e b c a d
+a b = segment a b; c = on_line c b a; d = on_circle d a b, on_bline d c b; e = circle e d c a; f = circle f c e b ? eqangle a e b d c d c e
+a b c = triangle a b c; d = circle d a b c; e = mirror e d a; f = circle f d a b; g = midpoint g f d; h = midpoint h e a; i = midpoint i a c ? eqangle a c b c b d b f
+a b = segment a b; c = mirror c a b; d = mirror d b c; e = on_bline e b a; f = on_bline f d a ? cong a c b d
+a b = segment a b; c = midpoint c a b; d = on_circle d b a, on_bline d a b; e = midpoint e c d; f = mirror f a b; g = midpoint g e d ? eqratio a d b c c d d e
+a b c = triangle a b c; d = on_bline d a c; e = circle e b c d; f = circle f a c b; g = midpoint g b f; h = midpoint h d c ? eqangle b d b e c d e f
+a b c = triangle a b c; d = midpoint d c b; e = on_line e a c; f = mirror f e c; g = midpoint g f b ? eqratio b c b d e f c f
+a b = segment a b; c = on_bline c a b; d = midpoint d a b; e = circle e c a d; f = circle f d c b ? eqangle a b c e d e a b
+a b c = triangle a b c; d = mirror d a b; e = circle e a c b; f = on_line f d c, on_bline f e b; g = circle g e c a; h = mirror h b e ? eqangle a b b c c e c g
+a b c = triangle a b c; d = midpoint d c a; e = circle e c a b; f = mirror f e c; g = circle g d e c ? eqratio a c a d e f c f
+a b c = triangle a b c; d = on_circle d a c; e = midpoint e c a; f = mirror f e a; g = circle g d e c; h = circle h a g d; i = midpoint i d g ? eqratio a c c d g h e g
+a b = segment a b; c = midpoint c a b; d = mirror d c b; e = mirror e a d; f = on_bline f c b ? cong a b c d
+a b c = triangle a b c; d = circle d a b c; e = on_bline e b a, on_circle e a b; f = on_circle f d a, on_circle f a e ? eqangle a c a d b c d e
+a b = segment a b; c = mirror c a b; d = on_bline d b c; e = circle e b a d; f = midpoint f a e; g = circle g a d c ? eqangle a e b d c d b e
+a b c = triangle a b c; d = on_circle d c b, on_bline d b a; e = midpoint e d a; f = mirror f e c; g = circle g a d b; h = circle h a g e ? eqratio a d a e e f c f
+a b c = triangle a b c; d = circle d b a c; e = midpoint e a d; f = mirror f a c; g = mirror g a b; h = midpoint h g f; i = circle i d b h ? cong b g c h
+a b c = triangle a b c; d = on_bline d c a, on_bline d a b; e = mirror e c b; f = mirror f d b; g = on_bline g c a, on_line g c e; h = on_circle h d c; i = on_line i g d ? eqangle a b b d d g b c
+a b c = triangle a b c; d = on_circle d c b, on_circle d b a; e = circle e d a b; f = circle f b c d; g = on_circle g b d, on_bline g e d ? eqangle b c c f c f c d
+a b c = triangle a b c; d = midpoint d a b; e = circle e a d c; f = circle f b e d; g = midpoint g b e ? eqangle a e b f d f d e
+a b c = triangle a b c; d = circle d a b c; e = circle e d a c; f = midpoint f a b ? eqangle a b a e b c a d
+a b = segment a b; c = midpoint c b a; d = on_circle d b c; e = circle e d b c; f = circle f b e a; g = circle g d c a ? eqangle a f b e e f d e
+a b c = triangle a b c; d = circle d b a c; e = on_line e a b; f = mirror f c a; g = circle g f e c; h = on_line h f g; i = circle i a e c ? eqangle a d a g a g c d
+a b c = triangle a b c; d = midpoint d c a; e = mirror e b a; f = circle f a c e; g = on_line g d e; h = midpoint h e f ? eqratio a c a d b e a e
+a b c = triangle a b c; d = circle d c b a; e = mirror e d a; f = circle f d c b; g = mirror g a b; h = mirror h e c ? eqratio a e b g d e a g
+a b c = triangle a b c; d = midpoint d a b; e = on_circle e a b; f = circle f d c b; g = mirror g e b; h = circle h e d b; i = midpoint i b g ? eqangle b e b h d e f h
+a b c = triangle a b c; d = midpoint d b c; e = circle e b a d; f = circle f d b e; g = mirror g d e ? eqangle a b a d d e d f
+a b c = triangle a b c; d = midpoint d b a; e = mirror e d b; f = on_line f c a; g = circle g c e a ? cong a b d e
+a b c = triangle a b c; d = circle d b c a; e = on_circle e b a; f = circle f c b e; g = midpoint g a b ? eqangle a b a c d f c d
+a b c = triangle a b c; d = circle d a b c; e = on_bline e a c, on_line e a c; f = mirror f c d; g = circle g f e b; h = on_circle h c e, on_circle h d e; i = midpoint i a f ? eqangle c d c h e h d h
+a b c = triangle a b c; d = midpoint d b c; e = on_line e d c; f = mirror f d a; g = circle g f d e; h = midpoint h f g ? eqratio a f c d d f b c
+a b c = triangle a b c; d = circle d b c a; e = midpoint e c a; f = midpoint f a d; g = mirror g f c; h = mirror h e c ? eqratio c d d f f g c g
+a b c = triangle a b c; d = circle d a b c; e = circle e a d b; f = midpoint f a b ? eqangle a c b c b d b e
+a b c = triangle a b c; d = midpoint d b c; e = mirror e a b; f = mirror f b e; g = mirror g f c ? cong a e b f
+a b c = triangle a b c; d = mirror d a b; e = circle e b c d; f = midpoint f e d; g = midpoint g e b; h = circle h f g a; i = circle i b a g ? eqangle b c c d e h d e
+a b c = triangle a b c; d = mirror d a b; e = on_circle e a b; f = circle f e a c; g = mirror g b e; h = midpoint h e g ? eqratio a d a e b g e g
+a b c = triangle a b c; d = circle d a c b; e = midpoint e c d; f = mirror f b d; g = midpoint g e a ? eqangle a b a c c f c d
+a b c = triangle a b c; d = mirror d b a; e = mirror e a d; f = mirror f a b; g = circle g d b c ? cong b e d f
+a b c = triangle a b c; d = midpoint d a b; e = circle e c b d; f = mirror f d e; g = mirror g c b; h = mirror h a f ? eqratio a b b d c g b g
+a b c = triangle a b c; d = circle d a b c; e = circle e c a d; f = on_circle f e b, on_circle f d c; g = midpoint g a c ? eqangle a d a e c f a f
+a b c = triangle a b c; d = circle d b a c; e = circle e d a b; f = on_bline f e d, on_line f b e; g = midpoint g b a ? eqangle a c b c b d b e
+a b c = triangle a b c; d = on_bline d c a; e = on_bline e c a; f = circle f d a e; g = circle g c e d ? eqangle a c d f e f a c
+a b c = triangle a b c; d = circle d b c a; e = circle e d b a; f = midpoint f a b ? eqangle a c b c b d b e
+a b c = triangle a b c; d = circle d b c a; e = on_bline e d c, on_line e c a; f = circle f e c b; g = midpoint g a f; h = midpoint h a b ? eqratio a b a e c d d f
+a b c = triangle a b c; d = mirror d a b; e = midpoint e c a; f = midpoint f d c; g = midpoint g b f; h = on_circle h d a, on_line h d a ? eqratio b f c d f g c f
+a b = segment a b; c = mirror c b a; d = on_bline d a b; e = midpoint e a b; f = circle f a d e; g = midpoint g e a ? para a d a f
+a b c = triangle a b c; d = midpoint d a b; e = circle e a b c; f = on_circle f c b; g = circle g b a f; h = mirror h f g; i = mirror i e a ? eqangle a b a g b h a f
+a b c = triangle a b c; d = circle d a b c; e = circle e a b d; f = mirror f e b; g = mirror g b d ? eqangle a c b c b d b e
+a b c = triangle a b c; d = circle d a c b; e = on_circle e c a, on_circle e d b; f = circle f c b d; g = midpoint g a f; h = on_line h b a ? eqangle a b a c c d c f
+a b c = triangle a b c; d = mirror d b a; e = midpoint e c a; f = circle f a c b; g = circle g f b c; h = circle h b d f; i = on_circle i c g ? eqangle a b a c b f f g
+a b c = triangle a b c; d = circle d b c a; e = on_bline e b a; f = circle f a d b; g = mirror g a f ? eqangle a d b d d f b f
+a b c = triangle a b c; d = midpoint d c a; e = mirror e b c; f = on_bline f c a; g = circle g e a d; h = midpoint h b a ? eqratio a c a d b e c e
+a b c = triangle a b c; d = circle d c a b; e = circle e d a b; f = midpoint f b c ? eqangle a c a e b c a d
+a b c = triangle a b c; d = midpoint d c b; e = mirror e d a; f = on_line f c d; g = midpoint g d c ? eqratio a e b d d e b c
+a b c = triangle a b c; d = circle d c b a; e = midpoint e b d; f = midpoint f c d; g = midpoint g b f; h = midpoint h a g ? eqratio b f c e d f d e
+a b = segment a b; c = mirror c a b; d = mirror d b c; e = on_bline e a d ? cong a c b d
+a b c = triangle a b c; d = on_line d b c; e = on_bline e b d, on_line e d b; f = midpoint f c e; g = midpoint g a b ? eqratio b d c e d e e f
+a b c = triangle a b c; d = circle d c a b; e = circle e d c a; f = mirror f d a; g = midpoint g f c; h = mirror h e a ? eqangle c d c e e f d g
+a b = segment a b; c = on_bline c a b, on_circle c b a; d = midpoint d b c; e = midpoint e b d; f = mirror f e c; g = on_circle g b c; h = mirror h f g ? eqratio c d d e e f c f
+a b c = triangle a b c; d = circle d a c b; e = mirror e b d; f = circle f e d c; g = midpoint g f c; h = on_bline h b a, on_circle h d a; i = midpoint i f b ? eqangle b f d f d f d g
+a b c = triangle a b c; d = circle d b c a; e = circle e b a d; f = circle f b c d; g = mirror g f c; h = midpoint h d a; i = midpoint i b a ? eqangle a b a c d f c d
+a b c = triangle a b c; d = midpoint d b c; e = circle e c a d; f = circle f e c d; g = circle g d f b; h = mirror h e d ? eqangle b g e f e f d g
+a b c = triangle a b c; d = circle d b a c; e = circle e b a d; f = circle f e a d; g = circle g e d c ? eqangle a b d f e f a b
+a b = segment a b; c = on_circle c a b, on_bline c b a; d = circle d b c a; e = midpoint e b a; f = on_bline f c e; g = circle g a d e; h = circle h d b c ? cong d e e g
+a b c = triangle a b c; d = midpoint d c b; e = midpoint e a d; f = circle f a d c; g = midpoint g a f ? eqratio a d b c d e b d
+a b c = triangle a b c; d = circle d c b a; e = circle e d a b; f = circle f b c e; g = circle g a d f; h = midpoint h c a ? eqangle a c b c b d b e
+a b = segment a b; c = on_circle c a b; d = mirror d c b; e = circle e c d a; f = mirror f a e ? eqangle a b a d b e a e
+a b c = triangle a b c; d = mirror d b c; e = midpoint e c b; f = mirror f e b; g = circle g a e d; h = midpoint h f b; i = mirror i g h ? eqratio b d b e e f b h
+a b c = triangle a b c; d = circle d b a c; e = midpoint e a c; f = mirror f b d; g = midpoint g f e ? eqangle a b a c c f c d
+a b c = triangle a b c; d = on_bline d b c; e = mirror e b c; f = circle f c e a; g = circle g c e d; h = mirror h c e; i = midpoint i a e ? eqangle a c a f f g a e
+a b = segment a b; c = mirror c b a; d = on_circle d a b; e = circle e b d a; f = circle f e a d; g = circle g d a c ? eqangle a b a d b e c d
+a b c = triangle a b c; d = mirror d a c; e = on_line e b d; f = mirror f c a; g = circle g e f d ? cong a d c f
+a b = segment a b; c = midpoint c b a; d = mirror d c a; e = mirror e a d; f = on_bline f b a; g = midpoint g c e; h = mirror h b f ? cong a b a e
+a b c = triangle a b c; d = on_circle d c a, on_circle d a c; e = midpoint e b a; f = on_circle f d a, on_circle f c a; g = on_bline g c f; h = circle h d f c; i = circle i d a h ? eqangle a d a f d h c d
+a b = segment a b; c = midpoint c b a; d = on_line d a b, on_circle d a c; e = on_bline e b d ? cong a b c d
+a b c = triangle a b c; d = midpoint d b a; e = mirror e d c; f = mirror f d a; g = midpoint g a e ? cong a b d f
+a b c = triangle a b c; d = mirror d b a; e = circle e b d c; f = mirror f e b; g = circle g e b c; h = midpoint h g b; i = midpoint i c e ? eqratio a h d g e h f g
+a b c = triangle a b c; d = circle d c b a; e = circle e a d c; f = circle f e b d; g = midpoint g b c ? eqangle a b b c c d c e
+a b = segment a b; c = mirror c a b; d = on_circle d b c; e = midpoint e c d; f = circle f d e b; g = midpoint g a e ? eqangle a d d f e f a d
+a b = segment a b; c = on_bline c b a, on_circle c b a; d = circle d a c b; e = circle e a b d; f = midpoint f e a; g = circle g d e b ? eqangle a b a c a d d e
+a b c = triangle a b c; d = midpoint d b c; e = circle e b a c; f = circle f c e d; g = midpoint g b d; h = circle h d f a; i = circle i d h c ? eqangle c f d e d e d f
+a b c = triangle a b c; d = circle d a b c; e = mirror e a b; f = circle f a e d; g = midpoint g b f; h = circle h g e f; i = mirror i c d ? eqangle a d b d d f e f
+a b c = triangle a b c; d = circle d a c b; e = mirror e b d; f = circle f a d b; g = circle g a e d ? eqangle a c a d b c d f
+a b = segment a b; c = on_bline c a b; d = circle d a c b; e = circle e d c b; f = on_bline f e c; g = circle g a e b ? eqangle a d c d d e b e
+a b c = triangle a b c; d = circle d a c b; e = circle e a d b; f = midpoint f b a ? eqangle a c a e b c a d
+a b c = triangle a b c; d = midpoint d c b; e = mirror e c b; f = on_circle f d c; g = circle g b a e; h = midpoint h d e; i = midpoint i d f ? eqratio b e c e e h d e
+a b c = triangle a b c; d = circle d c b a; e = mirror e b a; f = circle f b c e; g = circle g d a c; h = midpoint h b a ? eqangle a c a d c e e f
+a b = segment a b; c = on_bline c a b; d = mirror d b a; e = mirror e a c; f = on_circle f b d, on_bline f b e; g = midpoint g e d ? eqratio a d c e e f a e
+a b c = triangle a b c; d = circle d a c b; e = mirror e d c; f = circle f b e a; g = mirror g b d; h = on_bline h c f, on_circle h a c; i = on_bline i a h, on_bline i f g ? eqangle a c a g c d b c
+a b c = triangle a b c; d = midpoint d c b; e = midpoint e d c; f = circle f a b c; g = midpoint g a c; h = circle h e f d; i = circle i f d b ? para e h f h
+a b c = triangle a b c; d = circle d c a b; e = mirror e a c; f = circle f b a d; g = on_circle g f d, on_line g c b ? eqangle a c a f b c a d
+a b c = triangle a b c; d = circle d b a c; e = on_circle e d b; f = circle f a c d; g = midpoint g a c ? eqangle a e c d c e c f
+a b c = triangle a b c; d = circle d c b a; e = circle e d b a; f = mirror f c d ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d a b c; e = circle e b d a; f = mirror f d c; g = mirror g a b; h = midpoint h g c; i = midpoint i b a ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d b a c; e = midpoint e d c; f = circle f c e a; g = mirror g a e; h = circle h f a d; i = circle i h a c ? eqangle a c c d e f e h
+a b c = triangle a b c; d = circle d a b c; e = on_bline e a c; f = on_line f b a, on_circle f a d; g = midpoint g a b ? eqangle a b b c d e c d
+a b c = triangle a b c; d = circle d c b a; e = circle e d c a; f = mirror f a e; g = midpoint g f d ? eqangle a d c f d e c d
+a b c = triangle a b c; d = mirror d c a; e = mirror e c b; f = circle f b c d; g = circle g e c d; h = circle h g b c ? eqangle b f b g b g c f
+a b = segment a b; c = mirror c a b; d = on_bline d c b; e = mirror e c d; f = mirror f d e; g = midpoint g b a ? eqangle a f b e b e b f
+a b c = triangle a b c; d = on_circle d b a; e = circle e c a d; f = mirror f c b; g = circle g e b a; h = on_line h f d, on_bline h d c; i = circle i d b e ? eqangle a b a d a e e g
+a b = segment a b; c = mirror c a b; d = on_circle d a c; e = circle e a c d; f = circle f a e b; g = midpoint g b a ? para a e e f
+a b c = triangle a b c; d = on_bline d c a; e = circle e c d b; f = mirror f c b; g = mirror g d c; h = on_line h g d, on_bline h d c ? eqratio b f c f c g d g
+a b c = triangle a b c; d = midpoint d a c; e = mirror e d c; f = mirror f d a; g = circle g b e f ? cong d e d f
+a b c = triangle a b c; d = circle d c b a; e = mirror e d b; f = circle f e c b; g = circle g c e f ? eqangle a b a c b d d f
+a b = segment a b; c = midpoint c a b; d = on_bline d b c; e = mirror e c d; f = midpoint f e d ? eqratio a b b c c e c d
+a b c = triangle a b c; d = circle d a c b; e = circle e b c d; f = midpoint f a c ? eqangle a b a c c d c e
+a b c = triangle a b c; d = circle d c b a; e = circle e a d b; f = on_line f d e; g = circle g f d a; h = midpoint h f d ? eqangle a b a d b f d g
+a b c = triangle a b c; d = mirror d c a; e = on_circle e d c; f = mirror f a b; g = circle g f b c; h = midpoint h f e ? eqratio a d b f c d a f
+a b = segment a b; c = mirror c a b; d = on_line d a c; e = midpoint e b d; f = mirror f e c; g = midpoint g d e ? eqratio a c b c b d d e
+a b = segment a b; c = on_bline c a b; d = circle d b a c; e = midpoint e b c; f = on_bline f a c, on_bline f c e; g = circle g d f a; h = midpoint h c a ? eqangle a b a e b d e f
+a b c = triangle a b c; d = circle d a b c; e = circle e b d c; f = midpoint f b c ? eqangle a b a c c d c e
+a b = segment a b; c = on_line c a b; d = mirror d b a; e = mirror e d c; f = on_line f b c, on_line f c a; g = midpoint g e c ? eqratio a d b d c e d e
+a b c = triangle a b c; d = mirror d c b; e = midpoint e a b; f = circle f a c d; g = on_line g b f; h = on_circle h e a; i = mirror i f e ? eqratio a b c d e h b d
+a b c = triangle a b c; d = circle d b a c; e = circle e d c a; f = midpoint f c a ? eqangle a b b c c d c e
+a b c = triangle a b c; d = midpoint d b a; e = mirror e d a; f = circle f c d a ? cong a b d e
+a b c = triangle a b c; d = on_line d b a; e = circle e d a c; f = mirror f c b; g = circle g b c d; h = midpoint h d g; i = midpoint i d c ? eqangle a e b g d g d e
+a b = segment a b; c = mirror c b a; d = on_bline d c a, on_circle d a b; e = circle e c a d; f = circle f b d a ? eqangle a b b d d e c d
+a b c = triangle a b c; d = midpoint d c b; e = on_bline e a b, on_bline e c a; f = midpoint f a d; g = circle g f d b; h = on_circle h b c; i = midpoint i g e ? eqratio a d b c d f b d
+a b c = triangle a b c; d = circle d b c a; e = midpoint e d b; f = circle f c d a; g = mirror g c b; h = on_circle h a b; i = mirror i g f ? eqratio b e c d c e d g
+a b c = triangle a b c; d = circle d a c b; e = circle e b a d; f = midpoint f a b ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d c a b; e = midpoint e c d; f = mirror f e c; g = circle g a e c ? cong a d e f
+a b = segment a b; c = on_bline c b a; d = on_line d a b; e = mirror e c b; f = mirror f a e; g = circle g b e f; h = midpoint h f g ? eqratio a f c e e f b e
+a b c = triangle a b c; d = circle d a c b; e = mirror e b c; f = mirror f b d; g = on_circle g d f; h = mirror h e f ? eqangle b c e f f g c g
+a b c = triangle a b c; d = circle d b a c; e = on_bline e a c, on_bline e a d; f = on_line f c d, on_circle f b a; g = midpoint g f a; h = circle h e d a; i = on_circle i a b, on_line i c d ? eqangle a c c e e h c d
+a b = segment a b; c = on_bline c b a; d = circle d a c b; e = circle e c a d; f = circle f b a d ? eqangle a e c d d e b d
+a b c = triangle a b c; d = circle d c b a; e = midpoint e b a; f = midpoint f e d; g = circle g d e b ? eqratio a b a e d e d f
+a b c = triangle a b c; d = mirror d c b; e = circle e c a d; f = circle f b d e; g = circle g d c e ? para d f e f
+a b c = triangle a b c; d = mirror d b c; e = circle e b d a; f = circle f e b c; g = midpoint g d a; h = on_circle h f a, on_circle h e b ? para b f e f
+a b c = triangle a b c; d = circle d b a c; e = circle e a c d; f = on_circle f a c, on_circle f b c; g = midpoint g b a ? eqangle a c a d c f b f
+a b c = triangle a b c; d = mirror d c a; e = circle e a b c; f = on_bline f d c; g = mirror g f b; h = midpoint h b a ? eqangle a e a f a f c e
+a b c = triangle a b c; d = midpoint d c a; e = mirror e a c; f = midpoint f e b; g = midpoint g f d; h = mirror h f e; i = mirror i c f ? eqratio a d a e c g b c
+a b c = triangle a b c; d = midpoint d b c; e = mirror e d b; f = circle f c a e ? cong b c d e
+a b c = triangle a b c; d = midpoint d b c; e = mirror e d b; f = midpoint f c a ? cong b c d e
+a b c = triangle a b c; d = midpoint d a c; e = circle e c d b; f = circle f a c e; g = circle g a e b ? eqangle a f d e e f c e
+a b = segment a b; c = on_bline c b a; d = mirror d c a; e = midpoint e b a; f = circle f b c a; g = mirror g d b ? eqratio a b a e c d a c
+a b c = triangle a b c; d = circle d a c b; e = circle e d c b; f = midpoint f c a ? eqangle a b a c c d c e
+a b c = triangle a b c; d = circle d b c a; e = circle e c a d; f = mirror f b e; g = midpoint g b c ? eqangle a b b c c d c e
+a b = segment a b; c = on_line c b a; d = midpoint d a c; e = on_bline e d b; f = circle f b e c; g = midpoint g b e; h = circle h c g a ? eqangle b e d e e f c f
+a b c = triangle a b c; d = on_bline d b a, on_line d b a; e = circle e a d c; f = mirror f c b; g = mirror g d b; h = midpoint h e c ? cong a b d g
+a b c = triangle a b c; d = on_bline d a c, on_circle d b c; e = mirror e c a; f = mirror f b c; g = midpoint g f e ? eqratio a e b c c e b f
+a b c = triangle a b c; d = mirror d b c; e = midpoint e d c; f = midpoint f b c; g = midpoint g a b ? cong b c e f
+a b c = triangle a b c; d = circle d c b a; e = mirror e c b; f = midpoint f a b; g = circle g f e c; h = mirror h f g; i = midpoint i g b ? eqangle b c c g e h c f
+a b c = triangle a b c; d = circle d b c a; e = mirror e d b; f = mirror f b d; g = mirror g a b; h = midpoint h g e ? cong b f d e
+a b c = triangle a b c; d = mirror d a c; e = midpoint e b c; f = on_line f a c; g = mirror g e b; h = circle h g f c ? cong b c e g
+a b c = triangle a b c; d = mirror d b a; e = mirror e a c; f = midpoint f a b ? eqratio a d b d c e a e
+a b c = triangle a b c; d = circle d b a c; e = mirror e a d; f = on_line f e b, on_bline f c b ? eqangle a c b e c d b c
+a b c = triangle a b c; d = circle d b c a; e = mirror e c a; f = mirror f b e; g = midpoint g b c ? eqratio a e c e e f b f
+a b = segment a b; c = midpoint c a b; d = on_circle d c a; e = on_bline e a c, on_circle e c b; f = mirror f d b ? eqangle a e b d c e d e
+a b c = triangle a b c; d = circle d c b a; e = circle e b d a; f = circle f e d b; g = mirror g d f ? eqangle a e d f e f b e
+a b c = triangle a b c; d = mirror d c b; e = mirror e a d; f = mirror f b d; g = circle g b a d ? cong b f c d
+a b c = triangle a b c; d = on_bline d b a; e = mirror e a c; f = circle f d e b; g = on_circle g a f, on_line g e c; h = circle h e a d; i = midpoint i b e ? eqangle b d b e d f f h
+a b c = triangle a b c; d = circle d a c b; e = midpoint e b d; f = circle f d c a; g = mirror g c d ? eqangle a b b c c d c f
+a b c = triangle a b c; d = circle d c b a; e = midpoint e b c; f = on_circle f e b, on_bline f d c; g = midpoint g e f; h = circle h c e f; i = circle i b d c ? eqangle b c c f c h d e
+a b c = triangle a b c; d = circle d a b c; e = midpoint e b d; f = midpoint f d e; g = mirror g b f; h = mirror h f b; i = mirror i h a ? eqratio b d b g d e b h
+a b c = triangle a b c; d = on_circle d b a; e = on_circle e c a; f = circle f a e b; g = circle g f c e; h = midpoint h f e ? eqangle a c a e f g e f
+a b = segment a b; c = on_circle c a b, on_circle c b a; d = circle d b c a; e = on_bline e c b; f = on_bline f d a, on_bline f b a; g = circle g c b d ? eqangle a b a c b f c d
+a b c = triangle a b c; d = circle d a c b; e = circle e c b d; f = midpoint f a b ? eqangle a b a c c d c e
+a b c = triangle a b c; d = mirror d b a; e = mirror e a d; f = on_circle f a d; g = midpoint g c b ? cong a e b d
+a b = segment a b; c = midpoint c b a; d = mirror d a b; e = midpoint e b c; f = mirror f c a; g = mirror g c f; h = on_bline h f e, on_line h f g ? eqratio a c b d f g c g
+a b c = triangle a b c; d = midpoint d b a; e = circle e d c b; f = midpoint f d c; g = circle g b e c; h = on_bline h c e; i = mirror i b h ? eqratio a b a d c d c f
+a b = segment a b; c = midpoint c b a; d = on_circle d b c; e = mirror e c a; f = on_line f d e; g = circle g b d f; h = circle h d c a ? cong a b c e
+a b c = triangle a b c; d = mirror d c b; e = mirror e b d; f = midpoint f a b; g = circle g e d a; h = on_circle h b g; i = circle i c f e ? cong b e c d
+a b c = triangle a b c; d = on_bline d b c; e = midpoint e a b; f = circle f b c d; g = mirror g e f; h = mirror h b c ? eqratio a b b e e g f g
+a b c = triangle a b c; d = on_line d a c, on_bline d c b; e = circle e c b a; f = circle f c b d; g = on_circle g d c; h = circle h a d e; i = circle i c g d ? eqangle a e b e e h b h
+a b = segment a b; c = on_circle c b a; d = mirror d b c; e = circle e c d a; f = mirror f d a ? eqangle a d b c b e c e
+a b c = triangle a b c; d = circle d c a b; e = on_circle e c d, on_bline e c a; f = circle f e c d; g = mirror g c a; h = mirror h b d ? eqangle a b b c d e a e
+a b c = triangle a b c; d = circle d b c a; e = mirror e d b; f = midpoint f b c; g = midpoint g c e ? eqratio b c c f d e b e
+a b = segment a b; c = on_circle c b a; d = midpoint d c a; e = circle e d b c; f = midpoint f e d; g = mirror g b d ? eqangle a b a e c f b c
+a b = segment a b; c = on_bline c b a; d = midpoint d b a; e = on_bline e a d; f = mirror f d e; g = circle g b d c ? eqratio a b a d d f d e
+a b c = triangle a b c; d = circle d a c b; e = circle e d c a; f = circle f e b d; g = mirror g d e ? eqangle a b a d b c d e
+a b = segment a b; c = midpoint c a b; d = on_bline d c a; e = circle e b c d; f = circle f b d a ? eqangle a d b e c e c d
+a b c = triangle a b c; d = circle d a b c; e = mirror e d c; f = midpoint f a c; g = mirror g e b ? eqratio a c c f d e c e
+a b = segment a b; c = on_bline c a b; d = mirror d b a; e = circle e d b c; f = mirror f b c ? eqangle a c b e d e b c
+a b c = triangle a b c; d = midpoint d c a; e = circle e c a b; f = mirror f e d; g = mirror g a c; h = mirror h a e ? eqangle a e e g f g a f
+a b c = triangle a b c; d = on_circle d a c; e = midpoint e d c; f = circle f a e b; g = circle g a e c ? eqangle a f c d c d e f
+a b c = triangle a b c; d = mirror d a c; e = circle e d a b; f = mirror f c b; g = mirror g c e; h = circle h c d e ? eqratio a d c d f g a e
+a b c = triangle a b c; d = on_bline d c b; e = mirror e b a; f = midpoint f a d; g = mirror g d c ? eqratio a d b e d f a e
+a b c = triangle a b c; d = mirror d b a; e = mirror e c b; f = midpoint f c a; g = mirror g d f ? eqratio a d b d b e c e
+a b c = triangle a b c; d = circle d a c b; e = mirror e c d; f = circle f e b d; g = circle g f a c ? eqangle a b a d d f a e
+a b = segment a b; c = midpoint c a b; d = on_circle d b a; e = circle e c a d; f = circle f a d e ? eqangle a b a e c d b e
+a b = segment a b; c = mirror c a b; d = on_circle d b a; e = on_circle e b c; f = midpoint f d b ? eqangle a e c d d e b d
+a b = segment a b; c = mirror c b a; d = on_bline d c a; e = circle e b c d; f = circle f d a b ? eqangle a d b e c d d e
+a b = segment a b; c = on_line c a b; d = mirror d c a; e = on_circle e c d, on_bline e a b; f = mirror f a d; g = mirror g c d; h = mirror h e f ? eqratio a d b e b e b g
+a b c = triangle a b c; d = mirror d b a; e = mirror e a b; f = mirror f e a; g = midpoint g c b ? eqratio a f b e e f b d
+a b c = triangle a b c; d = on_line d a b; e = midpoint e b a; f = on_circle f b e, on_line f e b; g = circle g b c e ? cong a b e f
+a b = segment a b; c = midpoint c b a; d = on_circle d b a; e = circle e d c a; f = midpoint f c a ? eqangle a b b e c e c d
+a b = segment a b; c = mirror c b a; d = on_bline d b a; e = circle e d a b; f = mirror f d e; g = on_circle g d c; h = circle h c f b ? eqangle a b a e b f a d
+a b = segment a b; c = on_line c b a; d = on_circle d b a, on_circle d a b; e = circle e a d c; f = on_line f d b; g = circle g c e d; h = mirror h c f ? eqangle a e b g d e c e
+a b c = triangle a b c; d = circle d a c b; e = on_line e c a; f = circle f b a d; g = midpoint g c a ? eqangle a c b c d f b d
+a b c = triangle a b c; d = circle d b a c; e = mirror e a c; f = mirror f a e; g = mirror g d a; h = midpoint h b f ? eqratio a d c e d g e f
+a b = segment a b; c = on_bline c a b, on_circle c b a; d = on_bline d a b; e = mirror e c d; f = mirror f d c; g = circle g d c a ? cong c e d f
+a b c = triangle a b c; d = on_line d a c; e = on_bline e a b; f = circle f e d a; g = mirror g f c; h = midpoint h c e; i = midpoint i e a ? eqratio c e e h f g c g
+a b c = triangle a b c; d = circle d b c a; e = circle e b d a; f = on_circle f d b, on_line f a d ? eqangle a c a e b c a d
+a b c = triangle a b c; d = midpoint d c a; e = mirror e b c; f = circle f b a c; g = on_line g d f; h = on_line h f c; i = midpoint i h a ? eqratio a c a d b e c e
+a b c = triangle a b c; d = circle d a b c; e = circle e a d c; f = circle f a e c; g = midpoint g e d ? eqangle a d a f c d a e
+a b c = triangle a b c; d = mirror d a c; e = circle e a b d; f = mirror f b e; g = mirror g b c ? eqangle a c a e b d a f
+a b c = triangle a b c; d = circle d a b c; e = circle e d b c; f = midpoint f d e; g = midpoint g b a ? eqangle a b a c c d c e
+a b = segment a b; c = mirror c a b; d = mirror d a c; e = on_circle e b d; f = circle f d c e; g = midpoint g b a; h = on_line h c a, on_bline h f b ? eqangle b e b f e f c e
+a b c = triangle a b c; d = on_bline d c b, on_bline d c a; e = circle e c d a; f = midpoint f b c ? eqangle a b b c c d c e
+a b = segment a b; c = midpoint c b a; d = on_bline d b c; e = midpoint e d b; f = mirror f e b; g = midpoint g e a ? eqratio a b a c e f b e
+a b = segment a b; c = mirror c b a; d = midpoint d a c; e = on_bline e b a; f = circle f a c e; g = mirror g a e ? eqangle a e b e e f c f
+a b c = triangle a b c; d = mirror d b a; e = midpoint e c a; f = circle f b c a; g = circle g f c e ? eqratio a c a e b d a d
+a b c = triangle a b c; d = midpoint d b c; e = mirror e a c; f = on_circle f c d; g = mirror g e b ? eqratio a e b c c e c d
+a b c = triangle a b c; d = circle d b a c; e = midpoint e b a; f = midpoint f b d; g = mirror g a f; h = mirror h e g; i = circle i g c d ? eqangle a c b g c d a c
+a b c = triangle a b c; d = midpoint d c a; e = mirror e d c; f = circle f b e d; g = circle g d f c ? cong a c d e
+a b c = triangle a b c; d = circle d c b a; e = midpoint e b c; f = circle f a b d; g = mirror g e b; h = mirror h g a ? eqratio b c e g e g b c
+a b c = triangle a b c; d = circle d c a b; e = mirror e a d; f = midpoint f e b ? eqangle a b b d c e b c
+a b c = triangle a b c; d = circle d c a b; e = mirror e c d; f = circle f c b d; g = circle g d f a; h = mirror h g e ? eqangle a b a d d f a c
+a b c = triangle a b c; d = circle d b a c; e = circle e c a d; f = circle f c e d; g = on_bline g e d ? eqangle a c d f e f a c
+a b c = triangle a b c; d = circle d c b a; e = midpoint e b c; f = circle f d c e; g = circle g c e a ? eqangle c f d e d e e f
+a b c = triangle a b c; d = circle d b c a; e = circle e a b d; f = circle f d c b; g = on_line g f a; h = midpoint h b a ? eqangle a b a c d f c d
+a b c = triangle a b c; d = circle d b c a; e = mirror e b a; f = circle f d b c; g = midpoint g c b ? eqangle a b a c b f b d
+a b c = triangle a b c; d = midpoint d a c; e = circle e b c a; f = mirror f d c; g = midpoint g a e ? cong a c d f
+a b c = triangle a b c; d = circle d c b a; e = circle e d b c; f = on_line f e c; g = midpoint g c a ? eqangle a b a c c d c e
+a b c = triangle a b c; d = circle d c a b; e = midpoint e d c; f = mirror f a d; g = mirror g d a ? eqangle a b b c c f c d
+a b c = triangle a b c; d = circle d a c b; e = mirror e d c; f = circle f c a d; g = mirror g c d ? eqangle a b a f b c a d
+a b c = triangle a b c; d = mirror d c a; e = midpoint e a c; f = midpoint f c e; g = mirror g e b ? eqratio a d c d e f c e
+a b c = triangle a b c; d = on_bline d a c; e = on_bline e b c, on_circle e c b; f = midpoint f d b; g = midpoint g d e; h = circle h b d e; i = on_line i h a, on_circle i a d ? eqangle b d c h d e e h
+a b = segment a b; c = mirror c b a; d = on_bline d c b, on_circle d b c; e = midpoint e d a; f = circle f c d a; g = mirror g f c ? para c d c f
+a b c = triangle a b c; d = circle d c b a; e = on_circle e c a, on_line e c b; f = mirror f a d; g = circle g b e f ? eqangle a b b d c f b c
+a b c = triangle a b c; d = on_circle d c a; e = circle e c d a; f = circle f c a e; g = on_circle g e d, on_line g e d; h = on_circle h d e ? eqangle a c a d a f a e
+a b c = triangle a b c; d = mirror d c a; e = mirror e b c; f = on_line f a c; g = on_line g e c, on_circle g e b ? eqratio a d c d c e b e
+a b c = triangle a b c; d = midpoint d b c; e = circle e c a b; f = on_bline f c d; g = circle g f d b; h = circle h b a d ? eqangle b g d e d e d g
+a b c = triangle a b c; d = circle d b a c; e = midpoint e c b; f = midpoint f e a; g = mirror g f a; h = mirror h c b ? cong a e f g
+a b c = triangle a b c; d = on_circle d b c; e = midpoint e a c; f = midpoint f b e; g = on_bline g a d; h = circle h g b e; i = midpoint i h a ? eqratio a c b e c e e f
+a b = segment a b; c = midpoint c a b; d = mirror d a b; e = on_line e b d; f = mirror f a d; g = mirror g b d; h = midpoint h c f ? cong b g d f
+a b c = triangle a b c; d = circle d a c b; e = mirror e a c; f = circle f b e c; g = midpoint g a c ? eqangle a b a d d f a c
+a b = segment a b; c = midpoint c b a; d = on_circle d a c; e = mirror e c b; f = circle f c a d; g = circle g a d b; h = circle h g a d ? eqangle b d b g c d c f
+a b c = triangle a b c; d = midpoint d a c; e = on_circle e a b, on_line e d a; f = midpoint f c e; g = circle g a f b; h = circle h d g e; i = midpoint i d a ? eqratio a c c d c e e f
+a b = segment a b; c = mirror c a b; d = mirror d a c; e = mirror e a d; f = mirror f b d; g = on_bline g e a ? cong a b e f
+a b c = triangle a b c; d = on_line d c a; e = circle e a b c; f = circle f d b e; g = circle g e b c; h = midpoint h d e ? eqangle b d d f f g d e
+a b c = triangle a b c; d = circle d b c a; e = circle e d c a; f = circle f c d e; g = circle g d c b; h = midpoint h g e; i = mirror i d g ? eqangle a b a e c f c g
+a b c = triangle a b c; d = mirror d b c; e = circle e b c a; f = midpoint f b a; g = midpoint g f b; h = mirror h c e; i = midpoint i h e ? eqangle a b a e b c a h
+a b c = triangle a b c; d = mirror d b a; e = on_bline e d a; f = circle f e b d; g = circle g e d c ? eqangle a e b f d f d e
+a b c = triangle a b c; d = midpoint d b a; e = circle e b a c; f = midpoint f c e; g = mirror g a c; h = midpoint h e b; i = mirror i d g ? eqratio b f c h e f e f
+a b c = triangle a b c; d = mirror d a b; e = on_bline e c b, on_bline e a c; f = mirror f e a; g = mirror g c b ? eqratio a d b d e f a e
+a b = segment a b; c = on_circle c b a; d = circle d a b c; e = circle e b d c; f = circle f c a e ? eqangle a c b c c d c e
+a b c = triangle a b c; d = circle d b a c; e = mirror e c a; f = midpoint f b c; g = mirror g c e; h = on_bline h c e, on_circle h d c; i = midpoint i b h ? eqangle a b a d b h a c
+a b c = triangle a b c; d = circle d c b a; e = mirror e d c; f = circle f a b d; g = circle g d f e; h = mirror h g f; i = mirror i d f ? eqangle a c b c b d b f
+a b c = triangle a b c; d = circle d a c b; e = circle e a b d; f = midpoint f a b ? eqangle a c a e b c a d
+a b = segment a b; c = mirror c a b; d = mirror d b a; e = on_circle e d a; f = midpoint f e d ? cong a c b d
+a b = segment a b; c = on_bline c a b; d = mirror d a b; e = mirror e b d; f = circle f b e c; g = mirror g c e; h = circle h d b c ? eqangle a c b c e f c f
+a b c = triangle a b c; d = circle d b a c; e = midpoint e a d; f = mirror f c d; g = on_line g e c; h = mirror h g c ? eqangle a b a d b f a c
+a b = segment a b; c = midpoint c a b; d = mirror d b a; e = midpoint e a d; f = on_bline f c e; g = circle g e c f; h = circle h g d c ? eqangle b g c f e f d g
+a b c = triangle a b c; d = circle d b c a; e = midpoint e b d; f = circle f d a c; g = midpoint g a b ? eqangle a b b d d f b c
+a b c = triangle a b c; d = circle d a b c; e = midpoint e b c; f = circle f d b e; g = circle g d c b ? para b d b f
+a b c = triangle a b c; d = circle d c b a; e = circle e c b d; f = midpoint f c a ? eqangle a b a c c d c e
+a b = segment a b; c = on_circle c a b, on_circle c b a; d = midpoint d c b; e = midpoint e a b; f = midpoint f e d; g = mirror g f e ? eqangle a c a d b f b c
+a b c = triangle a b c; d = circle d a b c; e = midpoint e d c; f = circle f a e c; g = mirror g b d ? eqangle a b a f b c a e
+a b c = triangle a b c; d = on_bline d c a; e = circle e d a c; f = mirror f d e; g = circle g e a d; h = midpoint h c d ? eqangle a c a d c e d g
+a b c = triangle a b c; d = mirror d a b; e = on_bline e d b; f = circle f e d a; g = circle g a d f; h = circle h f e a ? eqangle a e a g d f b e
+a b c = triangle a b c; d = midpoint d a c; e = mirror e c b; f = circle f e b a; g = circle g c e a; h = midpoint h b f ? eqangle a c b c f g e g
+a b c = triangle a b c; d = circle d a b c; e = midpoint e a b; f = circle f e c a; g = midpoint g a f; h = mirror h b c ? eqratio a b c e d f f g
+a b = segment a b; c = on_circle c a b; d = midpoint d a c; e = circle e b c d; f = on_line f b d, on_circle f d e ? eqangle a c a e d e b d
+a b c = triangle a b c; d = circle d b a c; e = circle e d a b; f = midpoint f a c ? eqangle a c a e b c a d
+a b = segment a b; c = midpoint c a b; d = on_bline d b a; e = circle e a d c; f = on_bline f c b; g = on_circle g b d; h = midpoint h d b ? eqangle a d c e d e b d
+a b c = triangle a b c; d = circle d b c a; e = circle e c d b; f = on_line f d e; g = circle g f d b; h = mirror h f c ? eqangle c e c f f g e g
+a b c = triangle a b c; d = on_bline d b a; e = mirror e b a; f = midpoint f d a; g = circle g f d c; h = midpoint h b c ? eqratio a d a f b e a e
+a b = segment a b; c = mirror c a b; d = on_circle d a b, on_circle d c a; e = circle e a b d; f = circle f c a e; g = mirror g c a; h = mirror h g c ? eqratio a f b e c e b f
+a b = segment a b; c = on_bline c b a, on_circle c a b; d = on_circle d a b, on_bline d b c; e = circle e d c a; f = midpoint f e d ? eqangle a e b d d e c e
+a b c = triangle a b c; d = mirror d b c; e = midpoint e a b; f = mirror f e d; g = circle g c a d; h = midpoint h e c ? eqratio a d c e e f d f
+a b c = triangle a b c; d = circle d b a c; e = circle e a d b; f = circle f a c d; g = circle g d f e; h = mirror h d f ? eqangle b c c d e f f g
+a b c = triangle a b c; d = on_line d a c; e = circle e d b c; f = midpoint f c d; g = mirror g f c; h = circle h e f c ? cong c d f g
+a b = segment a b; c = on_line c a b; d = midpoint d c a; e = midpoint e a b; f = midpoint f d c ? eqratio a b a c b e a d
+a b c = triangle a b c; d = circle d a b c; e = circle e d b a; f = circle f a e c; g = mirror g a d ? eqangle a c a e b c a d
+a b = segment a b; c = on_circle c a b, on_bline c a b; d = on_line d b a, on_bline d b a; e = circle e c d b; f = midpoint f b d ? cong a d c e
+a b c = triangle a b c; d = circle d b c a; e = circle e a b d; f = circle f c d b; g = mirror g b d ? eqangle a c d f e f b e
+a b = segment a b; c = midpoint c b a; d = mirror d c b; e = midpoint e d a; f = on_bline f c b ? cong b e c e
+a b c = triangle a b c; d = on_circle d a c; e = circle e c a d; f = circle f c e a; g = mirror g a f ? eqangle a c c f d e c d
+a b c = triangle a b c; d = circle d a b c; e = mirror e c b; f = midpoint f a e; g = circle g c e a; h = on_bline h e f, on_line h c e ? eqangle a g d g f g b g
+a b c = triangle a b c; d = circle d a c b; e = circle e d c b; f = circle f d e c; g = circle g e f b; h = midpoint h b f ? eqangle b e b f e g c d
+a b = segment a b; c = mirror c b a; d = on_circle d b a, on_circle d a b; e = circle e a b d; f = circle f e c a; g = circle g a d e ? eqangle a f b d b d e f
+a b c = triangle a b c; d = circle d a c b; e = circle e c d b; f = midpoint f b c ? eqangle a b a c c d c e
+a b c = triangle a b c; d = midpoint d b c; e = midpoint e d c; f = circle f a b c; g = midpoint g d e; h = mirror h b a ? eqratio b c c d c e e g
+a b c = triangle a b c; d = circle d a c b; e = circle e c a d; f = mirror f c d ? eqangle a b b c c d c e
+a b = segment a b; c = mirror c b a; d = mirror d a b; e = on_bline e b a ? cong a d b c
+a b c = triangle a b c; d = mirror d a b; e = on_circle e a d; f = mirror f c d; g = mirror g c a ? eqratio a d b d c f d f
+a b c = triangle a b c; d = circle d c a b; e = mirror e c d; f = on_circle f d e, on_bline f e c; g = midpoint g b a ? eqangle a b a d b e a c
+a b c = triangle a b c; d = circle d b a c; e = circle e d a c; f = circle f c e d; g = midpoint g d e ? eqangle a c a d d e d f
+a b c = triangle a b c; d = midpoint d b c; e = midpoint e c a; f = circle f d e a; g = circle g c f a; h = circle h e f c ? eqangle a f a g c g e f
+a b c = triangle a b c; d = circle d c a b; e = midpoint e d b; f = on_bline f d a, on_line f d b; g = midpoint g e f; h = circle h a d f; i = mirror i c g ? eqratio a d b e e f f g
+a b c = triangle a b c; d = circle d c b a; e = midpoint e a b; f = mirror f c d; g = on_bline g e b ? eqangle a b a f b d b c
+a b c = triangle a b c; d = circle d c b a; e = midpoint e a b; f = circle f a d b; g = mirror g d f ? eqangle a d b d d f b f
+a b c = triangle a b c; d = circle d a b c; e = circle e b a d; f = midpoint f c b ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d b c a; e = mirror e b d; f = midpoint f c b ? eqangle a b a c c e c d
+a b c = triangle a b c; d = mirror d b c; e = mirror e c d; f = mirror f b a ? cong b d c e
+a b = segment a b; c = on_circle c b a; d = circle d b a c; e = circle e d c a; f = circle f d b c; g = on_bline g a c, on_bline g d f ? eqangle a d b f d f c d
+a b c = triangle a b c; d = mirror d c b; e = on_bline e d c; f = on_bline f b c, on_circle f a c; g = mirror g c f ? eqangle b f c e d e c f
+a b c = triangle a b c; d = circle d b c a; e = circle e a b d; f = midpoint f c b ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d b a c; e = mirror e a d; f = circle f a c d; g = circle g c d b; h = mirror h g e ? eqangle b d b e d g c e
+a b c = triangle a b c; d = mirror d a c; e = circle e a c b; f = midpoint f c e; g = circle g e d a; h = mirror h d b ? eqangle a c a f d e a c
+a b c = triangle a b c; d = circle d a b c; e = circle e c d b; f = midpoint f e c; g = circle g d c e; h = mirror h g a; i = midpoint i c b ? eqangle a b a c f g c g
+a b = segment a b; c = midpoint c b a; d = midpoint d c a; e = on_circle e b c; f = midpoint f c b; g = mirror g e d ? cong a d c f
+a b c = triangle a b c; d = circle d c b a; e = circle e a b d; f = on_circle f e b; g = midpoint g f b ? eqangle a f d e e f b f
+a b c = triangle a b c; d = circle d c b a; e = circle e b a d; f = mirror f c d ? eqangle a c b c b d b e
+a b c = triangle a b c; d = circle d b c a; e = mirror e a c; f = circle f c d a; g = circle g c b d; h = mirror h b d ? eqangle a b a f b c a d
+a b c = triangle a b c; d = circle d b a c; e = circle e b d a; f = circle f e d a; g = circle g a d f ? eqangle a b b e e f b d
+a b = segment a b; c = midpoint c a b; d = on_bline d a c; e = circle e a d b; f = circle f b e d ? eqangle b d c d d e c e
+a b c = triangle a b c; d = circle d b a c; e = mirror e a b; f = on_line f e c; g = midpoint g b f; h = midpoint h c g; i = midpoint i c a ? eqratio a e b e b f f g
+a b c = triangle a b c; d = circle d c a b; e = on_bline e c a; f = on_line f e d, on_line f b a ? eqangle a b a d b c d e
+a b c = triangle a b c; d = circle d b c a; e = mirror e b a; f = circle f a d e; g = circle g b d e ? eqangle a d a f e f b d
+a b = segment a b; c = mirror c b a; d = midpoint d a c; e = on_bline e a d; f = midpoint f c d; g = midpoint g e f; h = midpoint h b e ? eqratio a c b c d f c d
+a b c = triangle a b c; d = mirror d a c; e = midpoint e b a; f = circle f c a b; g = mirror g f a; h = midpoint h e c ? eqratio a b a e f g a f
+a b c = triangle a b c; d = circle d c b a; e = mirror e c a; f = circle f c d e; g = mirror g a e; h = on_bline h f d; i = circle i h c d ? eqangle a d c f e f c d
+a b c = triangle a b c; d = on_circle d c b, on_line d a b; e = mirror e a b; f = circle f d c a; g = on_bline g b f, on_circle g d c; h = mirror h b f; i = circle i c b a ? eqangle a f b c c d d f
+a b c = triangle a b c; d = circle d c a b; e = circle e c a d; f = midpoint f a c ? eqangle a b b c c d c e
+a b c = triangle a b c; d = midpoint d c a; e = mirror e d a; f = midpoint f b e ? cong a c d e
+a b = segment a b; c = on_circle c b a, on_circle c a b; d = midpoint d c a; e = on_line e c a; f = circle f d a b; g = mirror g d f ? para a f b f
+a b c = triangle a b c; d = circle d c a b; e = circle e a c d; f = mirror f c e; g = midpoint g d c ? eqangle a c a d d f d e
+a b = segment a b; c = on_circle c a b; d = midpoint d a b; e = circle e b a c; f = circle f c a d; g = circle g b e a; h = midpoint h d b ? eqangle a g b c b c d e
+a b = segment a b; c = midpoint c a b; d = on_circle d c a; e = midpoint e d c; f = midpoint f c b; g = on_line g d b, on_bline g f e; h = circle h f e c ? eqangle a d e g f g a d
+a b c = triangle a b c; d = circle d a b c; e = mirror e a d; f = midpoint f e c ? eqangle a c b e c d b c
+a b c = triangle a b c; d = midpoint d b c; e = midpoint e d a; f = midpoint f a b ? eqratio a d a e b c c d
+a b c = triangle a b c; d = midpoint d c b; e = midpoint e c a; f = circle f a b e; g = mirror g d f; h = midpoint h b a; i = midpoint i d a ? cong a e d h
+a b c = triangle a b c; d = circle d c a b; e = mirror e a c; f = mirror f a d; g = on_line g e f; h = midpoint h d b ? eqangle a b b d c f b c
+a b c = triangle a b c; d = on_circle d c a, on_line d c a; e = on_line e a c; f = circle f b c e; g = on_bline g c f; h = midpoint h e d; i = mirror i e b ? eqratio a c a d d h d e
+a b c = triangle a b c; d = circle d b a c; e = midpoint e b a; f = circle f d c b; g = midpoint g b c; h = circle h b a d; i = on_bline i a d ? eqangle a c d f f h b h
+a b c = triangle a b c; d = midpoint d a b; e = mirror e c b; f = midpoint f b c ? eqratio a b b d c e b e
+a b c = triangle a b c; d = circle d b a c; e = mirror e b a; f = circle f d c a; g = midpoint g a b ? eqangle a b b d d f b c
+a b c = triangle a b c; d = circle d c a b; e = circle e a b d; f = circle f d e a; g = circle g a d f ? eqangle a e d f e f b e
+a b = segment a b; c = mirror c b a; d = on_circle d b c; e = circle e a b d; f = mirror f d c; g = mirror g f a ? eqangle a d c d c d b f
+a b c = triangle a b c; d = midpoint d c b; e = on_bline e a d; f = midpoint f e d; g = on_line g a c; h = mirror h c a ? eqratio b c b d d e d f
+a b = segment a b; c = mirror c b a; d = on_circle d c a, on_circle d a c; e = midpoint e c a; f = mirror f c b; g = midpoint g f d ? eqratio a c b e b f a f
+a b c = triangle a b c; d = mirror d b c; e = circle e c a d; f = circle f e b c; g = mirror g c a; h = midpoint h f c; i = mirror i h e ? eqratio b f c h d f b h
+a b c = triangle a b c; d = mirror d a c; e = circle e a d b; f = circle f a b c; g = mirror g d e; h = midpoint h a b ? eqangle a e a f c f d e
+a b = segment a b; c = mirror c a b; d = on_circle d c a; e = circle e b c d; f = circle f c a d; g = midpoint g a b; h = midpoint h c b ? eqangle a b b d e f d e
+a b c = triangle a b c; d = on_bline d c a; e = on_line e a b; f = mirror f c b; g = midpoint g f b; h = mirror h d f; i = mirror i c a ? eqratio b f b g d h f h
+a b c = triangle a b c; d = circle d b c a; e = circle e c a d; f = midpoint f b c ? eqangle a b b c c d c e
+a b c = triangle a b c; d = circle d c a b; e = circle e d b c; f = midpoint f b c ? eqangle a b a c c d c e
+a b c = triangle a b c; d = circle d b c a; e = midpoint e c b; f = circle f d c e; g = circle g e a d ? eqangle b c d f e f b c
+a b c = triangle a b c; d = circle d c a b; e = mirror e c a; f = circle f e b a; g = midpoint g f d; h = on_circle h e b ? eqangle a b b e b g b f
+a b c = triangle a b c; d = mirror d b a; e = circle e c d b; f = circle f a e c; g = circle g a e d ? eqangle a b a f e f a b
+a b = segment a b; c = on_circle c a b; d = circle d b c a; e = on_circle e d b; f = mirror f c e; g = circle g b c d; h = on_bline h c a ? eqangle a d b e c e d e
+a b c = triangle a b c; d = midpoint d b a; e = mirror e c b; f = mirror f d e; g = mirror g d c ? eqratio b e c e e f d f
+a b c = triangle a b c; d = circle d a b c; e = circle e a c d; f = midpoint f c b ? eqangle a b b c c d c e
+a b c = triangle a b c; d = mirror d b a; e = midpoint e a c; f = mirror f b c ? eqratio a c b d c e a d
+a b = segment a b; c = mirror c b a; d = on_line d b a; e = on_bline e b c; f = circle f d e a; g = midpoint g b d ? eqangle a f b e c e d e
+a b c = triangle a b c; d = on_bline d a b; e = circle e d c b; f = midpoint f b a; g = circle g c f d; h = on_circle h d f; i = circle i d f a ? eqangle a b d g f g a b
+a b c = triangle a b c; d = circle d a b c; e = on_bline e b a; f = midpoint f c a ? eqangle a c c d d e b c
+a b c = triangle a b c; d = mirror d c a; e = mirror e b d; f = on_bline f d a, on_line f e d; g = midpoint g c a ? eqratio a d c d d e b e
+a b c = triangle a b c; d = circle d b c a; e = circle e d c b; f = circle f b e c; g = mirror g d c; h = on_bline h a g, on_bline h g f ? eqangle b d c d c e c f
+a b = segment a b; c = mirror c a b; d = on_bline d c b; e = circle e d c b; f = midpoint f b d; g = mirror g e f ? eqratio a d b d c f d f
+a b c = triangle a b c; d = circle d a c b; e = mirror e b d; f = on_line f b c ? eqangle a c a d b c a e
+a b c = triangle a b c; d = mirror d b c; e = circle e a d b; f = on_bline f d c, on_line f d a; g = circle g b c f; h = circle h c g d ? eqangle a d a e c f b e
+a b c = triangle a b c; d = midpoint d c b; e = on_circle e a b, on_circle e d b; f = circle f e a c; g = midpoint g e c ? eqangle a b a e c f a f
+a b c = triangle a b c; d = circle d a b c; e = on_line e a c, on_bline e b c; f = midpoint f a e ? eqangle a b a d d e a c
+a b c = triangle a b c; d = mirror d c a; e = circle e a d b; f = mirror f a b; g = circle g e c d; h = circle h b c e ? eqangle a e a g c e e g
+a b c = triangle a b c; d = circle d b a c; e = midpoint e c b; f = circle f e d c; g = midpoint g e c ? para c d d f
+a b = segment a b; c = on_bline c b a; d = circle d b c a; e = on_bline e c d, on_bline e a b; f = circle f c b e; g = circle g a d b ? eqangle a b b e c f b c
+a b c = triangle a b c; d = on_bline d a c; e = mirror e d c; f = mirror f c a; g = circle g b c e; h = mirror h e g ? eqratio a f c d c f d e
+a b = segment a b; c = mirror c b a; d = on_bline d a b; e = on_line e a d; f = circle f d c b; g = midpoint g a b ? eqangle a d b f c f b d
+a b c = triangle a b c; d = circle d b c a; e = circle e d a c; f = circle f a d e; g = midpoint g c e ? eqangle a e d f e f c e
+a b = segment a b; c = on_bline c a b, on_line c a b; d = on_bline d a c; e = circle e d a c; f = mirror f c b; g = circle g c d b ? cong a b c f
+a b c = triangle a b c; d = circle d c a b; e = mirror e d b; f = midpoint f c d; g = midpoint g c f; h = midpoint h e b ? eqratio b e d f d f f g
+a b = segment a b; c = on_circle c a b; d = circle d b a c; e = circle e c a d; f = midpoint f c a ? eqangle a c b d c e b c
+a b c = triangle a b c; d = midpoint d a b; e = circle e c b a; f = on_bline f e b; g = mirror g e a; h = circle h d b e ? eqratio a b b d e g a g
+a b = segment a b; c = mirror c b a; d = mirror d a c; e = on_bline e a d; f = midpoint f a e ? cong a d b c
+a b = segment a b; c = mirror c b a; d = on_bline d b c, on_circle d c b; e = circle e c d b; f = mirror f c b; g = circle g b e c ? eqratio a c b f b f c f
+a b c = triangle a b c; d = circle d b a c; e = circle e d c b; f = midpoint f b c ? eqangle a b a c c d c e
+a b c = triangle a b c; d = circle d b a c; e = mirror e b a; f = mirror f b d; g = midpoint g f e ? eqangle a b c f e f a c
+a b c = triangle a b c; d = on_bline d b a; e = circle e a c b; f = circle f b e d; g = midpoint g e b ? eqangle a d d f e f b d
+a b c = triangle a b c; d = on_bline d c b, on_circle d b c; e = circle e b d a; f = midpoint f c d; g = mirror g d e; h = circle h b d f; i = mirror i e h ? eqangle a b a e b g a d
+a b = segment a b; c = mirror c b a; d = mirror d a b; e = midpoint e a c; f = on_circle f b d; g = circle g d f b; h = midpoint h f d ? eqangle a b c g e f b g
+a b c = triangle a b c; d = circle d c b a; e = on_bline e a c; f = circle f b e d; g = circle g e d c ? eqangle a c d f e f a c
+a b = segment a b; c = on_circle c b a, on_bline c a b; d = mirror d b a; e = circle e c b a; f = circle f c d a ? eqangle a b c d c e b c
+a b = segment a b; c = on_bline c a b, on_circle c b a; d = circle d c b a; e = midpoint e c d; f = mirror f c b; g = circle g f e a; h = midpoint h e a ? eqangle a c a e e f e g
+a b c = triangle a b c; d = circle d c b a; e = on_bline e b a, on_circle e d c; f = circle f b d e; g = mirror g c a ? eqangle a c b c e f d f
+a b c = triangle a b c; d = circle d b c a; e = circle e d c a; f = mirror f e a; g = circle g e c a; h = circle h e d b ? eqangle a d a g c e a d
+a b c = triangle a b c; d = circle d a c b; e = midpoint e b a; f = circle f d c e; g = circle g e d b ? eqangle a b d f e f a b
+a b c = triangle a b c; d = mirror d a c; e = mirror e a d; f = mirror f d b; g = circle g a b c; h = mirror h b g; i = midpoint i a b ? eqangle a c a g b c a h
+a b c = triangle a b c; d = circle d a b c; e = circle e a d b; f = mirror f b a; g = mirror g a e; h = midpoint h c g ? eqratio a f b f e g a g
+a b = segment a b; c = on_bline c a b; d = circle d b c a; e = mirror e c b; f = circle f e a b; g = midpoint g f a ? eqangle a c a f c d a e
+a b c = triangle a b c; d = mirror d b c; e = circle e c a d; f = circle f d e b; g = on_circle g e a; h = midpoint h a f; i = mirror i c e ? eqangle b f c e d e d f
+a b c = triangle a b c; d = circle d a c b; e = mirror e d c; f = circle f c b e; g = on_bline g e f, on_line g a f; h = midpoint h c b ? eqangle a b a c b f b e
+a b c = triangle a b c; d = circle d c b a; e = circle e a d c; f = on_line f c d; g = circle g f c a; h = midpoint h d g; i = mirror i d a ? eqangle a d a g d e a f
+a b c = triangle a b c; d = mirror d c a; e = mirror e a d; f = circle f a b d ? cong a e c d
+a b c = triangle a b c; d = circle d a b c; e = circle e c a d; f = on_bline f e d, on_bline f d c; g = circle g f b a; h = mirror h a c; i = mirror i c f ? eqangle a c a d c e e f
+a b c = triangle a b c; d = circle d c a b; e = circle e d b a; f = midpoint f e b; g = mirror g a d ? eqangle a c b c b d b e
+a b c = triangle a b c; d = circle d c a b; e = on_line e b c; f = circle f b d c; g = mirror g c d ? eqangle a b a c b f b d
+a b c = triangle a b c; d = circle d c b a; e = circle e b d a; f = circle f b e c; g = midpoint g b e ? eqangle b e c e d f c f
+a b c = triangle a b c; d = circle d a b c; e = midpoint e b a; f = circle f c b d; g = circle g c f d; h = circle h g a e; i = midpoint i d h ? eqangle a b a c c d c f
+a b c = triangle a b c; d = midpoint d a c; e = mirror e d b; f = circle f a c e; g = circle g b a d; h = circle h a e f; i = midpoint i b e ? eqratio a c c d d e b e
+a b c = triangle a b c; d = circle d b a c; e = circle e d c a; f = mirror f a d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = midpoint d a c; e = mirror e d a; f = circle f b d a ? cong a c d e
+a b c = triangle a b c; d = mirror d b a; e = midpoint e a c; f = midpoint f e c ? eqratio a c b d c e a d
+a b c = triangle a b c; d = circle d b c a; e = circle e c a d; f = midpoint f a b ? eqangle a b b c c d c e
+a b = segment a b; c = mirror c b a; d = on_circle d b c, on_line d a c; e = mirror e a d; f = midpoint f c a; g = mirror g d f; h = midpoint h e f ? eqratio b c c d f g d g
+a b c = triangle a b c; d = mirror d c a; e = circle e b c a; f = circle f d a e; g = mirror g e a ? eqangle a e a f d f c e
+a b c = triangle a b c; d = circle d c b a; e = midpoint e b a; f = circle f b e c; g = midpoint g b c ? eqangle a c a d c e e f
+a b c = triangle a b c; d = circle d c a b; e = mirror e b d; f = midpoint f e c ? eqangle a c a e c d b c
+a b c = triangle a b c; d = mirror d b a; e = on_circle e a b; f = circle f a d c; g = circle g d c b; h = midpoint h g d ? eqangle a c a f c g b c
+a b c = triangle a b c; d = circle d c b a; e = midpoint e c a; f = midpoint f c d; g = circle g d f e; h = circle h f a c; i = circle i h e c ? eqangle a h c g e g d e
+a b c = triangle a b c; d = circle d c a b; e = mirror e c b; f = circle f c e d; g = mirror g d a; h = circle h a e d ? eqangle b d b f d e d f
+a b = segment a b; c = on_circle c a b; d = midpoint d c a; e = midpoint e c b; f = circle f e b a; g = circle g d e c ? eqratio a b b c b f b e
+a b c = triangle a b c; d = midpoint d c b; e = circle e b c a; f = mirror f e c; g = mirror g a b; h = midpoint h f b ? eqratio a g b c b g b d
+a b c = triangle a b c; d = mirror d c a; e = on_circle e d a; f = mirror f b c; g = midpoint g f a; h = midpoint h g d ? eqratio a b c d c g a d
+a b = segment a b; c = on_bline c a b; d = midpoint d c b; e = circle e a b c; f = midpoint f a d; g = circle g a c f; h = midpoint h b d ? eqratio a d b c d f b d
+a b c = triangle a b c; d = circle d a c b; e = circle e c b d; f = mirror f b d ? eqangle a b a c c d c e
+a b c = triangle a b c; d = on_bline d b a; e = midpoint e a d; f = mirror f d a; g = on_line g a d; h = midpoint h f b; i = midpoint i h d ? eqangle a d e h e h a h
+a b c = triangle a b c; d = circle d a c b; e = midpoint e d a; f = midpoint f c d; g = mirror g a d; h = on_circle h b a, on_circle h g a ? eqangle a b b c c g c d
+a b = segment a b; c = mirror c a b; d = on_circle d c b; e = mirror e c d; f = circle f e a b; g = mirror g d a ? eqangle a b a f c f a d
+a b c = triangle a b c; d = on_bline d c b; e = circle e c b a; f = mirror f e d; g = midpoint g a d; h = circle h e b f; i = midpoint i e c ? eqratio a d d g e f d f
+a b c = triangle a b c; d = on_circle d b c, on_line d c a; e = circle e d a b; f = circle f b a c ? eqangle a e b c b d d e
+a b c = triangle a b c; d = mirror d b c; e = circle e b a d; f = circle f e c d; g = circle g b c e ? para d f e f
+a b c = triangle a b c; d = circle d b a c; e = circle e c d b; f = on_bline f b c, on_line f c a ? eqangle a b a c c d c e
+a b c = triangle a b c; d = midpoint d a c; e = circle e c b a; f = mirror f d b; g = circle g f c d; h = midpoint h g f ? eqratio a c c d d f b f
+a b c = triangle a b c; d = circle d c a b; e = midpoint e b a; f = on_line f a e; g = midpoint g e d; h = mirror h a c ? eqratio a b a e d e d g
+a b = segment a b; c = midpoint c b a; d = on_bline d b a; e = mirror e d a; f = mirror f a e; g = on_circle g a d, on_bline g b e; h = on_circle h g f, on_bline h e a ? cong a f d e
+a b = segment a b; c = on_bline c a b; d = circle d a b c; e = circle e c a d; f = circle f c b e; g = circle g a f b ? eqangle a b b d d e b c
+a b c = triangle a b c; d = on_circle d a b, on_circle d c b; e = circle e b d a; f = circle f c e d; g = circle g d b f; h = circle h c d f ? eqangle b c c f e f c d
+a b = segment a b; c = midpoint c a b; d = on_bline d b c, on_circle d c a; e = on_line e c b, on_bline e c b; f = circle f c e d; g = circle g f b a ? para c d c f
+a b c = triangle a b c; d = circle d c a b; e = circle e d a c; f = mirror f a d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = mirror d c b; e = circle e c b a; f = circle f c d a; g = midpoint g a c ? eqangle a b a d c f c e
+a b c = triangle a b c; d = circle d a c b; e = circle e d b c; f = midpoint f c a ? eqangle a b a c c d c e
+a b c = triangle a b c; d = midpoint d b a; e = mirror e a b; f = mirror f c a; g = midpoint g d c ? eqratio a d a f b e c f
+a b c = triangle a b c; d = circle d b c a; e = circle e d a c; f = circle f e c a; g = midpoint g e c; h = on_circle h g e, on_line h c d ? eqangle a e c d c d c f
+a b c = triangle a b c; d = mirror d a b; e = mirror e c a; f = on_line f c d; g = circle g e f c; h = circle h e f a; i = midpoint i e d ? eqratio a d b d c e a e
+a b c = triangle a b c; d = midpoint d c a; e = midpoint e d b; f = circle f a e b; g = midpoint g f b ? eqratio a c a d b d b e
+a b c = triangle a b c; d = on_bline d c a, on_bline d b c; e = circle e d c a; f = circle f d e b; g = midpoint g e d; h = circle h d a g; i = mirror i h d ? eqangle a e d h e h c g
+a b = segment a b; c = on_circle c a b, on_circle c b a; d = mirror d a c; e = midpoint e d b ? eqangle a b a c b c a b
+a b c = triangle a b c; d = circle d a b c; e = mirror e d b; f = circle f b a e; g = on_line g e b ? eqangle a e b d d f b f
+a b c = triangle a b c; d = mirror d b a; e = on_line e b c; f = on_circle f c d, on_bline f d a; g = circle g c a e; h = mirror h e d; i = midpoint i g c ? eqratio a d b d d h e h
+a b c = triangle a b c; d = on_bline d b a, on_circle d a b; e = circle e d c a; f = circle f e c b; g = circle g e b d ? eqangle a d b f e f a d
+a b c = triangle a b c; d = on_bline d a b, on_circle d c a; e = midpoint e c a; f = circle f a e d; g = midpoint g f e ? eqangle a c c f e f d e
+a b c = triangle a b c; d = on_circle d c b; e = circle e d b a; f = circle f b d c; g = on_bline g a c, on_circle g a f ? eqangle b c c d c f d f
+a b = segment a b; c = on_circle c a b; d = mirror d a c; e = midpoint e c b; f = circle f c e a ? eqratio a d b c c d b e
+a b = segment a b; c = midpoint c a b; d = on_bline d b c; e = midpoint e d c; f = circle f b c e; g = mirror g e c ? eqangle a b a d b e a b
+a b c = triangle a b c; d = circle d c b a; e = mirror e b d; f = midpoint f b a ? eqangle a c a d b c a e
+a b c = triangle a b c; d = midpoint d a c; e = circle e a b d; f = on_line f c d; g = circle g c b a; h = circle h d a g ? eqangle b e b g d e c g
+a b c = triangle a b c; d = midpoint d c a; e = midpoint e b d; f = on_circle f e c; g = circle g c e d; h = midpoint h c g ? eqratio a c a d b d d e
+a b c = triangle a b c; d = mirror d b c; e = mirror e a b; f = circle f d c a; g = mirror g a f ? eqratio a e b d b e c d
+a b c = triangle a b c; d = midpoint d a c; e = circle e d b c; f = mirror f e a; g = circle g f d a; h = circle h e b a; i = midpoint i b g ? eqratio a c c d e f a f
+a b = segment a b; c = mirror c a b; d = on_bline d a c; e = circle e b a d; f = midpoint f b d ? para a d d e
+a b c = triangle a b c; d = circle d a c b; e = circle e d a b; f = mirror f c d ? eqangle a c b c b d b e
+a b c = triangle a b c; d = circle d c a b; e = on_circle e a c, on_circle e d b; f = midpoint f a d; g = midpoint g b c ? eqangle a d b c b e b d
+a b c = triangle a b c; d = midpoint d c a; e = mirror e d b; f = mirror f d c; g = mirror g b e ? cong a c d f
+a b c = triangle a b c; d = circle d a c b; e = midpoint e d a; f = mirror f d a; g = circle g b a d; h = on_circle h d a; i = midpoint i g d ? eqratio a b d f e g a g
+a b c = triangle a b c; d = circle d c b a; e = circle e b d c; f = midpoint f a c ? eqangle a b a c c d c e
+a b c = triangle a b c; d = circle d b a c; e = midpoint e c b; f = mirror f b c; g = midpoint g e c; h = mirror h d a ? eqratio b e b f c g c f
+a b c = triangle a b c; d = mirror d b a; e = midpoint e a d; f = midpoint f b e; g = mirror g c a ? eqratio a d b d e f b e
+a b = segment a b; c = on_circle c a b, on_bline c b a; d = circle d b c a; e = circle e b a d; f = mirror f e c; g = on_circle g d f; h = midpoint h e b ? eqangle a e a f b f b e
+a b c = triangle a b c; d = mirror d a c; e = circle e d b c; f = mirror f c a; g = circle g c e f; h = circle h c a g ? cong a d c f
+a b c = triangle a b c; d = circle d b a c; e = circle e c d b; f = midpoint f c a ? eqangle a b a c c d c e
+a b = segment a b; c = on_circle c b a; d = on_line d b a; e = circle e c b d; f = midpoint f d c; g = circle g c b a ? eqangle a c b e e f a c
+a b c = triangle a b c; d = midpoint d a b; e = circle e a d c; f = circle f a b e; g = on_bline g b e, on_bline g d c ? eqangle b e b f d f d e
+a b c = triangle a b c; d = midpoint d b c; e = circle e c d a; f = on_bline f b c; g = midpoint g c a ? eqangle a c a d d f d e
+a b c = triangle a b c; d = mirror d a c; e = circle e d a b; f = circle f b c d; g = mirror g b f ? eqangle a e b e c f b f
+a b = segment a b; c = on_bline c a b, on_circle c a b; d = circle d b a c; e = on_bline e c d, on_line e c d; f = circle f a b e; g = circle g d a c ? eqangle a b a d c d b c
+a b = segment a b; c = mirror c a b; d = mirror d b a; e = on_circle e c a; f = mirror f d e ? cong a c b d
+a b c = triangle a b c; d = mirror d c a; e = circle e c b d; f = on_line f c a; g = mirror g f c; h = mirror h c b; i = midpoint i h g ? eqratio b h c g c h f g
+a b = segment a b; c = midpoint c a b; d = mirror d c a; e = on_bline e a d; f = mirror f e d ? cong a b c d
+a b c = triangle a b c; d = circle d c b a; e = circle e a b d; f = on_bline f d e; g = on_circle g f d, on_circle g e a ? eqangle a d d f e f b d
+a b c = triangle a b c; d = circle d c b a; e = mirror e c d; f = on_line f b a ? eqangle a b a e b d b c
+a b c = triangle a b c; d = circle d b a c; e = circle e d b a; f = mirror f c d ? eqangle a c b c b d b e
+a b = segment a b; c = on_bline c b a; d = circle d a c b; e = on_bline e b d, on_bline e c b; f = midpoint f a c; g = mirror g c d ? eqangle a d c d d e b e
+a b = segment a b; c = midpoint c b a; d = on_circle d c a, on_bline d c b; e = on_circle e d b, on_line e d a; f = circle f a e c; g = midpoint g e a ? eqangle a b c d e f c e
+a b c = triangle a b c; d = midpoint d c b; e = mirror e d b; f = circle f a b e; g = mirror g b f; h = midpoint h g c ? cong b c d e
+a b = segment a b; c = mirror c b a; d = on_circle d b c, on_circle d c a; e = circle e b a d; f = circle f e c d; g = circle g a c d ? cong b f d f
+a b c = triangle a b c; d = midpoint d c b; e = circle e a c b; f = circle f a c e; g = mirror g e a; h = circle h e b d; i = midpoint i c e ? para b h e h
+a b c = triangle a b c; d = circle d a c b; e = circle e b a d; f = midpoint f b a ? eqangle a c a e b c a d
+a b = segment a b; c = mirror c a b; d = mirror d b c; e = on_bline e d a ? cong a c b d
+a b c = triangle a b c; d = circle d a b c; e = mirror e b c; f = mirror f d b; g = midpoint g c e ? eqratio b d c e d f b e
+a b c = triangle a b c; d = circle d a b c; e = circle e b a d; f = mirror f a d ? eqangle a c a e b c a d
+a b c = triangle a b c; d = midpoint d a b; e = mirror e d b; f = circle f e c a ? cong a b d e
+a b c = triangle a b c; d = circle d b a c; e = mirror e b c; f = on_circle f d e; g = circle g e b d; h = midpoint h a c ? eqangle b d c g c g c d
+a b c = triangle a b c; d = circle d c a b; e = midpoint e b d; f = midpoint f d c; g = circle g c b e; h = circle h d f e ? eqangle c d c g d g c e
+a b c = triangle a b c; d = midpoint d a c; e = circle e b a c; f = circle f a c e; g = circle g e a d; h = on_line h e g, on_circle h b f; i = mirror i d c ? para a g e g
+a b c = triangle a b c; d = circle d c b a; e = midpoint e b a; f = mirror f e b; g = mirror g f a; h = circle h d g b; i = on_line i a c, on_bline i b e ? cong a b e f
+a b c = triangle a b c; d = midpoint d c b; e = on_bline e d c, on_bline e a d; f = circle f c b e; g = midpoint g a c ? eqangle b f c e d e c f
+a b c = triangle a b c; d = circle d a b c; e = on_bline e d b, on_circle e a d; f = circle f a e c; g = on_line g d e; h = midpoint h b a ? eqangle a b b d d f b c
+a b c = triangle a b c; d = on_circle d a c; e = circle e b d c; f = on_bline f b e, on_circle f b d; g = circle g d b a; h = circle h a g e; i = on_circle i e c, on_line i a d ? eqangle a e b c b d b e
+a b c = triangle a b c; d = circle d b a c; e = circle e b d a; f = circle f e a b; g = mirror g b f ? eqangle a d b d b e b f
+a b c = triangle a b c; d = circle d c b a; e = circle e d a c; f = circle f d a e; g = circle g d e b ? eqangle a c a d a e a f
+a b c = triangle a b c; d = circle d b c a; e = midpoint e c a; f = on_circle f c b; g = circle g d a e; h = mirror h e d; i = circle i c g e ? eqratio a c a e e h d h
+a b c = triangle a b c; d = on_bline d c a, on_circle d c a; e = circle e c d a; f = on_circle f e d, on_line f e c; g = circle g b a d; h = midpoint h e d; i = mirror i f b ? eqratio a c c f f h a f
+a b c = triangle a b c; d = midpoint d c b; e = circle e b a c; f = circle f d e c; g = circle g d f c ? para c f e f
+a b c = triangle a b c; d = midpoint d c b; e = circle e c b a; f = circle f c a d; g = midpoint g c a ? eqangle a c a f d e a d
+a b = segment a b; c = midpoint c a b; d = on_circle d a b; e = on_bline e b d, on_circle e a d; f = circle f c a e; g = mirror g d f; h = mirror h a f ? eqangle a b a f e f a d
+a b = segment a b; c = midpoint c b a; d = on_bline d c b; e = circle e c d b; f = midpoint f c b; g = midpoint g a f; h = midpoint h a e ? eqratio a b a c b f c g
+a b c = triangle a b c; d = circle d b a c; e = midpoint e d b; f = circle f c b e; g = mirror g f e; h = midpoint h b f ? eqangle b d b g b g c d
+a b c = triangle a b c; d = mirror d b c; e = circle e c d a; f = mirror f c d; g = circle g d b e; h = midpoint h f e; i = circle i d e h ? eqangle b g c e e g d e
+a b c = triangle a b c; d = circle d a b c; e = mirror e a d; f = circle f a c d; g = midpoint g c e ? eqangle a c b e c d b c
+a b = segment a b; c = midpoint c b a; d = mirror d c a; e = midpoint e c b; f = mirror f b d; g = on_circle g f e, on_line g a d ? cong a b c d
+a b c = triangle a b c; d = mirror d b c; e = circle e a b d; f = midpoint f a c; g = circle g c b e ? eqratio a c b d c f c d
+a b c = triangle a b c; d = circle d b c a; e = on_bline e c d, on_bline e d a; f = circle f e a d; g = midpoint g e f ? eqangle a e d f e f c e
+a b = segment a b; c = midpoint c b a; d = on_circle d a b; e = on_bline e b c, on_bline e b d; f = circle f b d a; g = midpoint g a e ? eqratio a b b d e f c f
+a b c = triangle a b c; d = circle d a b c; e = on_line e b c, on_circle e c b; f = circle f a b e; g = midpoint g c f; h = circle h c f b ? eqangle a b a c c f c d
+a b c = triangle a b c; d = on_circle d b c; e = circle e d b c; f = circle f d c e; g = midpoint g e d; h = circle h d g a ? eqangle b c c f d e b c
+a b c = triangle a b c; d = circle d c a b; e = mirror e a b; f = mirror f c d; g = on_bline g d c ? eqangle a b a d b c a f
+a b c = triangle a b c; d = mirror d c b; e = mirror e c a; f = circle f d e c; g = circle g c a f; h = mirror h d g ? cong b g c g
+a b c = triangle a b c; d = circle d c b a; e = circle e b d c; f = midpoint f c a ? eqangle a b a c c d c e
+a b c = triangle a b c; d = midpoint d b c; e = mirror e d a; f = on_line f d a; g = circle g b d e; h = midpoint h b g ? eqratio a e c d d e b c
+a b c = triangle a b c; d = mirror d b a; e = midpoint e a c; f = on_bline f c b, on_bline f d a; g = midpoint g b c ? eqratio a c b d c e a d
+a b c = triangle a b c; d = on_circle d c a; e = circle e b a d; f = midpoint f b d ? eqangle a b b e c e b d
+a b c = triangle a b c; d = circle d c b a; e = midpoint e c d; f = circle f b c e; g = on_bline g f b; h = midpoint h e a; i = mirror i c f ? eqratio a e a h b d d e
+a b c = triangle a b c; d = circle d a c b; e = circle e a d c; f = mirror f c d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = midpoint d b c; e = circle e a d c; f = circle f d c e; g = on_bline g c b; h = midpoint h c d ? eqangle a c a d c f c e
+a b c = triangle a b c; d = midpoint d a c; e = midpoint e d c; f = midpoint f a e; g = mirror g b d ? eqratio a c a e c d e f
+a b c = triangle a b c; d = circle d a b c; e = on_circle e c b, on_circle e b c; f = on_bline f c e, on_bline f e d ? eqangle a b a d d e a c
+a b = segment a b; c = on_circle c b a; d = on_circle d c a; e = mirror e a c; f = circle f a e b; g = midpoint g b a ? eqangle a b b c b f e f
+a b = segment a b; c = mirror c b a; d = mirror d a b; e = on_circle e b d, on_circle e a b ? cong a d b c
+a b c = triangle a b c; d = circle d c b a; e = on_circle e d b; f = mirror f d c; g = circle g c a f; h = circle h a c d ? eqangle a f d g f g c d
+a b c = triangle a b c; d = midpoint d c b; e = mirror e d a; f = midpoint f e c ? eqratio a e b d d e b c
+a b c = triangle a b c; d = circle d b a c; e = mirror e b a; f = mirror f c b; g = circle g a f d; h = mirror h d b; i = mirror i e g ? eqratio a e b e b f c f
+a b c = triangle a b c; d = circle d b c a; e = circle e b a d; f = mirror f c a; g = mirror g d e ? eqangle a c b c b d b e
+a b = segment a b; c = on_circle c a b; d = circle d b a c; e = circle e c a d; f = mirror f c d ? eqangle a c b c c e c d
+a b = segment a b; c = on_circle c a b, on_bline c b a; d = midpoint d b c; e = midpoint e b d; f = midpoint f b a; g = midpoint g d f; h = circle h g c d ? eqangle a c b c c f b g
+a b c = triangle a b c; d = on_circle d c a; e = mirror e a b; f = midpoint f b d; g = midpoint g d a ? eqratio a e b d b e d f
+a b c = triangle a b c; d = on_circle d c b; e = mirror e b c; f = mirror f a e; g = mirror g a d ? eqratio a f b e e f b c
+a b c = triangle a b c; d = midpoint d b a; e = midpoint e c d; f = circle f b c d; g = midpoint g a c ? eqratio a b a d c d d e
+a b c = triangle a b c; d = midpoint d b c; e = circle e a c d; f = mirror f a b; g = mirror g d a; h = midpoint h g f ? eqratio a f b c b f c d
+a b = segment a b; c = mirror c a b; d = mirror d b a; e = on_bline e b c; f = mirror f d e ? cong a c b d
+a b = segment a b; c = mirror c b a; d = on_circle d b a; e = mirror e d b; f = circle f b e a ? cong b c d e
+a b c = triangle a b c; d = midpoint d b c; e = mirror e d a; f = on_circle f a b; g = circle g c e f; h = midpoint h f c ? eqratio a e c d d e b c
+a b c = triangle a b c; d = circle d c b a; e = circle e a b d; f = on_circle f c b, on_circle f b c; g = mirror g b d ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d a b c; e = circle e b c d; f = circle f b d e; g = midpoint g c a ? eqangle a b a c b d d e
+a b c = triangle a b c; d = mirror d a b; e = mirror e c d; f = midpoint f d c ? eqratio a d b d c e d e
+a b = segment a b; c = on_circle c b a, on_circle c a b; d = circle d c b a; e = mirror e b a; f = circle f a e d; g = on_circle g a d; h = on_circle h d a, on_bline h d a ? eqangle a f b c b c d f
+a b c = triangle a b c; d = circle d c b a; e = circle e d a b; f = circle f e a c; g = midpoint g c a ? eqangle a c a e b c a d
+a b c = triangle a b c; d = mirror d a b; e = mirror e c d; f = mirror f d a; g = midpoint g a f; h = on_line h g a; i = mirror i e c ? cong a g b d
+a b c = triangle a b c; d = midpoint d b a; e = mirror e c b; f = circle f c d e; g = circle g c b f ? eqratio a b a d c e b e
+a b c = triangle a b c; d = circle d c a b; e = circle e c d a; f = circle f c e a; g = mirror g c d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = on_circle d a c; e = mirror e d c; f = midpoint f a c; g = midpoint g b a ? eqratio a c a e c f d f
+a b c = triangle a b c; d = circle d c a b; e = on_circle e a b; f = mirror f e a; g = mirror g b e; h = midpoint h c b ? eqratio a f e f e g b g
+a b c = triangle a b c; d = circle d c b a; e = on_circle e a c; f = midpoint f e b; g = mirror g c b; h = midpoint h f d; i = midpoint i e c ? eqratio b e b f d f d h
+a b = segment a b; c = on_bline c b a, on_circle c b a; d = circle d c b a; e = mirror e b a; f = on_circle f d b; g = circle g f e c; h = mirror h e g ? eqangle a b a f e g e f
+a b = segment a b; c = midpoint c a b; d = mirror d a b; e = on_bline e b a; f = circle f e c d; g = circle g e c f ? para d f e f
+a b c = triangle a b c; d = midpoint d b c; e = circle e a d c; f = circle f d a e; g = circle g d b a; h = mirror h c b; i = mirror i c e ? eqangle a c a f b c a e
+a b c = triangle a b c; d = circle d b a c; e = circle e a d c; f = mirror f a d ? eqangle a b b c c d c e
+a b = segment a b; c = on_bline c a b, on_circle c b a; d = circle d b a c; e = mirror e c a; f = on_bline f e d; g = circle g e f c ? eqangle a c b d b e b c
+a b c = triangle a b c; d = mirror d b a; e = on_bline e c d; f = mirror f a e; g = on_line g e b; h = midpoint h f g ? eqratio a d b d e f a f
+a b c = triangle a b c; d = circle d a b c; e = circle e b c d; f = on_circle f e b; g = midpoint g c a ? eqangle a b a c c d c e
+a b c = triangle a b c; d = circle d b c a; e = circle e a c d; f = mirror f a d ? eqangle a b b c c d c e
+a b c = triangle a b c; d = circle d c b a; e = circle e c d b; f = mirror f c d ? eqangle a b a c b d d e
+a b = segment a b; c = midpoint c a b; d = mirror d c a; e = on_bline e a b; f = circle f c a e ? cong a b c d
+a b c = triangle a b c; d = circle d a c b; e = circle e c d a; f = circle f c e a; g = mirror g e f; h = midpoint h a b ? eqangle a b b d d e b c
+a b c = triangle a b c; d = circle d b a c; e = on_line e d a; f = midpoint f d c; g = circle g a f b; h = mirror h c d ? eqangle a c b c d g b d
+a b = segment a b; c = midpoint c b a; d = mirror d c b; e = on_bline e d a ? cong a b c d
+a b c = triangle a b c; d = on_bline d a c; e = mirror e d a; f = circle f c a d; g = on_circle g f d; h = circle h d c e; i = on_circle i e c ? eqangle a f a g d f c g
+a b = segment a b; c = on_bline c a b; d = circle d a c b; e = circle e b a d; f = midpoint f d b ? eqangle a c a e b d a c
+a b c = triangle a b c; d = circle d a b c; e = mirror e b d; f = midpoint f a e ? eqangle a b a d c e a c
+a b c = triangle a b c; d = circle d a b c; e = mirror e a d; f = mirror f c d; g = on_bline g d e; h = midpoint h a c ? eqangle a b b c c e c d
+a b c = triangle a b c; d = circle d c b a; e = circle e d b a; f = mirror f c d ? eqangle a c b c b d b e
+a b c = triangle a b c; d = mirror d a b; e = on_bline e b a; f = circle f a d c; g = circle g b a c ? eqangle a e b f b f b e
+a b c = triangle a b c; d = circle d b c a; e = circle e b d a; f = midpoint f c a ? eqangle a c a e b c a d
+a b c = triangle a b c; d = midpoint d c b; e = midpoint e c d; f = midpoint f b e; g = mirror g d b; h = midpoint h a b ? eqratio b c b d b e e f
+a b c = triangle a b c; d = circle d c a b; e = mirror e b d; f = circle f b d c; g = on_bline g e d ? eqangle a b a c d f c d
+a b = segment a b; c = midpoint c b a; d = midpoint d b c; e = midpoint e a c; f = on_circle f a e; g = circle g c f e; h = on_bline h e g, on_bline h c g ? eqratio a g b e f g c f
+a b c = triangle a b c; d = mirror d c b; e = circle e b a d; f = midpoint f b e; g = midpoint g e a ? eqratio a e c e e f d f
+a b c = triangle a b c; d = circle d b c a; e = on_line e d c; f = circle f a c e; g = circle g f e a; h = mirror h d f; i = midpoint i a b ? eqangle a b b d d f b c
+a b c = triangle a b c; d = circle d c a b; e = mirror e d a; f = midpoint f b e; g = mirror g a d; h = circle h c e b; i = on_circle i a h ? eqangle a b b d c g b c
+a b c = triangle a b c; d = circle d a c b; e = on_bline e d a, on_bline e a b; f = mirror f d b; g = mirror g b e; h = mirror h b a; i = on_bline i e g, on_line i d c ? eqangle a d b d d e b e
+a b c = triangle a b c; d = on_circle d c b, on_bline d b a; e = on_line e c a, on_circle e d a; f = circle f a b d; g = midpoint g a f; h = circle h f c a; i = on_circle i f e ? eqangle a c a d c h b f
+a b c = triangle a b c; d = circle d a c b; e = midpoint e d a; f = mirror f e d; g = midpoint g c b ? cong a d e f
+a b c = triangle a b c; d = circle d c a b; e = on_line e b a; f = mirror f b c; g = mirror g a f; h = midpoint h a e ? eqratio a g b f f g c f
+a b c = triangle a b c; d = circle d b a c; e = mirror e d a; f = circle f e c a; g = circle g c d a ? eqangle a d d f e f c e
+a b c = triangle a b c; d = circle d b a c; e = mirror e d c; f = circle f b a e; g = circle g d b f; h = midpoint h f d ? eqangle a d b d f g b g
+a b = segment a b; c = on_circle c a b; d = circle d a b c; e = midpoint e c a; f = on_line f c b; g = mirror g c a; h = midpoint h a b ? eqratio a e a g a g c g
+a b c = triangle a b c; d = circle d c a b; e = circle e d c a; f = on_circle f c a; g = circle g a e c; h = circle h b e g; i = circle i e g f ? eqangle a c e h g h a c
+a b c = triangle a b c; d = mirror d a b; e = mirror e c a; f = mirror f e d ? eqratio a d b d c e a e
+a b = segment a b; c = midpoint c b a; d = mirror d b a; e = on_line e b c, on_circle e b c; f = midpoint f a c; g = on_circle g c b, on_bline g e a ? cong a b c e
+a b c = triangle a b c; d = midpoint d b c; e = on_bline e a c; f = mirror f e b; g = midpoint g a e ? eqratio b c c d e f b f
+a b c = triangle a b c; d = circle d c a b; e = mirror e a c; f = mirror f b a; g = midpoint g f d ? eqratio a e b f c e a f
+a b c = triangle a b c; d = midpoint d c a; e = mirror e d b; f = mirror f b c; g = circle g e d a; h = mirror h c g ? eqratio a c a d d e b e
+a b c = triangle a b c; d = midpoint d b a; e = midpoint e a c; f = circle f e d b; g = on_bline g a d, on_bline g d c; h = circle h c e g; i = circle i e a g ? eqangle a c e h g h a c
+a b c = triangle a b c; d = circle d c a b; e = circle e d b c; f = mirror f b d ? eqangle a b a c c d c e
+a b c = triangle a b c; d = mirror d b c; e = circle e a b c; f = circle f a c e; g = circle g b f d; h = circle h c d g; i = midpoint i b c ? eqangle a b a f b c a e
+a b c = triangle a b c; d = circle d b a c; e = midpoint e c a; f = midpoint f a d; g = mirror g e a; h = midpoint h f e; i = on_line i b g ? eqratio a c a e e f e h
+a b = segment a b; c = mirror c b a; d = on_circle d b a, on_circle d a b; e = circle e a c d; f = circle f d a b; g = midpoint g a f ? eqangle a b c d d f b d
+a b c = triangle a b c; d = mirror d b a; e = on_bline e a b; f = on_circle f c d; g = mirror g a d; h = circle h d f b; i = midpoint i d h ? cong a g b d
+a b c = triangle a b c; d = mirror d c b; e = on_line e b d; f = mirror f b e; g = mirror g b f; h = on_line h g f; i = mirror i g h ? eqratio b d c d f g b g
+a b c = triangle a b c; d = circle d b a c; e = mirror e b d; f = on_line f d c, on_line f e a; g = circle g f a c ? eqratio a c b c c f e f
+a b = segment a b; c = midpoint c b a; d = midpoint d b c; e = on_bline e b d; f = midpoint f c a; g = mirror g a e ? cong a c d f
+a b c = triangle a b c; d = midpoint d a b; e = midpoint e d c; f = circle f b e a; g = mirror g d c; h = circle h f c d; i = circle i c b d ? eqangle a b d h f h a b
+a b c = triangle a b c; d = circle d b c a; e = circle e a c d; f = circle f b c e; g = midpoint g d b; h = midpoint h e b ? eqangle b e c e d f c f
+a b = segment a b; c = on_bline c a b; d = circle d c b a; e = on_bline e d a, on_circle e c a; f = mirror f b c ? eqangle a e b c b e b d
+a b c = triangle a b c; d = on_bline d b c, on_bline d b a; e = mirror e d b; f = mirror f a e; g = midpoint g c a ? eqratio a f d e e f b e
+a b c = triangle a b c; d = circle d c b a; e = circle e d b a; f = mirror f b d ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d c a b; e = circle e a b d; f = midpoint f b c ? eqangle a c a e b c a d
+a b c = triangle a b c; d = circle d a c b; e = circle e b d a; f = on_line f c a, on_bline f b a ? eqangle a c a e b c a d
+a b = segment a b; c = on_circle c b a; d = circle d b c a; e = circle e a d b; f = mirror f e d ? eqangle a d b e d e c d
+a b c = triangle a b c; d = circle d c b a; e = mirror e a d; f = mirror f b e; g = on_bline g b f ? eqangle a c b e c d b c
+a b = segment a b; c = on_circle c b a; d = circle d a b c; e = mirror e b d; f = circle f a d e; g = midpoint g f d; h = mirror h e f ? eqangle a c a f c e a d
+a b c = triangle a b c; d = on_circle d a b; e = midpoint e d a; f = midpoint f b a; g = mirror g e d ? eqratio a b a f b d e f
+a b c = triangle a b c; d = circle d b a c; e = mirror e a c; f = circle f e b c; g = on_circle g d c, on_circle g a b ? eqangle a b a c d f c d
+a b = segment a b; c = midpoint c a b; d = on_circle d a c; e = midpoint e c b; f = mirror f a b; g = circle g d c e; h = midpoint h c d ? eqratio a d a f b e b f
+a b c = triangle a b c; d = circle d b a c; e = circle e d c a; f = on_bline f e c, on_circle f c b; g = midpoint g b a ? eqangle a b b c c d c e
+a b c = triangle a b c; d = mirror d a c; e = circle e c b a; f = mirror f b c; g = on_circle g d b, on_line g d c; h = midpoint h a b ? eqangle a c b g b g a f
+a b = segment a b; c = mirror c b a; d = midpoint d b a; e = mirror e c b; f = mirror f b e; g = midpoint g c a; h = midpoint h c g ? cong a g b d
+a b c = triangle a b c; d = mirror d a b; e = circle e c a d; f = circle f e c d; g = mirror g e f ? eqangle a b a c d e e f
+a b c = triangle a b c; d = mirror d b c; e = circle e b c a; f = mirror f c d; g = on_circle g f b, on_circle g b e; h = mirror h b e ? cong b d c f
+a b c = triangle a b c; d = midpoint d a c; e = midpoint e d b; f = on_bline f b a; g = midpoint g f b ? eqratio a c b d c d b e
+a b c = triangle a b c; d = mirror d c b; e = on_circle e d a; f = midpoint f c a; g = mirror g f a; h = midpoint h e g ? eqratio a c f g f g a c
+a b = segment a b; c = mirror c b a; d = on_bline d a c; e = circle e a d c; f = mirror f b d; g = circle g f a b; h = midpoint h c d ? eqangle a f b d d e b g
+a b c = triangle a b c; d = mirror d b a; e = on_circle e c d, on_circle e a c; f = mirror f a e; g = circle g a c d; h = circle h a e d; i = midpoint i d f ? eqratio a d b d e f a f

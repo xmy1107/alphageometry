@@ -1,3 +1,0 @@
-cong a b a d
-cong e d e c
-para a e b c

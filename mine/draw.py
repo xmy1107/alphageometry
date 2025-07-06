@@ -11,7 +11,7 @@ import alphageometry
 
 DEFS_FILE = '../defs.txt'
 PROBLEMS_FILE = 'gen.txt'
-PROBLEM_NAME =  'p1'
+PROBLEM_NAME =  'p3'
 # PROBLEMS_FILE = '../examples.txt'
 # PROBLEM_NAME =  'orthocenter_aux'
 OUT_FILE = ''
