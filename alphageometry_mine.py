@@ -28,7 +28,8 @@ import graph as gh
 import lm_inference as lm
 import pretty as pt
 import problem as pr
-
+import subprocess
+import os
 
 _GIN_SEARCH_PATHS = flags.DEFINE_list(
     'gin_search_paths',
@@ -479,118 +480,80 @@ def insert_aux_to_premise(pstring: str, auxstring: str) -> str:
   setup, goal = pstring.split(' ? ')
   return setup + '; ' + auxstring + ' ? ' + goal
 
+def translate_sentence(model_path, sentence, gpu=0, beam_size=10, n_best=5):
+    """
+    用法：
+    sentence = "a b c = triangle ; h = on_tline b a c , on_tline c a b ? perp a h b c"
+    translated = translate_sentence("mine/run/model_step_1000.pt", sentence, gpu=0)
+    print(f"Translated sentences: {translated}")
+    print(f"Best translation: {translated[0]}")
+    """
+    with open("temp_input.txt", "w") as f:
+        f.write(sentence)
+    
+    output_file = "temp_output.txt"
+    
+    cmd = [
+        "onmt_translate", 
+        "-model", model_path, 
+        "-src", "temp_input.txt", 
+        "-output", output_file, 
+        "-gpu", str(gpu), 
+        "-beam_size", str(beam_size),
+        "-n_best", str(n_best),
+        "-verbose"
+    ]
+    
+    subprocess.run(cmd, check=True)
+    
+    with open(output_file, "r") as f:
+        translated_sentences = [line.strip() for line in f.readlines()]
+    
+    subprocess.run("rm temp_input.txt temp_output.txt", shell=True)
+    
+    return translated_sentences
+
 def run_alphageometry(
     model: "lm.LanguageModelInference", # 前向引用
     p: pr.Problem,
     search_depth: int,
     beam_size: int,
     out_file: str,
+    pstring: str
 ) -> bool:
-  """Simplified code to run AlphaGeometry proof search.
-
-  We removed all optimizations that are infrastructure-dependent, e.g.
-  parallelized model inference on multi GPUs,
-  parallelized DD+AR on multiple CPUs,
-  parallel execution of LM and DD+AR,
-  shared pool of CPU workers across different problems, etc.
-
-  Many other speed optimizations and abstractions are also removed to
-  better present the core structure of the proof search.
-
-  Args:
-    model: Interface with inference-related endpoints to JAX's model.
-    p: pr.Problem object describing the problem to solve.
-    search_depth: max proof search depth.
-    beam_size: beam size of the proof search.
-    out_file: path to output file if solution is found.
-
-  Returns:
-    boolean of whether this is solved.
-  """
-  # translate the problem to a string of grammar that the LM is trained on.
-  string = p.setup_str_from_problem(DEFINITIONS)
-  # special tokens prompting the LM to generate auxiliary points.
-  string += ' {F1} x00'
-  # the graph to represent the proof state.
   g, _ = gh.Graph.build_problem(p, DEFINITIONS)
 
-  # First we run the symbolic engine DD+AR:
   if run_ddar(g, p, out_file):
     return True
 
-  # beam search for the proof
-  # each node in the search tree is a 3-tuple:
-  # (<graph representation of proof state>,
-  #  <string for LM to decode from>,
-  #  <original problem string>)
-  beam_queue = BeamQueue(max_size=beam_size)
+  pstring_to_string = lambda pstring: pstring.replace(',', ' ,').replace(';', ' ;')
+  string_to_pstring = lambda string: string.replace(' ,', ',').replace(' ;', ';')
+
+  beam_queue = []
   # originally the beam search tree starts with a single node (a 3-tuple):
-  beam_queue.add(
-      node=(g, string, p.txt()), val=0.0  # value of the root node is simply 0.
-  )
+  beam_queue.append((g, pstring))
 
-  for depth in range(search_depth):
-    logging.info(
-        'Depth %s. There are %i nodes to expand:', depth, len(beam_queue)
-    )
-    for _, (_, string, _) in beam_queue:
-      logging.info(string)
+  for (g, pstring) in beam_queue:
+    string = pstring_to_string(pstring)
+    logging.info('Solving: "%s"', pstring)
 
-    new_queue = BeamQueue(max_size=beam_size)  # to replace beam_queue.
+    candidates = translate_sentence(_CKPT_PATH.value, string, gpu=0)
 
-    for prev_score, (g, string, pstring) in beam_queue:
-      logging.info('Decoding from %s', string)      # Decoding from {S} a : ; b : ; c : ; d : T a b c d 00 T a c b d 01 ? T a d b c {F1} x00
-      outputs = model.beam_decode(string, eos_tokens=[';'])
+    print(f"Candidates: {candidates}")
 
-      # translate lm output to the constructive language.
-      # so that we can update the graph representing proof states:
-      translations = [
-          try_translate_constrained_to_construct(o, g)
-          for o in outputs['seqs_str']
-      ]
+    for aux in candidates:
+      # logging.info('Add auxiliary point: "%s"\n', aux)
+      paux = string_to_pstring(aux)
 
-      # couple the lm outputs with its translations
-      candidates = zip(outputs['seqs_str'], translations, outputs['scores'])
+      candidate_pstring = insert_aux_to_premise(pstring, paux)
 
-      # bring the highest scoring candidate first
-      candidates = reversed(list(candidates))
+      logging.info('Solving: "%s"', candidate_pstring)
+      p_new = pr.Problem.from_txt(candidate_pstring)
 
-      for lm_out, translation, score in candidates:
-        logging.info('LM output (score=%f): "%s"', score, lm_out) # LM output (score=-1.119110): "e : C a c e 02 C b d e 03 ;"
-        logging.info('Translation: "%s"\n', translation)          # Translation: "e = on_line e a c, on_line e b d"
-
-        if translation.startswith('ERROR:'):
-          # the construction is invalid.
-          continue
-
-        # Update the constructive statement of the problem with the aux point:
-        candidate_pstring = insert_aux_to_premise(pstring, translation)
-
-        logging.info('Solving: "%s"', candidate_pstring)    # Solving: "a b c = triangle a b c; d = on_tline d b a c, on_tline d c a b; e = on_line e a c, on_line e b d ? perp a d b c"
-        p_new = pr.Problem.from_txt(candidate_pstring)
-
-        # This is the new proof state graph representation:
-        g_new, _ = gh.Graph.build_problem(p_new, DEFINITIONS)
-        if run_ddar(g_new, p_new, out_file):
-          logging.info('Solved.')
-          return True
-
-        # Add the candidate to the beam queue.
-        new_queue.add(
-            # The string for the new node is old_string + lm output +
-            # the special token asking for a new auxiliary point ' x00':
-            node=(g_new, string + ' ' + lm_out + ' x00', candidate_pstring),
-            # the score of each node is sum of score of all nodes
-            # on the path to itself. For beam search, there is no need to
-            # normalize according to path length because all nodes in beam
-            # is of the same path length.
-            val=prev_score + score,
-        )
-        # Note that the queue only maintain at most beam_size nodes
-        # so this new node might possibly be dropped depending on its value.
-
-    # replace the old queue with new queue before the new proof search depth.
-    beam_queue = new_queue
+      g_new, _ = gh.Graph.build_problem(p_new, DEFINITIONS)
+      if run_ddar(g_new, p_new, out_file):
+        logging.info('Solved.')
+        return True
 
   return False
 
@@ -629,13 +592,15 @@ def main(_):
     run_ddar(g, this_problem, _OUT_FILE.value)
 
   elif _MODE.value == 'alphageometry':
-    model = get_lm(_CKPT_PATH.value, _VOCAB_PATH.value)
+    # model = get_lm(_CKPT_PATH.value, _VOCAB_PATH.value)
+    model = None
     run_alphageometry(
         model,
         this_problem,
         _SEARCH_DEPTH.value,
         _BEAM_SIZE.value,
         _OUT_FILE.value,
+        this_problem.txt()
     )
 
   else:

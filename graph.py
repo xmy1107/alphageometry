@@ -576,8 +576,10 @@ class Graph:
         break
 
       args = list(map(lambda x: g.get(x, lambda: int(x)), pr.goal.args))
-      # check = nm.check(pr.goal.name, args) # goal最终也是图的一部分，需要成立
-      check = True # 忽略goal
+      if pr.goal != None:
+        check = nm.check(pr.goal.name, args) # goal最终也是图的一部分，需要成立
+      else:
+        check = True
       logging.info(f"{check}")
 
     g.url = pr.url

@@ -23,4 +23,6 @@ share/python-wheels/
 *.egg
 MANIFEST
 ag_ckpt_vocab
-meliad_lib
+meliad_lib/
+OpenNMT-py/
+mine/run

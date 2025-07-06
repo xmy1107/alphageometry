@@ -48,17 +48,17 @@ SEARCH_ARGS=(
 LM_ARGS=(
   --ckpt_path=$DATA \
   --vocab_path=$DATA/geometry.757.model \
-  # --gin_search_paths=$MELIAD_PATH/transformer/configs \
-  # --gin_file=base_htrans.gin \
-  # --gin_file=size/medium_150M.gin \
-  # --gin_file=options/positions_t5.gin \
-  # --gin_file=options/lr_cosine_decay.gin \
-  # --gin_file=options/seq_1024_nocache.gin \
-  # --gin_file=geometry_150M_generate.gin \
-  # --gin_param=DecoderOnlyLanguageModelGenerate.output_token_losses=True \
-  # --gin_param=TransformerTaskConfig.batch_size=$BATCH_SIZE \
-  # --gin_param=TransformerTaskConfig.sequence_length=128 \
-  # --gin_param=Trainer.restore_state_variables=False
+  --gin_search_paths=$MELIAD_PATH/transformer/configs \
+  --gin_file=base_htrans.gin \
+  --gin_file=size/medium_150M.gin \
+  --gin_file=options/positions_t5.gin \
+  --gin_file=options/lr_cosine_decay.gin \
+  --gin_file=options/seq_1024_nocache.gin \
+  --gin_file=geometry_150M_generate.gin \
+  --gin_param=DecoderOnlyLanguageModelGenerate.output_token_losses=True \
+  --gin_param=TransformerTaskConfig.batch_size=$BATCH_SIZE \
+  --gin_param=TransformerTaskConfig.sequence_length=128 \
+  --gin_param=Trainer.restore_state_variables=False
 );
 
 echo $PYTHONPATH
@@ -92,12 +92,12 @@ echo $PYTHONPATH
 # echo "所有问题处理完成，日志已保存至: $log_file"
 
 # Run DDAR
-python -m alphageometry \
---alsologtostderr \
---problems_file=$(pwd)/examples.txt \
---problem_name=orthocenter_aux \
---mode=ddar \
-"${DDAR_ARGS[@]}"
+# python -m alphageometry \
+# --alsologtostderr \
+# --problems_file=$(pwd)/examples.txt \
+# --problem_name=orthocenter_aux \
+# --mode=ddar \
+# "${DDAR_ARGS[@]}"
 # --problems_file=$(pwd)/imo_ag_30.txt \
 # --problem_name=translated_imo_2005_p5 \
 
@@ -115,3 +115,12 @@ python -m alphageometry \
 # "${LM_ARGS[@]}" >> "$log_file" 2>&1
 # 2>&1 | grep "TensorRT\|GPU"
 # 将 stderr 重定向到 stdout
+
+python -m alphageometry_mine \
+--alsologtostderr \
+--problems_file=$(pwd)/examples.txt \
+--problem_name=orthocenter \
+--mode=alphageometry \
+"${DDAR_ARGS[@]}" \
+"${SEARCH_ARGS[@]}" \
+"--ckpt_path=$(pwd)/mine/run/model_step_10000.pt"
