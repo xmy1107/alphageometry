@@ -123,9 +123,22 @@ def main(_):
     DEFINITIONS = pr.Definition.from_txt_file(DEFS_FILE, to_dict=True)
     RULES = pr.Theorem.from_txt_file(RULES_FILE, to_dict=True)
 
-    for _ in range(10000000):
+    for _ in range(1):
         print(f"\nTrying to generate a new geometry script in {_}th iteration.")
-        script = random_geometry()
+        # script = random_geometry()
+        # script = [      # 假的
+        #     'a b = segment a b',
+        #     'c = mirror c a b',
+        #     'd = mirror d b a',
+        #     'e = on_bline e d c'
+        # ]
+
+        script = [      # 真的
+            "a b c = triangle",
+            "d = on_tline d b a c, on_tline d c a b",
+            "e = on_line e a c, on_line e b d"
+        ]
+
         prev_conclusions = set()
         
         print("Generated script: ",'\n'.join(script))
@@ -144,6 +157,9 @@ def main(_):
 
                 curr_conclusions = set(tuple(con) for con in getattr(g, 'all_conclusions', []))
                 new_conclusions = curr_conclusions - prev_conclusions
+
+                print(f'\n{i}th step\'s new conclusions:')
+                print('\n'.join([' '.join(con) for con in new_conclusions]))
 
                 for concl in new_conclusions:
                     if t not in concl:          # 找到一组同构判定下以为有辅助点的问题
@@ -178,28 +194,29 @@ def main(_):
             if out:
                 break
 
-# if __name__ == '__main__':
-#     # app.run(main)  # 输出log用这个
-#     main(None)
-
-def run_thread(thread_id):
-    """
-    每个线程运行的主函数，动态修改 OUT_FILE 为 gen{thread_id}.txt
-    """
-    global OUT_FILE
-    OUT_FILE = f'gen{thread_id}.txt'  # 根据线程 ID 修改输出文件
-
-    print(f"线程 {thread_id} 开始运行，输出文件为 {OUT_FILE}")
-    main(None)  # 调用主函数
-
 if __name__ == '__main__':
-    num_threads = 16
-    processes = []
+    # app.run(main)  # 输出log用这个
+    main(None)
 
-    for i in range(num_threads):
-        p = multiprocessing.Process(target=run_thread, args=(i + 1,))
-        processes.append(p)
-        p.start()
+# 多线程改下面
+# def run_thread(thread_id):
+#     """
+#     每个线程运行的主函数，动态修改 OUT_FILE 为 gen{thread_id}.txt
+#     """
+#     global OUT_FILE
+#     OUT_FILE = f'gen{thread_id}.txt'  # 根据线程 ID 修改输出文件
 
-    for p in processes:
-        p.join()
+#     print(f"线程 {thread_id} 开始运行，输出文件为 {OUT_FILE}")
+#     main(None)  # 调用主函数
+
+# if __name__ == '__main__':
+#     num_threads = 16
+#     processes = []
+
+#     for i in range(num_threads):
+#         p = multiprocessing.Process(target=run_thread, args=(i + 1,))
+#         processes.append(p)
+#         p.start()
+
+#     for p in processes:
+#         p.join()

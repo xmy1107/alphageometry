@@ -1,6 +1,8 @@
 p1
 a b c = triangle; h = on_tline b a c, on_tline c a b ? perp a h b c
-p2
+p1_myaux
+a b c = triangle; h = on_tline b a c, on_tline c a b; e = on_line b c, on_line a h ? perp a h b c
+p1_stdaux
 a b c = triangle; d = on_tline d b a c, on_tline d c a b; e = on_line e a c, on_line e b d ? perp a d b c
 incenter_excenter
 a b c = triangle a b c; d1 d2 d3 d = incenter2 a b c; e1 e2 e3 e = excenter2 a b c ? perp d c c e
@@ -22,3 +24,7 @@ p8
 a b = segment a b; c = midpoint c b a; d = on_bline d b a; e = midpoint e a d; f = mirror f d c ? cong c e d e
 p9
 a b c = triangle a b c; d = mirror d c a; e = mirror e b c ? eqratio a d c d c e b e
+p10
+a b c = triangle a b c; d = circle d c b a; e = on_circle e d a, on_line e d b; f = midpoint f e c ? eqangle a c a e c d b c
+p10_minus
+a b c = triangle a b c; d = circle d c b a; e = on_circle e d a, on_line e d b ? eqangle a c a e c d b c

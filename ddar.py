@@ -92,7 +92,7 @@ def solve(
   all_added = []
 
   while len(level_times) < max_level:
-    logging.info(f'Level {len(level_times) + 1}/{max_level}')
+    # logging.info(f'Level {len(level_times) + 1}/{max_level}')
     dervs, eq4, next_branches, added = saturate_or_goal(                  # 找到所有结论（未应用）=> 应用 => 下一轮找结论
         g, theorems, level_times, controller, max_level, timeout=timeout
     )
