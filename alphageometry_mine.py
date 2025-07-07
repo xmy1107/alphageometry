@@ -480,7 +480,7 @@ def insert_aux_to_premise(pstring: str, auxstring: str) -> str:
   setup, goal = pstring.split(' ? ')
   return setup + '; ' + auxstring + ' ? ' + goal
 
-def translate_sentence(model_path, sentence, gpu=0, beam_size=10, n_best=5):
+def translate_sentence(model_path, sentence, gpu=0, beam_size=30, n_best=30):
     """
     用法：
     sentence = "a b c = triangle ; h = on_tline b a c , on_tline c a b ? perp a h b c"
@@ -530,10 +530,10 @@ def run_alphageometry(
   string_to_pstring = lambda string: string.replace(' ,', ',').replace(' ;', ';')
 
   beam_queue = []
-  # originally the beam search tree starts with a single node (a 3-tuple):
   beam_queue.append((g, pstring))
 
-  for (g, pstring) in beam_queue:
+  for i, (g, pstring) in enumerate(beam_queue):
+    logging.info('Processing beam %d', i)
     string = pstring_to_string(pstring)
     logging.info('Solving: "%s"', pstring)
 
@@ -548,9 +548,18 @@ def run_alphageometry(
       candidate_pstring = insert_aux_to_premise(pstring, paux)
 
       logging.info('Solving: "%s"', candidate_pstring)
-      p_new = pr.Problem.from_txt(candidate_pstring)
+      try:
+        p_new = pr.Problem.from_txt(candidate_pstring)
+      except Exception as e:
+        logging.info('Failed to parse problem: "%s", error: %s', candidate_pstring, str(e))
+        continue
 
-      g_new, _ = gh.Graph.build_problem(p_new, DEFINITIONS)
+      try:
+        g_new, _ = gh.Graph.build_problem(p_new, DEFINITIONS)
+      except Exception as e:
+        logging.info('Failed to build graph from problem: "%s", error: %s', candidate_pstring, str(e))
+        continue
+
       if run_ddar(g_new, p_new, out_file):
         logging.info('Solved.')
         return True

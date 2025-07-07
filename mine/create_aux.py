@@ -10,6 +10,7 @@ import alphageometry
 
 import random
 import string
+import multiprocessing
 
 DEFS_FILE = '../defs.txt'
 # PROBLEMS_FILE = 'gen.txt'
@@ -122,25 +123,14 @@ def main(_):
     DEFINITIONS = pr.Definition.from_txt_file(DEFS_FILE, to_dict=True)
     RULES = pr.Theorem.from_txt_file(RULES_FILE, to_dict=True)
 
-    aux_problems = []
-    # num = 0
-    # if os.path.exists(OUT_FILE):
-    #     with open(OUT_FILE, 'r') as f:
-    #         lines = f.readlines()
-    #         for line in reversed(lines):
-    #             if line.startswith('p') and line[1:].split()[0].isdigit():
-    #                 num = int(line[1:].split()[0])
-    #                 break
-
     for _ in range(10000000):
         print(f"\nTrying to generate a new geometry script in {_}th iteration.")
         script = random_geometry()
         prev_conclusions = set()
-
         
         print("Generated script: ",'\n'.join(script))
 
-        found = False
+        out = False
         for i in range(2, len(script) + 1):
             try:
                 problem_str = '; '.join(script[:i])
@@ -161,27 +151,55 @@ def main(_):
                         # print("new: ",new_conclusions)
                         # print("curr: ",curr_conclusions)
                         
-
                         this_problem = pr.Problem.from_txt(f"{problem_str} ? {' '.join(concl)}", translate=True)
                         # this_problem.goal = pr.Construction.from_txt(f"{' '.join(concl)}")
                         ddar.solve(g, RULES, this_problem, max_level=10)
                         count_points = alphageometry.write_solution(g, this_problem, '', False)
                         if len(count_points) > 0:       # 找到真的有辅助点的问题
-                            # num += 1
-                            # aux_problems.append(f"p{num}\n{problem_str} ? {' '.join(concl)}")
+                            problem_str = '; '.join(script[:i-1])
+                            this_problem = pr.Problem.from_txt(f"{problem_str} ? {' '.join(concl)}", translate=True)
+                            ddar.solve(g, RULES, this_problem, max_level=10)
+                            goal_args = g.names2nodes(this_problem.goal.args)
+                            if g.check(this_problem.goal.name, goal_args):  # 必须是原本解不出来的问题
+                               out = True
+                               print('假的辅助点问题')
+                               break
+
                             with open(OUT_FILE, 'a') as f:
                                 f.write(f"{problem_str} ? {' '.join(concl)}\n")
-                            # print(f"Found auxiliary problem: p{num} with goal {concl}")
                             # alphageometry.write_solution(g, this_problem, '', True)
-                            found = True
+                            out = True
                             break
                 prev_conclusions = curr_conclusions
 
             except Exception as e:
                 print(f"Error at problem {i}: {e}")
                 break
-            if found:
+            if out:
                 break
 
+# if __name__ == '__main__':
+#     # app.run(main)  # 输出log用这个
+#     main(None)
+
+def run_thread(thread_id):
+    """
+    每个线程运行的主函数，动态修改 OUT_FILE 为 gen{thread_id}.txt
+    """
+    global OUT_FILE
+    OUT_FILE = f'gen{thread_id}.txt'  # 根据线程 ID 修改输出文件
+
+    print(f"线程 {thread_id} 开始运行，输出文件为 {OUT_FILE}")
+    main(None)  # 调用主函数
+
 if __name__ == '__main__':
-    app.run(main)
+    num_threads = 16
+    processes = []
+
+    for i in range(num_threads):
+        p = multiprocessing.Process(target=run_thread, args=(i + 1,))
+        processes.append(p)
+        p.start()
+
+    for p in processes:
+        p.join()

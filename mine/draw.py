@@ -6,14 +6,14 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../meli
 import graph as gh
 import problem as pr
 import ddar
-from absl import app, logging
+from absl import app, logging, flags
 import alphageometry
 
+FLAGS = flags.FLAGS
+flags.DEFINE_string('name', '', 'Problem name to solve')
+
 DEFS_FILE = '../defs.txt'
-PROBLEMS_FILE = 'gen.txt'
-PROBLEM_NAME =  'p3'
-# PROBLEMS_FILE = '../examples.txt'
-# PROBLEM_NAME =  'orthocenter_aux'
+PROBLEMS_FILE = 'examples.txt'
 OUT_FILE = ''
 RULES_FILE = '../rules.txt'
 
@@ -64,11 +64,12 @@ def main(_):
   RULES = pr.Theorem.from_txt_file(RULES_FILE, to_dict=True)
 
   problems = pr.Problem.from_txt_file(PROBLEMS_FILE, to_dict=True)
+  problem_name = FLAGS.name
 
-  if PROBLEM_NAME not in problems:
-      raise ValueError(f'Problem name `{PROBLEM_NAME}` not found in `{PROBLEMS_FILE}`')
+  if problem_name not in problems:
+      raise ValueError(f'Problem name `{problem_name}` not found in `{PROBLEMS_FILE}`')
 
-  this_problem = problems[PROBLEM_NAME]
+  this_problem = problems[problem_name]
 
   g, _ = gh.Graph.build_problem(this_problem, DEFINITIONS)
 

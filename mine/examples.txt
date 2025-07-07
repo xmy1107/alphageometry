@@ -1,0 +1,24 @@
+p1
+a b c = triangle; h = on_tline b a c, on_tline c a b ? perp a h b c
+p2
+a b c = triangle; d = on_tline d b a c, on_tline d c a b; e = on_line e a c, on_line e b d ? perp a d b c
+incenter_excenter
+a b c = triangle a b c; d1 d2 d3 d = incenter2 a b c; e1 e2 e3 e = excenter2 a b c ? perp d c c e
+euler
+a b c = triangle a b c; h = orthocenter a b c; h1 = foot a b c; h2 = foot b c a; h3 = foot c a b; g1 g2 g3 g = centroid g1 g2 g3 g a b c; o = circle a b c ? coll h g o
+p3
+a b c = triangle a b c; d = midpoint d a c; e = midpoint e c b; f = on_circle f c a, on_bline f c d; g = midpoint g b f; h = mirror h c g ? cong a d e g
+p4
+a b = segment a b; c = on_line c a b; d = midpoint d c b; e = mirror e a d; f = on_bline f e a ? cong a c b e
+p5
+a b c = triangle a b c; d = midpoint d b a; e = circle e a c d; f = circle f b c a; g = circle g a f d ? eqangle a e d f d f d e
+p6
+a b = segment a b; c = mirror c a b; d = mirror d b a; e = on_bline e d c ? cong a c b d
+p6_minus
+a b = segment a b; c = mirror c a b; d = mirror d b a ? cong a c b d
+p7
+a b = segment a b; c = on_bline c b a; d = midpoint d b a; e = mirror e d a; f = circle f c b e ? cong a b d e
+p8
+a b = segment a b; c = midpoint c b a; d = on_bline d b a; e = midpoint e a d; f = mirror f d c ? cong c e d e
+p9
+a b c = triangle a b c; d = mirror d c a; e = mirror e b c ? eqratio a d c d c e b e
