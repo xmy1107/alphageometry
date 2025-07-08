@@ -133,9 +133,13 @@ calls3 = ["on_line","on_tline","on_bline","on_circle","on_pline"]  # 2 点 → �
 
 `ddar.get_proof_steps` 等地方提供的方法只能由 `goal` 出发生成依赖关系，但由前文所述，随机生成的内容不包含 `goal`，自己手动造结论很可能出现冲突导致异常，造出正确且不是条件中的结论很难，急需一个遍历所有结论的方法。
 
-如果对 `trace_back.py` `geometry.py`等代码有足够深的理解可能可以直接调用其数据结构，我能想到的替代方案是在 `graph.py` 中 `add_algebra` 中加一句 `self.all_conclusions.append([name] + [a.name for a in args])`，可以收集所有可达结论。
+如果对 `trace_back.py` `geometry.py`等代码有足够深的理解可能可以直接调用其数据结构，我能想到的替代方案是在 `graph.py` 中 `add_algebra` 中加一句 `self.all_conclusions.append([name] + [a.name for a in args])`，可以收集所有可达结论（后面提到这里的结论是假的，不全的）。
 
-然后便遇到了同构问题，在规定其格式后解决，但依然会有“假”辅助点。这是因为即便结论形成闭包，也依然会有别的不同形式的表述不能简单由同构判断，同构只能令单个句子规范化，若两个句子派生很多结论，不会每个都存着。不过这个问题只要调用 `write_solution` 进行进一步检验即可，在输出证明过程的时候会输出其中的辅助点，不为空即可行。
+然后便遇到了同构问题，在规定其格式后解决，但依然会有“假”辅助点。因为DDAR虽然是一直运行到结论形成闭包，但内部并不是将所有结论存起来，而是将父类`Node` 分为 `Point,Line,Angle` 等子类，所谓的闭包是说这些子类之间无法产生新的结论。只能通过 `check` 得到单对 `Node` 之间的关系。不过这个问题只要调用 `write_solution` 进行进一步检验即可，在输出证明过程的时候会输出其中的辅助点，不为空即可行。
+
+之后又碰到一个新问题，即便 DDAR 引擎判为辅助点也不代表这个点非加不可，只能是这个证明中必须要这个点，删掉以后就不成立；实际的辅助点需要对于任意证明都需要加这样一个新的点。不过这样训出来的模型可以添加 DDAR 认为是辅助点的点。
+
+TODO：用枚举方法生成结论，生成更高质量的数据
 
 
 
@@ -147,7 +151,7 @@ calls3 = ["on_line","on_tline","on_bline","on_circle","on_pline"]  # 2 点 → �
 
 ## 训练模型
 
-
+[OpenNMT](https://github.com/OpenNMT/OpenNMT-py)
 
 # Encoutered problems
 
@@ -158,6 +162,13 @@ calls3 = ["on_line","on_tline","on_bline","on_circle","on_pline"]  # 2 点 → �
 ![image-20250707134712016](alphageometry复现/image-20250707134712016.png)
 
 - 垂心的结论去掉以后，光由DDAR推导无法推到该结论，说明结论应当通过枚举获得。
-- 这里的`∠(EB-CD) = ∠(EC-AB)`，其实不合理，左边相当于 `∠BDC`，而右边的 `∠CAB` 显然与之不等，问题出在斜率角单纯用两条直线的斜率相减根本不知道正负，而比如垂直这个条件是可以任意交换前后的两个变量顺序的。
+
+
+
+- 这里的`∠(EB-CD) = ∠(EC-AB)`是对的，开始搞错了
 
 ![image-20250707141750313](alphageometry复现/image-20250707141750313.png)
+
+- 能训出让DDAR认为是辅助点的辅助点添加建议
+
+![image-20250708135619534](alphageometry复现/image-20250708135619534.png)

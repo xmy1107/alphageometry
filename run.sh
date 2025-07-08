@@ -118,8 +118,8 @@ echo $PYTHONPATH
 
 python -m alphageometry_mine \
 --alsologtostderr \
---problems_file=$(pwd)/examples.txt \
---problem_name=orthocenter \
+--problems_file=$(pwd)/mine/examples.txt \
+--problem_name=p4 \
 --mode=alphageometry \
 "${DDAR_ARGS[@]}" \
 "${SEARCH_ARGS[@]}" \

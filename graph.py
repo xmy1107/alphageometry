@@ -144,8 +144,9 @@ class Graph:
 
   def sort_conclusions(self) -> None:  # 明确结论描述的同构并内部排好序便于判同构时比较
     for con in self.all_conclusions:
-      for i in range(1, len(con), 2): # 各点对ab遵循a<b
-        if con[i] > con[i + 1]: con[i], con[i + 1] = con[i + 1], con[i]
+      if len(con) % 2 == 1:
+        for i in range(1, len(con), 2): # 各点对ab遵循a<b
+          if con[i] > con[i + 1]: con[i], con[i + 1] = con[i + 1], con[i]
 
       if len(con) == 5: # eg. cong c d a b = cong a b c d
         if con[1] + con[2] > con[3] + con[4]:
@@ -235,6 +236,9 @@ class Graph:
   def add_algebra(self, dep: Dependency, level: int) -> None:
     """Add new algebraic predicates."""
     _ = level
+    name, args = dep.name, dep.args
+    self.all_conclusions.append([name] + [a.name for a in args])
+
     if dep.name not in [
         'para',
         'perp',
@@ -245,9 +249,6 @@ class Graph:
         'cong',
     ]:
       return
-
-    name, args = dep.name, dep.args
-    self.all_conclusions.append([name] + [a.name for a in args])
 
     if name == 'para':
       ab, cd = dep.algebra

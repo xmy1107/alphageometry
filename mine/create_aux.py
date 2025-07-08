@@ -93,7 +93,7 @@ def draw(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
   ddar.solve(g, RULES, p, max_level=10)
 
   # goal_args = g.names2nodes(p.goal.args)
-  # if not g.check(p.goal.name, goal_args):
+#   if not g.check(p.goal.name, goal_args):
     # logging.info('DD+AR failed to solve the problem.')
     # return False
   
@@ -142,7 +142,7 @@ def main(_):
         prev_conclusions = set()
         
         print("Generated script: ",'\n'.join(script))
-
+        # if not nm.check('para', [e, f, p, q]):
         out = False
         for i in range(2, len(script) + 1):
             try:

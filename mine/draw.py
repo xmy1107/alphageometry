@@ -8,6 +8,7 @@ import problem as pr
 import ddar
 from absl import app, logging, flags
 import alphageometry
+import geometry as geom
 
 FLAGS = flags.FLAGS
 flags.DEFINE_string('name', '', 'Problem name to solve')
@@ -49,13 +50,34 @@ def draw(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
   print('\n'.join([' '.join(con) for con in g.all_conclusions]))
   print("Size of all_conclutions: ", len(g.all_conclusions))
 
-  gh.nm.draw(
-      g.type2nodes[gh.Point],
-      g.type2nodes[gh.Line],
-      g.type2nodes[gh.Circle],
-      g.type2nodes[gh.Segment])
+  # gh.nm.draw(
+  #     g.type2nodes[gh.Point],
+  #     g.type2nodes[gh.Line],
+  #     g.type2nodes[gh.Circle],
+  #     g.type2nodes[gh.Segment])
   return True
 
+def get_node_type(node: geom.Node) -> str:
+    if isinstance(node, geom.Point):
+        return "Point"
+    elif isinstance(node, geom.Line):
+        return "Line"
+    elif isinstance(node, geom.Segment):
+        return "Segment"
+    elif isinstance(node, geom.Circle):
+        return "Circle"
+    elif isinstance(node, geom.Angle):
+        return "Angle"
+    elif isinstance(node, geom.Ratio):
+        return "Ratio"
+    elif isinstance(node, geom.Measure):
+        return "Measure"
+    elif isinstance(node, geom.Value):
+        return "Value"
+    elif isinstance(node, geom.Direction):
+        return "Direction"
+    else:
+        return "Unknown"
 def main(_):
   global DEFINITIONS
   global RULES
@@ -74,6 +96,11 @@ def main(_):
   g, _ = gh.Graph.build_problem(this_problem, DEFINITIONS)
 
   draw(g, this_problem, OUT_FILE)
+
+  all = g.all_nodes()
+  for item in all:
+    print(item.name, get_node_type(item))
+    
 
   # Set = set(getattr(g, 'all_conclusions', []))
   # print(Set)

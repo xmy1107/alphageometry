@@ -11,7 +11,7 @@ a b c = triangle a b c; h = orthocenter a b c; h1 = foot a b c; h2 = foot b c a;
 p3
 a b c = triangle a b c; d = midpoint d a c; e = midpoint e c b; f = on_circle f c a, on_bline f c d; g = midpoint g b f; h = mirror h c g ? cong a d e g
 p4
-a b = segment a b; c = on_line c a b; d = midpoint d c b; e = mirror e a d; f = on_bline f e a ? cong a c b e
+a b c = triangle a b c; d = circle d a c b; e = circle e a c d; f = mirror f b d ? eqangle a b b c c d c e
 p5
 a b c = triangle a b c; d = midpoint d b a; e = circle e a c d; f = circle f b c a; g = circle g a f d ? eqangle a e d f d f d e
 p6

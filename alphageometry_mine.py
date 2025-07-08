@@ -228,7 +228,7 @@ def get_lm(ckpt_init: str, vocab_path: str) -> "lm.LanguageModelInference": # å‰
   return lm.LanguageModelInference(vocab_path, ckpt_init, mode='beam_search')
 
 
-def run_ddar(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
+def run_ddar(g: gh.Graph, p: pr.Problem, out_file: str, printlog: bool = False) -> bool:
   """Run DD+AR.
 
   Args:
@@ -246,7 +246,7 @@ def run_ddar(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
     logging.info('DD+AR failed to solve the problem.')
     return False
 
-  write_solution(g, p, out_file)
+  write_solution(g, p, out_file, printlog)
 
   gh.nm.draw(
       g.type2nodes[gh.Point],
@@ -523,8 +523,8 @@ def run_alphageometry(
 ) -> bool:
   g, _ = gh.Graph.build_problem(p, DEFINITIONS)
 
-  if run_ddar(g, p, out_file):
-    return True
+  # if run_ddar(g, p, out_file):
+  #   return True
 
   pstring_to_string = lambda pstring: pstring.replace(',', ' ,').replace(';', ' ;')
   string_to_pstring = lambda string: string.replace(' ,', ',').replace(' ;', ';')
@@ -560,7 +560,7 @@ def run_alphageometry(
         logging.info('Failed to build graph from problem: "%s", error: %s', candidate_pstring, str(e))
         continue
 
-      if run_ddar(g_new, p_new, out_file):
+      if run_ddar(g_new, p_new, out_file, True):
         logging.info('Solved.')
         return True
 
