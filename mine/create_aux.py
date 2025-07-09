@@ -106,8 +106,6 @@ def draw(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
   # p.goal = pr.Construction.from_txt("cong a d b e")
 #   count_points = alphageometry.write_solution(g, p, out_file, False)
   g.sort_conclusions()
-#   print('\n'.join([' '.join(con) for con in g.all_conclusions]))
-#   print("Size of all_conclutions: ", len(g.all_conclusions))
 
 #   gh.nm.draw(
 #       g.type2nodes[gh.Point],
@@ -142,51 +140,47 @@ def main(_):
         prev_conclusions = set()
         
         print("Generated script: ",'\n'.join(script))
-        # if not nm.check('para', [e, f, p, q]):
         out = False
         for i in range(2, len(script) + 1):
+            if 'triangle' in script[0]:
+                num = i + 2  # 当前用了几个变量
+            else:
+                num = i + 1
+
             try:
                 problem_str = '; '.join(script[:i])
                 last_line = script[i-1]
                 t = last_line.split('=')[0].strip().split()[0]
 
-                # 构造 pr.Problem 对象
                 this_problem = pr.Problem.from_txt(problem_str, translate=True)
                 g, _ = gh.Graph.build_problem(this_problem, DEFINITIONS)
                 draw(g, this_problem, OUT_FILE)
 
-                curr_conclusions = set(tuple(con) for con in getattr(g, 'all_conclusions', []))
-                new_conclusions = curr_conclusions - prev_conclusions
+                conclusions = []
+                conditions = ['cong', 'coll', 'perp', 'para']
 
-                print(f'\n{i}th step\'s new conclusions:')
-                print('\n'.join([' '.join(con) for con in new_conclusions]))
+                for condition in conditions:
+                    for a in range(num - 1):
+                        for b in range(a + 1, num - 1):
+                            for c in range(a, num - 1):
+                                for d in range(c + 1, num - 1):
+                                    if a == c and b == d:
+                                        continue
+                                    conclusion = f"{condition} {chr(97+a)} {chr(97+b)} {chr(97+c)} {chr(97+d)}"
+                                    conclusions.append(conclusion)
+                mp = {}
 
-                for concl in new_conclusions:
-                    if t not in concl:          # 找到一组同构判定下以为有辅助点的问题
-                        # print("prev: ",prev_conclusions)
-                        # print("new: ",new_conclusions)
-                        # print("curr: ",curr_conclusions)
-                        
-                        this_problem = pr.Problem.from_txt(f"{problem_str} ? {' '.join(concl)}", translate=True)
-                        # this_problem.goal = pr.Construction.from_txt(f"{' '.join(concl)}")
-                        ddar.solve(g, RULES, this_problem, max_level=10)
-                        count_points = alphageometry.write_solution(g, this_problem, '', False)
-                        if len(count_points) > 0:       # 找到真的有辅助点的问题
-                            problem_str = '; '.join(script[:i-1])
-                            this_problem = pr.Problem.from_txt(f"{problem_str} ? {' '.join(concl)}", translate=True)
-                            ddar.solve(g, RULES, this_problem, max_level=10)
-                            goal_args = g.names2nodes(this_problem.goal.args)
-                            if g.check(this_problem.goal.name, goal_args):  # 必须是原本解不出来的问题
-                               out = True
-                               print('假的辅助点问题')
-                               break
-
-                            with open(OUT_FILE, 'a') as f:
-                                f.write(f"{problem_str} ? {' '.join(concl)}\n")
-                            # alphageometry.write_solution(g, this_problem, '', True)
-                            out = True
-                            break
-                prev_conclusions = curr_conclusions
+                for concl in conclusions:
+                    this_problem.goal = pr.Construction.from_txt(concl)
+                    goal_args = g.names2nodes(this_problem.goal.args)
+                    if (not concl in mp) and g.check(this_problem.goal.name, goal_args):
+                        mp[concl] = 1
+                        with open(OUT_FILE, 'a') as f:
+                            f.write(f"{problem_str} ? {concl}\n")
+                        print('真的辅助点问题')
+                        # alphageometry.write_solution(g, this_problem, '', True)
+                        out = True
+                        break
 
             except Exception as e:
                 print(f"Error at problem {i}: {e}")

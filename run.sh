@@ -112,7 +112,8 @@ echo $PYTHONPATH
 # --mode=alphageometry \
 # "${DDAR_ARGS[@]}" \
 # "${SEARCH_ARGS[@]}" \
-# "${LM_ARGS[@]}" >> "$log_file" 2>&1
+# "${LM_ARGS[@]}"
+#  >> "$log_file" 2>&1
 # 2>&1 | grep "TensorRT\|GPU"
 # 将 stderr 重定向到 stdout
 

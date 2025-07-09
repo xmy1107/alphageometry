@@ -158,7 +158,7 @@ class Problem:
     return data
 
   @classmethod
-  def from_txt(cls, data: str, translate: bool = True) -> Problem:
+  def from_txt(cls, data: str, translate: bool = True) -> Problem: # translate决定是否按字母表顺序描述题目
     """Load a problem from a str object."""
     url = ''
     if '\n' in data:

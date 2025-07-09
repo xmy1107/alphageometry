@@ -281,7 +281,7 @@ def run_ddar(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
     logging.info('DD+AR failed to solve the problem.')
     return False
 
-  write_solution(g, p, out_file)
+  write_solution(g, p, out_file, True)
 
   gh.nm.draw(
       g.type2nodes[gh.Point],
