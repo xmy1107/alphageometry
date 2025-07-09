@@ -1,0 +1,1 @@
+a b c = triangle a b c; d = circle d c a b; e = mirror e c d; f = midpoint f e b; g = midpoint g d c; h = circle h e f d ? cong b g f g

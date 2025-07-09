@@ -50,11 +50,11 @@ def draw(g: gh.Graph, p: pr.Problem, out_file: str) -> bool:
   print('\n'.join([' '.join(con) for con in g.all_conclusions]))
   print("Size of all_conclutions: ", len(g.all_conclusions))
 
-  # gh.nm.draw(
-  #     g.type2nodes[gh.Point],
-  #     g.type2nodes[gh.Line],
-  #     g.type2nodes[gh.Circle],
-  #     g.type2nodes[gh.Segment])
+  gh.nm.draw(
+      g.type2nodes[gh.Point],
+      g.type2nodes[gh.Line],
+      g.type2nodes[gh.Circle],
+      g.type2nodes[gh.Segment])
   return True
 
 def get_node_type(node: geom.Node) -> str:
@@ -97,9 +97,9 @@ def main(_):
 
   draw(g, this_problem, OUT_FILE)
 
-  all = g.all_nodes()
-  for item in all:
-    print(item.name, get_node_type(item))
+  # all = g.all_nodes()
+  # for item in all:
+  #   print(item.name, get_node_type(item))
     
 
   # Set = set(getattr(g, 'all_conclusions', []))

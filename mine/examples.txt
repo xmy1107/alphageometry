@@ -28,3 +28,15 @@ p10
 a b c = triangle a b c; d = circle d c b a; e = on_circle e d a, on_line e d b; f = midpoint f e c ? eqangle a c a e c d b c
 p10_minus
 a b c = triangle a b c; d = circle d c b a; e = on_circle e d a, on_line e d b ? eqangle a c a e c d b c
+p11
+a b = segment a b; c = on_circle c b a; d = on_circle d c b, on_pline d c b a; e = midpoint e b d ? cong a b a d
+p12
+a b c = triangle a b c; d = on_tline d b c a, on_tline d c b a; e = circle e c d a; f = circle f d a b ? perp a d b c
+p13
+a b c = triangle a b c; d = circle d c a b; e = mirror e c d; f = midpoint f e b; g = midpoint g d c; h = circle h e f d ? cong b g f g
+p14
+a b = segment a b; c = on_circle c a b, on_line c b a; d = on_bline d a c; e = circle e b a d; f = midpoint f a c; g = circle g e d b; h = mirror h b e ? perp a d a g
+p15
+a b = segment a b; c = on_circle c b a, on_bline c b a; d = midpoint d b a; e = on_line e b c, on_circle e b d; f = circle f e c d ? cong a d c e
+p16
+a b = segment a b; c = midpoint c b a; d = on_circle d c a, on_bline d c b; e = midpoint e a d; f = mirror f e b; g = mirror g e c; h = circle h a e b ? perp c f d g

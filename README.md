@@ -1,11 +1,3 @@
----
-title: alphageometry复现
-date: 2025-07-03 18:48:15
-tags:
----
-
-
-
 # Code
 
 [项目链接](https://github.com/google-deepmind/alphageometry)
@@ -140,13 +132,6 @@ calls3 = ["on_line","on_tline","on_bline","on_circle","on_pline"]  # 2 点 → �
 之后又碰到一个新问题，即便 DDAR 引擎判为辅助点也不代表这个点非加不可，只能是这个证明中必须要这个点，删掉以后就不成立；实际的辅助点需要对于任意证明都需要加这样一个新的点。不过这样训出来的模型可以添加 DDAR 认为是辅助点的点。
 
 TODO：用枚举方法生成结论，生成更高质量的数据
-
-
-
-## 生成数据
-
-
-
 
 
 ## 训练模型

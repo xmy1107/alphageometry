@@ -1,0 +1,1 @@
+a b = segment a b; c = on_circle c b a, on_bline c b a; d = midpoint d b a; e = on_line e b c, on_circle e b d; f = circle f e c d ? cong a d c e

@@ -1,0 +1,1 @@
+a b c = triangle a b c; d = on_tline d b c a, on_tline d c b a; e = circle e c d a; f = circle f d a b ? perp a d b c

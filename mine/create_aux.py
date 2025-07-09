@@ -121,9 +121,9 @@ def main(_):
     DEFINITIONS = pr.Definition.from_txt_file(DEFS_FILE, to_dict=True)
     RULES = pr.Theorem.from_txt_file(RULES_FILE, to_dict=True)
 
-    for _ in range(1):
+    for _ in range(1000000):
         print(f"\nTrying to generate a new geometry script in {_}th iteration.")
-        # script = random_geometry()
+        script = random_geometry()
         # script = [      # 假的
         #     'a b = segment a b',
         #     'c = mirror c a b',
@@ -131,16 +131,15 @@ def main(_):
         #     'e = on_bline e d c'
         # ]
 
-        script = [      # 真的
-            "a b c = triangle",
-            "d = on_tline d b a c, on_tline d c a b",
-            "e = on_line e a c, on_line e b d"
-        ]
-
-        prev_conclusions = set()
+        # script = [      # 真的
+        #     "a b c = triangle",
+        #     "d = on_tline d b a c, on_tline d c a b",
+        #     "e = on_line e a c, on_line e b d"
+        # ]
         
         print("Generated script: ",'\n'.join(script))
         out = False
+        mp = {}
         for i in range(2, len(script) + 1):
             if 'triangle' in script[0]:
                 num = i + 2  # 当前用了几个变量
@@ -160,21 +159,21 @@ def main(_):
                 conditions = ['cong', 'coll', 'perp', 'para']
 
                 for condition in conditions:
-                    for a in range(num - 1):
-                        for b in range(a + 1, num - 1):
-                            for c in range(a, num - 1):
-                                for d in range(c + 1, num - 1):
+                    for a in range(num):
+                        for b in range(a + 1, num):
+                            for c in range(a, num):
+                                for d in range(c + 1, num):
                                     if a == c and b == d:
                                         continue
                                     conclusion = f"{condition} {chr(97+a)} {chr(97+b)} {chr(97+c)} {chr(97+d)}"
                                     conclusions.append(conclusion)
-                mp = {}
-
+                
                 for concl in conclusions:
                     this_problem.goal = pr.Construction.from_txt(concl)
                     goal_args = g.names2nodes(this_problem.goal.args)
                     if (not concl in mp) and g.check(this_problem.goal.name, goal_args):
                         mp[concl] = 1
+                        if chr(97 + num - 1) in concl[4:]: continue
                         with open(OUT_FILE, 'a') as f:
                             f.write(f"{problem_str} ? {concl}\n")
                         print('真的辅助点问题')
@@ -188,29 +187,29 @@ def main(_):
             if out:
                 break
 
-if __name__ == '__main__':
-    # app.run(main)  # 输出log用这个
-    main(None)
+# if __name__ == '__main__':
+#     # app.run(main)  # 输出log用这个
+#     main(None)
 
 # 多线程改下面
-# def run_thread(thread_id):
-#     """
-#     每个线程运行的主函数，动态修改 OUT_FILE 为 gen{thread_id}.txt
-#     """
-#     global OUT_FILE
-#     OUT_FILE = f'gen{thread_id}.txt'  # 根据线程 ID 修改输出文件
+def run_thread(thread_id):
+    """
+    每个线程运行的主函数，动态修改 OUT_FILE 为 gen{thread_id}.txt
+    """
+    global OUT_FILE
+    OUT_FILE = f'gen{thread_id}.txt'  # 根据线程 ID 修改输出文件
 
-#     print(f"线程 {thread_id} 开始运行，输出文件为 {OUT_FILE}")
-#     main(None)  # 调用主函数
+    print(f"线程 {thread_id} 开始运行，输出文件为 {OUT_FILE}")
+    main(None)  # 调用主函数
 
-# if __name__ == '__main__':
-#     num_threads = 16
-#     processes = []
+if __name__ == '__main__':
+    num_threads = 16
+    processes = []
 
-#     for i in range(num_threads):
-#         p = multiprocessing.Process(target=run_thread, args=(i + 1,))
-#         processes.append(p)
-#         p.start()
+    for i in range(num_threads):
+        p = multiprocessing.Process(target=run_thread, args=(i + 1,))
+        processes.append(p)
+        p.start()
 
-#     for p in processes:
-#         p.join()
+    for p in processes:
+        p.join()

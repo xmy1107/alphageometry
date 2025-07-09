@@ -1,0 +1,1 @@
+a b = segment a b; c = on_circle c a b, on_line c b a; d = on_bline d a c; e = circle e b a d; f = midpoint f a c; g = circle g e d b; h = mirror h b e ? perp a d a g

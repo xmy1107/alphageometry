@@ -1,5 +1,5 @@
 # 合并数据
-./merge.sh
+# ./merge.sh
 # 处理数据
 python process_data.py
 # 分割成train和val

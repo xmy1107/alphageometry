@@ -1,1 +1,1 @@
-a b c = triangle; d = on_tline d b a c, on_tline d c a b; e = on_line e a c, on_line e b d ? perp a b c d
+a b = segment a b; c = on_circle c b a; d = on_circle d c b, on_pline d c b a; e = midpoint e b d ? cong a b a d
