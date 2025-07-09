@@ -174,6 +174,7 @@ def main(_):
                         if len(count_points) > 0:       # 找到真的有辅助点的问题
                             problem_str = '; '.join(script[:i-1])
                             this_problem = pr.Problem.from_txt(f"{problem_str} ? {' '.join(concl)}", translate=True)
+                            g, _ = gh.Graph.build_problem(this_problem, DEFINITIONS)
                             ddar.solve(g, RULES, this_problem, max_level=10)
                             goal_args = g.names2nodes(this_problem.goal.args)
                             if g.check(this_problem.goal.name, goal_args):  # 必须是原本解不出来的问题
